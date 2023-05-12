@@ -4,8 +4,71 @@ import {toast} from 'react-toastify';
 import {axiosPublic} from '../../redux/axiosPublic';
 import ProductCard from '../Product/ProductCard';
 import {getCategories, selectAllCategories} from '../../redux/features/categorySlice';
+import './home.css'
 
 import {Box, Typography} from '@mui/material';
+import HeroSlider,{Slide} from '@mui/material/hero-slider';
+//Image
+const bananaLeaf = 'client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg';
+const bananaLeaf1 = 'client/src/images/Chinese Noodle Salad.jpeg';
+const bananaLeaf2 = 'client/src/images/palte.jpeg';
+const bananaLeaf3 = 'client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg';
+
+
+const App = () => {
+    return (
+        <HeroSlider
+        slidingAnimation = 'left_to_right'
+        arientation = 'horizontal'
+        initialslide = {1}
+        onBeforeChane = {(previousSlide,nextSlide)=>console.log('onBeforeChange',previousSlide,nextSlide)}
+        onChange = {nextSlide => console.log('onChange',nextSlide)}
+        onAfterChange = {nextSlide => console.log('onAfterChange',nextSlide)}
+        style = {{
+            backgroundColor:'rgba(0,0,0,0.33)'
+        }}
+        settings = {{
+            slidingDuration: 250,
+            slideingDelay: 100,
+            shouldAutoplay: true,
+            shouldDisplayButtons: true,
+            autoplayDuration: 3000,
+            height: '100vh'
+        }}
+        >
+            <Slide
+            background={{
+                backgroundImage: bananaLeaf,
+                backgroundAttachment: 'fixed'
+            }}
+            />
+            <Slide
+            background={{
+                backgroundImage: bananaLeaf1,
+                backgroundAttachment: 'fixed'
+            }}
+            />
+            <Slide
+            background={{
+                backgroundImage: bananaLeaf2,
+                backgroundAttachment: 'fixed'
+            }}
+            />
+            <Slide
+            background={{
+                backgroundImage: bananaLeaf3,
+                backgroundAttachment: 'fixed'
+            }}
+            />
+            
+        </HeroSlider>
+    )
+} 
+   
+
+
+
+
 
 const Home = () => {
     const limit=4;
@@ -52,14 +115,18 @@ const Home = () => {
         getProducts();
       }
     }, [categories,catProductsLoading]);
+
+
+
+
     
     
   return (
     <Box className='container'>
         <Typography variant='div'
                     component='h3'
-                    sx={{m:1,p:1,background:'#1976D5',color:'#fff',textShadow:'1px 1px 1px #555'}}>
-                        Top rated products : 
+                    sx={{m:10,p:1,background:"#89D555",color:'#1F6415',textShadow:'1px 1px 1px #555'}}>
+                        Top rated products 
         </Typography>
         <Box className='card-container'>
             {topRatedProduct && topRatedProduct?.products.map(product=>(
@@ -71,7 +138,7 @@ const Home = () => {
         <Box key={cat._id}>
             <Typography variant='div'
                     component='h3'
-                    sx={{m:1,p:1,background:'#1976D5',color:'#fff',textShadow:'1px 1px 1px #555'}}>
+                    sx={{m:10,p:1,background:'#89D555',color:'#1F6415',textShadow:'1px 1px 1px #555'}}>
                         {cat.title} 
             </Typography>
             <Box className='card-container'>
@@ -83,6 +150,8 @@ const Home = () => {
         )}
 
     </Box>
+
+    
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/OSHOP2.svg';
+import logo from '/home/gowsi/Documents/Final_Project/client/src/images/Green_Creative_Geometry_Leaf_Circular_Logo__2_-removebg-preview.png';
 import './Header.css';
 import {NavLink,Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
@@ -35,7 +35,7 @@ const Header = () => {
           <div className='logo-area'>
             <Tooltip title='Home'>
               <Link to='/'>
-                <img src={logo} alt='oshop ecommerce site' style={{width:'90px'}}/>
+                <img src={logo} alt='L E A F L I N E ecommerce site' style={{width:'40px'}}/>
               </Link>
             </Tooltip>
           </div>

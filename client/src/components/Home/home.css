@@ -1,0 +1,11 @@
+.card-container{
+    background-color: rgb(1, 27, 5);
+    box-shadow: 1px 1px 6px -3px rgb(230, 226, 226);
+}
+
+.card-container{
+    width: 300px;
+    height: 450px;
+    border-radius: 2px;
+    padding:16px;
+}
