@@ -138,8 +138,8 @@ const UpdateProduct = () => {
     <>
     {loading ? <BoxShadowLoader/> :
     <Box sx={{m:'0 auto',marginTop:2, maxWidth:'550px'}}>
-        <Typography component='div' variant='h5'>Add new product</Typography>
-        <Box component='form' onSubmit={handleSubmit}>
+        <Typography component='div' variant='h5' color="green">Add new product</Typography>
+        <Box component='form' onSubmit={handleSubmit} >
             <TextField type='text'
                         id='title'
                         label='Title'
@@ -150,6 +150,7 @@ const UpdateProduct = () => {
                         autoFocus
                         value={title}
                         onChange={(e=>setTitle(e.target.value))}
+                        color="success"
             />
             <TextareaAutosize required
                               aria-label='description'
@@ -158,6 +159,7 @@ const UpdateProduct = () => {
                               value={description}
                               style={{width:'100%',marginTop:'16px'}}
                               onChange={(e=>setDescription(e.target.value))}
+                              color="success"
             />
 
 
@@ -172,6 +174,7 @@ const UpdateProduct = () => {
                           fullWidth
                           value={price}
                           onChange={(e=>setPrice(e.target.value))}
+                          color="success"
                 />
               </Grid>
               <Grid item xs={6}>
@@ -184,6 +187,7 @@ const UpdateProduct = () => {
                           fullWidth
                           value={discount}
                           onChange={(e=>setDiscount(e.target.value))}
+                          color="success"
                 />               
                 </Grid>
             </Grid>
@@ -201,6 +205,7 @@ const UpdateProduct = () => {
                           fullWidth
                           value={weight}
                           onChange={(e=>setWeight(e.target.value))}
+                          color="success"
                   />
                 </InfoTooltip>
               </Grid>
@@ -214,13 +219,14 @@ const UpdateProduct = () => {
                           fullWidth
                           value={stock}
                           onChange={(e=>setStock(e.target.value))}
+                          color="success"
                 />               
                 </Grid>
             </Grid>
             <Grid container spacing={2} sx={{mt:'4px'}}>
               <Grid item xs={6}>
-                  <FormControl fullWidth>
-                    <InputLabel id='category'>Category</InputLabel>
+                  <FormControl fullWidth color="success">
+                    <InputLabel id='category' color="success">Category</InputLabel>
                     <Select required
                             labelId='category'
                             id='category'
@@ -235,8 +241,8 @@ const UpdateProduct = () => {
                   </FormControl>
               </Grid>
               <Grid item xs={6}>
-                <FormControl fullWidth>
-                    <InputLabel id='brand'>Brand</InputLabel>
+                <FormControl fullWidth color="success">
+                    <InputLabel id='brand'color="success">Brand</InputLabel>
                     <Select required
                             labelId='brand'
                             id='brand'
@@ -254,8 +260,8 @@ const UpdateProduct = () => {
 
             <Grid container spacing={2} sx={{mt:'16px'}}>
               <Grid item xs={6}>
-                <FormControl fullWidth>
-                  <InputLabel id='store'>Store</InputLabel>
+                <FormControl fullWidth color="success">
+                  <InputLabel id='store' color="success">Store</InputLabel>
                     <Select required
                             labelId='store'
                             id='store'
@@ -274,10 +280,10 @@ const UpdateProduct = () => {
               </Grid>
             </Grid>
 
-            <Grid container spacing={2} sx={{mt:'16px'}}>
+            <Grid container spacing={2} sx={{mt:'16px'}} >
               <Grid item xs={6}>
-                  <FormControl fullWidth>
-                    <InputLabel id='localShipmentPolicy'>Local Shipment Policy</InputLabel>
+                  <FormControl fullWidth color="success">
+                    <InputLabel id='localShipmentPolicy' color="success">Local Shipment Policy</InputLabel>
                     <Select required
                             labelId='localShipmentPolicy'
                             id='localShipmentPolicy'
@@ -292,8 +298,8 @@ const UpdateProduct = () => {
                   </FormControl>
               </Grid>
               <Grid item xs={6}>
-              <FormControl fullWidth>
-                    <InputLabel id='internationalShipmentPolicy'>International Shipment Policy</InputLabel>
+              <FormControl fullWidth color="success">
+                    <InputLabel id='internationalShipmentPolicy' color="success">International Shipment Policy</InputLabel>
                     <Select required
                             labelId='internationalShipmentPolicy'
                             id='internationalShipmentPolicy'
@@ -320,6 +326,7 @@ const UpdateProduct = () => {
                           fullWidth
                           value={customLocalShipmentCost}
                           onChange={(e=>setCustomLocalShipmentCost(e.target.value))}
+                          color="success"
                 />
                 }
               </Grid>
@@ -333,6 +340,7 @@ const UpdateProduct = () => {
                           fullWidth
                           value={customInternationalShipmentCost}
                           onChange={(e=>setCustomInternationalShipmentCost(e.target.value))}
+                          color="green"
                 /> 
                 }              
                 </Grid>
@@ -353,6 +361,7 @@ const UpdateProduct = () => {
                               variant='outlined'
                               startIcon={<CollectionsIcon/>}
                               sx={{m:'16px 0'}}
+                              color="success"
                   >Upload photo</Button>                  
                 </label>
             </Box>
@@ -362,10 +371,10 @@ const UpdateProduct = () => {
                   image.url?
                   <img key={index} src={IMAGE_BASEURL+image.url} 
                                     alt='product image' 
-                                    style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} />
+                                    style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} color="success"/>
                   :
                   <img key={index} src={image} alt='product image' 
-                                    style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} />
+                                    style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} color="success" />
                 ))
                 }
               </Box>
@@ -380,6 +389,7 @@ const UpdateProduct = () => {
                         variant='contained'
                         startIcon={<UpdateIcon/>}
                         sx={{mt:3,mb:2}}
+                        color="success"
             >Update Product</Button>
         </Box>
     </Box>

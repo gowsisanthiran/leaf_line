@@ -32,7 +32,8 @@ const Products = () => {
     }
     const priceHandler=(e,newPriceRange)=>{
       setPriceRange(newPriceRange);
-      setCurrentPage(1);
+      setCurrentPage(1);        {/* <StyledTreeItem nodeId="6" label="Review List" onClick={()=>goto('reviewlist')}  /> */}
+
       dispatch(resetProducts());
     }
     const ratingHandler=(e)=>{
@@ -86,8 +87,9 @@ const Products = () => {
         <Box className='filter-box'>
         <Accordion>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon /> }
           aria-controls="panel1a-content"
+          
           id="panel1a-header"
         >
           <Typography sx={{display:'flex'}}><FilterAltIcon/>Filter products</Typography>
@@ -205,7 +207,7 @@ const Products = () => {
         </Accordion>
 
         </Box>
-
+        authorized/categorylist
         <Box className='container'>
           {loading && loading ? <HeadingWaveSkeleton/>:
             <Typography variant='div'

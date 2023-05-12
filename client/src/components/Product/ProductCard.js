@@ -121,7 +121,7 @@ const ProductCard = React.forwardRef(({product},ref) => {
             {
                 product.localShipmentPolicy==='free' ?
                 <Box sx={{display:'flex', justifyContent:'center',alignItems:'center'}}>
-                    <LocalShippingIcon sx={{mr:1, color:'#9c27b0'}} />
+                    <LocalShippingIcon sx={{mr:1, color:'#458a6f'}} />
                     <Typography variant='caption'>Free Shipping</Typography>                
                 </Box>
                 :
@@ -139,13 +139,13 @@ const ProductCard = React.forwardRef(({product},ref) => {
                 <Button variant='outlined'
                         ref={ref}
                         fullWidth
-                        color={color}
+                        color="success"
                         startIcon={icon}
                         onClick={cartHandler}>{text}</Button>
             :
               <Button variant='outlined'
                         fullWidth
-                        color={color}
+                        color="success"
                         startIcon={icon}
                         onClick={cartHandler}>{text}</Button>
             }

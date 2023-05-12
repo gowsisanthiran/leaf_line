@@ -43,7 +43,7 @@ const UpdateCategory = () => {
     <>
     {loading ? <BoxShadowLoader/> :
     <Box sx={{marginTop:2, display:'flex',flexDirection:'column',alignItems:'center'}}>
-        <Typography component='div' variant='h5'>Update category</Typography>
+        <Typography component='div' color="#1b5e20" variant='h5'>Update category</Typography>
         <Box component='form' onSubmit={handleSubmit}>
             <TextField type='text'
                         id='title'
@@ -55,19 +55,24 @@ const UpdateCategory = () => {
                         autoFocus
                         value={title}
                         onChange={(e=>setTitle(e.target.value))}
+                        color='success'
+
             />
             <TextField type='text'
                         id='description'
                         label='Description'
                         name='description'
-                        margin='normal'
+                        margin='success'
                         required
                         fullWidth
                         autoFocus
                         value={description}
                         onChange={(e=>setDescription(e.target.value))}
+                        color='success'
+
             />
             <Button type='submit'
+                        color="success"
                         fullWidth 
                         disabled={isUdating?true:false}                       
                         variant='contained'

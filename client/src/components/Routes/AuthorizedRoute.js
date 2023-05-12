@@ -19,8 +19,9 @@ const AuthorizedRoute = () => {
     role=UserInfo.roles[0].toString();
     if(role==='admin' || role==='seller'){
         return (
+            
             <>
-            <Box sx={{background:'#1976d2', display:'flex', color:'#fff',p:1}}>
+            <Box sx={{background:'#2e7d32',  boxShadow: '4px 4px 4px #689f38', display:'flex', color:'#fff',p:1}}>
                 <Box className='mTreeMenu' sx={{minWidth:'225px',mr:1}}>
                     <DrawerTreeMenu/>
                 </Box>
@@ -29,7 +30,7 @@ const AuthorizedRoute = () => {
                 </Box>
             </Box>
             <Box sx={{display:'flex',flexGrow:1}}>
-                <Box className='dTreeMenu' sx={{background:'#1976d2',minWidth:'225px',mr:1}}>
+                <Box className='dTreeMenu' sx={{background:'white',boxShadow: '4px 4px 4px #689f38',minWidth:'225px',mr:1}}>
                     <TreeMenu/>                    
                 </Box>
                 <Box sx={{flexGrow:1}}>

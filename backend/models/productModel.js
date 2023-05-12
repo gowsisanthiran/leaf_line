@@ -41,7 +41,7 @@ const productSchema=new mongoose.Schema({
     store:{
         type:mongoose.Schema.ObjectId,
         ref:"Store",
-        required:[true,'Please select a store.']
+        // required:[true,'Please select a store.']
     },
     localShipmentPolicy:{
         type:String,

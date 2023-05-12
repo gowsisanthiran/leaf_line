@@ -28,6 +28,7 @@ const ProductDetails = () => {
     const {reviews}=useSelector(selectAllReviews);
     const {success}=useSelector(selectReviewMutationResult);
     console.log(reviews);
+    
 
     useEffect(() => {
         if(success){
@@ -64,8 +65,8 @@ const ProductDetails = () => {
 
 
                 <Box className='product-reviews' style={{marginTop:'50px'}}>
-                    <Box className='reviews' style={{textAlign:'center'}}>
-                        <Button variant="outlined" onClick={handleClickOpen}>Submit Review</Button>
+                    <Box className='reviews' spacing={6} style={{textAlign:'center'}} >
+                        <Button variant="outlined" onClick={handleClickOpen}color="success" >Submit Review</Button>
                         <Dialog open={open} onClose={handleClose}>
                             <DialogTitle sx={{bgcolor:'primary.main', color:'#fff',mb:2}}>Review &#38; Rating</DialogTitle>
                             <DialogContent sx={{minWidth:'350px'}} fullWidth>
@@ -86,7 +87,7 @@ const ProductDetails = () => {
                             </DialogContent>
                             <DialogActions>
                             <Button onClick={handleClose}>Cancel</Button>
-                            <Button onClick={handleSubmitReviewRating}>Submit</Button>
+                            <Button onClick={handleSubmitReviewRating} color="success" >Submit</Button>
                             </DialogActions>
                         </Dialog>   
 
@@ -97,7 +98,7 @@ const ProductDetails = () => {
                             )}
                         </Box>
                          :                        
-                        <Typography variant='button'>No reviews yet</Typography>                        
+                        <Typography variant='button' spacing={6}>No reviews yet</Typography>                        
                         }
 
                     </Box>                

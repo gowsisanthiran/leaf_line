@@ -144,7 +144,7 @@ const AddNewProduct = () => {
     
   return (
     <Box sx={{m:'0 auto',marginTop:2, maxWidth:'550px'}}>
-        <Typography component='div' variant='h5'sx={{textAlign:'center'}}>Add new product</Typography>
+        <Typography component='div' color="#1b5e20" variant='h5'sx={{textAlign:'center'}}>Add new product</Typography>
         <Box component='form' onSubmit={handleSubmit}>
             <TextField type='text'
                         id='title'
@@ -156,6 +156,7 @@ const AddNewProduct = () => {
                         autoFocus
                         value={title}
                         onChange={(e=>setTitle(e.target.value))}
+                        color="success"
             />
             <TextareaAutosize required
                               aria-label='description'
@@ -164,6 +165,7 @@ const AddNewProduct = () => {
                               value={description}
                               style={{width:'100%',marginTop:'16px'}}
                               onChange={(e=>setDescription(e.target.value))}
+                              color="green"
             />
             <Grid container spacing={2}>
               <Grid item xs={6}>
@@ -176,6 +178,7 @@ const AddNewProduct = () => {
                           fullWidth
                           value={price}
                           onChange={(e=>setPrice(e.target.value))}
+                          color="success"
                 />
               </Grid>
               <Grid item xs={6}>
@@ -188,6 +191,7 @@ const AddNewProduct = () => {
                           fullWidth
                           value={discount}
                           onChange={(e=>setDiscount(e.target.value))}
+                          color="success"
                 />               
                 </Grid>
             </Grid>
@@ -204,6 +208,7 @@ const AddNewProduct = () => {
                           fullWidth
                           value={weight}
                           onChange={(e=>setWeight(e.target.value))}
+                          color="success"
                   />
                 </InfoTooltip>
               </Grid>
@@ -217,6 +222,7 @@ const AddNewProduct = () => {
                           fullWidth
                           value={stock}
                           onChange={(e=>setStock(e.target.value))}
+                          color="success"
                 />               
                 </Grid>
             </Grid>
@@ -230,7 +236,8 @@ const AddNewProduct = () => {
                             id='category'
                             value={category}
                             label='Category'
-                            onChange={(e=>setCategory(e.target.value))}>
+                            onChange={(e=>setCategory(e.target.value))}
+                            color="success">
 
                             {categories && categories.map((cat)=>
                               <MenuItem key={cat._id} value={cat._id}>{cat.title}</MenuItem>
@@ -246,7 +253,8 @@ const AddNewProduct = () => {
                             id='brand'
                             value={brand}
                             label='Brand'
-                            onChange={(e=>setBrand(e.target.value))}>
+                            onChange={(e=>setBrand(e.target.value))}
+                            color="success">
 
                             {brands && brands.map((brand)=>
                               <MenuItem key={brand._id} value={brand._id}>{brand.title}</MenuItem>
@@ -265,7 +273,8 @@ const AddNewProduct = () => {
                             id='store'
                             value={store}
                             label='Store'
-                            onChange={(e=>setStore(e.target.value))}>
+                            onChange={(e=>setStore(e.target.value))}
+                            color="success">
 
                             {stores && stores.map((store)=>
                               <MenuItem key={store._id} value={store._id}>{store.title}</MenuItem>
@@ -279,7 +288,7 @@ const AddNewProduct = () => {
             </Grid>
 
             <Grid container spacing={2} sx={{mt:'16px'}}>
-              <Grid item xs={6}>
+              {/* <Grid item xs={6}>
                   <FormControl fullWidth>
                     <InputLabel id='localShipmentPolicy'>Local Shipment Policy</InputLabel>
                     <Select required
@@ -287,15 +296,16 @@ const AddNewProduct = () => {
                             id='localShipmentPolicy'
                             value={localShipmentPolicy}
                             label='Local Shipment Policy'
-                            onChange={(e=>setLocalShipmentPolicy(e.target.value))}>
+                            onChange={(e=>setLocalShipmentPolicy(e.target.value))}
+                            color="success">
 
                             {POLICIES && POLICIES.map((policy)=>
                               <MenuItem key={policy.id} value={policy.type}>{policy.title}</MenuItem>
                             )}
                     </Select>
                   </FormControl>
-              </Grid>
-              <Grid item xs={6}>
+              </Grid> */}
+              {/* <Grid item xs={6}>
               <FormControl fullWidth>
                     <InputLabel id='internationalShipmentPolicy'>International Shipment Policy</InputLabel>
                     <Select required
@@ -303,14 +313,15 @@ const AddNewProduct = () => {
                             id='internationalShipmentPolicy'
                             value={internationalShipmentPolicy}
                             label='International Shipment Policy'
-                            onChange={(e=>setInternationalShipmentPolicy(e.target.value))}>
+                            onChange={(e=>setInternationalShipmentPolicy(e.target.value))}
+                            color="success">
 
                             {POLICIES && POLICIES.map((policy)=>
                               <MenuItem key={policy.id} value={policy.type}>{policy.title}</MenuItem>
                             )}
                     </Select>
                   </FormControl>             
-              </Grid>
+              </Grid> */}
             </Grid>
 
             <Grid container spacing={2}>
@@ -324,6 +335,7 @@ const AddNewProduct = () => {
                           fullWidth
                           value={customLocalShipmentCost}
                           onChange={(e=>setCustomLocalShipmentCost(e.target.value))}
+                          color="success"
                 />
                 }
               </Grid>
@@ -337,6 +349,7 @@ const AddNewProduct = () => {
                           fullWidth
                           value={customInternationalShipmentCost}
                           onChange={(e=>setCustomInternationalShipmentCost(e.target.value))}
+                          color="success"
                 /> 
                 }              
                 </Grid>
@@ -350,6 +363,7 @@ const AddNewProduct = () => {
                           type='file'
                           name='productImage'
                           onChange={imageHandler}
+                          color="success"
                   />
                   <Button type='button'
                               fullWidth
@@ -357,18 +371,20 @@ const AddNewProduct = () => {
                               variant='outlined'
                               startIcon={<CollectionsIcon/>}
                               sx={{m:'16px 0'}}
+                              color="success"
                   >Upload photo</Button>                  
                 </label>
             </Box>
             {images.length>0?
               <Box className='galleryback'>
                 {images.map((image,index)=>(
-                  <img key={index} src={image} alt='product image' style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} />
+                  <img key={index} src={image} alt='product image' style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} color="success" />
                 ))}
+                
               </Box>
             :
             <Box className='galleryback' style={{backgroundImage:`url("${galleryback}")`}}>
-                <img src={gallery} alt='oshop nophoto'/>
+                <img src={gallery} alt='oshop nophoto' color="success"/>
             </Box>
             }
 
@@ -378,8 +394,10 @@ const AddNewProduct = () => {
                         fullWidth
                         disabled={loading?true:false}
                         variant='contained'
+                        
                         startIcon={<AddBoxOutlinedIcon/>}
                         sx={{mt:3,mb:2}}
+                        color="success"
             >Add Product</Button>
         </Box>
     </Box>

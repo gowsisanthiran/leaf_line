@@ -29,8 +29,8 @@ const AddNewCategory = () => {
     
   return (
     <Box sx={{marginTop:2, display:'flex',flexDirection:'column',alignItems:'center'}}>
-        <Typography component='div' variant='h5'>Add new category</Typography>
-        <Box component='form' onSubmit={handleSubmit}>
+        <Typography component='div' variant='h5' color="#1b5e20">Add new category</Typography>
+        <Box component='form' onSubmit={handleSubmit} >
             <TextField type='text'
                         id='title'
                         label='Title'
@@ -41,6 +41,8 @@ const AddNewCategory = () => {
                         autoFocus
                         value={title}
                         onChange={(e=>setTitle(e.target.value))}
+                        color='success'
+                       
             />
             <TextField type='text'
                         id='description'
@@ -52,11 +54,13 @@ const AddNewCategory = () => {
                         autoFocus
                         value={description}
                         onChange={(e=>setDescription(e.target.value))}
+                        color='success'
             />
             <Button type='submit'
                         fullWidth
                         disabled={loading?true:false}
                         variant='contained'
+                        color='success'
                         startIcon={<AddBoxOutlinedIcon/>}
                         sx={{mt:3,mb:2}}
             >Add Category</Button>

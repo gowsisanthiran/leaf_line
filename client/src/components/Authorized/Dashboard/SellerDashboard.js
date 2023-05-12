@@ -1,8 +1,9 @@
 import React from 'react'
+import './seller.css'
 
 const SellerDashboard = () => {
   return (
-    <div>SellerDashboard</div>
+    <div class="dashboard">SellerDashboard</div>
   )
 }
 

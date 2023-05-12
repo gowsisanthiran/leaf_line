@@ -70,7 +70,7 @@ const Auth = () => {
         variant="fullWidth"
         aria-label="full width tabs example"
       >
-        <Tab label="Login" {...a11yProps(0)} />
+        <Tab label="Login" {...a11yProps(0)}  />
         <Tab label="Registration" {...a11yProps(1)} />
       </Tabs>
     </AppBar>

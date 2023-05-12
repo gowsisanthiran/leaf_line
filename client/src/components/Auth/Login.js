@@ -42,11 +42,11 @@ const Login = () => {
     
   return (
     <>
-    <Box sx={{marginTop:2, display:'flex',flexDirection:'column',alignItems:'center'}}>
-        <Avatar sx={{m:1,bgcolor:'primary.main'}}>
+    <Box sx={{marginTop:2, display:'flex',flexDirection:'column',alignItems:'center',}}>
+        <Avatar sx={{m:1,bgcolor:"green"}}>
             <LockOutlinedIcon/>
         </Avatar>
-        <Typography component='div' variant='h5'>Login</Typography>
+        <Typography component='div' variant='h5'  color="#1b5e20">Login</Typography>
 
         <Box component='form' onSubmit={handleSubmit}>
             <TextField type='email'
@@ -57,6 +57,7 @@ const Login = () => {
                         required
                         fullWidth
                         autoComplete='email'
+                        color="success"
                         autoFocus
                         value={email}
                         onChange={(e=>setEmail(e.target.value))}
@@ -68,12 +69,14 @@ const Login = () => {
                         margin='normal'
                         required
                         fullWidth
+                        color="success"
                         autoFocus
                         value={password}
                         onChange={(e=>setPassword(e.target.value))}
             />
             <Button type='submit'
                         fullWidth
+                        color="success"
                         variant='contained'
                         sx={{mt:3,mb:2}}
             >Login</Button>
@@ -81,7 +84,7 @@ const Login = () => {
             <Grid container style={{}}>
                 <Grid item xs>
                     <FormGroup>
-                        <FormControlLabel control={<Checkbox/>}
+                        <FormControlLabel   control={<Checkbox/>}
                                             label='Keep me logged in.'
                                             checked={checked}
                                             onChange={handleKeepMeLoggedIn}

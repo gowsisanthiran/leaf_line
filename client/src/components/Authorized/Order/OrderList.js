@@ -37,7 +37,7 @@ const OrderList = () => {
                     <>
                         <Link to={`/authorized/order/${params.getValue(params.id,'id')}`}>
                         <Tooltip title='Edit' placement='top'>
-                            <EditIcon sx={{width:'30px', height:'30px', color:'#1976d2'}} />
+                            <EditIcon sx={{width:'30px', height:'30px', color:'#1b5e20'}} />
                         </Tooltip>
                         </Link>
 
@@ -72,7 +72,7 @@ const OrderList = () => {
     
   return (
     <Box style={{displya:'flex', flexDirection:'column', width:'100%', marginTop:'15px', textAlign:'center'}}>
-        <Typography component='h1' variant='h5'sx={{m:4}}>Full list of brands</Typography>
+        <Typography component='h1'color="#1b5e20" variant='h5'sx={{m:4}}>Full list of brands</Typography>
         {loading ? <BoxShadowLoader/>:
         <DataGrid rows={rows}
                     columns={columns}

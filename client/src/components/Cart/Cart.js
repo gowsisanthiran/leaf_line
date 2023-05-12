@@ -39,9 +39,9 @@ const Cart = () => {
         products.length>0?
         <Box className='cart-items'>
             <Box className='cart-header'>
-                <Typography variant='button' display='block'>Product</Typography>
-                <Typography variant='button' display='block' sx={{textAlign:'center'}}>Quantity</Typography>
-                <Typography variant='button' display='block' sx={{textAlign:'right'}}>Subtotal</Typography>
+                <Typography variant='button' display='block' color="#1b5e20">Product</Typography>
+                <Typography variant='button' display='block'  color="#1b5e20" sx={{textAlign:'center'}}>Quantity</Typography>
+                <Typography variant='button' display='block'  color="#1b5e20" sx={{textAlign:'right'}}>Subtotal</Typography>
             </Box>
             {products && products.map((item)=>
             <Box className='cart-body' key={item._id}>
@@ -78,6 +78,7 @@ const Cart = () => {
             </Box> 
             <Box sx={{textAlign:'center'}}>
                 <Button variant='contained'
+                        color="success"
                         startIcon={<ShoppingCartCheckoutIcon/>}
                         onClick={chackOutHandler}> Checkout
                 </Button>

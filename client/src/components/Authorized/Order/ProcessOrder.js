@@ -58,7 +58,7 @@ const ProcessOrder = () => {
 
     <Box sx={{m:'20px 10px'}}>
         <Box className='title'>
-            <Avatar sx={{mr:1,background:'#fff', color:'#9c27b0',width:30,height:30}}><MonitorHeartIcon/></Avatar>
+            <Avatar sx={{mr:1,background:'#fff', color:'#43a047',width:30,height:30}}><MonitorHeartIcon/></Avatar>
             <Typography variant='button' 
                         component='div' 
                         gutterBottom>Order Status
@@ -143,7 +143,7 @@ const ProcessOrder = () => {
     <Box className='base-div3'>
         <Box className='div3'>
             <Box className='title'>
-                <Avatar sx={{mr:1,background:'#fff', color:'#9c27b0',width:30,height:30}}><LocalShippingIcon/></Avatar>
+                <Avatar sx={{mr:1,background:'#fff', color:'#43a047',width:30,height:30}}><LocalShippingIcon/></Avatar>
                 <Typography variant='button' 
                             component='div' 
                             gutterBottom>Shipping 
@@ -174,7 +174,7 @@ const ProcessOrder = () => {
 
         <Box className='div3'>
             <Box className='title'>
-                <Avatar sx={{mr:1,background:'#fff',color:'#9c27b0', width:30,height:30}}>
+                <Avatar sx={{mr:1,background:'#fff',color:'#43a047', width:30,height:30}}>
                     <ShoppingCartIcon/>
                 </Avatar>
                 <Typography component='div'
@@ -207,7 +207,7 @@ const ProcessOrder = () => {
 
         <Box className='div3'>
             <Box className='title'>
-                <Avatar sx={{mr:1,background:'#fff',color:'#9c27b0', width:30,height:30}}>
+                <Avatar sx={{mr:1,background:'#fff',color:'#43a047', width:30,height:30}}>
                     <FactCheckIcon/>
                 </Avatar>
                 <Typography component='div'

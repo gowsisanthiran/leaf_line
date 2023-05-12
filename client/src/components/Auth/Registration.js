@@ -52,17 +52,18 @@ const Registration = () => {
   return (
     <>
     <Box sx={{marginTop:2, display:'flex',flexDirection:'column',alignItems:'center'}}>
-        <Avatar sx={{m:1,bgcolor:'primary.main'}}>
+        <Avatar sx={{m:1,bgcolor:'#1b5e20'}}>
             <NoAccountsIcon/>
         </Avatar>
-        <Typography component='div' variant='h5'>Registration</Typography>
+        <Typography component='div' variant='h5' color="#1b5e20">Registration</Typography>
 
-        <Box component='form' onSubmit={handleSubmit}>
+        <Box component='form' onSubmit={handleSubmit} >
             <TextField type='text'
                         id='name'
                         label='Name'
                         name='name'
                         margin='normal'
+                        color="success"
                         required
                         fullWidth
                         autoFocus
@@ -75,6 +76,7 @@ const Registration = () => {
                         name='email'
                         margin='normal'
                         required
+                        color="success"
                         fullWidth
                         autoComplete='email'
                         value={email}
@@ -86,6 +88,7 @@ const Registration = () => {
                         name='password'
                         margin='normal'
                         required
+                        color="success"
                         fullWidth
                         autoFocus
                         value={password}
@@ -93,7 +96,7 @@ const Registration = () => {
             />
             <Grid container style={{alignItems:'center',margin:'10px 0'}}>
                 <Grid item xs>
-                  <Avatar sx={{m:1,bgcolor:'primary.main', height:'80px',width:'80px',fontSize:'5.35rem'}}>
+                  <Avatar sx={{m:1,bgcolor:'green', height:'80px',width:'80px',fontSize:'5.35rem'}}>
                     {!previewAvatar ?
                     <AccountCircleIcon fontSize='2.5rem'/>
                     :
@@ -105,6 +108,7 @@ const Registration = () => {
                   <Button fullWidth
                           variant='contained'
                           component='label'
+                          color="success"
                           startIcon={<PhotoIcon/>}
                   >
                     <input type='file' 
@@ -119,6 +123,7 @@ const Registration = () => {
             <Button type='submit'
                         fullWidth
                         variant='contained'
+                        color="success"
                         sx={{mt:3,mb:2}}
             >Registration & Login</Button>
 
@@ -126,6 +131,7 @@ const Registration = () => {
                 <Grid item xs>
                     <FormGroup>
                         <FormControlLabel control={<Checkbox/>}
+                       
                                             label='Keep me logged in.'
                                             checked={checked}
                                             onChange={handleKeepMeLoggedIn}
