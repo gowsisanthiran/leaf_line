@@ -5,20 +5,11 @@ import {axiosPublic} from '../../redux/axiosPublic';
 import ProductCard from '../Product/ProductCard';
 import {getCategories, selectAllCategories} from '../../redux/features/categorySlice';
 import './home.css'
+import Carousel from 'react-material-ui-carousel'
+import sl1 from '/home/gowsi/Music/Final_Project/client/src/images/sl1.jpg'
+import sl2 from '/home/gowsi/Music/Final_Project/client/src/images/sl2.jpg'
 
 import {Box, Typography} from '@mui/material';
-//Image
-const bananaLeaf = 'client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg';
-const bananaLeaf1 = 'client/src/images/Chinese Noodle Salad.jpeg';
-const bananaLeaf2 = 'client/src/images/palte.jpeg';
-const bananaLeaf3 = 'client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg';
-
-
-   
-
-
-
-
 
 const Home = () => {
     const limit=4;
@@ -72,7 +63,15 @@ const Home = () => {
     
     
   return (
-    <Box className='container'>
+    <Box >
+        <div className='banner'>
+        <Carousel>
+            <img src={sl1} className='bgImg' />
+            <img src={sl2} className='bgImg' />
+        </Carousel>
+        </div>
+        <Box className='container'>
+
         <Typography variant='div'
                     component='h3'
                     sx={{m:10,p:1,background:"#89D555",color:'#1F6415',textShadow:'1px 1px 1px #555'}}>
@@ -98,7 +97,7 @@ const Home = () => {
             </Box>
         </Box>
         )}
-
+        </Box>
     </Box>
 
     

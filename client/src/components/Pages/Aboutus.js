@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../../images/img1.jpeg'
+import image from '/home/gowsi/Music/Final_Project/client/src/images/img1.jpeg'
 
 const Aboutus = () => {
   return (
