@@ -232,7 +232,7 @@ const ConfirmOrder = () => {
     
     <Button variant='contained'
             sx={{m:4, width:250, m:'0 auto', display:'block'}}
-            onClick={proccedToPayment}>Procced to payment
+            onClick={proccedToPayment}>Proceed to payment
     </Button>
     </>
   )

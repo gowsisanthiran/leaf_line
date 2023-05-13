@@ -17,7 +17,7 @@ const AdminDashboard = () => {
     const {products}=useSelector(selectAllProducts);
     const {users}=useSelector(selectUserList);
     const {orders}=useSelector(selectAllOrders);
-    const {stores}=useSelector(selectAllStores);
+    // const {stores}=useSelector(selectAllStores);
 
     const outOfStock=0;
     products && products.forEach((item)=>{

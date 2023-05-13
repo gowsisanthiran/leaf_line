@@ -13,7 +13,7 @@ import CollectionsIcon from '@mui/icons-material/Collections';
 
 import {getCategories,selectAllCategories} from '../../../redux/features/categorySlice';
 import {getBrands,selectAllBrands} from '../../../redux/features/brandSlice';
-import {getStores,selectAllStores} from '../../../redux/features/storeSlice';
+// import {getStores,selectAllStores} from '../../../redux/features/storeSlice';
 import { productDetails, resetMutationResult, selectProductDetails, selectProductMutationResult, updateProduct } from '../../../redux/features/productSlice';
 import {POLICIES} from '../../../constants/policies';
 import { IMAGE_BASEURL } from '../../../constants/baseURL';
@@ -47,8 +47,8 @@ const UpdateProduct = () => {
     const [weight,setWeight]=useState(0);
     const [stock,setStock]=useState(1);
     const [category,setCategory]=useState('');
-    const [brand,setBrand]=useState('');
-    const [store,setStore]=useState('');
+    // const [brand,setBrand]=useState('');
+    // const [store,setStore]=useState('');
     const [localShipmentPolicy,setLocalShipmentPolicy]=useState('standard');
     const [internationalShipmentPolicy,setInternationalShipmentPolicy]=useState('standard');
     const [customLocalShipmentCost,setCustomLocalShipmentCost]=useState('');
@@ -59,7 +59,7 @@ const UpdateProduct = () => {
     const {loading, product}=useSelector(selectProductDetails);
     const {brands}=useSelector(selectAllBrands);
     const {categories}=useSelector(selectAllCategories);
-    const {stores}=useSelector(selectAllStores);
+    // const {stores}=useSelector(selectAllStores);
 
     const {loading:isUdating, success}=useSelector(selectProductMutationResult);
 
@@ -90,8 +90,8 @@ const UpdateProduct = () => {
         formData.append('weight',weight);
         formData.append('stock',stock);
         formData.append('category',category);
-        formData.append('brand',brand);
-        formData.append('store',store);
+        // formData.append('brand',brand);
+        // formData.append('store',store);
         formData.append('localShipmentPolicy',localShipmentPolicy);
         formData.append('internationalShipmentPolicy',internationalShipmentPolicy);
         formData.append('customLocalShipmentCost',customLocalShipmentCost);
@@ -108,9 +108,9 @@ const UpdateProduct = () => {
         if(success){
             dispatch(resetMutationResult());
         }
-        dispatch(getBrands({toast}));
-        dispatch(getCategories({toast}));
-        dispatch(getStores({toast}));
+        // dispatch(getBrands({toast}));
+        // dispatch(getCategories({toast}));
+        // dispatch(getStores({toast}));
         dispatch(productDetails({id,toast}));
     }, [dispatch,id,success]);
 
@@ -124,8 +124,8 @@ const UpdateProduct = () => {
             setWeight(product?.weight);
             setStock(product?.stock);
             setCategory(product?.category?._id);
-            setBrand(product?.brand?._id);
-            setStore(product?.store?._id);
+            // setBrand(product?.brand?._id);
+            // setStore(product?.store?._id);
             setLocalShipmentPolicy(product?.localShipmentPolicy);
             setInternationalShipmentPolicy(product?.internationalShipmentPolicy);
             setCustomLocalShipmentCost(product?.customLocalShipmentCost);
@@ -240,7 +240,7 @@ const UpdateProduct = () => {
                     </Select>
                   </FormControl>
               </Grid>
-              <Grid item xs={6}>
+              {/* <Grid item xs={6}>
                 <FormControl fullWidth color="success">
                     <InputLabel id='brand'color="success">Brand</InputLabel>
                     <Select required
@@ -255,10 +255,10 @@ const UpdateProduct = () => {
                             )}
                     </Select>
                   </FormControl>             
-              </Grid>
+              </Grid> */}
             </Grid>
 
-            <Grid container spacing={2} sx={{mt:'16px'}}>
+            {/* <Grid container spacing={2} sx={{mt:'16px'}}>
               <Grid item xs={6}>
                 <FormControl fullWidth color="success">
                   <InputLabel id='store' color="success">Store</InputLabel>
@@ -278,7 +278,7 @@ const UpdateProduct = () => {
               <Grid item xs={6}>
                
               </Grid>
-            </Grid>
+            </Grid> */}
 
             <Grid container spacing={2} sx={{mt:'16px'}} >
               <Grid item xs={6}>
@@ -348,7 +348,7 @@ const UpdateProduct = () => {
 
             <Box>
                 <label htmlFor='productImage'>
-                  <Input  accept='imaage/*'
+                  <Input  accept='image/*'
                           id='productImage'
                           multiple
                           type='file'

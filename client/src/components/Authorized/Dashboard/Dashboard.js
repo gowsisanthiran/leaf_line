@@ -4,14 +4,14 @@ import {selectLoggedInUser} from '../../../redux/features/authSlice';
 import {useSelector} from 'react-redux';
 
 import AdminDashboard from './AdminDashboard';
-import SellerDashboard from './SellerDashboard';
+import Login from '../../Auth/Login';
 
 const Dashboard = () => {
   const {accessToken}=useSelector(selectLoggedInUser);
   let role;
   const {UserInfo}=jwtDecode(accessToken);
   role=UserInfo.roles[0];
-  return role==='admin'? <AdminDashboard/> : <SellerDashboard/>;
+  return role==='admin'? <AdminDashboard/> : <Login/>;
 }
 
 export default Dashboard

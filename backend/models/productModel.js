@@ -45,7 +45,7 @@ const productSchema=new mongoose.Schema({
     },
     localShipmentPolicy:{
         type:String,
-        required:[true,'Please select a local shipment policy.'],
+        // required:[true,'Please select a local shipment policy.'],
         default:'standard',
         enum:['free','standard','custom']
     },
