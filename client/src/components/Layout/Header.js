@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '/home/gowsi/Documents/Final_Project/client/src/images/Green_Creative_Geometry_Leaf_Circular_Logo__2_-removebg-preview.png';
+import logo from '../../images/Logo.png';
 import './Header.css';
 import {NavLink,Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';

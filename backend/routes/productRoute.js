@@ -12,7 +12,7 @@ const router=express.Router();
 
 
 router.route('/products').post(isAuthenticated,
-                authorizeRoles('admin','seller'),
+                authorizeRoles('admin'),
                 fileUpload({createParentPath:true}),
                 filesPayloadExists,
                 fileExtLimiter(['.png','.jpg','.jpeg']),
@@ -20,7 +20,7 @@ router.route('/products').post(isAuthenticated,
 
 router.route('/products/:id').get(getProductDetails)
                                 .put(isAuthenticated,
-                                    authorizeRoles('admin','seller'),
+                                    authorizeRoles('admin'),
                                     fileUpload({createParentPath:true}),
                                     fileExtLimiter(['.png','.jpg','.jpeg']),
                                     fileSizeLimiter,updateProduct).
@@ -28,7 +28,7 @@ router.route('/products/:id').get(getProductDetails)
                                     authorizeRoles('admin'),
                                     deleteProduct)
 
-router.route('/athorized/products').get(isAuthenticated,authorizeRoles('admin','seller'),getProductsByAuthorizeRoles)
+router.route('/athorized/products').get(isAuthenticated,authorizeRoles('admin'),getProductsByAuthorizeRoles)
 
 
 module.exports=router;

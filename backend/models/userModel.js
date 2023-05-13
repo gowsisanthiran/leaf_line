@@ -29,11 +29,7 @@ const userSchema=new mongoose.Schema({
         type:[String],
         default:'user',
         required:true,
-        enum:['admin','seller','user']
-    },
-    store:{
-        type:mongoose.Schema.ObjectId,
-        ref:"Store"
+        enum:['admin','user']
     },
     updatedBy:{
         user:{
