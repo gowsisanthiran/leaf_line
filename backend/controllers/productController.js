@@ -7,13 +7,9 @@ const ApiFeatures = require('../utils/apiFeatures');
 const ErrorHandler = require('../utils/errorHandler');
 
 exports.addProduct=asyncHandler(async(req,res,next)=>{
-    const {roles}=req.userInfo;
-    req.body.addedBy=req.userInfo.userId;
-    // if(roles==='seller' || roles.includes('seller')){
-    //     req.body.store=req.userInfo.storeId;
-    // }else{
-    //     req.body.store=req.body.store;
-    // }
+    // const {roles}=req.userInfo;
+    // req.body.addedBy=req.userInfo.userId;
+    //
     let product=await Product.create(req.body);
     if(product){
         const path=`products/${product._id}`;
