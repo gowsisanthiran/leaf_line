@@ -1,4 +1,5 @@
 import React from 'react'
+import image from '/home/gowsi/Music/Final_Project/client/src/images/img1.jpeg'
 import image from '/home/ukijaffna/Documents/Final_Project/client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg'
 
 const Aboutus = () => {
@@ -14,7 +15,7 @@ Furthermore, using biodegradable banana leaf plates supports local communities a
 
 Overall, biodegradable banana leaf plates offer a sustainable and eco-friendly option for those who want to reduce their environmental impact while still enjoying the convenience of disposable plates.</p>
 
-<img src ={image} alt='about'></img>
+<img src ={image} alt='about' />
 
 
     </div>

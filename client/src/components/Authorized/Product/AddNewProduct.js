@@ -10,8 +10,6 @@ import {styled} from '@mui/material/styles';
 import CollectionsIcon from '@mui/icons-material/Collections';
 
 import {getCategories,selectAllCategories} from '../../../redux/features/categorySlice';
-import {getBrands,selectAllBrands} from '../../../redux/features/brandSlice';
-import {getStores,selectAllStores} from '../../../redux/features/storeSlice';
 import {addProduct,resetMutationResult,selectProductMutationResult} from '../../../redux/features/productSlice';
 import {POLICIES} from '../../../constants/policies';
 import gallery from '../../../images/gallery.png';
@@ -39,9 +37,7 @@ const AddNewProduct = () => {
 
     const dispatch=useDispatch();
     const {loading,success}=useSelector(selectProductMutationResult);
-    const {brands}=useSelector(selectAllBrands);
     const {categories}=useSelector(selectAllCategories);
-    const {stores}=useSelector(selectAllStores);
 
     const [title,setTitle]=useState('');
     const [description,setDescription]=useState('');
@@ -50,8 +46,6 @@ const AddNewProduct = () => {
     const [weight,setWeight]=useState(0);
     const [stock,setStock]=useState(1);
     const [category,setCategory]=useState('');
-    const [brand,setBrand]=useState('');
-    const [store,setStore]=useState('');
     const [localShipmentPolicy,setLocalShipmentPolicy]=useState('standard');
     const [internationalShipmentPolicy,setInternationalShipmentPolicy]=useState('standard');
     const [customLocalShipmentCost,setCustomLocalShipmentCost]=useState('');
@@ -98,10 +92,8 @@ const AddNewProduct = () => {
         formData.append('price',price);
         formData.append('discount',discount);
         formData.append('weight',weight);
-        formData.append('stock',stock);
         formData.append('category',category);
-        formData.append('brand',brand);
-        formData.append('store',store);
+       ;
 
         formData.append('localShipmentPolicy',localShipmentPolicy);
         formData.append('internationalShipmentPolicy',internationalShipmentPolicy);
@@ -115,9 +107,7 @@ const AddNewProduct = () => {
     }
 
     useEffect(() => {
-      dispatch(getBrands({toast}));
       dispatch(getCategories({toast}));
-      dispatch(getStores({toast}));
     }, [dispatch]);
     
     useEffect(() => {
@@ -131,12 +121,7 @@ const AddNewProduct = () => {
         setWeight(0);
         setStock(1);
         setCategory('');
-        setBrand('');
-        setStore('');
-        setLocalShipmentPolicy('standard');
-        setInternationalShipmentPolicy('standard');
-        setCustomLocalShipmentCost('');
-        setCustomInternationalShipmentCost('');
+        
         setImages([]);
         setProductFiles('');
       }
@@ -212,7 +197,7 @@ const AddNewProduct = () => {
                   />
                 </InfoTooltip>
               </Grid>
-              {/* <Grid item xs={6}>
+               <Grid item xs={6}>
                 <TextField type='number'
                           id='stock'
                           label='Stock'
@@ -245,50 +230,12 @@ const AddNewProduct = () => {
                     </Select>
                   </FormControl>
               </Grid>
-              <Grid item xs={6}>
-                <FormControl fullWidth>
-                    <InputLabel id='brand'>Brand</InputLabel>
-                    <Select required
-                            labelId='brand'
-                            id='brand'
-                            value={brand}
-                            label='Brand'
-                            onChange={(e=>setBrand(e.target.value))}
-                            color="success">
-
-                            {brands && brands.map((brand)=>
-                              <MenuItem key={brand._id} value={brand._id}>{brand.title}</MenuItem>
-                            )}
-                    </Select>
-                  </FormControl>             
-              </Grid> */}
+              
             </Grid>
-{/* 
+
+            
             <Grid container spacing={2} sx={{mt:'16px'}}>
               <Grid item xs={6}>
-                <FormControl fullWidth>
-                  <InputLabel id='store'>Store</InputLabel>
-                    <Select required
-                            labelId='store'
-                            id='store'
-                            value={store}
-                            label='Store'
-                            onChange={(e=>setStore(e.target.value))}
-                            color="success">
-
-                            {stores && stores.map((store)=>
-                              <MenuItem key={store._id} value={store._id}>{store.title}</MenuItem>
-                            )}
-                    </Select>
-                  </FormControl>
-              </Grid>
-              <Grid item xs={6}>
-               
-              </Grid>
-            </Grid> */}
-
-            <Grid container spacing={2} sx={{mt:'16px'}}>
-              {/* <Grid item xs={6}>
                   <FormControl fullWidth>
                     <InputLabel id='localShipmentPolicy'>Local Shipment Policy</InputLabel>
                     <Select required
@@ -304,8 +251,8 @@ const AddNewProduct = () => {
                             )}
                     </Select>
                   </FormControl>
-              </Grid> */}
-              {/* <Grid item xs={6}>
+              </Grid>
+              <Grid item xs={6}>
               <FormControl fullWidth>
                     <InputLabel id='internationalShipmentPolicy'>International Shipment Policy</InputLabel>
                     <Select required
@@ -321,7 +268,7 @@ const AddNewProduct = () => {
                             )}
                     </Select>
                   </FormControl>             
-              </Grid> */}
+              </Grid>
             </Grid>
 
             <Grid container spacing={2}>
@@ -357,7 +304,7 @@ const AddNewProduct = () => {
 
             <Box>
                 <label htmlFor='productImage'>
-                  <Input  accept='imaage/*'
+                  <Input  accept='image/'
                           id='productImage'
                           multiple
                           type='file'

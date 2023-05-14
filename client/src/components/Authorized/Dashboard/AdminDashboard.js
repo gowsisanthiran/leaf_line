@@ -5,7 +5,6 @@ import {useSelector,useDispatch} from 'react-redux';
 import {selectUserList,getAllUsers} from '../../../redux/features/authSlice';
 import {selectAllProducts,getProductsByAuthorizeRoles} from '../../../redux/features/productSlice';
 import {getAllOrders,selectAllOrders} from '../../../redux/features/orderSlice';
-import {getStores,selectAllStores} from '../../../redux/features/storeSlice';
 
 import {Doughnut,Line} from 'react-chartjs-2';
 import chart from 'chart.js/auto';
@@ -17,7 +16,6 @@ const AdminDashboard = () => {
     const {products}=useSelector(selectAllProducts);
     const {users}=useSelector(selectUserList);
     const {orders}=useSelector(selectAllOrders);
-    const {stores}=useSelector(selectAllStores);
 
     const outOfStock=0;
     products && products.forEach((item)=>{
@@ -36,7 +34,6 @@ const AdminDashboard = () => {
       dispatch(getProductsByAuthorizeRoles({toast}));
       dispatch(getAllOrders({toast}));
       dispatch(getAllUsers({toast}));
-      dispatch(getStores({toast}));
     }, [dispatch]);
 
     const lineData={
@@ -78,11 +75,7 @@ const AdminDashboard = () => {
             <Typography variant='button' component='div'>{users && users.length}</Typography>
         </Grid>
 
-        {/* <Grid item xs={4}>
-            <Typography variant='button' component='div' sx={{color:'#fff', background:'#66bb6a'}}>Stores</Typography>
-            <Divider/>
-            <Typography variant='button' component='div'>{stores && stores.length}</Typography>
-        </Grid> */}
+        
 
         <Grid item xs={6}>
             <Typography variant='button' component='div' sx={{color:'#fff', background:'#66bb6a'}}>Orders</Typography>
@@ -98,10 +91,7 @@ const AdminDashboard = () => {
 
     </Grid>
 
-        {/* <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
-        <Grid item xs={5}><Line data={lineData}/></Grid>
-        <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
-        </Grid> */}
+        
     </Box>
     </>
   )

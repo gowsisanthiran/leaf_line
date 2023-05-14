@@ -19,17 +19,17 @@ import UpdateProfile from './components/Auth/UpdateProfile';
 import UpdatePassword from './components/Auth/UpdatePassword';
 import Dashboard from './components/Authorized/Dashboard/Dashboard';
 
-import AddNewBrand from './components/Authorized/Brand/AddNewBrand';
-import BrandList from './components/Authorized/Brand/BrandList';
-import UpdateBrand from './components/Authorized/Brand/UpdateBrand';
+// import AddNewBrand from './components/Authorized/Brand/AddNewBrand';
+// import BrandList from './components/Authorized/Brand/BrandList';
+// import UpdateBrand from './components/Authorized/Brand/UpdateBrand';
 
 import AddNewCategory from './components/Authorized/Category/AddNewCategory';
 import CategoryList from './components/Authorized/Category/CategoryList';
 import UpdateCategory from './components/Authorized/Category/UpdateCategory';
 
-import AddNewStore from './components/Authorized/Store/AddNewStore';
-import StoreList from './components/Authorized/Store/StoreList';
-import UpdateStore from './components/Authorized/Store/UpdateStore';
+// import AddNewStore from './components/Authorized/Store/AddNewStore';
+// import StoreList from './components/Authorized/Store/StoreList';
+// import UpdateStore from './components/Authorized/Store/UpdateStore';
 
 import AddNewProduct from './components/Authorized/Product/AddNewProduct';
 import ProductList from './components/Authorized/Product/ProductList';
@@ -129,17 +129,17 @@ function App() {
             <Route path='/authorized' element={<AuthorizedRoute/>}>
               <Route path='dashboard' element={<Dashboard/>} />
 
-              <Route path='brand' element={<AddNewBrand/>} />
+              {/* <Route path='brand' element={<AddNewBrand/>} />
               <Route path='brandlist' element={<BrandList/>} />
-              <Route path='brand/:id' element={<UpdateBrand/>} />
+              <Route path='brand/:id' element={<UpdateBrand/>} /> */}
 
               <Route path='category' element={<AddNewCategory/>} />
               <Route path='categorylist' element={<CategoryList/>} />
               <Route path='category/:id' element={<UpdateCategory/>} />
 
-              <Route path='store' element={<AddNewStore/>} />
+              {/* <Route path='store' element={<AddNewStore/>} />
               <Route path='storelist' element={<StoreList/>} />
-              <Route path='store/:id' element={<UpdateStore/>} />
+              <Route path='store/:id' element={<UpdateStore/>} /> */}
 
               <Route path='product' element={<AddNewProduct/>} />
               <Route path='productlist' element={<ProductList/>} />

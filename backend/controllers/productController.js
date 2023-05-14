@@ -7,16 +7,12 @@ const ApiFeatures = require('../utils/apiFeatures');
 const ErrorHandler = require('../utils/errorHandler');
 
 exports.addProduct=asyncHandler(async(req,res,next)=>{
-    const {roles}=req.userInfo;
-    req.body.addedBy=req.userInfo.userId;
-    if(roles==='seller' || roles.includes('seller')){
-        req.body.store=req.userInfo.storeId;
-    }else{
-        req.body.store=req.body.store;
-    }
+    // const {roles}=req.userInfo;
+    // req.body.addedBy=req.userInfo.userId;
+    //
     let product=await Product.create(req.body);
     if(product){
-        const path=`products/${req.body.store}/${product._id}`;
+        const path=`products/${product._id}`;
         const productImages=await saveImages(req.files,path);
         product.images=productImages.map((image)=>({url:image}));
         product=await product.save();
@@ -78,8 +74,8 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
 exports.getProductDetails = asyncHandler(async (req, res, next) => {
   const product=await Product.findById(req.params.id)
-  .populate('store', 'id title')
-  .populate('brand','id title')
+//   .populate('store', 'id title')
+  // .populate('brand','id title')
   .populate('category','id title')
   .populate({path:'reviews',populate:({path:'user',select:'name avatar'})});
 
@@ -89,11 +85,11 @@ exports.getProductDetails = asyncHandler(async (req, res, next) => {
 
   exports.getProductsByAuthorizeRoles = asyncHandler(async (req, res, next) => {
     const {roles}=req.userInfo;
-    let storeId;
+    // let storeId;
     let products;
-    if(roles==='seller' || roles.includes('seller')){
-      storeId=req.userInfo.storeId;
-      products=await Product.find({store:storeId});
+    if(roles==='admin' || roles.includes('admin')){
+      // storeId=req.userInfo.storeId;
+      products=await Product.find();
     }else{
       products=await Product.find();
     }
@@ -107,8 +103,8 @@ exports.getProductDetails = asyncHandler(async (req, res, next) => {
 
     let product;
     if(roles==='seller' || roles.includes('seller')){
-      product=await Product.findOne({_id:req.params.id,store:req.userInfo.storeId});
-      req.body.store=req.userInfo.storeId;
+      product=await Product.findOne({_id:req.params.id});
+      // req.body.store=req.userInfo.storeId;
     }else{
       product=await Product.findById(req.params.id);
     }

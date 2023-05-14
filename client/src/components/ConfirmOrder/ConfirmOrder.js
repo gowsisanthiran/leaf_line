@@ -235,6 +235,7 @@ const ConfirmOrder = () => {
            color='success'
             sx={{m:4, width:250, m:'0 auto', display:'block', }}
             onClick={proccedToPayment}>Procced to payment
+    
     </Button>
     </>
   )
