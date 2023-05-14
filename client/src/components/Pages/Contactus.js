@@ -13,7 +13,9 @@ const Contactus = () => {
   const handleChecked = () => setChecked(!checked);
 
   return (
-    <Box component="section" py={12}>
+    
+    <Box component="section" py={12 }>
+      
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
           <Typography variant="h3" mb={1}>
@@ -22,18 +24,33 @@ const Contactus = () => {
         </Grid>
         <Grid container item xs={12} lg={7} sx={{ mx: "auto" }}>
           <Box width="100%" component="form" method="post" autocomplete="off">
+          
             <Box p={3}>
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                  <input variant="standard" label="First Name" fullWidth />
+                <Typography variant="h6" mb={1}>
+            First Name
+          </Typography>
+                 <input variant="standard" label="First Name" fullWidth /> 
+                 
+
                 </Grid>
                 <Grid item xs={12} md={6}>
+                <Typography variant="h6" mb={1}>
+            Last Name
+          </Typography>
                   <input variant="standard" label="Last Name" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
+                <Typography variant="h6" mb={1}>
+            Email Address
+          </Typography>
                   <input variant="standard" type="email" label="Email Address" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
+                <Typography variant="h6" mb={1}>
+            Your Message
+          </Typography>
                   <input variant="standard" label="Your Message" multiline fullWidth rows={6} />
                 </Grid>
                 <Grid item xs={12} alignItems="center" ml={-1}>
@@ -53,14 +70,14 @@ const Contactus = () => {
                     href="#"
                     variant="button"
                     fontWeight="regular"
-                    color="dark"
+                    color="#1F6415"
                   >
                     Terms and Conditions
                   </Typography>
                 </Grid>
               </Grid>
               <Grid container item justifyContent="center" xs={12} my={2}>
-                <button type="submit" variant="gradient" color="dark" fullWidth>
+                <button type="submit" variant="gradient" color="#1F6415" fullWidth>
                   Send Message
                 </button>
               </Grid>
@@ -68,6 +85,7 @@ const Contactus = () => {
           </Box>
         </Grid>
       </Container>
+      
     </Box>
   );
 }
