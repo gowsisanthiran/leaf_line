@@ -35,7 +35,7 @@ const Header = () => {
           <div className='logo-area'>
             <Tooltip title='Home'>
               <Link to='/'>
-                <img src={logo} alt='L E A F L I N E ecommerce site' style={{width:'40px'}}/>
+              <span className='logo'>leafline</span>
               </Link>
             </Tooltip>
           </div>

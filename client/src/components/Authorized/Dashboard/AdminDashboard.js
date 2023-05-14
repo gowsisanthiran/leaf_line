@@ -77,13 +77,13 @@ const AdminDashboard = () => {
 
         
 
-        <Grid item xs={6}>
+        <Grid item xs={4}>
             <Typography variant='button' component='div' sx={{color:'#fff', background:'#66bb6a'}}>Orders</Typography>
             <Divider/>
             <Typography variant='button' component='div'>{orders && orders.length}</Typography>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={4}>
             <Typography variant='button' component='div' sx={{color:'#fff', background:'#66bb6a'}}>Ordered Amount</Typography>
             <Divider/>
             <Typography variant='button' component='div'>{orders && totalAmount}</Typography>

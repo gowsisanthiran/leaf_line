@@ -106,22 +106,12 @@ export default function TreeMenu() {
           <StyledTreeItem nodeId="10" label="Category List" onClick={()=>goto('categorylist')}  />
         </StyledTreeItem>
 
-        {/* <StyledTreeItem nodeId="3" label="Brand">
-          <StyledTreeItem nodeId="11" label="New Brand" onClick={()=>goto('brand')}  />
-          <StyledTreeItem nodeId="12" label="Brand List" onClick={()=>goto('brandlist')}  />
-        </StyledTreeItem> */}
-
-        {/* <StyledTreeItem nodeId="4" label="Store">
-          <StyledTreeItem nodeId="13" label="New Store" onClick={()=>goto('store')}  />
-          <StyledTreeItem nodeId="14" label="Store List" onClick={()=>goto('storelist')}  />
-        </StyledTreeItem> */}
-
         <StyledTreeItem nodeId="5" label="Product">
           <StyledTreeItem nodeId="15" label="New Product" onClick={()=>goto('product')}  />
           <StyledTreeItem nodeId="16" label="Product List" onClick={()=>goto('productlist')} />
         </StyledTreeItem>
 
-        {/* <StyledTreeItem nodeId="6" label="Review List" onClick={()=>goto('reviewlist')}  /> */}
+        <StyledTreeItem nodeId="6" label="Review List" onClick={()=>goto('reviewlist')}  />
 
         <StyledTreeItem nodeId="7" label="Order List" onClick={()=>goto('orderlist')}  />
 

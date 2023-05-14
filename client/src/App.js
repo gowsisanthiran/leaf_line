@@ -4,6 +4,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import notfound from './images/notfound.svg';
 
+
+
 import {useDispatch, useSelector} from 'react-redux';
 import { axiosPublic } from './redux/axiosPublic';
 
@@ -89,6 +91,7 @@ function App() {
   
   return (
     isLoading ? <BoxShadowLoader/> :
+
     <div className="App">
       <ToastContainer
         position="top-center"
@@ -129,24 +132,17 @@ function App() {
             <Route path='/authorized' element={<AuthorizedRoute/>}>
               <Route path='dashboard' element={<Dashboard/>} />
 
-              {/* <Route path='brand' element={<AddNewBrand/>} />
-              <Route path='brandlist' element={<BrandList/>} />
-              <Route path='brand/:id' element={<UpdateBrand/>} /> */}
-
               <Route path='category' element={<AddNewCategory/>} />
               <Route path='categorylist' element={<CategoryList/>} />
               <Route path='category/:id' element={<UpdateCategory/>} />
 
-              {/* <Route path='store' element={<AddNewStore/>} />
-              <Route path='storelist' element={<StoreList/>} />
-              <Route path='store/:id' element={<UpdateStore/>} /> */}
 
               <Route path='product' element={<AddNewProduct/>} />
               <Route path='productlist' element={<ProductList/>} />
               <Route path='product/:id' element={<UpdateProduct/>} />
 
               <Route path='orderlist' element={<OrderList/>}/>
-              <Route path='order/:id' element={<ProcessOrder/>}/>
+              <Route path='/authorized/order/:id' element={<ProcessOrder/>}/>
 
               <Route path='reviewlist' element={<ReviewList/>}/>
 
@@ -164,6 +160,7 @@ function App() {
         </Route>
       </Routes>
     </div>
+
   );
 }
 

@@ -207,7 +207,7 @@ const Products = () => {
         </Accordion>
 
         </Box>
-        authorized/categorylist
+        
         <Box className='container'>
           {loading && loading ? <HeadingWaveSkeleton/>:
             <Typography variant='div'

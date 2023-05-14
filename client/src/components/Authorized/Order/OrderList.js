@@ -71,8 +71,8 @@ const OrderList = () => {
     }, [dispatch,success])
     
   return (
-    <Box style={{displya:'flex', flexDirection:'column', width:'100%', marginTop:'15px', textAlign:'center'}}>
-        <Typography component='h1'color="#1b5e20" variant='h5'sx={{m:4}}>Full list of brands</Typography>
+    <Box style={{display:'flex', flexDirection:'column', width:'100%', marginTop:'15px', textAlign:'center'}}>
+        <Typography component='h1'color="#1b5e20" variant='h5'sx={{m:4}}>Full list of Orders</Typography>
         {loading ? <BoxShadowLoader/>:
         <DataGrid rows={rows}
                     columns={columns}

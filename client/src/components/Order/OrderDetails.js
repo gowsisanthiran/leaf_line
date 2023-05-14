@@ -47,23 +47,26 @@ const OrderDetails = () => {
         </Box>
         <Box>
             <List>
-                <ListItem>
-                    <ListItemAvatar>
-                        <Avatar>
-                            <AttachMoneyIcon/>
-                        </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText>{order && order.paymentInfo.status==='succeeded' ? 'Paid' : 'Not Paid'}</ListItemText>
-                </ListItem>
+            <ListItem>
+  <ListItemAvatar>
+    <Avatar>
+      <AttachMoneyIcon />
+    </Avatar>
+  </ListItemAvatar>
+  <ListItemText>
+    {order?.paymentInfo?.status === 'succeeded' ? 'Paid' : 'Not Paid'}
+  </ListItemText>
+</ListItem>
 
-                <ListItem>
-                    <ListItemAvatar>
-                        <Avatar>
-                            <TakeoutDiningIcon/>
-                        </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText primary={order && order.orderStatus}/>
-                </ListItem>
+<ListItem>
+  <ListItemAvatar>
+    <Avatar>
+      <TakeoutDiningIcon />
+    </Avatar>
+  </ListItemAvatar>
+  <ListItemText primary={order?.orderStatus} />
+</ListItem>
+
             </List>
         </Box>
     </Box>
