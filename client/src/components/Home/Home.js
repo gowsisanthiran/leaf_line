@@ -6,8 +6,8 @@ import ProductCard from '../Product/ProductCard';
 import {getCategories, selectAllCategories} from '../../redux/features/categorySlice';
 import './home.css'
 import Carousel from 'react-material-ui-carousel'
-import sl1 from '/home/gowsi/Music/Final_Project/client/src/images/sl1.jpg'
-import sl2 from '/home/gowsi/Music/Final_Project/client/src/images/sl2.jpg'
+import sl1 from '/home/gowsi/Music/Final_Project/client/src/images/pic01.jpeg'
+import sl2 from '/home/gowsi/Music/Final_Project/client/src/images/sl1.jpg'
 
 import {Box, Typography} from '@mui/material';
 
@@ -67,6 +67,8 @@ const Home = () => {
         <div className='banner'>
         <Carousel>
             <img src={sl1} className='bgImg' />
+            <img src={sl2} className='bgImg' />
+            <img src={sl2} className='bgImg' />
             <img src={sl2} className='bgImg' />
         </Carousel>
         </div>
