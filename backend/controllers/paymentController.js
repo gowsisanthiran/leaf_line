@@ -6,7 +6,7 @@ exports.processPayment=asyncHandler(async(req,res,next)=>{
 
     const paymentIntent=await stripe.paymentIntents.create({
         amount:req.body.amount,
-        currency:'lkr',
+        currency:'inr',
         automatic_payment_methods:{enabled:true}
     });
     res.status(200).json({clientSecret:paymentIntent.client_secret});
