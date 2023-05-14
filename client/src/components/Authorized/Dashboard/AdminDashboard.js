@@ -17,12 +17,13 @@ const AdminDashboard = () => {
     const {users}=useSelector(selectUserList);
     const {orders}=useSelector(selectAllOrders);
 
-    const outOfStock=0;
-    products && products.forEach((item)=>{
-        if(item.stock===0){
-            outOfStock+=1;
-        }
-    })
+    let outOfStock = 0;
+products && products.forEach((item) => {
+    if (item.stock === 0) {
+        outOfStock += 1;
+    }
+});
+
 
     let totalAmount=0;
     orders && orders.forEach((item)=>{
