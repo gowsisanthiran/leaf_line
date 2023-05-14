@@ -6,8 +6,9 @@ import ProductCard from '../Product/ProductCard';
 import {getCategories, selectAllCategories} from '../../redux/features/categorySlice';
 import './home.css'
 import Carousel from 'react-material-ui-carousel'
-import sl1 from '../../images/pic01.jpeg'
-import sl2 from '../../images/sl1.jpg'
+import sl1 from '/home/gowsi/Music/Final_Project/client/src/images/pic01.jpeg'
+import sl2 from '/home/gowsi/Music/Final_Project/client/src/images/sl1.jpg'
+
 
 import {Box, Typography} from '@mui/material';
 
@@ -64,12 +65,14 @@ const Home = () => {
     
   return (
     <Box >
-        <Box>
-            <div className='imageBackground'>
-                <h2 className='tagLine'>"Naturel Fine Dining"</h2>
-            </div>
-        </Box>
-
+        <div className='banner'>
+        <Carousel>
+            <img src={sl1} className='bgImg' />
+            <img src={sl2} className='bgImg' />
+            <img src={sl2} className='bgImg' />
+            <img src={sl2} className='bgImg' />
+        </Carousel>
+        </div>
         <Box className='container'>
             <Typography variant='div' component='h3' sx={{m:10,p:1,background:"#89D555",color:'#1F6415',textShadow:'1px 1px 1px #555'}}>
                 Top rated products 

@@ -13,7 +13,9 @@ const Contactus = () => {
   const handleChecked = () => setChecked(!checked);
 
   return (
-    <Box component="section" py={12}>
+    
+    <Box component="section" py={12 }>
+      
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
           <Typography variant="h3" mb={1}>
@@ -53,7 +55,7 @@ const Contactus = () => {
                     href="#"
                     variant="button"
                     fontWeight="regular"
-                    color="dark"
+                    color="#1F6415"
                   >
                     Terms and Conditions
                   </Typography>
@@ -68,6 +70,7 @@ const Contactus = () => {
           </Box>
         </Grid>
       </Container>
+      
     </Box>
   );
 }
