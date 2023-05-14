@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box,Typography } from '@mui/material';
+import { Box,Typography, TextField, Button } from '@mui/material';
 import { useState } from "react";
 
 // @mui material components
@@ -21,20 +21,20 @@ const Contactus = () => {
           </Typography>
         </Grid>
         <Grid container item xs={12} lg={7} sx={{ mx: "auto" }}>
-          <Box width="100%" component="form" method="post" autocomplete="off">
+          <Box width="100%" component="form" method="post" autoComplete="off">
             <Box p={3}>
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                  <input variant="standard" label="First Name" fullWidth />
+                  <TextField label="First Name" variant="standard" fullWidth />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <input variant="standard" label="Last Name" fullWidth />
+                  <TextField label="Last Name" variant="standard" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
-                  <input variant="standard" type="email" label="Email Address" fullWidth />
+                  <TextField label="Email Address" variant="standard" type="email" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
-                  <input variant="standard" label="Your Message" multiline fullWidth rows={6} />
+                  <TextField label="Your Message" variant="standard" multiline fullWidth rows={6} />
                 </Grid>
                 <Grid item xs={12} alignItems="center" ml={-1}>
                   <Switch checked={checked} onChange={handleChecked} />
@@ -46,7 +46,7 @@ const Contactus = () => {
                     sx={{ cursor: "pointer", userSelect: "none" }}
                     onClick={handleChecked}
                   >
-                    &nbsp;&nbsp;I agree the&nbsp;
+                    &nbsp;&nbsp;I agree to the&nbsp;
                   </Typography>
                   <Typography
                     component="a"
@@ -60,9 +60,9 @@ const Contactus = () => {
                 </Grid>
               </Grid>
               <Grid container item justifyContent="center" xs={12} my={2}>
-                <button type="submit" variant="gradient" color="dark" fullWidth>
+                <Button type="submit" variant="contained" color="success" fullWidth>
                   Send Message
-                </button>
+                </Button>
               </Grid>
             </Box>
           </Box>

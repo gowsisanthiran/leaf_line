@@ -73,7 +73,7 @@ const AuthMenu = () => {
     };
 
     const navigate=useNavigate();
-
+    
     const auth=()=>navigate('/auth');
     const dashboard=()=>navigate('/authorized/dashboard');
     const orders=()=>navigate('/order');

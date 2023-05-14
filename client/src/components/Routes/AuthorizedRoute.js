@@ -17,7 +17,7 @@ const AuthorizedRoute = () => {
     let role;
     const {UserInfo}=jwtDecode(accessToken);
     role=UserInfo.roles[0].toString();
-    if(role==='admin' || role==='seller'){
+    if(role==='admin'){
         return (
             
             <>

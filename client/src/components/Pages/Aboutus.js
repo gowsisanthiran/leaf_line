@@ -1,26 +1,58 @@
-import React from 'react'
-import image from '../../images/img1.jpeg'
-// import image from '../../images/'
+import React from 'react';
+import { makeStyles } from '@mui/styles';
+import { Typography, Grid, Divider } from '@mui/material';
+import Img from '../../images/Bg2.jpeg'
 
-const Aboutus = () => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: '20px',
+  },
+  heading: {
+    marginBottom: '20px',
+  },
+  divider: {
+    marginTop: '20px',
+    marginBottom: '20px',
+  },
+  description: {
+    padding: '30px',
+    marginTop: '100px',
+    marginBottom: '100px',
+  },
+}));
+
+const AboutUs = () => {
+  const classes = useStyles();
+
   return (
-    <div>Aboutus <br></br>
-      <p>Biodegradable banana leaf plates are an eco-friendly alternative to plastic or paper plates. These plates are made from the leaves of the banana plant, which are both abundant and renewable. The leaves are collected, cleaned, and then molded into plates of different shapes and sizes.<br></br>
-
-One of the main benefits of using biodegradable banana leaf plates is that they are fully compostable. Unlike plastic or paper plates that can take hundreds of years to decompose, banana leaf plates break down in a matter of weeks. This means that they do not contribute to the pollution of landfills and oceans.
-<br></br>
-In addition to being eco-friendly, banana leaf plates are also aesthetically pleasing. The natural texture and color of the leaves give the plates a unique and rustic look that can enhance the presentation of food.
-
-Furthermore, using biodegradable banana leaf plates supports local communities and farmers. The production of these plates often involves small-scale farmers who earn a living by collecting the leaves and selling them to plate manufacturers.
-
-Overall, biodegradable banana leaf plates offer a sustainable and eco-friendly option for those who want to reduce their environmental impact while still enjoying the convenience of disposable plates.</p>
-
-<img src ={image} alt='about' />
-
-
+    <div className={classes.root}>
+      <Typography variant="h4" className={classes.heading}>
+        About Us
+      </Typography>
+      <Divider className={classes.divider} />
+      <Grid container spacing={4}>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h6">Our Mission</Typography>
+          <Typography variant="body1" className={classes.description}>
+            At Eco Plates, our mission is to provide eco-friendly alternatives to single-use plastic plates. We believe that small changes can make a big impact on the environment, and we're committed to making it easy for people to make those changes in their daily lives.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h6">Our Products</Typography>
+          <Typography variant="body1" className={classes.description}>
+            All of our plates are made from sustainable materials like bamboo and sugarcane, which are biodegradable and compostable. We offer a variety of sizes and styles to meet your needs, whether you're hosting a party or just enjoying a meal at home.
+          </Typography>
+        </Grid>
+      </Grid >
+      <Divider className={classes.divider} />
+      <Grid item xs={12} sm={6} md={2}>
+      <img src={Img} alt='' style={{float:'left'}} />
+      <Typography variant="body1" className={classes.description}>
+        Thank you for choosing Eco Plates. By choosing our products, you're helping to reduce waste and protect the planet for future generations.
+      </Typography>
+      </Grid>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Aboutus
+export default AboutUs;
