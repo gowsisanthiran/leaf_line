@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '/home/gowsi/Music/Final_Project/client/src/images/img1.jpeg'
-import image from '/home/ukijaffna/Documents/Final_Project/client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg'
+//import image from '/home/ukijaffna/Documents/Final_Project/client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg'
 
 const Aboutus = () => {
   return (
