@@ -29,7 +29,7 @@ const Shipping = () => {
     }
   return (
     <Box sx={{m:'0 auto',marginTop:2,textAlign:'center', maxWidth:'550px'}}>
-        <LocationOnIcon sx={{width:100,height:100,color:'#1976d2'}}/>
+        <LocationOnIcon sx={{width:100,height:100,color:'#2e7d32'}}/>
         <Typography component='div' variant='h5'>Shipping Information</Typography>
         <Box component='form' onSubmit={handleSubmit} sx={{p:1}}>
             <TextareaAutosize required
@@ -47,6 +47,7 @@ const Shipping = () => {
                           margin='normal'
                           required
                           fullWidth
+                          color="success"
                           value={phone}
                           onChange={(e=>setPhone(e.target.value))}
             /> 
@@ -57,6 +58,7 @@ const Shipping = () => {
                           label='City'
                           name='city'
                           margin='normal'
+                          color="success"
                           required
                           fullWidth
                           value={city}
@@ -69,6 +71,7 @@ const Shipping = () => {
                           label='Zip'
                           name='zipCode'
                           margin='normal'
+                          color="success"
                           required
                           fullWidth
                           value={zipCode}
@@ -103,6 +106,7 @@ const Shipping = () => {
 
             <Button type='submit'
                     variant='contained'
+                    color="success"
                     startIcon={<LocalShippingIcon/>}
                     sx={{m:4}}>
                 Continue

@@ -21,16 +21,16 @@ const AuthorizedRoute = () => {
         return (
             
             <>
-            <Box sx={{background:'#2e7d32',  boxShadow: '4px 4px 4px #689f38', display:'flex', color:'#fff',p:1}}>
+            <Box sx={{background:'#f9fbe7',  boxShadow: '2px 2px 10px #7b9c56', display:'flex', color:'#fff',p:1}}>
                 <Box className='mTreeMenu' sx={{minWidth:'225px',mr:1}}>
                     <DrawerTreeMenu/>
                 </Box>
                 <Box sx={{flexGrow:1}}>
-                    <Typography component='div' variant='h6' sx={{textAlign:'center'}}>Dashboard</Typography>
+                    <Typography component='div' variant='h6' sx={{textAlign:"left" , color:"#1b5e20", textShadow:"1px 1px 1px #555"}}>Dashboard</Typography>
                 </Box>
             </Box>
             <Box sx={{display:'flex',flexGrow:1}}>
-                <Box className='dTreeMenu' sx={{background:'white',boxShadow: '4px 4px 4px #689f38',minWidth:'225px',mr:1}}>
+                <Box className='dTreeMenu' sx={{background:'#132b03',boxShadow: '2px 2px 10px #7b9c56',minWidth:'225px',mr:1}}>
                     <TreeMenu/>                    
                 </Box>
                 <Box sx={{flexGrow:1}}>

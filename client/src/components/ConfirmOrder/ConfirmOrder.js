@@ -91,6 +91,7 @@ const ConfirmOrder = () => {
     <>
     <Typography component='h1'
                 variant='h5'
+                color="green"
                 sx={{textAlign:'center'}}>
                     Cart & Shipping Information
     </Typography>
@@ -98,7 +99,7 @@ const ConfirmOrder = () => {
     <Box className='base-div3'>
         <Box className='div3'>
             <Box className='title'>
-                <Avatar sx={{mr:1,background:'#fff',color:'#9c27b0', width:30,height:30}}>
+                <Avatar sx={{mr:1,background:'#fff',color:'#2e7d32', width:30,height:30}}>
                     <LocalShippingIcon/>
                 </Avatar>
                 <Typography component='div'
@@ -132,7 +133,7 @@ const ConfirmOrder = () => {
 
         <Box className='div3'>
             <Box className='title'>
-                <Avatar sx={{mr:1,background:'#fff',color:'#9c27b0', width:30,height:30}}>
+                <Avatar sx={{mr:1,background:'#fff',color:'#2e7d32', width:30,height:30}}>
                     <ShoppingCartIcon/>
                 </Avatar>
                 <Typography component='div'
@@ -169,7 +170,7 @@ const ConfirmOrder = () => {
 
         <Box className='div3'>
         <Box className='title'>
-                <Avatar sx={{mr:1,background:'#fff',color:'#9c27b0', width:30,height:30}}>
+                <Avatar sx={{mr:1,background:'#fff',color:'#2e7d32', width:30,height:30}}>
                     <PaidIcon/>
                 </Avatar>
                 <Typography component='div'
@@ -230,8 +231,9 @@ const ConfirmOrder = () => {
 
     </Box>
     
-    <Button variant='contained'
-            sx={{m:4, width:250, m:'0 auto', display:'block'}}
+    <Button variant='contained' 
+           color='success'
+            sx={{m:4, width:250, m:'0 auto', display:'block', }}
             onClick={proccedToPayment}>Procced to payment
     </Button>
     </>

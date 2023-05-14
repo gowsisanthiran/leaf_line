@@ -212,7 +212,7 @@ const AddNewProduct = () => {
                   />
                 </InfoTooltip>
               </Grid>
-              <Grid item xs={6}>
+              {/* <Grid item xs={6}>
                 <TextField type='number'
                           id='stock'
                           label='Stock'
@@ -261,9 +261,9 @@ const AddNewProduct = () => {
                             )}
                     </Select>
                   </FormControl>             
-              </Grid>
+              </Grid> */}
             </Grid>
-
+{/* 
             <Grid container spacing={2} sx={{mt:'16px'}}>
               <Grid item xs={6}>
                 <FormControl fullWidth>
@@ -285,7 +285,7 @@ const AddNewProduct = () => {
               <Grid item xs={6}>
                
               </Grid>
-            </Grid>
+            </Grid> */}
 
             <Grid container spacing={2} sx={{mt:'16px'}}>
               {/* <Grid item xs={6}>
@@ -384,7 +384,7 @@ const AddNewProduct = () => {
               </Box>
             :
             <Box className='galleryback' style={{backgroundImage:`url("${galleryback}")`}}>
-                <img src={gallery} alt='oshop nophoto' color="success"/>
+                <img src={gallery} alt='LeafLine nophoto' color="success"/>
             </Box>
             }
 

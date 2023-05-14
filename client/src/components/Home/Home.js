@@ -7,7 +7,7 @@ import {getCategories, selectAllCategories} from '../../redux/features/categoryS
 import './home.css'
 
 import {Box, Typography} from '@mui/material';
-import HeroSlider,{Slide} from '@mui/material/hero-slider';
+// import HeroSlider,{Slide} from '@mui/material/hero-slider';
 //Image
 const bananaLeaf = 'client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg';
 const bananaLeaf1 = 'client/src/images/Chinese Noodle Salad.jpeg';
@@ -15,55 +15,55 @@ const bananaLeaf2 = 'client/src/images/palte.jpeg';
 const bananaLeaf3 = 'client/src/images/20 Idli Varieties - Different Types Of Idli Recipes.jpeg';
 
 
-const App = () => {
-    return (
-        <HeroSlider
-        slidingAnimation = 'left_to_right'
-        arientation = 'horizontal'
-        initialslide = {1}
-        onBeforeChane = {(previousSlide,nextSlide)=>console.log('onBeforeChange',previousSlide,nextSlide)}
-        onChange = {nextSlide => console.log('onChange',nextSlide)}
-        onAfterChange = {nextSlide => console.log('onAfterChange',nextSlide)}
-        style = {{
-            backgroundColor:'rgba(0,0,0,0.33)'
-        }}
-        settings = {{
-            slidingDuration: 250,
-            slideingDelay: 100,
-            shouldAutoplay: true,
-            shouldDisplayButtons: true,
-            autoplayDuration: 3000,
-            height: '100vh'
-        }}
-        >
-            <Slide
-            background={{
-                backgroundImage: bananaLeaf,
-                backgroundAttachment: 'fixed'
-            }}
-            />
-            <Slide
-            background={{
-                backgroundImage: bananaLeaf1,
-                backgroundAttachment: 'fixed'
-            }}
-            />
-            <Slide
-            background={{
-                backgroundImage: bananaLeaf2,
-                backgroundAttachment: 'fixed'
-            }}
-            />
-            <Slide
-            background={{
-                backgroundImage: bananaLeaf3,
-                backgroundAttachment: 'fixed'
-            }}
-            />
+// const App = () => {
+//     return (
+//         <HeroSlider
+//         slidingAnimation = 'left_to_right'
+//         arientation = 'horizontal'
+//         initialslide = {1}
+//         onBeforeChane = {(previousSlide,nextSlide)=>console.log('onBeforeChange',previousSlide,nextSlide)}
+//         onChange = {nextSlide => console.log('onChange',nextSlide)}
+//         onAfterChange = {nextSlide => console.log('onAfterChange',nextSlide)}
+//         style = {{
+//             backgroundColor:'rgba(0,0,0,0.33)'
+//         }}
+//         settings = {{
+//             slidingDuration: 250,
+//             slideingDelay: 100,
+//             shouldAutoplay: true,
+//             shouldDisplayButtons: true,
+//             autoplayDuration: 3000,
+//             height: '100vh'
+//         }}
+//         >
+//             <Slide
+//             background={{
+//                 backgroundImage: bananaLeaf,
+//                 backgroundAttachment: 'fixed'
+//             }}
+//             />
+//             <Slide
+//             background={{
+//                 backgroundImage: bananaLeaf1,
+//                 backgroundAttachment: 'fixed'
+//             }}
+//             />
+//             <Slide
+//             background={{
+//                 backgroundImage: bananaLeaf2,
+//                 backgroundAttachment: 'fixed'
+//             }}
+//             />
+//             <Slide
+//             background={{
+//                 backgroundImage: bananaLeaf3,
+//                 backgroundAttachment: 'fixed'
+//             }}
+//             />
             
-        </HeroSlider>
-    )
-} 
+//         </HeroSlider>
+//     )
+// } 
    
 
 

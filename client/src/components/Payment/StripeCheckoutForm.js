@@ -106,7 +106,7 @@ const StripeCheckoutForm = (props) => {
             onSubmit={(e)=>submitHandler(e)}
             sx={{m:'0 auto', maxWidth:'550px',textAlign:'center',minWidth:'500px'}}>
         <Card sx={{p:1,pt:3}}>
-            <Avatar sx={{bgcolor:'primary.main',height:'80px',width:'80px',m:'0 auto'}}>
+            <Avatar sx={{bgcolor:'green',height:'80px',width:'80px',m:'0 auto'}}>
                 <Typography sx={{fontSize:'1.3rem'}}>Stripe</Typography>
             </Avatar>
         
@@ -133,6 +133,7 @@ const StripeCheckoutForm = (props) => {
                         fullWidth
                         loadingPosition='start'
                         startIcon={<PaymentIcon/>}
+                        color='success'
                         variant='contained'>
                             Pay - {orderInfo && formatCurrency(orderInfo.totalPrice)}
 

@@ -88,7 +88,7 @@
 @keyframes animate{
     0%
     {
-        box-shadow: 0 0 0 rgba(85, 167, 91, 0.5);
+        box-shadow: 0 0 0 #55a75b80;
         opacity:0;
         transform: translateX(-20px) scale(1);
     }
