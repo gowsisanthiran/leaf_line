@@ -13,7 +13,7 @@ import sl4 from '../../images/land04.jpeg'
 import sl5 from '../../images/land05.jpeg'
 import sl6 from '../../images/pic05.jpeg'
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import {Box, Typography} from '@mui/material';
 
 
