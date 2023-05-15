@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/comico-2');
 
 
-.imageBackground{
+/* .imageBackground{
     background-image: url(https://img.freepik.com/free-photo/drops-water-falling-banana-leaves_1150-16403.jpg);
     background-size: cover;
     background-position: center;
@@ -11,7 +11,7 @@
     margin-bottom: 150px;
     padding-left: 20%;
     padding-right: 20%;
-}
+} */
 .tagLine{
     font-size: 2em;
     font-family: 'Comico', sans-serif;
@@ -30,15 +30,45 @@
     height: 450px;
     border-radius: 2px;
     padding:16px;
+    margin: 16px;
+    background-color: #0B4619;
 }
-.banner{
+.banner {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    border-radius: 2px;
+    padding: 16px;
+    margin: 0 auto;
+  }
+  
+
+.bgImg{
+    height: 500%;
+    width: 500%;
+    border-radius: 2px;
+    padding:16px;
+
+
+    
+   
+}
+.container1{
     height: 100vh;
     width: 100%;
     position: relative;
+    background-color: #C7F2A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
-.bgImg{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
+.bgImg7{
+    height: 75vh;
+    width: 50%;
+    align-items: right;
+    
+
 }
 

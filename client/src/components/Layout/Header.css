@@ -10,7 +10,9 @@ header{
 .site-header{
     color:#080707;
     display:flex;
-    background-color: #f4f5f4;
+    /* background-color: #f4f5f4; */
+    background-image: linear-gradient(to right, #DDFFBB, #379237);
+    color: white;
     box-shadow: 0px 2px 4px -1px rgba(2, 41, 3, 0.2), 0px 4px 5px 0px rgba(2, 41, 3, 0.2), 0px 1px 10px 0px rgba(2, 41, 3, 0.2);
     justify-content: space-between;
     align-items: center;
@@ -44,7 +46,7 @@ header{
     text-shadow: 1px 1px 1px #9aeeb6;
 }
 header a{
-    color:#094d12
+    color:#285430
 }
 .mobile-menu{
     display: none;
@@ -82,9 +84,25 @@ header a:hover{
     .primary-menu{
         justify-content: flex-start;
     }
-}
+} 
 /* .logo-area{
     display: flex;
     width: auto;
     height: auto;
 } */
+
+/* .site-header {
+    background-image: linear-gradient(to right, #00b712, #00b7a1);
+    color: white;
+  }
+  
+  .site-header .primary-menu nav a, 
+  .site-header .secondary-menu a {
+    color: white;
+  }
+  
+  .site-header .primary-menu nav a.active, 
+  .site-header .secondary-menu a.active {
+    border-bottom: 2px solid white;
+  }
+   */
