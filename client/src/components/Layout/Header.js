@@ -58,7 +58,7 @@ const Header = () => {
           <div className='cart-area'>
             <Tooltip title='Your cart'>
               <Link to='/cart' style={{padding:'8px 15px'}}>
-                <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
+                <StyledBadge badgeContent={products.length>0?products.length:'0'} color='success'>
                   <ShoppingCartIcon/>
                 </StyledBadge>
               </Link>
