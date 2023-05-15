@@ -1,7 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { Typography, Grid, Divider } from '@mui/material';
-import Img from '../../images/Bg2.jpeg'
+import { Typography, Grid, Divider, Button, Link } from '@mui/material';
+import bananaLeafImage from '../../images/pic04.jpeg';
+import farmImage from '../../images/parallax1.jpg';
+import compostImage from '../../images/parallax2.jpeg';
+import '@fontsource/montserrat';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,15 +12,31 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     marginBottom: '20px',
+    fontFamily: 'Montserrat',
   },
   divider: {
-    marginTop: '20px',
-    marginBottom: '20px',
+    marginTop: '40px',
+    marginBottom: '40px',
+    paddingBottom: '20px'
   },
   description: {
     padding: '30px',
-    marginTop: '100px',
-    marginBottom: '100px',
+    marginTop: '40px',
+    marginBottom: '40px',
+  },
+  image: {
+    float: 'left',
+    marginRight: '20px',
+    marginBottom: '20px',
+    width: '300px',
+    height: '200px',
+    objectFit: 'cover',
+  },
+  button: {
+    marginTop: '20px',
+  },
+  link: {
+    margin: '8px 12px', 
   },
 }));
 
@@ -26,33 +45,43 @@ const AboutUs = () => {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h4" className={classes.heading}>
+      <Typography variant="h3" className={classes.heading} fontFamily="Montserrat">
         About Us
       </Typography>
       <Divider className={classes.divider} />
       <Grid container spacing={4}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h6">Our Mission</Typography>
-          <Typography variant="body1" className={classes.description}>
-            At Eco Plates, our mission is to provide eco-friendly alternatives to single-use plastic plates. We believe that small changes can make a big impact on the environment, and we're committed to making it easy for people to make those changes in their daily lives.
+          <Typography variant="h4" fontFamily="Montserrat">Our Mission</Typography>
+          <Typography variant="body1" className={classes.description} fontFamily="Montserrat">
+            At Banana Leaf Plates, our mission is to provide sustainable and eco-friendly alternatives to disposable tableware. We believe in the power of natural materials and their positive impact on the environment. Our goal is to make it easy for individuals and businesses to adopt eco-friendly practices in their daily lives. We strive to promote awareness about the harmful effects of single-use plastic and inspire positive change.
           </Typography>
+          <Button variant="contained" color="primary" className={classes.button}>
+            Learn More
+          </Button>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h6">Our Products</Typography>
-          <Typography variant="body1" className={classes.description}>
-            All of our plates are made from sustainable materials like bamboo and sugarcane, which are biodegradable and compostable. We offer a variety of sizes and styles to meet your needs, whether you're hosting a party or just enjoying a meal at home.
+          <Typography variant="h4" fontFamily="Montserrat">Our Products</Typography>
+          <Typography variant="body1" className={classes.description}fontFamily="Montserrat">
+            All our plates are made from biodegradable and compostable banana leaves. We source these leaves from local farmers who practice sustainable agriculture. Our plates are not only eco-friendly but also sturdy and suitable for various occasions, from casual picnics to elegant parties. By choosing our products, you contribute to reducing plastic waste and promoting a healthier planet. Explore our wide range of sizes and designs to find the perfect fit for your eco-conscious lifestyle.
           </Typography>
+            <Button variant="contained" color="primary" className={classes.button}conClick='/product' >
+            Shop Now
+          </Button>
         </Grid>
-      </Grid >
+      </Grid>
       <Divider className={classes.divider} />
       <Grid item xs={12} sm={6} md={2}>
-      <img src={Img} alt='' style={{float:'left'}} />
-      <Typography variant="body1" className={classes.description}>
-        Thank you for choosing Eco Plates. By choosing our products, you're helping to reduce waste and protect the planet for future generations.
-      </Typography>
+        <img src={bananaLeafImage} alt="Banana Leaf" className={classes.image} />
+        <img src={farmImage} alt="Sustainable Farming" className={classes.image} />
+        <img src={compostImage} alt="Compost" className={classes.image} />
+        <Typography variant="body1" className={classes.description}fontFamily="Montserrat">
+          Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us in our journey towards a more sustainable future.
+        </Typography>
+
       </Grid>
     </div>
   );
 };
 
 export default AboutUs;
+
