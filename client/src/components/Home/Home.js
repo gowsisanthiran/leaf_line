@@ -5,13 +5,13 @@ import {axiosPublic} from '../../redux/axiosPublic';
 import ProductCard from '../Product/ProductCard';
 import {getCategories, selectAllCategories} from '../../redux/features/categorySlice';
 import './home.css'
-import Carousel from 'react-material-ui-carousel'
-import sl1 from '../../images/land06.jpeg'
-import sl2 from '../../images/land02.png'
-import sl3 from '../../images/land03.jpeg'
-import sl4 from '../../images/land04.jpeg'
-import sl5 from '../../images/land05.jpeg'
-import sl6 from '../../images/pic05.jpeg'
+// import Carousel from 'react-material-ui-carousel'
+// import sl1 from '../../images/land06.jpeg'
+// import sl2 from '../../images/land02.png'
+// import sl3 from '../../images/land03.jpeg'
+// import sl4 from '../../images/land04.jpeg'
+// import sl5 from '../../images/land05.jpeg'
+import sl6 from '../../images/picc.png'
 
 import { makeStyles } from '@mui/styles';
 import {Box, Typography} from '@mui/material';
@@ -107,7 +107,7 @@ const Home = () => {
     </Box>
    
         
-       <Box sx={{ background: '#', height: '100%' ,weight: '500%', position: 'fixed' }}>
+       {/* <Box sx={{ background: '#', height: '100%' ,weight: '500%', position: 'fixed' }}>
         <Carousel></Carousel>
         <div className='banner'>
         <Carousel>
@@ -118,7 +118,7 @@ const Home = () => {
             <img src={sl5} className='bgImg' />
         </Carousel>
       </div>
-        </Box> 
+        </Box>  */}
        
         <Box className='container'>
             <Typography variant='div' component='h3' sx={{m:10,p:1,background:"#0B4619",color:'#A6CF98',textShadow:'1px 1px 1px #555'}}>
@@ -126,8 +126,11 @@ const Home = () => {
             </Typography>
             <Box className='card-container'>
                 {topRatedProduct && topRatedProduct?.products.map(product=>(
-                    <ProductCard product={product} key={product._id}/>
-                ))}
+                    <ProductCard product={product} key={product._id}/> ))}
+
+{/* <ProductCard product={topRatedProduct} key={topRatedProduct._id}/> */}
+
+              
             </Box>
       </Box>
 
