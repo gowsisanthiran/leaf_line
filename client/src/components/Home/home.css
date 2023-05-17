@@ -48,7 +48,7 @@
     width: 500%;
     border-radius: 2px;
     padding:16px;
-
+    
 
     
    
@@ -62,13 +62,26 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     
 }
-.bgImg7{
-    height: 75vh;
-    width: 50%;
-    align-items: right;
     
-
+.bgImg7{
+width: 300px;
+  border: 2px solid rgb(178, 221, 178);
+  /* padding: 10px; */
+  margin: 50px;
+    height: 75%;
+    width: 75%;
+    align-items: right;
+    border-radius: 2px;
+    padding:10px;
+    box-shadow: inset 5px 5px 3px #E4E9E0;
+    position:relative;
+    overflow: hidden;
+    transform: transform 0.3s;
+}
+.bgImg7:hover{
+    transform: scale(1.2);
 }
 

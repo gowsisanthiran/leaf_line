@@ -18,7 +18,7 @@ exports.createProductReview=asyncHandler(async(req,res,next)=>{
     if(isReviewed){
         product.reviews.forEach((rev)=>{
             if(rev.user.toString()===req.userInfo.userId.toString())
-            (rev.rating=rating),(rev.comment=coment);
+            (rev.rating=rating),(rev.comment=comment);
         })
     }else{
         product.reviews.push(review);

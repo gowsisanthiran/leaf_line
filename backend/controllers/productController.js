@@ -7,9 +7,6 @@ const ApiFeatures = require('../utils/apiFeatures');
 const ErrorHandler = require('../utils/errorHandler');
 
 exports.addProduct=asyncHandler(async(req,res,next)=>{
-    // const {roles}=req.userInfo;
-    // req.body.addedBy=req.userInfo.userId;
-    //
     let product=await Product.create(req.body);
     if(product){
         const path=`products/${product._id}`;
@@ -74,8 +71,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
 exports.getProductDetails = asyncHandler(async (req, res, next) => {
   const product=await Product.findById(req.params.id)
-//   .populate('store', 'id title')
-  // .populate('brand','id title')
   .populate('category','id title')
   .populate({path:'reviews',populate:({path:'user',select:'name avatar'})});
 
@@ -85,10 +80,8 @@ exports.getProductDetails = asyncHandler(async (req, res, next) => {
 
   exports.getProductsByAuthorizeRoles = asyncHandler(async (req, res, next) => {
     const {roles}=req.userInfo;
-    // let storeId;
     let products;
-    if(roles==='admin' || roles.includes('admin')){
-      // storeId=req.userInfo.storeId;
+    if(roles==='admin'){
       products=await Product.find();
     }else{
       products=await Product.find();

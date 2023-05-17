@@ -5,17 +5,17 @@ import {axiosPublic} from '../../redux/axiosPublic';
 import ProductCard from '../Product/ProductCard';
 import {getCategories, selectAllCategories} from '../../redux/features/categorySlice';
 import './home.css'
-import Carousel from 'react-material-ui-carousel'
+import Carouselbutton from './Carousel';
+import sl6 from '../../images/pic05.jpeg'
+import img1 from '../../images/parallax1.jpg'
+import img2 from '../../images/pic04.jpeg'
 import sl1 from '../../images/land06.jpeg'
 import sl2 from '../../images/land02.png'
 import sl3 from '../../images/land03.jpeg'
 import sl4 from '../../images/land04.jpeg'
 import sl5 from '../../images/land05.jpeg'
-import sl6 from '../../images/pic05.jpeg'
-
-import { makeStyles } from '@mui/styles';
+// import { makeStyles } from '@mui/styles';
 import {Box, Typography} from '@mui/material';
-
 
 
 
@@ -91,8 +91,7 @@ const Home = () => {
   backgroundAttachment: 'fixed',
   
   }}>
-    <img src={sl6} className='bgImg7' />
-    
+    <img src={sl6} className='bgImg7'/>
         <Typography variant='div' component='h1' sx={{m:10,p:1,background:"#C7F2A4",color:'#1F6415',textShadow:'1px 1px 1px #555'}}>
           'NATURAL FINE DINING'
           <Typography variant='div' component='h4' sx={{m:5,background:"#C7F2A4",color:'#1F6415',textShadow:'1px 1px 1px #555'}}>
@@ -103,20 +102,14 @@ const Home = () => {
         </Typography>
       </Box>
       </Typography>
-      {/* rest of the code... */}
     </Box>
    
         
        <Box sx={{ background: '#', height: '100%' ,weight: '500%', position: 'fixed' }}>
-        <Carousel></Carousel>
         <div className='banner'>
-        <Carousel>
-            <img src={sl1} className='bgImg' />
-            <img src={sl2} className='bgImg' />
-            <img src={sl3} className='bgImg' />
-            <img src={sl4} className='bgImg' />
-            <img src={sl5} className='bgImg' />
-        </Carousel>
+        <Carouselbutton />
+        
+ 
       </div>
         </Box> 
        

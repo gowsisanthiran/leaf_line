@@ -33,16 +33,7 @@ const productSchema=new mongoose.Schema({
         ref:"Category",
         required:[true,'Please select a category.']
     },
-    // brand:{
-    //     type:mongoose.Schema.ObjectId,
-    //     ref:"Brand",
-    //     // required:[true,'Please select a brand.']
-    // },
-    // store:{
-    //     type:mongoose.Schema.ObjectId,
-    //     ref:"Store",
-    //     required:[true,'Please select a store.']
-    // },
+    
     localShipmentPolicy:{
         type:String,
         // required:[true,'Please select a local shipment policy.'],

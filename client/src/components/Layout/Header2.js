@@ -25,7 +25,6 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   const {products}=useSelector(selectCartItems);
-
   return (
     <header>
       <div className='site-header'>
@@ -47,12 +46,7 @@ const Header = () => {
             <NavLink to='/product' className={({isActive})=>isActive?'active':''}>
               Product
             </NavLink>
-            <NavLink to='/about-us' className={({isActive})=>isActive?'active':''}>
-              About Us
-            </NavLink>
-            <NavLink to='/contact-us' className={({isActive})=>isActive?'active':''}>
-              Contact Us
-            </NavLink>         
+            
           </nav>
         </div>
         <div className='secondary-menu'>
