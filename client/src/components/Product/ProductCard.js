@@ -84,7 +84,7 @@ const ProductCard = React.forwardRef(({product},ref) => {
         <CardMedia
           component="img"
           height="140"
-          image={product && product.images && product.images.length > 0 ? IMAGE_BASEURL + product.images[0].url : ''}
+          image = {product && product.images && product.images.length > 0 ? IMAGE_BASEURL + (product.images[0].url || 'placeholder.jpg') : ''}
           alt={product.title}
         />
         {product.discount>0?
@@ -94,8 +94,7 @@ const ProductCard = React.forwardRef(({product},ref) => {
         <CardContent>
             <Typography gutterBottom
                         variant='button'
-                        component='h1'>  {product?.title && product.title.length > 15 ? product.title.slice(0, 14) : product.title}
-
+                        component='h1'>{product?.title && product.title.length>15?product.title.slice(0,14):product.title}
             </Typography>
             <Stack spacing={1} sx={{display:'block'}}>
                 <Rating name="half-rating-read" value={product.ratings} precision={0.1} readOnly />
