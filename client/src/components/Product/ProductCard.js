@@ -81,10 +81,11 @@ const ProductCard = React.forwardRef(({product},ref) => {
       <Card className='box-shadow' 
             onClick={linkToDetails}
             sx={{position:'relative',overflow:'hidden', minHeight:'365px'}}>
+              
         <CardMedia
           component="img"
           height="140"
-          image={IMAGE_BASEURL+product.images[0].url}
+          image={product.images && product.images.length > 0 ? IMAGE_BASEURL + product.images[0].url : ''}
           alt={product.title}
         />
         {product.discount>0?
