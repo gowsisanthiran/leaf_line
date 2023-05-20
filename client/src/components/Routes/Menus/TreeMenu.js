@@ -100,7 +100,7 @@ export default function TreeMenu() {
     >
       <StyledTreeItem nodeId="1" label="Menu">
 
-        <StyledTreeItem nodeId="2" label="Category">
+        <StyledTreeItem nodeId="2" label="Category" >
           <StyledTreeItem nodeId="9" label="New Category" onClick={()=>goto('category')} />
           <StyledTreeItem nodeId="10" label="Category List" onClick={()=>goto('categorylist')}  />
         </StyledTreeItem>
