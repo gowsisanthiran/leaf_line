@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         </Link>
       </Typography>
       <Typography variant="body2" color="textSecondary">
-        &copy; {new Date().getFullYear()} My Ecommerce Website. All rights reserved.
+        &copy; {new Date().getFullYear()} LEAFLINE All rights reserved.
       </Typography>
     </Box>
   )

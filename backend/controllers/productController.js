@@ -11,7 +11,7 @@ exports.addProduct=asyncHandler(async(req,res,next)=>{
     if(product){
         const path=`products/${product._id}`;
         const productImages=await saveImages(req.files,path);
-        product.images=productImages.map((image)=>({url:image}));
+        product.images=productImages.forEach((image)=>({url:image}));
         product=await product.save();
         res.status(201).json({success:true,product});
     }

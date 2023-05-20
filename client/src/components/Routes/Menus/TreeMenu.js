@@ -96,11 +96,11 @@ export default function TreeMenu() {
       defaultCollapseIcon={<MinusSquare />}
       defaultExpandIcon={<PlusSquare />}
       defaultEndIcon={<CloseSquare />}
-      sx={{overflow: 'hidden', color:'white'}}
+      sx={{overflow: 'hidden', color:"white"}}
     >
       <StyledTreeItem nodeId="1" label="Menu">
 
-        <StyledTreeItem nodeId="2" label="Category">
+        <StyledTreeItem nodeId="2" label="Category" >
           <StyledTreeItem nodeId="9" label="New Category" onClick={()=>goto('category')} />
           <StyledTreeItem nodeId="10" label="Category List" onClick={()=>goto('categorylist')}  />
         </StyledTreeItem>
