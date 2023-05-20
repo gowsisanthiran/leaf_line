@@ -1,18 +1,92 @@
+// // import React from 'react';
+// // import logo from '../../images/Logo.png';
+// // import './Header.css';
+// // import {NavLink,Link} from 'react-router-dom';
+// // import {useSelector} from 'react-redux';
+// // import DrawerMenu from './DrawerMenu';
+// // import AuthMenu from './AuthMenu';
+
+// // import HomeIcon from '@mui/icons-material/Home';
+// // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+// // import { Tooltip } from '@mui/material';
+// // import Badge from '@mui/material/Badge';
+// // import { styled } from '@mui/material/styles';
+
+// // import {selectCartItems} from '../../redux/features/cartSlice';
+
+// // const StyledBadge = styled(Badge)(({ theme }) => ({
+// //   '& .MuiBadge-badge': {
+// //     right: -3,
+// //     top: 13,
+// //     border: `2px solid ${theme.palette.background.paper}`,
+// //     padding: '0 4px',
+// //   },
+// // }));
+
+// // const Header = () => {
+// //   const {products}=useSelector(selectCartItems);
+// //   return (
+// //     <header>
+// //       <div className='site-header'>
+// //         <div className='primary-menu'>
+// //           <div className='mobile-menu'>
+// //             <DrawerMenu/>
+// //           </div>
+// //           <div className='logo-area'>
+// //             <Tooltip title='Home'>
+// //               <Link to='/'>
+// //               <span className='logo'>leafline</span>
+// //               </Link>
+// //             </Tooltip>
+// //           </div>
+// //           <nav className='pages-area'>
+// //             <NavLink to='/' className={({isActive})=>isActive?'active':''}>
+// //               <HomeIcon/>Home
+// //             </NavLink>
+// //             <NavLink to='/product' className={({isActive})=>isActive?'active':''}>
+// //               Product
+// //             </NavLink>
+// //             <NavLink to='/about-us' className={({isActive})=>isActive?'active':''}>
+// //               About Us
+// //             </NavLink>
+// //             <NavLink to='/contact-us' className={({isActive})=>isActive?'active':''}>
+// //               Contact Us
+// //             </NavLink>
+// //           </nav>
+// //         </div>
+// //         <div className='secondary-menu'>
+// //           <div className='cart-area'>
+// //             <Tooltip title='Your cart'>
+// //               <Link to='/cart' style={{padding:'8px 15px'}}>
+// //                 <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
+// //                   <ShoppingCartIcon/>
+// //                 </StyledBadge>
+// //               </Link>
+// //             </Tooltip>
+// //           </div>
+// //           <div className='auth-area'>
+// //             <AuthMenu/>
+// //           </div>
+// //         </div>
+// //       </div>
+// //     </header>
+// //   )
+// // }
+
+// // export default Header
+
 // import React from 'react';
 // import logo from '../../images/Logo.png';
-// import './Header.css';
-// import {NavLink,Link} from 'react-router-dom';
-// import {useSelector} from 'react-redux';
+// import { NavLink, Link } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
 // import DrawerMenu from './DrawerMenu';
 // import AuthMenu from './AuthMenu';
-
 // import HomeIcon from '@mui/icons-material/Home';
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 // import { Tooltip } from '@mui/material';
 // import Badge from '@mui/material/Badge';
 // import { styled } from '@mui/material/styles';
-
-// import {selectCartItems} from '../../redux/features/cartSlice';
+// import { selectCartItems } from '../../redux/features/cartSlice';
 
 // const StyledBadge = styled(Badge)(({ theme }) => ({
 //   '& .MuiBadge-badge': {
@@ -24,56 +98,86 @@
 // }));
 
 // const Header = () => {
-//   const {products}=useSelector(selectCartItems);
+//   const { products } = useSelector(selectCartItems);
+
 //   return (
-//     <header>
-//       <div className='site-header'>
-//         <div className='primary-menu'>
-//           <div className='mobile-menu'>
-//             <DrawerMenu/>
+//     <header className="bg-transparent">
+//       <div className="container">
+//         <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+//           <Link to="/" className="navbar-brand">
+//             <span className="logo">LEAFLINE</span>
+//           </Link>
+//           <button
+//             className="navbar-toggler"
+//             type="button"
+//             data-toggle="collapse"
+//             data-target="#navbarNav"
+//             aria-controls="navbarNav"
+//             aria-expanded="false"
+//             aria-label="Toggle navigation"
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+//           <div className="collapse navbar-collapse" id="navbarNav">
+//             <ul className="navbar-nav ml-auto">
+//               <li className="nav-item">
+//                 <NavLink to="/" className="nav-link" activeClassName="active">
+//                   <HomeIcon/> Home
+//                 </NavLink>
+//               </li>
+//               <li className="nav-item">
+//                 <NavLink
+//                   to="/product"
+//                   className="nav-link"
+//                   activeClassName="active"
+//                 >
+//                   Product
+//                 </NavLink>
+//               </li>
+//               <li className="nav-item">
+//                 <NavLink
+//                   to="/about-us"
+//                   className="nav-link"
+//                   activeClassName="active"
+//                 >
+//                   About Us
+//                 </NavLink>
+//               </li>
+//               <li className="nav-item">
+//                 <NavLink
+//                   to="/contact-us"
+//                   className="nav-link"
+//                   activeClassName="active"
+//                 >
+//                   Contact Us
+//                 </NavLink>
+//               </li>
+//             </ul>
 //           </div>
-//           <div className='logo-area'>
-//             <Tooltip title='Home'>
-//               <Link to='/'>
-//               <span className='logo'>leafline</span>
-//               </Link>
-//             </Tooltip>
+//           <div className="ml-auto d-flex align-items-center">
+//             <div className="cart-area mr-3">
+//               <Tooltip title="Your cart">
+//                 <Link to="/cart">
+//                   <StyledBadge
+//                     badgeContent={products.length > 0 ? products.length : '0'}
+//                     color="secondary"
+//                   >
+//                     <ShoppingCartIcon />
+//                   </StyledBadge>
+//                 </Link>
+//               </Tooltip>
+//             </div>
+//             <div className="auth-area">
+//               <AuthMenu />
+//             </div>
 //           </div>
-//           <nav className='pages-area'>
-//             <NavLink to='/' className={({isActive})=>isActive?'active':''}>
-//               <HomeIcon/>Home
-//             </NavLink>
-//             <NavLink to='/product' className={({isActive})=>isActive?'active':''}>
-//               Product
-//             </NavLink>
-//             <NavLink to='/about-us' className={({isActive})=>isActive?'active':''}>
-//               About Us
-//             </NavLink>
-//             <NavLink to='/contact-us' className={({isActive})=>isActive?'active':''}>
-//               Contact Us
-//             </NavLink>
-//           </nav>
-//         </div>
-//         <div className='secondary-menu'>
-//           <div className='cart-area'>
-//             <Tooltip title='Your cart'>
-//               <Link to='/cart' style={{padding:'8px 15px'}}>
-//                 <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
-//                   <ShoppingCartIcon/>
-//                 </StyledBadge>
-//               </Link>
-//             </Tooltip>
-//           </div>
-//           <div className='auth-area'>
-//             <AuthMenu/>
-//           </div>
-//         </div>
+//         </nav>
 //       </div>
 //     </header>
-//   )
-// }
+//   );
+// };
 
-// export default Header
+// export default Header;
 
 import React from 'react';
 import logo from '../../images/Logo.png';
@@ -136,20 +240,11 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/about-us"
+                  to="/cart"
                   className="nav-link"
                   activeClassName="active"
                 >
-                  About Us
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/contact-us"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  Contact Us
+                  <ShoppingCartIcon /> Cart
                 </NavLink>
               </li>
             </ul>
