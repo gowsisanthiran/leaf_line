@@ -3,30 +3,66 @@ const asyncHandler=require('express-async-handler');
 const User=require('../models/userModel');
 const Order=require('../models/orderModel');
 const Product=require('../models/productModel');
-// const Store =require('../../storeModel');
 const {getAccessToken,getRefreshToken}=require('../utils/getTokens');
 const {sendUser}=require('../utils/sendUser');
 const jwt=require('jsonwebtoken');
 const {saveImages,removeFiles}=require('../utils/processImages');
-
+const fs = require('fs');
+const {resolve} = require('path');
+const cloudinary = require('../utils/cloudinary')
 /* const cookieOption={httpOnly:true,secure:true,sameSite:'None',maxAge:24*60*60*1000}; */
 const cookieOption={httpOnly:true};
 
 
-exports.registerUser=asyncHandler(async(req,res,next)=>{
-    
-    const {email, name, password}=req.body;
-    let user=await User.findOne({email}).exec();
-    if(user) return next(new ErrorHandler('This email is already used. You can login or use other email to register.',409));
-    user=await User.create({email,name,password});
-    if(user){
-        const path=`avatar/${user._id}`;        
-        const userAvatar=await saveImages(req.files,path);
-        user.avatar={url:userAvatar[0]};
-        await user.save();
-        res.status(201).json({success:true,user});
+exports.registerUser = asyncHandler(async (req, res, next) => {
+    const { email, name, password } = req.body;
+    let user = await User.findOne({ email }).exec();
+  
+    if (user) {
+      return next(
+        new ErrorHandler(
+          'This email is already used. You can login or use another email to register.',
+          409
+        )
+      );
     }
-})
+  
+    user = await User.create({ email, name, password });
+  
+    if (user) {
+      if (req.files) {
+        const path = `avatar/${user._id}`;
+        const userAvatar = await saveImages(req.files, path);
+        
+        let urls = [];
+        for (const file of userAvatar) {
+          const absolutePath = resolve('./public' + file);
+          const url = await cloudinary.uploader.upload(absolutePath, function (
+            error,
+            result
+          ) {
+            return result;
+          });
+          urls.push(url);
+        }
+        
+        if (urls.length > 0) {
+          user.avatar = { url: urls[0].url };
+          await user.save();
+          
+          userAvatar.map((image) => {
+            const absolutePath = resolve('./public' + image);
+            fs.unlinkSync(absolutePath);
+          });
+        } else {
+          return next(new ErrorHandler('Not processed.', 500));
+        }
+      }
+  
+      res.status(201).json({ success: true, user });
+    }
+  });
+  
 
 exports.loginUser=asyncHandler(async(req,res,next)=>{
     const cookies=req.cookies;
@@ -93,31 +129,62 @@ exports.updatePassword=asyncHandler(async(req,res,next)=>{
     res.status(200).json({success:true});
 })
 
-exports.updateProfile=asyncHandler(async(req,res,next)=>{
-    const newUserData={name:req.body.name}
-
-    let user= await User.findById(req.userInfo.userId);
-    if(!user) return next(new ErrorHandler('User not found.',404));
-    user=await User.findByIdAndUpdate(req.userInfo.userId,newUserData,{
-        new:true,
-        runValidators:true,
-        useFindAndMdify:false
-    })
-    if(user){
-        if(req.files){
-            const path=`avatar/${user._id}`
-            const remove=removeFiles(path);
-            if(remove){
-                const userImage=await saveImages(req.files,path);
-                user.avatar={url:userImage[0]}
-                await user.save();
-            }else{
-                return next(new ErrorHandler('Not procceded.Try again later.',500));
-            }
-        }
+exports.updateProfile = asyncHandler(async (req, res, next) => {
+    const newUserData = { name: req.body.name };
+  
+    let user = await User.findById(req.userInfo.userId);
+    if (!user) {
+      return next(new ErrorHandler('User not found.', 404));
     }
-    res.status(200).json({success:true,user:sendUser(user)});
-})
+  
+    user = await User.findByIdAndUpdate(
+      req.userInfo.userId,
+      newUserData,
+      {
+        new: true,
+        runValidators: true,
+        useFindAndMdify: false,
+      }
+    );
+  
+    if (user && req.files) {
+      const path = `avatar/${user._id}`;
+      const remove = removeFiles(path);
+  
+      if (remove) {
+        const userImage = await saveImages(req.files, path);
+  
+        let urls = [];
+        for (const file of userImage) {
+          const absolutePath = resolve('./public' + file);
+          const url = await cloudinary.uploader.upload(absolutePath, function (
+            error,
+            result
+          ) {
+            return result;
+          });
+          urls.push(url);
+        }
+  
+        if (urls.length > 0) {
+          user.avatar = { url: urls[0].url };
+          await user.save();
+  
+          userImage.map((image) => {
+            const absolutePath = resolve('./public' + image);
+            fs.unlinkSync(absolutePath);
+          });
+        } else {
+          return next(new ErrorHandler('Not processed. Try again later.', 500));
+        }
+      } else {
+        return next(new ErrorHandler('Not processed. Try again later.', 500));
+      }
+    }
+  
+    res.status(200).json({ success: true, user: sendUser(user) });
+  });
+  
 
 exports.getUsers=asyncHandler(async(req, res, next)=>{
     const {userId}=req.userInfo;

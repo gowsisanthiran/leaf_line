@@ -23,8 +23,8 @@ router.route('/products/:id').get(getProductDetails)
                                     authorizeRoles('admin'),
                                     fileUpload({createParentPath:true}),
                                     fileExtLimiter(['.png','.jpg','.jpeg']),
-                                    fileSizeLimiter,updateProduct).
-                                delete(isAuthenticated,
+                                    fileSizeLimiter,updateProduct)
+                                .delete(isAuthenticated,
                                     authorizeRoles('admin'),
                                     deleteProduct)
 

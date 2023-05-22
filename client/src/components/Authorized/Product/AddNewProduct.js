@@ -106,27 +106,27 @@ const AddNewProduct = () => {
     dispatch(addProduct({ formData, toast }));
   }
 
-  useEffect(() => {
-    dispatch(getCategories({ toast }));
-  }, [dispatch]);
-
-  useEffect(() => {
-
-    if (success) {
-      dispatch(resetMutationResult());
-      setTitle('');
-      setDescription('');
-      setPrice('');
-      setDiscount(0);
-      setWeight(0);
-      setStock(1);
-      setCategory('');
-
-      setImages([]);
-      setProductFiles('');
-    }
-  }, [success, dispatch]);
-
+    useEffect(() => {
+      dispatch(getCategories({toast}));
+    }, [dispatch]);
+    
+    useEffect(() => {
+      
+      if(success){
+        dispatch(resetMutationResult());
+        setTitle('');
+        setDescription('');
+        setPrice('');
+        setDiscount(0);
+        setWeight(0);
+        setStock(1);
+        setCategory('');
+        
+        setImages([]);
+        setProductFiles([]);
+      }
+    }, [success, dispatch]);
+    
   return (
     <Box
       sx={{

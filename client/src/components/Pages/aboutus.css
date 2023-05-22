@@ -1,78 +1,118 @@
 
-
-body {
-    font-family: "Montserrat";
-  }
-
-  image {
-    --g:8px; /* the gap */
-    --s:400px; /*the size*/
-
-    display: grid;
-    border-radius: 50%;
-
-  }
-  image > img {
-    grid-area: 1/1;
-    width: 400px;
-    aspect-ratio: 1;
-    object-fit: cover;
-
-  border-radius: 50%;
-  transform: translate(var(--_x,0)var(--_y,0));
-  cursor: pointer;
-  z-index: 0;
-  transition: .3s, z-index 0s .3s;
+/* body {
+  font-family: "Montserrat";
 }
 
-image img:hover{
-  --_i:1;
-  z-index: 1;
-  transition:transform .2s, clip-path .3s  .2s, z-index 0s ;
+image {
+  --g:8px; /* the gap */
+  /* --s:400px; /*the size*/
 
-}
-image:hover img {
-  transform: translate(0,0);
-
-}
-
-image > img:nth-child(1){
-  clip-path: polygon(50% 50%, calc(50%*var(--_i,0))
-  calc(120%*var(--_i,0)), 0 calc(100%*var(--_i,0 )), 0 0 , 100% calc(100%*var(--_i,0 )),
-  calc(100% - 50%*var(--_i)) calc(120%*var(--_i,0)));
-  --_y: calc(-1*var(--g))
-
-
-} 
-
+/* }   */
 /* .parallax-wrapper {
-  position: relative;
-  overflow: hidden;
+position: relative;
+overflow: hidden;
 }
 
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+position: relative;
+width: 100%;
+height: 100vh;
 }
 
 .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translateY(0);
-  transition: transform 0.3s ease-out;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transform: translateY(0);
+transition: transform 0.3s ease-out;
 }*/
 
-.content {
+/* .content {
+opacity: 0;
+transition: opacity 0.3s ease-in;
+}
+
+.fade-in {
+opacity: 1;
+} */
+
+
+
+/* .content {
   opacity: 0;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.5s;
 }
 
 .fade-in {
   opacity: 1;
 }
- 
+
+.carousel-content {
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+}
+
+.d-block {
+  display: 400px;
+  width: 400px;
+
+} */
+
+
+
+.carousell {
+  width: 800px; /* Adjust the width as desired */
+  height: 400px; /* Adjust the height as desired */
+overflow: hidden;
+
+   /* Center the image horizontally */
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 0%;
+  margin-left: 0%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(238, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #a75555;
+  width: 800%;
+    height: 500%; /* Adjust the desired height */
+    object-fit: cover;
+  
+  
+  
+}
+
+.carousel-caption {
+  text-align: center; /* Align the caption content to the right */
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  }
+
+
+
+.carousel-content {
+  color: #fff; /* Set the text color */
+  font-size: 18px; /* Set the font size */
+  /* Add any additional styles as needed */
+}
+
+

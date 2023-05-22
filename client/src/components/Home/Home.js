@@ -453,7 +453,7 @@ import AboutUs from '../Pages/Aboutus';
 import ContactUs from '../Pages/Contactus';
 import '../Home/home.css'
 
-import sl1 from '../../images/land06.jpeg';
+import sl1 from '../../images/bunch2.jpeg';
 import sl2 from '../../images/land02.png';
 import sl3 from '../../images/land03.jpeg';
 import sl4 from '../../images/land04.jpeg';
@@ -525,14 +525,15 @@ const Home = () => {
           }}
         >
           <Box
-            className="m-10 p-1"
+            className="m-10 p-1 text"
             style={{
-              // background: '#C7F2A4',
+            // background: '#C7F2A4',
               color: '#fefae0',
               textShadow: '1px 1px 1px #445',
               fontSize: '5px',
               fontWeight: 'bold',
               fontFamily: '"Times New Roman", Times, serif'
+              
 
             }}
           >
@@ -578,28 +579,7 @@ const Home = () => {
         </Box>
       </Box>
 
-      {/* <Box className="container">
-        <Typography variant="h3" className="m-4 p-1 bg-dark text-light">
-          Carousel
-        </Typography>
-        <Carousel>
-          <Carousel.Item>
-            <img src={sl1} className="bgImg" alt="Carousel Image" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl2} className="bgImg" alt="Carousel Image" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl3} className="bgImg" alt="Carousel Image" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl4} className="bgImg" alt="Carousel Image" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl5} className="bgImg" alt="Carousel Image" />
-          </Carousel.Item>
-        </Carousel>
-      </Box> */}
+   
        <Box className="container">
       <Typography variant="h3" className="m-4 p-1 bg-dark text-light">
         Carousel
@@ -612,18 +592,43 @@ const Home = () => {
       >
         <Carousel.Item>
           <img src={sl1} className="bgImg" alt="Carousel Image" />
+          <Carousel.Caption>
+                <p className="carousel-content">
+                  Another carousel content slide...
+                </p>
+              </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={sl2} className="bgImg" alt="Carousel Image" />
+          <Carousel.Caption>
+                <p className="carousel-content">
+                  Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us on our journey towards a more sustainable future.
+                </p>
+              </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={sl3} className="bgImg" alt="Carousel Image" />
+          <Carousel.Caption>
+                <p className="carousel-content">
+                  Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us on our journey towards a more sustainable future.
+                </p>
+              </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={sl4} className="bgImg" alt="Carousel Image" />
+          <Carousel.Caption>
+                <p className="carousel-content">
+                  Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us on our journey towards a more sustainable future.
+                </p>
+              </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img src={sl5} className="bgImg" alt="Carousel Image" />
+          <Carousel.Caption>
+                <p className="carousel-content">
+                  Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us on our journey towards a more sustainable future.
+                </p>
+              </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </Box>

@@ -12,7 +12,7 @@ const CartItemCard = ({item, deleteCartItems}) => {
             <Box sx={{display:'flex'}}>
                 <CardMedia component='img'
                         sx={{width:'150px', maxHeight:'120px'}}
-                        image={IMAGE_BASEURL+item.image} alt={item.title}/>
+                        image={item.image} alt={item.title}/>
             </Box>
             <Box sx={{display:'flex', flexDirection:'column',pl:1,pb:1}}>
                 <Typography variant='button' display='block'>{item.title}</Typography>

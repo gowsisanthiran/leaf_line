@@ -85,8 +85,12 @@ const ProductCard = React.forwardRef(({product},ref) => {
         <CardMedia
           component="img"
           height="140"
-          image = {product && product.images && product.images.length > 0 ? IMAGE_BASEURL + (product.images[0].url || 'placeholder.jpg') : ''}
-          alt={product.title}
+          image={
+            product && product.images && product.images.length > 0
+              ? product.images[0].url || 'placeholder.jpg'
+              : ''
+          }
+          alt={product && product.title}
         />
         {product.discount>0?
         <Typography variant='button' display='block' className='sale'>Sale</Typography>
@@ -135,20 +139,21 @@ const ProductCard = React.forwardRef(({product},ref) => {
         </CardContent>
         </Card>
       </CardActionArea>
-      <Box sx={{mt:2}}>
+      <Box sx={{mt:2}} >
             {ref? 
                 <Button variant='outlined'
                         ref={ref}
                         fullWidth
-                        color="success"
+                        color="primary"
                         startIcon={icon}
-                        onClick={cartHandler}>{text}</Button>
+                        onClick={cartHandler}
+                        style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
             :
               <Button variant='outlined'
                         fullWidth
-                        color="success"
+                        color="primary"
                         startIcon={icon}
-                        onClick={cartHandler}>{text}</Button>
+                        onClick={cartHandler} style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
             }
       </Box>
     </Box>

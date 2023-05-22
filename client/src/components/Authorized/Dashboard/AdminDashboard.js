@@ -13,9 +13,7 @@ import './Admin.css';
 import { Link } from 'react-router-dom';
 
 import Chart from 'chart.js/auto';
-import { LinearScale, LogarithmicScale } from 'chart.js';
-
-Chart.register(LinearScale, LogarithmicScale);
+import {Doughnut,Line,Bar} from 'react-chartjs-2';
 
 
 const AdminDashboard = () => {
@@ -23,7 +21,6 @@ const AdminDashboard = () => {
   const { products } = useSelector(selectAllProducts);
   const { users } = useSelector(selectUserList);
   const { orders } = useSelector(selectAllOrders);
-  const chartRef = useRef(null); // Create a reference for the chart
 
   let outOfStock = 0;
   products && products.forEach((item) => {
@@ -41,35 +38,42 @@ const AdminDashboard = () => {
     dispatch(getProductsByAuthorizeRoles({ toast }));
     dispatch(getAllOrders({ toast }));
     dispatch(getAllUsers({ toast }));
+  })
+  const lineData={
+    labels:['Initial Amount','Amount Earned'],
+    datasets:[
+        {
+            label:'Total Amount',
+            backgroundColor:['tomato'],
+            hoverBackgroundColor:['orange'],
+            data:[0,totalAmount]
+        }
+    ]
+}
 
-    // Create the chart instance
-    const chartInstance = chartRef.current;
-    if (chartInstance) {
-      const ctx = chartInstance.getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: products.map((product) => product.name),
-          datasets: [
-            {
-              label: 'Stock',
-              data: products.map((product) => product.stock),
-              backgroundColor: 'rgba(175, 198, 234, 0.6)',
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              precision: 0,
-            },
-          },
-        },
-      });
+const doughnutData={
+    labels:['Out Of Stock','In Stock'],
+    datasets:[
+        {
+            backgroundColor:['red','green'],
+            hoverBackgroundColor:['black','blue'],
+            data:[outOfStock,products.length-outOfStock]
+        }
+    ]
+}
+ // Create the bar chart data
+ const barData = {
+  labels: products && products.map((product) => product.name),
+  datasets: [
+    {
+      label: 'Stock',
+      backgroundColor: 'rgba(54, 162, 235, 0.5)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      borderWidth: 1,
+      data: products && products.map((product) => product.stock)
     }
-  }, [dispatch]);
-
+  ]
+};    
   return (
     <>
       <Box
@@ -154,33 +158,37 @@ const AdminDashboard = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
-          <Box
-            className='box'
-            sx={{
-              backgroundColor: 'white',
-              color: 'black',
-              padding: '20px',
-              borderRadius: '8px',
-              boxShadow: '0px 3px 5px 0px #415d43',
-            }}
-          >
-            <MonetizationOnOutlinedIcon />
-            <Typography variant='h6' textAlign='center'>
-              Ordered Amount
-            </Typography>
-            <Divider />
-            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-              {orders && totalAmount}
-            </Typography>
-          </Box>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
+              className='box'
+              sx={{
+                backgroundColor: 'white',
+                color: 'black',
+                padding: '20px',
+                borderRadius: '8px',
+                boxShadow: '0px 3px 5px 0px #415d43',
+              }}
+            >
+              <MonetizationOnOutlinedIcon />
+              <Typography variant='h6' textAlign='center'>
+                Revenue
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {orders && totalAmount}
+              </Typography>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
 
-      <Box sx={{ marginTop: '30px' }}>
-        <canvas ref={chartRef} />
+         <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
+        <Grid item xs={5}><Line data={lineData}/></Grid>
+        <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
+        <Grid item xs={12}>
+            <Bar data={barData} />
+          </Grid>
+        </Grid>
       </Box>
-    </Box>
     </>
   );
 };

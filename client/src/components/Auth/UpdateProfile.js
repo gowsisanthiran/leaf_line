@@ -77,7 +77,7 @@ const UpdateProfile = () => {
                 <Grid item xs>
                   <Avatar sx={{m:1,bgcolor:'primary.main', height:'80px',width:'80px',fontSize:'5.35rem'}}>
                     {previewProfileImage===''?
-                      <img src={IMAGE_BASEURL+profileImage} 
+                      <img src={profileImage} 
                             alt={name} 
                             style={{ width:80,height:80}}
                       />

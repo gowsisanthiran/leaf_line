@@ -34,10 +34,10 @@ const ProductDetailsImageCarouselCard = ({images}) => {
               smallImage: {
                   alt: 'Wristwatch by Ted Baker London',
                   isFluidWidth: true,
-                  src: IMAGE_BASEURL+image.url
+                  src: image.url
               },
               largeImage: {
-                  src: IMAGE_BASEURL+image.url,
+                  src: image.url,
                   width: 1200,
                   height: 1800
               },

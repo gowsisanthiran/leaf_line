@@ -66,11 +66,11 @@ const UserList = () => {
     const rows = [];
     users && users.forEach(user => {
         rows.push({
-            id: user._id,
-            name: user.name,
-            image: IMAGE_BASEURL + user.avatar.url,
-            email: user.email,
-            role: user.roles
+            id:user._id,
+            name:user.name,
+            image:user.avatar.url,
+            email:user.email,
+            role:user.roles
         })
     });
     useEffect(() => {

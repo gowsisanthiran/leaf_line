@@ -81,13 +81,11 @@ const ProductDetailsInfoCard = ({product}) => {
         <span style={{color:'green'}}>Out of Stock</span>
       }
       </Typography>
-      {/* <Typography sx={{display:'block'}}>Brand : {product.brand.title}</Typography> */}
-      {/* <Typography sx={{display:'block'}}>Category : {product.category.title}</Typography> */}
-      {/* <Typography sx={{display:'block'}}>Store : {product.store.title}</Typography> */}
-      {/* <Typography sx={{whiteSpace:'pre-line', mt:2}} 
+      <Typography sx={{display:'block'}}>Category : {product.category.title}</Typography>
+      <Typography sx={{whiteSpace:'pre-line', mt:2}} 
                   variant='body2'>
                     Description : {product.description}
-      </Typography> */}
+      </Typography>
     </Box>
   )
 }

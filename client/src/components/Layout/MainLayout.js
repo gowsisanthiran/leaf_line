@@ -12,7 +12,9 @@ const MainLayout=()=>{
     return(
         <>
             <div className='site'>
+                <div className='header'>
                 <Header/>
+                </div>
                 <div className='main'>
                     <div className="content"></div>
                     <Outlet/>

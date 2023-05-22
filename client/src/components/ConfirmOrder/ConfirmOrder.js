@@ -145,7 +145,7 @@ const ConfirmOrder = () => {
                 {products && products.map((item,i)=>(
                     <Box key={item._id} sx={{display:'flex', width:'100%',mb:2}}>
                         <Box>
-                            <img src={IMAGE_BASEURL+item.image} alt={item.title} style={{maxWidth:100,marginRight:'5px'}}/>
+                            <img src={item.image} alt={item.title} style={{maxWidth:100,marginRight:'5px'}}/>
                         </Box>
                         <Box>
                             <Typography component='div'

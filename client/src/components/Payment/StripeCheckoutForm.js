@@ -3,7 +3,8 @@ import {useDispatch,useSelector} from 'react-redux';
 import {toast} from 'react-toastify';
 import axiosPrivate from '../../redux/axiosPrivate';
 import {useNavigate} from 'react-router-dom';
-
+import { clearCart} from '../../redux/features/cartSlice';
+import logo from '../../images/Logo.png'
 import {CardNumberElement,CardCvcElement, CardExpiryElement,useStripe,useElements} from '@stripe/react-stripe-js';
 
 import {Box, Card, Avatar, Typography, Grid, Divider} from '@mui/material';
@@ -83,7 +84,7 @@ const StripeCheckoutForm = (props) => {
                     }
                     dispatch(createOrder({order,toast}));
                 }else{
-                    toast.error('Proccessing error');
+                    toast.error('Processing Error');
                     setProcessing(false);
                 }
             }
@@ -98,6 +99,8 @@ const StripeCheckoutForm = (props) => {
         dispatch(resetMutationResult());
         setProcessing(false);
         navigate('/order/success');
+        dispatch(clearCart())
+
       }
     }, [dispatch,success,navigate]);
     
@@ -106,8 +109,8 @@ const StripeCheckoutForm = (props) => {
             onSubmit={(e)=>submitHandler(e)}
             sx={{m:'0 auto', maxWidth:'550px',textAlign:'center',minWidth:'500px'}}>
         <Card sx={{p:1,pt:3}}>
-            <Avatar sx={{bgcolor:'green',height:'80px',width:'80px',m:'0 auto'}}>
-                <Typography sx={{fontSize:'1.3rem'}}>Stripe</Typography>
+            <Avatar sx={{bgcolor:'white',height:'100px',width:'100px',m:'0 auto'}}>
+                <img src={logo} alt="" style={{height:'150px',width:'200px'}} />
             </Avatar>
         
         <Divider sx={{m:'10px 0'}}/>
