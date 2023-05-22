@@ -85,8 +85,12 @@ const ProductCard = React.forwardRef(({product},ref) => {
         <CardMedia
           component="img"
           height="140"
-          image = {product && product.images && product.images.length > 0 ? IMAGE_BASEURL + (product.images[0].url || 'placeholder.jpg') : ''}
-          alt={product.title}
+          image={
+            product && product.images && product.images.length > 0
+              ? product.images[0].url || 'placeholder.jpg'
+              : ''
+          }
+          alt={product && product.title}
         />
         {product.discount>0?
         <Typography variant='button' display='block' className='sale'>Sale</Typography>

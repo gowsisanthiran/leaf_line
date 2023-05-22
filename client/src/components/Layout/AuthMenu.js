@@ -102,7 +102,7 @@ const AuthMenu = () => {
                 variant="dot"
                 >
                 <Avatar sx={{ width: 32, height: 32 }}>
-                  <img src={IMAGE_BASEURL+user.avatar.url} 
+                  <img src={user.avatar.url} 
                       alt={user.name}
                       style={{width:32,height:32}}/>
                 </Avatar>

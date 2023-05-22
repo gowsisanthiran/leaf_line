@@ -67,7 +67,7 @@ const UpdateRole = () => {
             <Typography component='h1' 
                         variant='h6'>Account Deatil's
             </Typography>
-            <img src={IMAGE_BASEURL+user?.avatar?.url} 
+            <img src={user?.avatar?.url} 
                     alt={user.name} 
                     style={{width:80,height:80,borderRadius:'50%', margin:'0 auto'}}
             />

@@ -12,8 +12,6 @@ import PhotoIcon from '@mui/icons-material/Photo';
 import CollectionsIcon from '@mui/icons-material/Collections';
 
 import {getCategories,selectAllCategories} from '../../../redux/features/categorySlice';
-// import {getBrands,selectAllBrands} from '../../../redux/features/brandSlice';
-// import {getStores,selectAllStores} from '../../../redux/features/storeSlice';
 import { productDetails, resetMutationResult, selectProductDetails, selectProductMutationResult, updateProduct } from '../../../redux/features/productSlice';
 import {POLICIES} from '../../../constants/policies';
 import { IMAGE_BASEURL } from '../../../constants/baseURL';
@@ -324,7 +322,7 @@ const UpdateProduct = () => {
               <Box className='galleryback'>
                 {images.map((image,index)=>(
                   image.url?
-                  <img key={index} src={IMAGE_BASEURL+image.url} 
+                  <img key={index} src={image.url} 
                                     alt='product image' 
                                     style={{maxWidth:90, maxHeight:80, padding:'0 5px'}} color="success"/>
                   :

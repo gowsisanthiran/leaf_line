@@ -66,7 +66,7 @@ const UserList = () => {
         rows.push({
             id:user._id,
             name:user.name,
-            image:IMAGE_BASEURL+user.avatar.url,
+            image:user.avatar.url,
             email:user.email,
             role:user.roles
         })

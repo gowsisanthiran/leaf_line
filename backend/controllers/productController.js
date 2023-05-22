@@ -10,22 +10,18 @@ const fs = require('fs');
 const {resolve} = require('path');
 const cloudinary = require('../utils/cloudinary')
 exports.addProduct=asyncHandler(async(req,res,next)=>{
-    // const {roles}=req.userInfo;
-    // req.body.addedBy=req.userInfo.userId;
-    //
-    
     let product=await Product.create(req.body);
     if(product){
         const path=`products/${product._id}`;
         const productImages=await saveImages(req.files,path);
        
-        product.images=productImages.forEach((image)=>({url:image}));
+        product.images = productImages.map((image) => ({ url: image }));
         let urls = []
         for (const file of productImages) {
           const absolutePath = resolve('./public'+ file);
           const url = await cloudinary.uploader.upload(absolutePath, function(error, result) {return result})
           urls.push(url)
-          //
+          
         }
         Promise.all(urls).then( async result=>{
           
@@ -115,37 +111,74 @@ exports.getProductDetails = asyncHandler(async (req, res, next) => {
   })
 
   exports.updateProduct = asyncHandler(async (req, res, next) => {
-    const {roles}=req.userInfo;
-    req.body.updatedBy=req.userInfo.userId;
-
+    const { roles } = req.userInfo;
+    req.body.updatedBy = req.userInfo.userId;
+  
     let product;
-    if(roles==='seller' || roles.includes('seller')){
-      product=await Product.findOne({_id:req.params.id});
-      // req.body.store=req.userInfo.storeId;
-    }else{
-      product=await Product.findById(req.params.id);
+    if (roles === 'seller' || roles.includes('seller')) {
+      product = await Product.findOne({ _id: req.params.id });
+      // req.body.store = req.userInfo.storeId;
+    } else {
+      product = await Product.findById(req.params.id);
     }
-
-    if(!product) return next(new ErrorHandler('Product not found',404));
-    product=await Product.findByIdAndUpdate(req.params.id,req.body,{
-      new:true,runValidators:true,useFindAndModify:false
-    })
-    if(product){
-      if(req.files){
-        const path=`products/${product.store}/${product._id}`;
-        const remove=removeFiles(path);
-        if(remove){
-          const productImages=await saveImages(req.files,path);
-          product.images=productImages.map((image)=>({url:image}));
-          await product.save();
-        }else{
-          return next(new ErrorHandler('Not proccedded.',500));
-        }        
+  
+    if (!product) {
+      return next(new ErrorHandler('Product not found', 404));
+    }
+  
+    product = await Product.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false,
       }
+    );
+  
+    if (product && req.files) {
+      const path = `products/${product.store}/${product._id}`;
+      const remove = removeFiles(path);
+  
+      if (remove) {
+        const productImages = await saveImages(req.files, path);
+        product.images = productImages.map((image) => ({ url: image }));
+        
+        let urls = [];
+        for (const file of productImages) {
+          const absolutePath = resolve('./public' + file);
+          const url = await cloudinary.uploader.upload(absolutePath, function (
+            error,
+            result
+          ) {
+            return result;
+          });
+          urls.push(url);
+        }
+        
+        Promise.all(urls)
+          .then(async (result) => {
+            product.images = result.map((image) => ({ url: image.url }));
+            product = await product.save();
+            
+            productImages.map((image) => {
+              const absolutePath = resolve('./public' + image);
+              fs.unlinkSync(absolutePath);
+            });
+  
+            res.status(201).json({ success: true, product });
+          })
+          .catch((error) => {
+            return next(new ErrorHandler('Not processed.', 500));
+          });
+      } else {
+        return next(new ErrorHandler('Not processed.', 500));
+      }
+    } else {
+      res.status(201).json({ success: true, product });
     }
-
-    res.status(201).json({success:true,product});
-  })
+  });
+  
 
   exports.deleteProduct = asyncHandler(async (req, res, next) => {
     const product=await Product.findById(req.params.id)
