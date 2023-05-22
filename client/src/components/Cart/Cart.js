@@ -32,7 +32,7 @@ const Cart = () => {
         if(stock<=qty) return;
         dispatch(addItemsToCart({_id,quantity}));
       }
-      const chackOutHandler=()=>{
+      const checkOutHandler=()=>{
         navigate('/auth',{state:{path:'/shipping'}});
       }
     return (
@@ -80,7 +80,7 @@ const Cart = () => {
                 <Button variant='contained'
                         color="success"
                         startIcon={<ShoppingCartCheckoutIcon/>}
-                        onClick={chackOutHandler}> Checkout
+                        onClick={checkOutHandler}> Checkout
                 </Button>
             </Box>
             

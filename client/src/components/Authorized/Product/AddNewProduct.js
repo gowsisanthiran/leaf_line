@@ -123,7 +123,7 @@ const AddNewProduct = () => {
         setCategory('');
         
         setImages([]);
-        setProductFiles('');
+        setProductFiles([]);
       }
     }, [success, dispatch]);
     

@@ -14,8 +14,8 @@ export const addItemsToCart=createAsyncThunk('cart/addItemsToCart',async({_id,qu
             customLocalShipmentCost:data.product.localShipmentPolicy==='custom'?data.product.customLocalShipmentCost:'',
             internationalShipmentPolicy:data.product.internationalShipmentPolicy,
             customInternationalShipmentCost:data.product.internationalShipmentPolicy==='custom'?data.product.customInternationalShipmentCost:'',
-            quantity
-        }
+            quantity,
+        };
     }
     catch(error){
         toast.error(error.response.data.message);
@@ -33,7 +33,11 @@ const cartSlice=createSlice({
             const newItems=state.cartItems.products.filter((i)=>i._id !== action.payload);
             state.cartItems.products=newItems;
             localStorage.setItem('products',JSON.stringify(newItems));
-        }
+        },
+        clearCart: (state) => {
+            state.cartItems.products = [];
+            localStorage.removeItem('products');
+          },
     },
     extraReducers:{
         //add new brand
@@ -67,5 +71,5 @@ const cartSlice=createSlice({
 })
 
 export const selectCartItems=(state)=>state.cart.cartItems;
-export const {removeItem}=cartSlice.actions;
+export const {removeItem, clearCart}=cartSlice.actions;
 export default cartSlice.reducer;
