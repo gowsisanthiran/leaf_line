@@ -98,7 +98,7 @@ const AboutUs = () => {
   return (
     <Container className="p-4">
       <h3 className="mb-4">About Us</h3>
-      <hr className="my-4" />
+      {/* <hr className="my-4" />
       <Row className="mb-4">
         <Col xs={12} sm={6}>
           <h4>Our Mission</h4>
@@ -108,8 +108,8 @@ const AboutUs = () => {
           <Button variant="primary" className="mt-4">
             Learn More
           </Button>
-        </Col>
-        <Col xs={12} sm={6}>
+        </Col> */}
+        {/* <Col xs={12} sm={6}>
           <h4>Our Products</h4>
           <p className="p-4">
             All our plates are made from biodegradable and compostable banana leaves. We source these leaves from local farmers who practice sustainable agriculture. Our plates are not only eco-friendly but also sturdy and suitable for various occasions, from casual picnics to elegant parties. By choosing our products, you contribute to reducing plastic waste and promoting a healthier planet. Explore our wide range of sizes and designs to find the perfect fit for your eco-conscious lifestyle.
@@ -118,14 +118,29 @@ const AboutUs = () => {
             Shop Now
           </Button>
         </Col>
-      </Row>
+      </Row> */}
+
+
+{/* templet carousel */}
+
+
+
+
+{/* templet carosel end */}
+
+
+
+
+
+
+
       <Row>
         <Col xs={12} sm={6} className="mx-auto">
           <Carousel fade>
             <Carousel.Item>
               <img
-                className="d-block w-100"
-                src={farmImage}
+                className=" carousell"
+                src={compostImage}
                 alt="Banana Leaf"
               />
               <Carousel.Caption>
@@ -136,7 +151,7 @@ const AboutUs = () => {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className=" carousell"
                 src={compostImage}
                 alt="Compost"
               />
@@ -147,6 +162,16 @@ const AboutUs = () => {
               </Carousel.Caption>
             </Carousel.Item>
             {/* Add more carousel items as needed */}
+            <img
+                className=" carousell"
+                src={compostImage}
+                alt="Compost"
+              />
+              <Carousel.Caption>
+                <p className="carousel-content ">
+                  Another carousel content slide...
+                </p>
+                </Carousel.Caption>
           </Carousel>
         </Col>
       </Row>

@@ -41,7 +41,7 @@ opacity: 1;
 
 
 
-.content {
+/* .content {
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -57,3 +57,62 @@ opacity: 1;
   padding: 20px;
   text-align: center;
 }
+
+.d-block {
+  display: 400px;
+  width: 400px;
+
+} */
+
+
+
+.carousell {
+  width: 800px; /* Adjust the width as desired */
+  height: 400px; /* Adjust the height as desired */
+overflow: hidden;
+
+   /* Center the image horizontally */
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 0%;
+  margin-left: 0%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(238, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #a75555;
+  width: 800%;
+    height: 500%; /* Adjust the desired height */
+    object-fit: cover;
+  
+  
+  
+}
+
+.carousel-caption {
+  text-align: center; /* Align the caption content to the right */
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  }
+
+
+
+.carousel-content {
+  color: #fff; /* Set the text color */
+  font-size: 18px; /* Set the font size */
+  /* Add any additional styles as needed */
+}
+
+

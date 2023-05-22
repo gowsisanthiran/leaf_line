@@ -6,17 +6,38 @@ const {saveImages,removeFiles}=require('../utils/processImages');
 const ApiFeatures = require('../utils/apiFeatures');
 const ErrorHandler = require('../utils/errorHandler');
 
+const fs = require('fs');
+const {resolve} = require('path');
+const cloudinary = require('../utils/cloudinary')
 exports.addProduct=asyncHandler(async(req,res,next)=>{
     // const {roles}=req.userInfo;
     // req.body.addedBy=req.userInfo.userId;
     //
+    
     let product=await Product.create(req.body);
     if(product){
         const path=`products/${product._id}`;
         const productImages=await saveImages(req.files,path);
+       
         product.images=productImages.forEach((image)=>({url:image}));
-        product=await product.save();
-        res.status(201).json({success:true,product});
+        let urls = []
+        for (const file of productImages) {
+          const absolutePath = resolve('./public'+ file);
+          const url = await cloudinary.uploader.upload(absolutePath, function(error, result) {return result})
+          urls.push(url)
+          //
+        }
+        Promise.all(urls).then( async result=>{
+          
+          product.images=result.map((image)=> {return {url:image.url}});
+          product=await product.save();
+          productImages.map((image)=> {
+            const absolutePath = resolve('./public'+ image);
+            fs.unlinkSync(absolutePath)
+          })
+          res.status(201).json({success:true,product});
+        })
+      
     }
 })
 
