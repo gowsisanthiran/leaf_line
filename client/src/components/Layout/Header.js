@@ -1,80 +1,3 @@
-// import React from 'react';
-// import logo from '../../images/Logo.png';
-// import './Header.css';
-// import {NavLink,Link} from 'react-router-dom';
-// import {useSelector} from 'react-redux';
-// import DrawerMenu from './DrawerMenu';
-// import AuthMenu from './AuthMenu';
-
-// import HomeIcon from '@mui/icons-material/Home';
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
-// import { Tooltip } from '@mui/material';
-// import Badge from '@mui/material/Badge';
-// import { styled } from '@mui/material/styles';
-
-// import {selectCartItems} from '../../redux/features/cartSlice';
-
-// const StyledBadge = styled(Badge)(({ theme }) => ({
-//   '& .MuiBadge-badge': {
-//     right: -3,
-//     top: 13,
-//     border: `2px solid ${theme.palette.background.paper}`,
-//     padding: '0 4px',
-//   },
-// }));
-
-// const Header = () => {
-//   const {products}=useSelector(selectCartItems);
-//   return (
-//     <header>
-//       <div className='site-header'>
-//         <div className='primary-menu'>
-//           <div className='mobile-menu'>
-//             <DrawerMenu/>
-//           </div>
-//           <div className='logo-area'>
-//             <Tooltip title='Home'>
-//               <Link to='/'>
-//               <span className='logo'>leafline</span>
-//               </Link>
-//             </Tooltip>
-//           </div>
-//           <nav className='pages-area'>
-//             <NavLink to='/' className={({isActive})=>isActive?'active':''}>
-//               <HomeIcon/>Home
-//             </NavLink>
-//             <NavLink to='/product' className={({isActive})=>isActive?'active':''}>
-//               Product
-//             </NavLink>
-//             <NavLink to='/about-us' className={({isActive})=>isActive?'active':''}>
-//               About Us
-//             </NavLink>
-//             <NavLink to='/contact-us' className={({isActive})=>isActive?'active':''}>
-//               Contact Us
-//             </NavLink>
-//           </nav>
-//         </div>
-//         <div className='secondary-menu'>
-//           <div className='cart-area'>
-//             <Tooltip title='Your cart'>
-//               <Link to='/cart' style={{padding:'8px 15px'}}>
-//                 <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
-//                   <ShoppingCartIcon/>
-//                 </StyledBadge>
-//               </Link>
-//             </Tooltip>
-//           </div>
-//           <div className='auth-area'>
-//             <AuthMenu/>
-//           </div>
-//         </div>
-//       </div>
-//     </header>
-//   )
-// }
-
-// export default Header
-
 import React from 'react';
 import logo from '../../images/Logo.png';
 import { NavLink, Link } from 'react-router-dom';
@@ -87,10 +10,11 @@ import { Tooltip } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { selectCartItems } from '../../redux/features/cartSlice';
+import '../Layout/Header.css';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
-    right: -3,
+    right: 6,
     top: 13,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: '0 4px',
@@ -99,11 +23,18 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   const { products } = useSelector(selectCartItems);
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      document.querySelector('.navbar').classList.add('active');
+    } else {
+      document.querySelector('.navbar').classList.remove('active');
+    }
+  });
 
   return (
     <header className="bg-transparent">
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div className="container justify-content-between header">
+        <nav className="navbar navbar-expand navbar-light bg-transparent navbar">
           <Link to="/" className="navbar-brand">
             <span className="logo">LEAFLINE</span>
           </Link>
@@ -118,56 +49,27 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
+          <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
+            <ul className="navbar-nav">
               <li className="nav-item">
                 <NavLink to="/" className="nav-link" activeClassName="active">
-                  <HomeIcon/> Home
+                  <HomeIcon /> Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  to="/product"
-                  className="nav-link"
-                  activeClassName="active"
-                >
+                <NavLink to="/product" className="nav-link" activeClassName="active">
                   Product
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  to="/about-us"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  About Us
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/contact-us"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  Contact Us
+                <NavLink to="/cart" className="nav-link" activeClassName="active">
+                  <ShoppingCartIcon /> Cart
                 </NavLink>
               </li>
             </ul>
           </div>
-          <div className="ml-auto d-flex align-items-center">
-            <div className="cart-area mr-3">
-              <Tooltip title="Your cart">
-                <Link to="/cart">
-                  <StyledBadge
-                    badgeContent={products.length > 0 ? products.length : '0'}
-                    color="secondary"
-                  >
-                    <ShoppingCartIcon />
-                  </StyledBadge>
-                </Link>
-              </Tooltip>
-            </div>
-            <div className="auth-area">
+          <div className="d-flex align-items-center">
+            <div className="auth-area text-left">
               <AuthMenu />
             </div>
           </div>
