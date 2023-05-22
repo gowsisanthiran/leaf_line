@@ -52,10 +52,10 @@ const AdminDashboard = () => {
           labels: products.map((product) => product.name),
           datasets: [
             {
-            label: 'Stock',
-            data: products.map((product) => product.stock),
-            backgroundColor: 'rgba(75, 192, 192, 0.6)',
-          },
+              label: 'Stock',
+              data: products.map((product) => product.stock),
+              backgroundColor: 'rgba(175, 198, 234, 0.6)',
+            },
           ],
         },
         options: {
@@ -90,96 +90,97 @@ const AdminDashboard = () => {
               className='box'
               sx={{
                 backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adjust the opacity for the glass effect
-               backdropFilter: 'blur(10px)', // Apply blur effect for glass
+                backdropFilter: 'blur(10px)', // Apply blur effect for glass
                 color: 'black',
                 padding: '20px',
                 borderRadius: '8px',
                 boxShadow: '0px 3px 5px 0px #415d43',
               }}
             >
-              <ShoppingCartOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Products
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {products && products.length}
-              </Typography>
+              
+                <ShoppingCartOutlinedIcon />
+                <Typography variant='h6' textAlign='center'>
+                  Products
+                </Typography>
+                <Divider />
+                <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                  {products && products.length}
+                </Typography>
             </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <Box
-              className='box'
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                padding: '20px',
-                borderRadius: '8px',
-                boxShadow: '0px 3px 5px 0px #415d43',
-              }}
-            >
-
-              <GroupOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Users
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {users && users.length}
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <Box
-              className='box'
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                padding: '20px',
-                borderRadius: '8px',
-                boxShadow: '0px 3px 5px 0px #415d43',
-              }}
-            >
-              <ListAltOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Orders
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {orders && orders.length}
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <Box
-              className='box'
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                padding: '20px',
-                borderRadius: '8px',
-                boxShadow: '0px 3px 5px 0px #415d43',
-              }}
-            >
-              <MonetizationOnOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Ordered Amount
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {orders && totalAmount}
-              </Typography>
-            </Box>
-          </Grid>
         </Grid>
 
-        <Box sx={{ marginTop: '30px' }}>
-          <canvas ref={chartRef} />
-        </Box>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            className='box'
+            sx={{
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+              borderRadius: '8px',
+              boxShadow: '0px 3px 5px 0px #415d43',
+            }}
+          >
+
+            <GroupOutlinedIcon />
+            <Typography variant='h6' textAlign='center'>
+              Users
+            </Typography>
+            <Divider />
+            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+              {users && users.length}
+            </Typography>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            className='box'
+            sx={{
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+              borderRadius: '8px',
+              boxShadow: '0px 3px 5px 0px #415d43',
+            }}
+          >
+            <ListAltOutlinedIcon />
+            <Typography variant='h6' textAlign='center'>
+              Orders
+            </Typography>
+            <Divider />
+            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+              {orders && orders.length}
+            </Typography>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            className='box'
+            sx={{
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+              borderRadius: '8px',
+              boxShadow: '0px 3px 5px 0px #415d43',
+            }}
+          >
+            <MonetizationOnOutlinedIcon />
+            <Typography variant='h6' textAlign='center'>
+              Ordered Amount
+            </Typography>
+            <Divider />
+            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+              {orders && totalAmount}
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Box sx={{ marginTop: '30px' }}>
+        <canvas ref={chartRef} />
       </Box>
+    </Box>
     </>
   );
 };

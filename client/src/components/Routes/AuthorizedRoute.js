@@ -105,7 +105,7 @@ const AuthorizedRoute = () => {
                         flexGrow: 1,
                         marginTop: '16px',
                         marginLeft: "20px",
-                        borderRadius: '8px',
+                        // borderRadius: '8px',
                         overflow: 'hidden',
                     }}
                 >
@@ -114,9 +114,9 @@ const AuthorizedRoute = () => {
                         sx={{
                             backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)',
                             boxShadow: '2px 2px 15px #7b9c56',
-                            minWidth: '225px',
+                            minWidth: '240px',
                             mr: 1,
-                            borderRadius: '8px',
+                            borderRadius: '10px',
                         }}
                     >
                         <TreeMenu />
