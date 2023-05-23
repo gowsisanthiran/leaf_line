@@ -101,61 +101,62 @@ const AdminDashboard = () => {
                 boxShadow: '0px 3px 5px 0px #415d43',
               }}
             >
-              <ShoppingCartOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Products
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {products && products.length}
-              </Typography>
+              
+                <ShoppingCartOutlinedIcon />
+                <Typography variant='h6' textAlign='center'>
+                  Products
+                </Typography>
+                <Divider />
+                <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                  {products && products.length}
+                </Typography>
             </Box>
-          </Grid>
+        </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <Box
-              className='box'
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                padding: '20px',
-                borderRadius: '8px',
-                boxShadow: '0px 3px 5px 0px #415d43',
-              }}
-            >
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            className='box'
+            sx={{
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+              borderRadius: '8px',
+              boxShadow: '0px 3px 5px 0px #415d43',
+            }}
+          >
 
-              <GroupOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Users
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {users && users.length}
-              </Typography>
-            </Box>
-          </Grid>
+            <GroupOutlinedIcon />
+            <Typography variant='h6' textAlign='center'>
+              Users
+            </Typography>
+            <Divider />
+            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+              {users && users.length}
+            </Typography>
+          </Box>
+        </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <Box
-              className='box'
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                padding: '20px',
-                borderRadius: '8px',
-                boxShadow: '0px 3px 5px 0px #415d43',
-              }}
-            >
-              <ListAltOutlinedIcon />
-              <Typography variant='h6' textAlign='center'>
-                Orders
-              </Typography>
-              <Divider />
-              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                {orders && orders.length}
-              </Typography>
-            </Box>
-          </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            className='box'
+            sx={{
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+              borderRadius: '8px',
+              boxShadow: '0px 3px 5px 0px #415d43',
+            }}
+          >
+            <ListAltOutlinedIcon />
+            <Typography variant='h6' textAlign='center'>
+              Orders
+            </Typography>
+            <Divider />
+            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+              {orders && orders.length}
+            </Typography>
+          </Box>
+        </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <Box

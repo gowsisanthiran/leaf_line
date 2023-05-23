@@ -1,183 +1,85 @@
-// import React, { useEffect } from 'react';
-// import { Button } from 'react-bootstrap';
-// import { Container, Row, Col } from 'react-bootstrap';
-// import bananaLeafImage from '../../images/pic04.jpeg';
-// import farmImage from '../../images/parallax1.jpg';
-// import compostImage from '../../images/parallax2.jpeg';
-// import '../Pages/aboutus.css';
 
-// const AboutUs = () => {
-//   useEffect(() => {
-//     const image = document.querySelector('.image');
-//     const content = document.querySelector('.content');
 
-//     window.addEventListener('scroll', () => {
-//       const scrollPosition = window.pageYOffset;
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import Carousel from 'react-material-ui-carousel';
+import Grid from '@mui/material/Grid';
 
-//       // Parallax effect for the image
-//       //image.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-
-//       // Fade-in effect for the content
-//       const contentPosition = content.offsetTop;
-//       const windowHeight = window.innerHeight;
-//       if (scrollPosition > contentPosition - windowHeight) {
-//         content.classList.add('fade-in');
-//       } else {
-//         content.classList.remove('fade-in');
-//       }
-//     });
-//   }, []);
-
-//   return (
-//     <Container className="p-4">
-//       <h3 className="mb-4">About Us</h3>
-//       <hr className="my-4" />
-//       <Row className="mb-4">
-//         <Col xs={12} sm={6}>
-//           <h4>Our Mission</h4>
-//           <p className="p-4">
-//             At Banana Leaf Plates, our mission is to provide sustainable and eco-friendly alternatives to disposable tableware. We believe in the power of natural materials and their positive impact on the environment. Our goal is to make it easy for individuals and businesses to adopt eco-friendly practices in their daily lives. We strive to promote awareness about the harmful effects of single-use plastic and inspire positive change.
-//           </p>
-//           <Button variant="primary" className="mt-4">Learn More</Button>
-//         </Col>
-//         <Col xs={12} sm={6}>
-//           <h4>Our Products</h4>
-//           <p className="p-4">
-//             All our plates are made from biodegradable and compostable banana leaves. We source these leaves from local farmers who practice sustainable agriculture. Our plates are not only eco-friendly but also sturdy and suitable for various occasions, from casual picnics to elegant parties. By choosing our products, you contribute to reducing plastic waste and promoting a healthier planet. Explore our wide range of sizes and designs to find the perfect fit for your eco-conscious lifestyle.
-//           </p>
-//           <Button variant="primary" className="mt-4">Shop Now</Button>
-//         </Col>
-//       </Row>
-//       <Row>
-//         <Col xs={5} sm={3} md={2}>
-//           <div className="parallax-wrapper">
-//             <div className="image-container">
-//               <img src={farmImage} alt="Banana Leaf" className="image" />
-//             </div>
-//             <div className="content">
-//               <p className="p-4">
-//                 Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us on our journey towards a more sustainable future.
-//               </p>
-//             </div>
-//           </div>
-//         </Col>
-//       </Row>
-//     </Container>
-//   );
-// };
-
-// export default AboutUs;
-
-import React, { useEffect } from 'react';
-import { Button, Container, Row, Col, Carousel } from 'react-bootstrap';
-import '../Pages/aboutus.css';
 
 import bananaLeafImage from '../../images/pic04.jpeg';
-import farmImage from '../../images/parallax1.jpg';
-import compostImage from '../../images/parallax2.jpeg';
+ import farmImage from '../../images/parallax1.jpg';
+ import compostImage from '../../images/parallax2.jpeg';
+ import sl1 from '../../images/bunch2.jpeg';
+import sl2 from '../../images/land02.png';
 
-
-const AboutUs = () => {
-  useEffect(() => {
-    const content = document.querySelector('.content');
-
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.pageYOffset;
-
-      // Fade-in effect for the content
-      const contentPosition = content.offsetTop;
-      const windowHeight = window.innerHeight;
-      if (scrollPosition > contentPosition - windowHeight) {
-        content.classList.add('fade-in');
-      } else {
-        content.classList.remove('fade-in');
-      }
-    });
-  }, []);
+const LandingPage = () => {
+  const carouselItems = [
+    {
+      image:bananaLeafImage ,
+      title: 'Product 1',
+    },
+    {
+      image:farmImage,
+      title: 'Product 2',
+    },
+    {
+      image: bananaLeafImage ,
+      title: 'Product 3',
+    },
+  ];
 
   return (
-    <Container className="p-4">
-      <h3 className="mb-4">About Us</h3>
-      {/* <hr className="my-4" />
-      <Row className="mb-4">
-        <Col xs={12} sm={6}>
-          <h4>Our Mission</h4>
-          <p className="p-4">
-            At Banana Leaf Plates, our mission is to provide sustainable and eco-friendly alternatives to disposable tableware. We believe in the power of natural materials and their positive impact on the environment. Our goal is to make it easy for individuals and businesses to adopt eco-friendly practices in their daily lives. We strive to promote awareness about the harmful effects of single-use plastic and inspire positive change.
-          </p>
-          <Button variant="primary" className="mt-4">
-            Learn More
-          </Button>
-        </Col> */}
-        {/* <Col xs={12} sm={6}>
-          <h4>Our Products</h4>
-          <p className="p-4">
-            All our plates are made from biodegradable and compostable banana leaves. We source these leaves from local farmers who practice sustainable agriculture. Our plates are not only eco-friendly but also sturdy and suitable for various occasions, from casual picnics to elegant parties. By choosing our products, you contribute to reducing plastic waste and promoting a healthier planet. Explore our wide range of sizes and designs to find the perfect fit for your eco-conscious lifestyle.
-          </p>
-          <Button variant="primary" className="mt-4">
-            Shop Now
-          </Button>
-        </Col>
-      </Row> */}
+    <Box textAlign="center">
+      <Typography variant="h4" sx={{ fontFamily: 'Your Custom Font', marginTop: '2rem' }}>
+        Welcome to Leafline
+      </Typography>
 
+    
 
-{/* templet carousel */}
+      {/* <Carousel>
+        {carouselItems.map((item, index) => (
+          <Box key={index} display="flex" justifyContent="center">
+            <img src={item.image} alt={item.title} style={{ height: '200px' }} />
+          </Box>
+        ))}
+      </Carousel> */}
 
+      <Box mt={4}>
+        <Typography variant="h5">About Us</Typography>
+        <Typography variant="body1" sx={{ maxWidth: '800px', margin: '0 auto' }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit nunc eget mauris tincidunt
+          convallis. Morbi rhoncus, libero nec condimentum interdum, lorem est maximus ipsum, nec laoreet justo ex
+          eu sem.
+        </Typography>
+      </Box>
 
-
-
-{/* templet carosel end */}
-
-
-
-
-
-
-
-      <Row>
-        <Col xs={12} sm={6} className="mx-auto">
-          <Carousel fade>
-            <Carousel.Item>
-              <img
-                className=" carousell"
-                src={compostImage}
-                alt="Banana Leaf"
-              />
-              <Carousel.Caption>
-                <p className="carousel-content">
-                  Thank you for supporting our mission to create a greener world. Together, we can make a difference by embracing sustainable choices and preserving the beauty of our planet for future generations. Join us on our journey towards a more sustainable future.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className=" carousell"
-                src={compostImage}
-                alt="Compost"
-              />
-              <Carousel.Caption>
-                <p className="carousel-content">
-                  Another carousel content slide...
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            {/* Add more carousel items as needed */}
-            <img
-                className=" carousell"
-                src={compostImage}
-                alt="Compost"
-              />
-              <Carousel.Caption>
-                <p className="carousel-content ">
-                  Another carousel content slide...
-                </p>
-                </Carousel.Caption>
-          </Carousel>
-        </Col>
-      </Row>
-    </Container>
+      <Grid container spacing={2} mt={4}>
+        <Grid item xs={12} sm={6}>
+          <Box p={2} bgcolor="#f1f1f1">
+            <Typography variant="h6">Product 1</Typography>
+            <Typography><img src={sl2}style={{ height: '400px', width: '400px' }} alt="Image" /> </Typography>
+            <Typography variant="body2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac quam ut justo interdum aliquam
+              eget ut risus.
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Box p={2} bgcolor="#f1f1f1">
+            <Typography variant="h6">Bowl</Typography>
+            <Typography><img src={sl1} style={{ height: '400px', width: '400px' }} alt="Image" /> </Typography>
+            <Typography variant="body2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac quam ut justo interdum aliquam
+              eget ut risus.
+            </Typography>
+          </Box>
+        </Grid>
+        
+      </Grid>
+    </Box>
   );
 };
 
-export default AboutUs;
+export default LandingPage;
+
 
