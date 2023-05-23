@@ -40,6 +40,16 @@ const Login = () => {
       }
     }, [accessToken,navigate,path])
     
+    const glassmorphismStyles = {
+        backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adjust the opacity as desired
+        backdropFilter: 'blur(10px)',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)', // Adjust the shadow properties as desired
+        borderRadius: '10px',
+        border: '1px solid rgba(255, 255, 255, 0.18)', // Adjust the border color and opacity as desired
+        padding: '10px',
+        margin: '0 auto',
+        maxWidth: 500,
+      };
   return (
     <>
     <Box sx={{marginTop:2, display:'flex',flexDirection:'column',alignItems:'center',}}>

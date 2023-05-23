@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ReactImageMagnify from 'react-image-magnify';
 
-import { IMAGE_BASEURL } from '../../constants/baseURL';
 
 const ProductDetailsImageCarouselCard = ({images}) => {
   const pagination={

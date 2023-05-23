@@ -13,7 +13,7 @@ import './Admin.css';
 import { Link } from 'react-router-dom';
 
 import Chart from 'chart.js/auto';
-import {Doughnut,Line,Bar} from 'react-chartjs-2';
+import { Doughnut, Line, Bar } from 'react-chartjs-2';
 
 
 const AdminDashboard = () => {
@@ -39,41 +39,41 @@ const AdminDashboard = () => {
     dispatch(getAllOrders({ toast }));
     dispatch(getAllUsers({ toast }));
   })
-  const lineData={
-    labels:['Initial Amount','Amount Earned'],
-    datasets:[
-        {
-            label:'Total Amount',
-            backgroundColor:['tomato'],
-            hoverBackgroundColor:['orange'],
-            data:[0,totalAmount]
-        }
+  const lineData = {
+    labels: ['Initial Amount', 'Amount Earned'],
+    datasets: [
+      {
+        label: 'Total Amount',
+        backgroundColor: ['tomato'],
+        hoverBackgroundColor: ['orange'],
+        data: [0, totalAmount]
+      }
     ]
-}
+  }
 
-const doughnutData={
-    labels:['Out Of Stock','In Stock'],
-    datasets:[
-        {
-            backgroundColor:['red','green'],
-            hoverBackgroundColor:['black','blue'],
-            data:[outOfStock,products.length-outOfStock]
-        }
+  const doughnutData = {
+    labels: ['Out Of Stock', 'In Stock'],
+    datasets: [
+      {
+        backgroundColor: ['red', 'green'],
+        hoverBackgroundColor: ['black', 'blue'],
+        data: [outOfStock, products.length - outOfStock]
+      }
     ]
-}
- // Create the bar chart data
- const barData = {
-  labels: products && products.map((product) => product.name),
-  datasets: [
-    {
-      label: 'Stock',
-      backgroundColor: 'rgba(54, 162, 235, 0.5)',
-      borderColor: 'rgba(54, 162, 235, 1)',
-      borderWidth: 1,
-      data: products && products.map((product) => product.stock)
-    }
-  ]
-};    
+  }
+  // Create the bar chart data
+  const barData = {
+    labels: products && products.map((product) => product.name),
+    datasets: [
+      {
+        label: 'Stock',
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1,
+        data: products && products.map((product) => product.stock)
+      }
+    ]
+  };
   return (
     <>
       <Box
@@ -94,7 +94,7 @@ const doughnutData={
               className='box'
               sx={{
                 backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adjust the opacity for the glass effect
-               backdropFilter: 'blur(10px)', // Apply blur effect for glass
+                backdropFilter: 'blur(10px)', // Apply blur effect for glass
                 color: 'black',
                 padding: '20px',
                 borderRadius: '8px',
@@ -180,10 +180,10 @@ const doughnutData={
           </Grid>
         </Grid>
 
-         <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
-        <Grid item xs={5}><Line data={lineData}/></Grid>
-        <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
-        <Grid item xs={12}>
+        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
+          <Grid item xs={5}><Line data={lineData} /></Grid>
+          <Grid item xs={5}> <Doughnut data={doughnutData} /></Grid>
+          <Grid item xs={12}>
             <Bar data={barData} />
           </Grid>
         </Grid>

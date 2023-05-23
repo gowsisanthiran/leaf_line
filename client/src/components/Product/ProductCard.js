@@ -1,5 +1,4 @@
 import React,{useEffect,useState} from 'react';
-import { IMAGE_BASEURL } from '../../constants/baseURL';
 import {formatCurrency} from '../../utility/formatCurrency';
 import {useDispatch,useSelector} from 'react-redux';
 import {toast} from 'react-toastify';
