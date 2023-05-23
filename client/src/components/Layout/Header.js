@@ -1,8 +1,4 @@
-
-
-
 import React from 'react';
-import logo from '../../images/Logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import DrawerMenu from './DrawerMenu';
@@ -35,7 +31,7 @@ const Header = () => {
   });
 
   return (
-    <header className="bg-transparent">
+    <header className="bg-transparent headers fixed-top">
       <div className="container justify-content-between header">
         <nav className="navbar navbar-expand navbar-light bg-transparent navbar">
           <Link to="/" className="navbar-brand">
@@ -71,7 +67,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center justify-content-end">
             <div className="auth-area text-left">
               <AuthMenu />
             </div>

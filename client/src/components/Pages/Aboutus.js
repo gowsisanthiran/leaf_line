@@ -11,6 +11,10 @@ import bananaLeafImage from '../../images/pic04.jpeg';
  import compostImage from '../../images/parallax2.jpeg';
  import sl1 from '../../images/bunch2.jpeg';
 import sl2 from '../../images/land02.png';
+import sl12 from '../../images/abou2.png';
+import sl13 from '../../images/about.png';
+import sl14 from '../../images/about3.png';
+
 
 const LandingPage = () => {
   const carouselItems = [
@@ -36,13 +40,6 @@ const LandingPage = () => {
 
     
 
-      {/* <Carousel>
-        {carouselItems.map((item, index) => (
-          <Box key={index} display="flex" justifyContent="center">
-            <img src={item.image} alt={item.title} style={{ height: '200px' }} />
-          </Box>
-        ))}
-      </Carousel> */}
 
       <Box mt={4}>
         <Typography variant="h5">About Us</Typography>
@@ -55,24 +52,24 @@ const LandingPage = () => {
 
       <Grid container spacing={2} mt={4}>
         <Grid item xs={12} sm={6}>
-          <Box p={2} bgcolor="#f1f1f1">
-            <Typography variant="h6">Product 1</Typography>
-            <Typography><img src={sl2}style={{ height: '400px', width: '400px' }} alt="Image" /> </Typography>
+          {/* <Box p={1} bgcolor="#f1f1f1"  > */}
+            {/* <Typography variant="h6">Product 1</Typography> */}
+            <Typography><img src={sl14}style={{ height: '400px', width: '400px' }} alt="Image" /> </Typography>
             <Typography variant="body2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac quam ut justo interdum aliquam
               eget ut risus.
             </Typography>
-          </Box>
+          {/* </Box> */}
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Box p={2} bgcolor="#f1f1f1">
-            <Typography variant="h6">Bowl</Typography>
-            <Typography><img src={sl1} style={{ height: '400px', width: '400px' }} alt="Image" /> </Typography>
+          {/* <Box p={2} bgcolor="#f1f1f1"> */}
+            {/* <Typography variant="h6">Bowl</Typography> */}
+            <Typography><img src={sl12} style={{ height: '400px', width: '400px' }} alt="Image" /> </Typography>
             <Typography variant="body2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac quam ut justo interdum aliquam
               eget ut risus.
             </Typography>
-          </Box>
+          {/* </Box> */}
         </Grid>
         
       </Grid>
