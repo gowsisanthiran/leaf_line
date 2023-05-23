@@ -52,12 +52,32 @@ const MyOrders = () => {
   }, [dispatch]);
 
   return (
-    <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
-      {loading ? (
-        <BoxShadowLoader />
-      ) : (
-        <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }} autoHeight />
-      )}
+    <Box
+      sx={{
+        marginTop: 8,
+
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        boxShadow: '0 2px 4px green',
+        borderRadius: '4px',
+        padding: '50px',
+        backgroundColor: '#fff',
+        height: "100% !important",
+        width: "80%",
+        marginLeft: "160px",
+        marginRight:"0px"
+
+      }}
+    >
+
+      <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
+        {loading ? (
+          <BoxShadowLoader />
+        ) : (
+          <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }} autoHeight />
+        )}
+      </Box>
     </Box>
   );
 };

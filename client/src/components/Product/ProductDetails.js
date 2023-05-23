@@ -65,10 +65,10 @@ const ProductDetails = () => {
 
 
                 <Box className='product-reviews' style={{marginTop:'50px'}}>
-                    <Box className='reviews' spacing={6} style={{textAlign:'center'}} >
+                    <Box className='reviews' spacing={10} style={{textAlign:'center', marginRight:"0px"}} >
                         <Button variant="outlined" onClick={handleClickOpen}color="success" >Submit Review</Button>
                         <Dialog open={open} onClose={handleClose}>
-                            <DialogTitle sx={{bgcolor:'primary.main', color:'#fff',mb:2}}>Review &#38; Rating</DialogTitle>
+                            <DialogTitle sx={{backgroundImage:'linear-gradient(to right, #143a0d, #c0dca5)', color:'#fff',mb:2}}>Review &#38; Rating</DialogTitle>
                             <DialogContent sx={{minWidth:'350px'}} fullWidth>
                             <Stack spacing={1} sx={{display:'block'}}>
                                     <Rating value={submitRating} 
@@ -78,7 +78,7 @@ const ProductDetails = () => {
                             </Stack>
                             <TextareaAutosize                            
                                 id="review"
-                                style={{width:'100%',margin:'10px 0',padding:0}}
+                                style={{width:'100%',margin:'10px 0',padding:"10px", borderRadius:"20px"}}
                                 minRows={5}
                                 value={submitReview}
                                 variant="standard"
@@ -98,7 +98,7 @@ const ProductDetails = () => {
                             )}
                         </Box>
                          :                        
-                        <Typography variant='button' spacing={6}>No reviews yet</Typography>                        
+                        <Typography variant='button' spacing={10} marginLeft="20px">No reviews yet</Typography>                        
                         }
 
                     </Box>                

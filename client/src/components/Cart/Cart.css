@@ -9,7 +9,7 @@
 .cart-body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 1px solid #163520;
+    border-bottom: 1px solid #806577;
     grid-gap: 5px;
     margin: 10px 0;
     padding-bottom: 10px;

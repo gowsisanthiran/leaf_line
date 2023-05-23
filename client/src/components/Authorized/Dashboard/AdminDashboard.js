@@ -55,7 +55,7 @@ const doughnutData={
     labels:['Out Of Stock','In Stock'],
     datasets:[
         {
-            backgroundColor:['red','green'],
+            backgroundColor:['red','#285430'],
             hoverBackgroundColor:['black','blue'],
             data:[outOfStock,products.length-outOfStock]
         }
@@ -184,9 +184,9 @@ const doughnutData={
          <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
         <Grid item xs={5}><Line data={lineData}/></Grid>
         <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
             <Bar data={barData} />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Box>
     </>
