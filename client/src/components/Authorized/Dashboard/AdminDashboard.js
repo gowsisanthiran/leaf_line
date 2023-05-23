@@ -56,7 +56,7 @@ const doughnutData={
     datasets:[
         {
             backgroundColor:['red','#285430'],
-            hoverBackgroundColor:['black','blue'],
+            hoverBackgroundColor:['black',''],
             data:[outOfStock,products.length-outOfStock]
         }
     ]
