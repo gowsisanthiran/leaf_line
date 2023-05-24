@@ -363,7 +363,7 @@ const Home = () => {
           </div>
         </Grid>
         <Grid>
-          <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop:'3rem' }}>
             <Typography variant="body1">
               Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
               the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
@@ -381,16 +381,17 @@ const Home = () => {
 
 
       <Box className="containerx">
-        <Typography variant="h3" className="m-4 p-1 bg-dark text-light">
-          Top rated products
-        </Typography>
-        <Box className="card-container">
-          {topRatedProduct &&
-            topRatedProduct.products.map((product) => (
-              <ProductCard product={product} key={product._id} />
-            ))}
-        </Box>
-      </Box>
+  <Typography variant="h3" className="m-4 p-1 bg-dark text-light text-center">
+    Top rated products
+  </Typography>
+  <Box className="card-container">
+    {topRatedProduct &&
+      topRatedProduct.products.map((product) => (
+        <ProductCard product={product} key={product._id} />
+      ))}
+  </Box>
+</Box>
+
 
       <Box className="container">
         <Typography variant="h3" className="m-4 p-1 bg-dark text-light">

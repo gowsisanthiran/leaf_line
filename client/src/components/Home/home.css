@@ -3,8 +3,8 @@
 @import url('https://fonts.cdnfonts.com/css/christopher-done');
 
 .tagLine{
-  font-family: 'Christopher Done', sans-serif;
-font-size: 2rem;
+    font-family: 'Christopher Done', sans-serif;
+  font-size: 2rem;
 }
 /* .tagLine{
     font-size: 2em;
@@ -316,6 +316,22 @@ font-size: 2rem;
         color: white;
         font-size: 16px;
         font-weight: bold;
+      }
+      
+
+      .containerx {
+        background: linear-gradient(to bottom, #5D9C59, #e5e5e5);
+        box-shadow: 0 2px 6px #539165;
+        animation: fade-in 0.5s ease-in-out;
+      }
+      
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
       
 

@@ -64,6 +64,8 @@
   background-color: #d62f2f;
 } */ 
 
+@import url('https://fonts.cdnfonts.com/css/christopher-done');
+
 .headers {
   background: linear-gradient(to bottom,#ABCB89, #285430 );
 }
@@ -72,7 +74,8 @@
   color: #E7F0D2;
   font-size: 28px;
   font-style: inherit;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Christopher Done', sans-serif;
+  font-size: 2rem;
   text-decoration:double;
 
 }
