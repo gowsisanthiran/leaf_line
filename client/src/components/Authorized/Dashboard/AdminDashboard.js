@@ -51,14 +51,14 @@ const AdminDashboard = () => {
     ]
   }
 
-  const doughnutData = {
-    labels: ['Out Of Stock', 'In Stock'],
-    datasets: [
-      {
-        backgroundColor: ['red', 'green'],
-        hoverBackgroundColor: ['black', 'blue'],
-        data: [outOfStock, products.length - outOfStock]
-      }
+const doughnutData={
+    labels:['Out Of Stock','In Stock'],
+    datasets:[
+        {
+            backgroundColor:['red','#285430'],
+            hoverBackgroundColor:['black','#FF6000'],
+            data:[outOfStock,products.length-outOfStock]
+        }
     ]
   }
   // Create the bar chart data
@@ -181,12 +181,12 @@ const AdminDashboard = () => {
           </Grid>
         </Grid>
 
-        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
-          <Grid item xs={5}><Line data={lineData} /></Grid>
-          <Grid item xs={5}> <Doughnut data={doughnutData} /></Grid>
-          <Grid item xs={12}>
+         <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
+        <Grid item xs={5}><Line data={lineData}/></Grid>
+        <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
+        {/* <Grid item xs={12}>
             <Bar data={barData} />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Box>
     </>

@@ -10,3 +10,6 @@
         display: none;
     }
 }
+.link-no-underline {
+    text-decoration: none;
+  }

@@ -101,7 +101,7 @@ const ReviewList = () => {
     
   return (
     <>
-    <Box sx={{textAlign:'center', boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.2)',borderRadius: '5px', padding: '20px' ,height:"500px"}}>
+    <Box sx={{textAlign:'center', boxShadow: '0px 0px 5px #013A20',borderRadius: '5px', padding: '20px' ,height:"100% !important"}}>
         <Box sx={{maxWidth:"500px", m:'30px auto', textAlign:'left', boxShadow: '0px 0px 5px #006400',borderRadius: '5px', padding: '20px'}} color='white' >
             <FormControl fullWidth  color='success'>
                 <InputLabel id='productList'>Product List</InputLabel>

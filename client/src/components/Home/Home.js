@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -14,13 +15,20 @@ import '../Home/home.css';
 
 import sl1 from '../../images/bunch2.jpeg';
 import sl2 from '../../images/land02.png';
-import sl3 from '../../images/land03.jpeg';
+// import sl3 from '../../images/land03.jpeg';
 import sl4 from '../../images/land04.jpeg';
 import sl5 from '../../images/land05.jpeg';
 import sl6 from '../../images/land05.jpeg';
 import sl7 from '../../images/home pic.jpg';
 import sl8 from '../../images/bunch1.png';
+import sl9 from '../../images/image1.jpeg';
+import sl10 from '../../images/image02.jpeg';
+import sl11 from '../../images/image03.jpeg';
 import { alignPropType } from 'react-bootstrap/esm/types';
+
+
+import { Grid } from '@mui/material';
+
 
 const Home = () => {
   const limit = 4;
@@ -88,14 +96,13 @@ const Home = () => {
           className="m-10 p-1 text"
           style={{
             color: '#D7E9B9',
-            textShadow: '1px 1px 1px #445',
-            fontSize: '5px',
-            fontWeight: 'bold',
-            fontFamily: '"Times New Roman", Times, serif',
+            textShadow: '1px 0px 0px #B6E2A1',
+            fontSize: '2px',
+            fontWeight: 'bold'
           }}
         >
-          <Typography variant="h1">'NATURAL FINE DINING'</Typography>
-          <Typography variant="h6">L E A F L I N E</Typography>
+          <Typography variant="h4" className='tagLine'>'NATURAL FINE DINING'</Typography>
+          <Typography variant="h6" className='tagLine'>L E A F L I N E</Typography>
         </Box>
 
         {/* <Box className="d-flex flex-column align-items-center mt-4">
@@ -105,66 +112,71 @@ const Home = () => {
         </Box> */}
       </Box>
 
-      <Box className="container2">
-  <Container>
-    <Box>
-    <Row>
-      <Box>
-    <Col sm={6} className="d-flex justify-content-start align-items-center order-sm-2">
-<Typography
-  variant="div"
-  component="h1"
-  className="content-box1"
->
-  Why Choosing Us!
-</Typography>
-</Col>
-</Box>
-<Box>
-    <Col sm={6} className="d-flex justify-content-start align-items-center order-sm-2">
+      {/* secound container */}
 
-<Typography
-  variant="div"
-  component="h6"
-  className="content-box2"
->
-choosing banana leaf plates aligns with the principles of sustainability, naturalness, and cultural appreciation. They provide a greener and more eco-friendly option for serving meals while adding a touch of tradition and visual appeal.
-</Typography>
+      <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '20px' }}>
+      <Typography variant="h6" sx={{ fontFamily: 'Your Custom Font', marginTop: '5rem', textAlign: 'center' }}>
+        Why Choosing Us!
+      </Typography>
+      <Box mt={4} style={{ textAlign: 'center' }}>
+        <Typography variant="h4">Few Reasons Why People Choosing Us!</Typography>
 
-</Col>
-</Box>
-     <Box>
-      <Col sm={6} className="d-flex justify-content-start align-items-center order-sm-1">
-        <img src={sl8} className="bgImg7" alt="Background Image" />
-        
-     
-      </Col>
+        <Grid className='card-container' style={{ marginLeft: '40px' }}>
+          <div className="image-card">
+            <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
+            <div className="overlay">
+              <Typography variant="body1">Image 1</Typography>
+            </div>
+          </div>
 
+          <div className="image-card">
+            <img src={sl10} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
+            <div className="overlay">
+              <Typography variant="body1">Image 2</Typography>
+            </div>
+          </div>
+
+          <div className="image-card">
+            <img src={sl11} style={{ height: '250px', width: '300px', margin: '20px' }} alt="Image" />
+            <div className="overlay">
+              <Typography variant="body1">Image 3</Typography>
+            </div>
+          </div>
+        </Grid>
+        <Grid>
+          <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop:'3rem' }}>
+            <Typography variant="body1">
+              Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
+              the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
-      
-     
-      
-    </Row>
     </Box>
-  </Container>
+
+
+
+
+
+      {/* ----------- */}
+
+
+      <Box className="containerx">
+  <Typography variant="h3" className="m-4 p-1 bg-dark text-light text-center">
+    Top rated products
+  </Typography>
+  <Box className="card-container">
+    {topRatedProduct &&
+      topRatedProduct.products.map((product) => (
+        <ProductCard product={product} key={product._id} />
+      ))}
+  </Box>
 </Box>
 
 
       <Box className="container">
         <Typography variant="h3" className="m-4 p-1 bg-dark text-light">
-          Top rated products
-        </Typography>
-        <Box className="card-container">
-          {topRatedProduct &&
-            topRatedProduct.products.map((product) => (
-              <ProductCard product={product} key={product._id} />
-            ))}
-        </Box>
-      </Box>
-
-      <Box className="container">
-        <Typography variant="h3" className="m-4 p-1 bg-dark text-light">
-          Carousel
+          Our Designs
         </Typography>
         <Carousel
           interval={3000} // Set the interval between slides (in milliseconds)
@@ -174,23 +186,23 @@ choosing banana leaf plates aligns with the principles of sustainability, natura
         >
           <Carousel.Item>
             <img src={sl1} className="bgImg" alt="Carousel Image" />
-            
+
           </Carousel.Item>
           <Carousel.Item>
             <img src={sl2} className="bgImg" alt="Carousel Image" />
-            
+
           </Carousel.Item>
           <Carousel.Item>
-            <img src={sl3} className="bgImg" alt="Carousel Image" />
-            
+            <img src={sl2} className="bgImg" alt="Carousel Image" />
+
           </Carousel.Item>
           <Carousel.Item>
             <img src={sl4} className="bgImg" alt="Carousel Image" />
-            
+
           </Carousel.Item>
           <Carousel.Item>
             <img src={sl5} className="bgImg" alt="Carousel Image" />
-            
+
           </Carousel.Item>
         </Carousel>
       </Box>

@@ -64,12 +64,24 @@
   background-color: #d62f2f;
 } */ 
 
-.header{
-  margin-top: 0.2%;
- 
+@import url('https://fonts.cdnfonts.com/css/christopher-done');
 
+.headers {
+  background: linear-gradient(to bottom,#ABCB89, #285430 );
+}
+
+.logo {
+  color: #E7F0D2;
+  font-size: 28px;
+  font-style: inherit;
+  font-family: 'Christopher Done', sans-serif;
+  font-size: 2rem;
+  text-decoration:double;
+
+}
+
+.navbar {
   position: relative;
-
-  
+  z-index: 9999;
 }
 

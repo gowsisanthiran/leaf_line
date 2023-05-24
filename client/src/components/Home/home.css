@@ -1,7 +1,11 @@
-@import url('https://fonts.cdnfonts.com/css/comico-2');
+/* @import url('https://fonts.cdnfonts.com/css/comico-2'); */
 
+@import url('https://fonts.cdnfonts.com/css/christopher-done');
 
-
+.tagLine{
+    font-family: 'Christopher Done', sans-serif;
+  font-size: 2rem;
+}
 /* .tagLine{
     font-size: 2em;
     font-family: 'Comico', sans-serif;
@@ -173,7 +177,7 @@
         transform: scale(1.1);
       }
       
-      .container {
+      .containerx {
         /* margin: 20px; */
         padding: 10px;
         background-color: #D7E9B9;
@@ -184,6 +188,7 @@
         align-items: center; 
          justify-content: center;
         margin-bottom: 20px;
+        margin-top: 5rem;
       }
       
       .card-container {
@@ -278,5 +283,55 @@
 
         
       } 
+      
+      .image-card {
+        position: relative;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      
+      .image-card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      .image-card:hover .overlay {
+        opacity: 1;
+      }
+      
+      .overlay > p {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      
+
+      .containerx {
+        background: linear-gradient(to bottom, #5D9C59, #e5e5e5);
+        box-shadow: 0 2px 6px #539165;
+        animation: fade-in 0.5s ease-in-out;
+      }
+      
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
       
 
