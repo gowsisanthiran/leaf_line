@@ -344,21 +344,21 @@ const Home = () => {
           <div className="image-card">
             <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
             <div className="overlay">
-              <Typography variant="body1">Image 1</Typography>
+              <Typography variant="body1">Product 01</Typography>
             </div>
           </div>
 
           <div className="image-card">
             <img src={sl10} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
             <div className="overlay">
-              <Typography variant="body1">Image 2</Typography>
+              <Typography variant="body1">Product 2</Typography>
             </div>
           </div>
 
           <div className="image-card">
             <img src={sl11} style={{ height: '250px', width: '300px', margin: '20px' }} alt="Image" />
             <div className="overlay">
-              <Typography variant="body1">Image 3</Typography>
+              <Typography variant="body1">Product 3</Typography>
             </div>
           </div>
         </Grid>
@@ -381,7 +381,7 @@ const Home = () => {
 
 
       <Box className="containerx">
-  <Typography variant="h3" className="m-4 p-1 bg-dark text-light text-center">
+  <Typography variant="h3" className="m-4 p-1  text-dark text-center">
     Top rated products
   </Typography>
   <Box className="card-container">
@@ -394,7 +394,7 @@ const Home = () => {
 
 
       <Box className="container">
-        <Typography variant="h3" className="m-4 p-1 bg-dark text-light">
+        <Typography variant="h3" className="m-4 p-1  text-light">
           Our Designs
         </Typography>
         <Carousel

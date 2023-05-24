@@ -132,7 +132,7 @@ const AboutUsPage = () => {
 
   return (
     <Box textAlign="center" marginTop='5rem'>
-      <Typography variant="h5">About Us</Typography>
+      <Typography variant="h3">About Us</Typography>
       <Box mt={4} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       
         <Box style={{ width: '50%', textAlign: 'Justify',marginLeft:'100px' }}>
@@ -141,15 +141,14 @@ const AboutUsPage = () => {
           The Leafline Banana Leaf Plates are eco-friendly and sustainable alternatives to traditional disposable plates. 
           These plates are made from 100% natural and biodegradable banana leaves. 
           They are fully biodegradable, meaning they can naturally decompose without causing harm to the environment.
-          The plates are free from chemicals, additives, and synthetic materials commonly found in traditional disposable plates. 
+          
           They are a safe and healthy option for serving food, as they do not leach harmful substances into the food.
           
           <Typography variant="body2" mt={2}>
           After use, these plates can be easily disposed of in compost or organic waste bins. 
-          They will naturally degrade, returning to the environment without leaving any harmful residues behind.
+         
           They can be used for serving appetizers, main courses, desserts, and snacks at both indoor and outdoor events.
-          These plates are heat-resistant, allowing you to serve piping hot meals without worrying about the plates losing their shape or integrity. 
-          Similarly, they can withstand cold temperatures, making them suitable for serving chilled desserts or salads.
+          
           </Typography>
           
           </Typography>
@@ -166,7 +165,7 @@ const AboutUsPage = () => {
         <Box style={{ width: '50%', textAlign: 'justify' ,marginRight:'100px' }}>
          
           <Typography variant="body2" mt={2}>
-          Despite their natural composition, Leafline Banana Leaf Plates are sturdy and durable.
+           Leafline Banana Leaf Plates are sturdy and durable.
            They can hold various types of food, including hot and cold dishes, without leaking or becoming soggy.
            The natural texture and patterns of banana leaves give the plates a unique and elegant appearance.
             They add a touch of natural beauty to any table setting, making them ideal for special events, parties, or eco-friendly weddings.
