@@ -59,6 +59,7 @@ import TreeMenu from './Menus/TreeMenu';
 import './Authorized.css';
 import DrawerTreeMenu from './Menus/DrawerTreeMenu';
 
+
 const AuthorizedRoute = () => {
     const navigate = useNavigate();
     const { accessToken } = useSelector(selectLoggedInUser);
@@ -115,6 +116,7 @@ const AuthorizedRoute = () => {
                             backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)',
                             boxShadow: '2px 2px 15px #7b9c56',
                             minWidth: '240px',
+                            maxHeight: '100px',
                             mr: 1,
                             borderRadius: '10px',
                         }}

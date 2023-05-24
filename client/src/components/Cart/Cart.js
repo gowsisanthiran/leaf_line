@@ -23,12 +23,12 @@ const Cart = () => {
         dispatch(removeItem(_id));
     }
     const decreaseQuantity=(_id,qty)=>{
-        const quantity=qty-1;
+        const quantity=qty-20;
         if(qty<=1) return;
         dispatch(addItemsToCart({_id,quantity}));
       }
       const increaseQuantity=(_id,qty,stock)=>{
-        const quantity=qty+1;
+        const quantity=qty+20;
         if(stock<=qty) return;
         dispatch(addItemsToCart({_id,quantity}));
       }
