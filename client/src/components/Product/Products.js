@@ -83,7 +83,7 @@ const Products = () => {
     
     
   return (
-    <Box className='wrapper'>
+    <Box className='wrapper' style={{marginTop:'5rem'}}>
         <Box className='filter-box'>
         <Accordion>
         <AccordionSummary

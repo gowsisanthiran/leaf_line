@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import DrawerMenu from './DrawerMenu';
 import AuthMenu from './AuthMenu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -8,8 +7,10 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Tooltip } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
+import { useSelector } from 'react-redux';  
 import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -21,6 +22,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  
   const { products } = useSelector(selectCartItems);
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 100) {
@@ -62,7 +64,10 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink to="/cart" className="nav-link" activeClassName="active">
-                  <ShoppingCartIcon /> Cart
+                  <StyledBadge badgeContent={products.length} color="secondary">
+                    <ShoppingCartIcon />
+                  </StyledBadge>
+                  Cart
                 </NavLink>
               </li>
             </ul>

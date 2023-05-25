@@ -53,7 +53,7 @@ const ProductDetails = () => {
     <>
         {loading?<BoxShadowLoader/>:
             <>
-                <Box className='product-details'>
+                <Box className='product-details'style={{marginTop:'5rem'}}>
                     <Box className='product-image-carousel'>
                         {product?.images && <ProductDetailsImageCarouselCard images={product.images}/>}
                     </Box>

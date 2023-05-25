@@ -67,7 +67,7 @@
 @import url('https://fonts.cdnfonts.com/css/christopher-done');
 
 .headers {
-  background: linear-gradient(to bottom,#ABCB89, #285430 );
+  background: linear-gradient(to bottom,#285430,#ABCB89  );
 }
 
 .logo {
