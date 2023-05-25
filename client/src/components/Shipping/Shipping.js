@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,30 @@ const Shipping = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { shipInfo } = useSelector(selectShippingInfo);
+  const validationCriteria = {
+    address: {
+      required: true,
+      minLength: 5, // Example: Address should have at least 5 characters
+    },
+    city: {
+      required: true,
+    },
+    zipCode: {
+      required: true,
+      pattern: /^\d{5}$/ // Example: Zip code should be a 5-digit number
+    },
+    state: {
+      required: true,
+    },
+    country: {
+      required: true,
+    },
+    phone: {
+      required: true,
+      pattern: /^\d{10}$/ // Example: Phone number should be a 10-digit number
+    },
+  };
+
 
   const [address, setAddress] = useState(shipInfo.address || '');
   const [city, setCity] = useState(shipInfo.city || '');
@@ -21,11 +45,50 @@ const Shipping = () => {
   const [state, setState] = useState(shipInfo.state || '');
   const [country, setCountry] = useState(shipInfo.country || '');
   const [phone, setPhone] = useState(shipInfo.phone || '');
+  const [errors, setErrors] = useState({});
+
+  const validateShippingInfo = () => {
+    const newErrors = {};
+
+    // Validate each shipping field based on the validation criteria
+    for (const field in validationCriteria) {
+      const value = eval(field); // Get the value of the field dynamically
+
+      // Check if the field is required and value is empty
+      if (validationCriteria[field].required && !value) {
+        newErrors[field] = 'This field is required.';
+      }
+
+      // Check if the field has a pattern to match
+      if (
+        validationCriteria[field].pattern &&
+        value &&
+        !validationCriteria[field].pattern.test(value)
+      ) {
+        newErrors[field] = 'Invalid format.';
+      }
+
+      // Check if the field has a minimum length
+      if (
+        validationCriteria[field].minLength &&
+        value &&
+        value.length < validationCriteria[field].minLength
+      ) {
+        newErrors[field] = `Must be at least ${validationCriteria[field].minLength} characters long.`;
+      }
+    }
+
+    setErrors(newErrors); // Update the errors state
+    return Object.keys(newErrors).length === 0; // Return true if there are no errors
+  };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(saveShippingInfo({ address, phone, city, zipCode, state, country }));
-    navigate('/confirm-order');
+    if (validateShippingInfo()) {
+      dispatch(saveShippingInfo({ address, phone, city, zipCode, state, country }));
+      navigate('/confirm-order');
+    }
   }
   return (
     <Box
@@ -57,6 +120,8 @@ const Shipping = () => {
             style={{ width: '100%', marginTop: '16px' }}
             onChange={(e => setAddress(e.target.value))}
           />
+          {errors.address && <Typography color="error">{errors.address}</Typography>}
+
           <TextField type='text'
             id='phone'
             label='Phone'
@@ -68,6 +133,8 @@ const Shipping = () => {
             value={phone}
             onChange={(e => setPhone(e.target.value))}
           />
+          {errors.phone && <Typography color="error">{errors.phone}</Typography>}
+
           <Grid container spacing={2}>
             <Grid item xs={6}>
               <TextField type='text'
@@ -81,6 +148,8 @@ const Shipping = () => {
                 value={city}
                 onChange={(e => setCity(e.target.value))}
               />
+              {errors.city && <Typography color="error">{errors.city}</Typography>}
+
             </Grid>
             <Grid item xs={6}>
               <TextField type='text'
@@ -94,6 +163,8 @@ const Shipping = () => {
                 value={zipCode}
                 onChange={(e => setZipCode(e.target.value))}
               />
+              {errors.zipCode && <Typography color="error">{errors.zipCode}</Typography>}
+
             </Grid>
           </Grid>
 
@@ -107,6 +178,8 @@ const Shipping = () => {
                 priorityOptions={['CA', 'US', 'IN', 'GB']}
                 onChange={(e => setCountry(e))}
               />
+              {errors.country && <Typography color="error">{errors.country}</Typography>}
+
             </Grid>
             <Grid item xs={6}>
               <RegionDropdown classes='ship-drop-down'
@@ -118,6 +191,8 @@ const Shipping = () => {
                 countryValueType='short'
                 onChange={(e => setState(e))}
               />
+              {errors.state && <Typography color="error">{errors.state}</Typography>}
+
             </Grid>
           </Grid>
 
