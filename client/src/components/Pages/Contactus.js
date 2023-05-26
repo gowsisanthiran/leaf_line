@@ -14,7 +14,7 @@ const Contactus = () => {
 
   return (
     
-    <Box component="section" py={12 }>
+    <Box component="section" py={12 } data-aos="fade-up">
       
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
