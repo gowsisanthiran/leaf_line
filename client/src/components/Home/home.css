@@ -2,131 +2,14 @@
 
 @import url('https://fonts.cdnfonts.com/css/christopher-done');
 
-.tagLine{
-    font-family: 'Christopher Done', sans-serif;
-  font-size: 2rem;
-}
-/* .tagLine{
-    font-size: 2em;
-    font-family: 'Comico', sans-serif;
-    color: #fff;
-    text-align: center;
-    padding-top: 250px;
-}
 
-.card-container{
-    background-color: transparent;
-    box-shadow: 1px 1px 6px -3px rgb(230, 226, 226);
-}
-
-.card-container{
-    width: 300px;
-    height: 450px;
-    border-radius: 2px;
-    padding:16px;
-    margin: 16px;
-    background-color: #0B4619;
-}
-.banner {
-    width: 100%;
-    height: auto;
-    max-width: 450px;
-    border-radius: 2px;
-    padding: 16px;
-    margin: 0 auto;
-  }
-  
-
-
-
-.container {
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  
-  .bgImg {
-    width: 100%;
-    height: 500px; /* Adjust the desired height */
-    /* object-fit: cover;
-  }
-  
-.container1{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    
-}
-    
-.bgImg7{
-    width: 100px;
-  border: 2px solid rgb(178, 221, 178);
-  
-  margin: 20px;
-    height: 50%;
-    width: 50%;
-    align-items: right;
-    border-radius: 2px;
-    padding:10px;
-    box-shadow: inset 5px 5px 3px #e4e9e0;
-    position:relative;
-    overflow: hidden;
-    transform: transform 0.3s;
-    border-radius: 50%;
-    animation: trans 3s infinite both;
-
-
-
-
-    
-
-}
-.bgImg7:hover{
-    transform: scale(1.2);
-
-}
-.carousel-caption {
-    text-align: center; 
-    color: white;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 300;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 3px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-    background-color: rgba(0, 0, 0, 0.5);
-  
-    }
-    .text{
-        text-align: center;
-        font-size: 16px;
-        font-style: italic;
-        font-weight: 300;
-        font-family: 'Signika';
-        padding: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 3px;
-        padding-right: 3px;
-       
-        color:white;
-
-
-
-    } */
  
 
 
 
-
+.fullDiv{
+  margin-top: -5px;
+}
 
     .container1 {
         position: relative;
@@ -180,7 +63,7 @@
       .containerx {
         /* margin: 20px; */
         padding: 10px;
-        background-color: #D7E9B9;
+        /* background-color: #D7E9B9; */
         border-radius: 10px;
         /* margin-right: 20px;
         margin-left: 20px; */
@@ -213,6 +96,7 @@
         justify-content: center;
         margin-bottom: 20px;
         margin-top: 0.5%;
+        /* background-color: #333; */
       }
       
       .container2 .bgImg7 {
@@ -223,11 +107,11 @@
       .container2 div {
         margin: 20px;
         padding: 20px;
-        background-color: #eff1eb;
+        /* background-color: #eff1eb; */
       }
 
       .container2 {
-        background-color: #f2f2f2;
+        /* background-color: #f2f2f2; */
         padding: 20px;
       }
       
@@ -320,10 +204,19 @@
       
 
       .containerx {
-        background: linear-gradient(to bottom, #5D9C59, #e5e5e5);
-        box-shadow: 0 2px 6px #539165;
+        /* background: linear-gradient(to bottom, #5D9C59, #e5e5e5); */
+        /* box-shadow: 0 2px 6px #539165; */
         animation: fade-in 0.5s ease-in-out;
       }
+
+      /* .background{
+        background-color: #4d5744;
+      } */
+
+
+      .da-section {
+        padding: 100px 0; }
+      
       
       @keyframes fade-in {
         0% {

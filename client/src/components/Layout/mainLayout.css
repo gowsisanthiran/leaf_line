@@ -3,9 +3,6 @@
     
 }
 .header {
-    background: transparent
+    /* background: transparent */
   }
   
-Outlet{
-    background-color: blue;
-}

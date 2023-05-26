@@ -1,4 +1,11 @@
 
-
+@import url('https://fonts.cdnfonts.com/css/christopher-done');
+ .da-project-1 {
+    position: relative;
+    min-height: 450px;
+    background-size: cover;
+    background-image: center center;
+    margin-left :10px
+ }
 
 

@@ -1,87 +1,69 @@
-/* .bg-transparent {
-  background-color: #a72929;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 9999;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border-bottom: 1px solid #830505;
-  box-shadow: 0 2px 2px 0 rgba(90, 245, 173, 0.14), 0 1px 5px 0 rgba(90, 245, 173, 0.14),
-    0 3px 1px -2px rgba(90, 245, 173, 0.14);
-}
 
-.navbar.active {
-  background-color: #f34c4c; /* Replace with your desired active background color */
-
-
-/* .logo {
-  font-size: 36px;
-  font-weight: bold;
-  color: #c22e2e; /* Replace with your desired logo color */
-  /* font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transition: all 0.3s ease-in-out;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-family: monospace;
-} */ 
-
-/* .navbar-toggler {
-
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border-bottom: 1px solid #e5e5e5;
-  box-shadow: 0 2px 2px 0 rgba(90, 245, 173, 0.14), 0 1px 5px 0 rgba(90, 245, 173, 0.14),
-  0 3px 1px -2px rgba(90, 245, 173, 0.14);
-
-  
-
-}
- .navbar-nav { */
-  /* margin-left: 50%;
-  margin-right: 50%; */
-  /* padding-left: 10%;
-  padding-right: 10%;
-  background-color: #c22e2e;
-}
-
- 
-
-.header{
-  background-color: #c22e2e;
-}
-
-.navbar  {
-  background-color: #d62f2f;
-} */ 
 
 @import url('https://fonts.cdnfonts.com/css/christopher-done');
 
 .headers {
-  background: linear-gradient(to bottom,#285430,#ABCB89  );
+   /* background: linear-gradient(to bottom,#2b5024
+
+,#f2f1e4
+
+
+
+
+
+   );   */
+   /* background-image: -moz-element(); */
+
+
+}
+
+.bg-transparent{
+  background-color: transparent ;
+
 }
 
 .logo {
-  color: #E7F0D2;
+  color: #ebeee9;
   font-size: 28px;
   font-style: inherit;
   font-family: 'Christopher Done', sans-serif;
   font-size: 2rem;
   text-decoration:double;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
+
+  
+  
 
 }
 
 .navbar {
   position: relative;
   z-index: 9999;
+  font-family:sans-seri ;
+  margin: 0%;
+  padding: 0%;
+  font-size: 16px;
+  /* margin-top: 2rem;
+  margin-bottom: 2rem; */
+color: #ebeee9;
 }
 
+.nav-item{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+  /* margin-bottom: 6rem; */
+  /* display: inline-flex; */
+  color: #ebeee9;
+}
+.navbar-nav{
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  /* margin-bottom: 5rem;
+     */
+
+}
