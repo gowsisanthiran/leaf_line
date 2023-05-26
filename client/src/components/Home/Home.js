@@ -231,6 +231,9 @@ import AboutUs from '../Pages/Aboutus';
 import ContactUs from '../Pages/Contactus';
 import Button from '@mui/material/Button';
 import '../Home/home.css';
+import {selectProductDetails,productDetails} from '../../redux/features/productSlice';
+import ProductDetailsInfoCard from '../Product/ProductDetailsInfoCard';
+
 
 import sl1 from '../../images/bunch2.jpeg';
 import sl2 from '../../images/land02.png';
@@ -255,6 +258,8 @@ const Home = () => {
   const limit = 4;
   const dispatch = useDispatch();
   const { categories } = useSelector(selectAllCategories);
+  // const {loading,product}=useSelector(selectProductDetails);/
+  const [product , setProduct]= useState([])
 
   useEffect(() => {
     dispatch(getCategories({ toast }));
@@ -297,6 +302,7 @@ const Home = () => {
       getProducts();
     }
   }, [categories, catProductsLoading]);
+  console.log(product)
 
   return (
     <Box className='fullDiv'>
@@ -323,7 +329,7 @@ const Home = () => {
             fontWeight: 'bold'
           }}
         >
-          <Typography variant="h4" className='tagLine'><img src ={logo } /></Typography>
+          <Typography variant="h4" className='tagLine'><img src={logo} /></Typography>
           <Typography variant="h6" className='tagLine'></Typography>
         </Box>
 
@@ -338,82 +344,82 @@ const Home = () => {
 
       {/*div02  */}
       <div class="da-section da-work bg-secondary" id="learn">
-  <div class="container">
-    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">Why Work With Us?</div>
-    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="flip-left">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
-            <div class="h4 pb-3">Experience</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+        <div class="container">
+          <div class="h3 pb-3 text-center text-white" data-aos="fade-up">Why Work With Us?</div>
+          <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-3" data-aos="flip-left">
+                <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
+                  <div class="h4 pb-3">Experience</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3" data-aos="zoom-in-up">
+                <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
+                  <div class="h4 pb-3">Flexibility</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3" data-aos="flip-right">
+                <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
+                  <div class="h4 pb-3">Results</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="zoom-in-up">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
-            <div class="h4 pb-3">Flexibility</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="flip-right">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
-            <div class="h4 pb-3">Results</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{/* end div 2 */}
+      {/* end div 2 */}
 
-<Box className = 'background'>
-      <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }}>
-      <Typography variant="h6" sx={{ fontFamily: 'cursive', marginTop: '0rem', textAlign: 'center' }}>
-        Why Choosing Us!
-      </Typography>
-      <Box mt={4} style={{ textAlign: 'center',fontFamily: 'cursive' }}>
-        <Typography variant="h4">Few Reasons Why People Choosing Us!</Typography>
+      <Box className='background'>
+        <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }}>
+          <Typography variant="h6" sx={{ fontFamily: 'cursive', marginTop: '0rem', textAlign: 'center' }}>
+            Why Choosing Us!
+          </Typography>
+          <Box mt={4} style={{ textAlign: 'center', fontFamily: 'cursive' }}>
+            <Typography variant="h4">Few Reasons Why People Choosing Us!</Typography>
 
-        <Grid className='card-container' style={{ marginLeft: '40px' }}>
-          <div className="image-card">
-            <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
-            <div className="overlay">
-              <Typography variant="body1">Product 01</Typography>
-            </div>
-          </div>
+            <Grid className='card-container' style={{ marginLeft: '40px' }}>
+              <div className="image-card">
+                <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
+                <div className="overlay">
+                  <Typography variant="body1">Product 01</Typography>
+                </div>
+              </div>
 
-          <div className="image-card">
-            <img src={sl10} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
-            <div className="overlay">
-              <Typography variant="body1">Product 2</Typography>
-            </div>
-          </div>
+              <div className="image-card">
+                <img src={sl10} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
+                <div className="overlay">
+                  <Typography variant="body1">Product 2</Typography>
+                </div>
+              </div>
 
-          <div className="image-card">
-            <img src={sl11} style={{ height: '250px', width: '300px', margin: '20px' }} alt="Image" />
-            <div className="overlay">
-              <Typography variant="body1">Product 3</Typography>
-            </div>
-          </div>
-        </Grid>
-        <Grid>
-          <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop:'3rem' }}>
-            <Typography variant="body1">
-              Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
-              the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
-            </Typography>
-          </Grid>
-        </Grid>
+              <div className="image-card">
+                <img src={sl11} style={{ height: '250px', width: '300px', margin: '20px' }} alt="Image" />
+                <div className="overlay">
+                  <Typography variant="body1">Product 3</Typography>
+                </div>
+              </div>
+            </Grid>
+            <Grid>
+              <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '3rem' }}>
+                <Typography variant="body1">
+                  Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
+                  the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+
+
       </Box>
-    </Box>
-    
-    
-</Box>
 
 
 
@@ -421,21 +427,62 @@ const Home = () => {
 
       {/* ----------- */}
 
+      
+        <Box className="containerx" style={{ textAlign: 'center', fontFamily: 'serif' }}>
+        <div class="container noselect">
+        <div class="canvas">
+          <div class="tracker tr-1"></div>
+          <div class="tracker tr-2"></div>
+          <div class="tracker tr-3"></div>
+          <div class="tracker tr-4"></div>
+          <div class="tracker tr-5"></div>
+          <div class="tracker tr-6"></div>
+          <div class="tracker tr-7"></div>
+          <div class="tracker tr-8"></div>
+          <div class="tracker tr-9"></div>
+          <div class="tracker tr-10"></div>
+          <div class="tracker tr-11"></div>
+          <div class="tracker tr-12"></div>
+          <div class="tracker tr-13"></div>
+          <div class="tracker tr-14"></div>
+          <div class="tracker tr-15"></div>
+          <div class="tracker tr-16"></div>
+          <div class="tracker tr-17"></div>
+          <div class="tracker tr-18"></div>
+          <div class="tracker tr-19"></div>
+          <div class="tracker tr-20"></div>
+          <div class="tracker tr-21"></div>
+          <div class="tracker tr-22"></div>
+          <div class="tracker tr-23"></div>
+          <div class="tracker tr-24"></div>
+          <div class="tracker tr-25"></div>
+          <div id="card">
+            {/* <img src={}/> */}
+            <div class="title">
+            {/* <Typography variant='h6' component='div'>{product.title}</Typography> */}
+        
+          
+              <div class="subtitle">
+                mouse hover tracker
+              </div>
 
-      <Box className="containerx"style={{ textAlign: 'center',fontFamily: 'serif' }}>
-  <Typography variant="h5" className="m-4 p-1  text-dark text-center">
-    Top rated products
-  </Typography>
-  <Box className="card-container">
-    {topRatedProduct &&
-      topRatedProduct.products.map((product) => (
-        <ProductCard product={product} key={product._id} />
-      ))}
-  </Box>
-</Box>
+            </div>
+          </div>
+        </div>
+        </div>
+          {/* <Typography variant="h5" className="m-4 p-1  text-dark text-center">
+            Top rated products
+          </Typography>
+          <Box className="card-container">
+            {topRatedProduct &&
+              topRatedProduct.products.map((product) => (
+                <ProductCard product={product} key={product._id} />
+              ))}
+          </Box> */}
+        </Box>
 
 
-      {/* <Box className="container">
+        {/* <Box className="container">
         <Typography variant="h3" className="m-4 p-1  text-light">
           Our Designs
         </Typography>
@@ -468,8 +515,8 @@ const Home = () => {
         </Carousel>
       </Box> */}
 
-      <AboutUs />
-      <ContactUs />
+        <AboutUs />
+        <ContactUs />
     </Box>
   );
 };
