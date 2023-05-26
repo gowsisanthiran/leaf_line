@@ -243,8 +243,10 @@ import sl8 from '../../images/bunch1.png';
 import sl9 from '../../images/image1.jpeg';
 import sl10 from '../../images/image02.jpeg';
 import sl11 from '../../images/image03.jpeg';
+import logo from '../../images/logo.png';
+import home from '../../images/home1.png';
 import { alignPropType } from 'react-bootstrap/esm/types';
-
+import Header from '../Layout/Header'
 
 import { Grid } from '@mui/material';
 
@@ -297,18 +299,19 @@ const Home = () => {
   }, [categories, catProductsLoading]);
 
   return (
-    <Box>
+    <Box className='fullDiv'>
+      {/* <Header/> */}
       <Box
         className="container1"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${sl1})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(${home})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '100vh',
           width: '100%',
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed',
-          padding: '10px',
+          // padding: '10px',
         }}
       >
         <Box
@@ -320,8 +323,8 @@ const Home = () => {
             fontWeight: 'bold'
           }}
         >
-          <Typography variant="h4" className='tagLine'>'NATURAL FINE DINING'</Typography>
-          <Typography variant="h6" className='tagLine'>L E A F L I N E</Typography>
+          <Typography variant="h4" className='tagLine'><img src ={logo } /></Typography>
+          <Typography variant="h6" className='tagLine'></Typography>
         </Box>
 
         {/* <Box className="d-flex flex-column align-items-center mt-4">
@@ -333,11 +336,47 @@ const Home = () => {
 
       {/* secound container */}
 
-      <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '20px' }}>
-      <Typography variant="h6" sx={{ fontFamily: 'Your Custom Font', marginTop: '5rem', textAlign: 'center' }}>
+      {/*div02  */}
+      <div class="da-section da-work bg-secondary" id="learn">
+  <div class="container">
+    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">Why Work With Us?</div>
+    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-3" data-aos="flip-left">
+          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
+            <div class="h4 pb-3">Experience</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3" data-aos="zoom-in-up">
+          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
+            <div class="h4 pb-3">Flexibility</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3" data-aos="flip-right">
+          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
+            <div class="h4 pb-3">Results</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/* end div 2 */}
+
+<Box className = 'background'>
+      <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }}>
+      <Typography variant="h6" sx={{ fontFamily: 'cursive', marginTop: '0rem', textAlign: 'center' }}>
         Why Choosing Us!
       </Typography>
-      <Box mt={4} style={{ textAlign: 'center' }}>
+      <Box mt={4} style={{ textAlign: 'center',fontFamily: 'cursive' }}>
         <Typography variant="h4">Few Reasons Why People Choosing Us!</Typography>
 
         <Grid className='card-container' style={{ marginLeft: '40px' }}>
@@ -372,6 +411,9 @@ const Home = () => {
         </Grid>
       </Box>
     </Box>
+    
+    
+</Box>
 
 
 
@@ -380,8 +422,8 @@ const Home = () => {
       {/* ----------- */}
 
 
-      <Box className="containerx">
-  <Typography variant="h3" className="m-4 p-1  text-dark text-center">
+      <Box className="containerx"style={{ textAlign: 'center',fontFamily: 'serif' }}>
+  <Typography variant="h5" className="m-4 p-1  text-dark text-center">
     Top rated products
   </Typography>
   <Box className="card-container">
@@ -393,7 +435,7 @@ const Home = () => {
 </Box>
 
 
-      <Box className="container">
+      {/* <Box className="container">
         <Typography variant="h3" className="m-4 p-1  text-light">
           Our Designs
         </Typography>
@@ -424,7 +466,7 @@ const Home = () => {
 
           </Carousel.Item>
         </Carousel>
-      </Box>
+      </Box> */}
 
       <AboutUs />
       <ContactUs />

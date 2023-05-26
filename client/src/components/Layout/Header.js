@@ -35,10 +35,12 @@ const Header = () => {
   return (
     <header className="bg-transparent headers fixed-top">
       <div className="container justify-content-between header">
-        <nav className="navbar navbar-expand navbar-light bg-transparent navbar">
-          <Link to="/" className="navbar-brand">
+      <div><Link to="/" className="navbar-brand">
             <span className="logo">LEAFLINE</span>
           </Link>
+          </div>
+        <nav className="navbar navbar-expand navbar-light bg-transparent navbar">
+          
           <button
             className="navbar-toggler"
             type="button"

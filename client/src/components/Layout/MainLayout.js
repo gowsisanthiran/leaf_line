@@ -13,7 +13,9 @@ const MainLayout=()=>{
         <>
             <div className='site'>
                 <div className='header'>
-                <Header/>
+                {/* {isHomePage ? '' : <Header />} */}
+<Header/>
+                {/* <Header/> */}
                 </div>
                 <div className='main'>
                     <div className="content"></div>
