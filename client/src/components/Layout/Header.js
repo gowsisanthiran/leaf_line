@@ -4,12 +4,13 @@ import DrawerMenu from './DrawerMenu';
 import AuthMenu from './AuthMenu';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Tooltip } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
-import logo from '../../images/Logo.png'
+import logo from '../../images/logo.png'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -23,13 +24,13 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Header = () => {
 
   const { products } = useSelector(selectCartItems);
-
+  
 
   return (
 
     <div class="container-fluid main">
 
-
+      
       <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default">
 
         <button
@@ -44,22 +45,22 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <Link to="/" className="navbar-brand">
-          <span className="logo">LEAFLINE</span>
-        </Link>
+        <span className="logo">LEAFLINE</span>
+      </Link>
         <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link custom-nav-link" activeClassName="active" style={{ color: 'white' }}>
+              <NavLink to="/" className="nav-link " activeClassName="active">
                 <HomeIcon /> Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/product" className="nav-link custom-nav-link" activeClassName="active" style={{ color: 'white' }}>
+              <NavLink to="/product" className="nav-link" activeClassName="active">
                 Product
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/cart" className="nav-link custom-nav-link" activeClassName="active" style={{ color: 'white' }}>
+              <NavLink to="/cart" className="nav-link" activeClassName="active">
                 <StyledBadge badgeContent={products.length} color="secondary">
                   <ShoppingCartIcon />
                 </StyledBadge>
@@ -78,24 +79,22 @@ const Header = () => {
       <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
         <div class="carousel-inner" role="listbox">
           <div class="item active background a"></div>
-          {/* <div class="item background b"></div>
-          <div class="item background c"></div> */}
         </div>
       </div>
 
       <div class="covertext">
         <div class="col-lg-10" style={{ float: "none", margin: "0 auto" }}>
-          <h1 class="title">          <img src={logo} alt="logo" style={{ height: "5" }} />
-          </h1>
+          <h1 class="title">LEAFLINE</h1>
+          <h3 class="subtitle">Fine Dinning</h3>
         </div>
         <div class="col-xs-12 explore">
-          <a href="/product"><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></a>
+          <a href="#"><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></a>
         </div>
       </div>
 
     </div>
 
-
+    
   );
 };
 

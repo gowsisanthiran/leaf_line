@@ -59,12 +59,11 @@
   background-color: #ffffff;
 }
 
-
 .carousel .background {
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 700px;
 }
 
 @media (max-width:991px) {
