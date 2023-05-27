@@ -81,120 +81,89 @@ const Home = () => {
 
   return (
     <Box className='fullDiv'>
-      {/* <Header/> */}
-      <Box
-        className="container1"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(${home})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '100vh',
-          width: '100%',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          // padding: '10px',
-        }}
-      >
-        <Box
-          className="m-10 p-1 text"
-          style={{
-            color: '#D7E9B9',
-            textShadow: '1px 0px 0px #B6E2A1',
-            fontSize: '2px',
-            fontWeight: 'bold'
-          }}
-        >
-          <Typography variant="h4" className='tagLine'><img src ={logo } /></Typography>
-          <Typography variant="h6" className='tagLine'></Typography>
-        </Box>
-
-        {/* <Box className="d-flex flex-column align-items-center mt-4">
-          <Button variant="contained" color="primary" size="large" style={{ marginTop: '20px' }}>
-            Find Express
-          </Button>
-        </Box> */}
-      </Box>
+      <Header/>
+      
 
       {/* secound container */}
 
       {/*div02  */}
       <div class="da-section da-work bg-secondary" id="learn">
-  <div class="container">
-    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">Why Work With Us?</div>
-    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="flip-left">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
-            <div class="h4 pb-3">Experience</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+        <div class="container">
+          <div class="h3 pb-3 text-center text-white" data-aos="fade-up">Why Work With Us?</div>
+          <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-3" data-aos="flip-left">
+                <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
+                  <div class="h4 pb-3">Experience</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3" data-aos="zoom-in-up">
+                <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
+                  <div class="h4 pb-3">Flexibility</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3" data-aos="flip-right">
+                <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
+                  <div class="h4 pb-3">Results</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="zoom-in-up">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
-            <div class="h4 pb-3">Flexibility</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="flip-right">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
-            <div class="h4 pb-3">Results</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada laoreet tempus blandit pretium etc.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{/* end div 2 */}
+      {/* end div 2 */}
 
-<Box className = 'background'>
-      <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }}>
-      <Typography variant="h6" sx={{ fontFamily: 'cursive', marginTop: '0rem', textAlign: 'center' }}>
-        Why Choosing Us!
-      </Typography>
-      <Box mt={4} style={{ textAlign: 'center',fontFamily: 'cursive' }}>
-        <Typography variant="h4">Few Reasons Why People Choosing Us!</Typography>
+      <Box className='background'>
+        <Box className='container' textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }}>
+          <Typography variant="h6" sx={{ fontFamily: 'cursive', marginTop: '0rem', textAlign: 'center' }}>
+            Why Choosing Us!
+          </Typography>
+          <Box mt={4} style={{ textAlign: 'center', fontFamily: 'cursive' }}>
+            <Typography variant="h4">Few Reasons Why People Choosing Us!</Typography>
 
-        <Grid className='card-container' style={{ marginLeft: '40px' }}>
-          <div className="image-card">
-            <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
-            <div className="overlay">
-              <Typography variant="body1">Image 1</Typography>
-            </div>
-          </div>
+            <Grid className='card-container' style={{ marginLeft: '40px' }}>
+              <div className="image-card">
+                <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
+                <div className="overlay">
+                  <Typography variant="body1">Image 1</Typography>
+                </div>
+              </div>
 
-          <div className="image-card">
-            <img src={sl10} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
-            <div className="overlay">
-              <Typography variant="body1">Image 2</Typography>
-            </div>
-          </div>
+              <div className="image-card">
+                <img src={sl10} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
+                <div className="overlay">
+                  <Typography variant="body1">Image 2</Typography>
+                </div>
+              </div>
 
-          <div className="image-card">
-            <img src={sl11} style={{ height: '250px', width: '300px', margin: '20px' }} alt="Image" />
-            <div className="overlay">
-              <Typography variant="body1">Image 3</Typography>
-            </div>
-          </div>
-        </Grid>
-        <Grid>
-          <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop:'3rem' }}>
-            <Typography variant="body1">
-              Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
-              the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
-            </Typography>
-          </Grid>
-        </Grid>
+              <div className="image-card">
+                <img src={sl11} style={{ height: '250px', width: '300px', margin: '20px' }} alt="Image" />
+                <div className="overlay">
+                  <Typography variant="body1">Image 3</Typography>
+                </div>
+              </div>
+            </Grid>
+            <Grid>
+              <Grid item sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '3rem' }}>
+                <Typography variant="body1">
+                  Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
+                  the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+
+
       </Box>
-    </Box>
-    
-    
-</Box>
 
 
 
@@ -203,51 +172,54 @@ const Home = () => {
       {/* ----------- */}
 
 
-      <Box className="containerx"style={{ textAlign: 'center',fontFamily: 'serif' }}>
-  <Typography variant="h5" className="m-4 p-1  text-dark text-center">
-    Top rated products
-  </Typography>
-  <Box className="card-container">
-    {topRatedProduct &&
-      topRatedProduct.products.map((product) => (
-        <ProductCard product={product} key={product._id} />
-      ))}
-  </Box>
-</Box>
+      <Box className="containerx" style={{ textAlign: 'center', fontFamily: 'serif' }}>
+        <Typography variant="h5" className="m-4 p-1 text-dark text-center">
+          Top rated products
+        </Typography>
+        <Grid container spacing={5} justifyContent="center">
+          {topRatedProduct &&
+            topRatedProduct.products.map((product) => (
+              <Grid item key={product._id}>
+                <ProductCard product={product} />
+              </Grid>
+            ))}
+        </Grid>
+      </Box>
+
 
 
       {/* <Box className="container">
-        <Typography variant="h3" className="m-4 p-1  text-light">
-          Our Designs
-        </Typography>
-        <Carousel
-          interval={3000} // Set the interval between slides (in milliseconds)
-          pause="hover" // Pause the carousel on mouse hover
-          indicators={true} // Show slide indicators
-          navButtonsAlwaysVisible={true} // Show navigation buttons always
-        >
-          <Carousel.Item>
-            <img src={sl1} className="bgImg" alt="Carousel Image" />
+          <Typography variant="h3" className="m-4 p-1  text-light">
+            Our Designs
+          </Typography>
+          <Carousel
+            interval={3000} // Set the interval between slides (in milliseconds)
+            pause="hover" // Pause the carousel on mouse hover
+            indicators={true} // Show slide indicators
+            navButtonsAlwaysVisible={true} // Show navigation buttons always
+          >
+            <Carousel.Item>
+              <img src={sl1} className="bgImg" alt="Carousel Image" />
 
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl2} className="bgImg" alt="Carousel Image" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={sl2} className="bgImg" alt="Carousel Image" />
 
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl2} className="bgImg" alt="Carousel Image" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={sl2} className="bgImg" alt="Carousel Image" />
 
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl4} className="bgImg" alt="Carousel Image" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={sl4} className="bgImg" alt="Carousel Image" />
 
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={sl5} className="bgImg" alt="Carousel Image" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={sl5} className="bgImg" alt="Carousel Image" />
 
-          </Carousel.Item>
-        </Carousel>
-      </Box> */}
+            </Carousel.Item>
+          </Carousel>
+        </Box> */}
 
       <AboutUs />
       <ContactUs />

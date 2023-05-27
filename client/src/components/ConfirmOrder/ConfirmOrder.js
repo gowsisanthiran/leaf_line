@@ -98,7 +98,7 @@ const ConfirmOrder = () => {
     <Divider/>
     <Box className='base-div3'>
         <Box className='div3'>
-            <Box className='title'>
+            <Box className='confirmOrderTitle '>
                 <Avatar sx={{mr:1,background:'#fff',color:'#2e7d32', width:30,height:30}}>
                     <LocalShippingIcon/>
                 </Avatar>

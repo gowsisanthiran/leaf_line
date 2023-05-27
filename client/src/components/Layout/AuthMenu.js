@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {useNavigate} from 'react-router-dom';
-import {IMAGE_BASEURL} from '../../constants/baseURL';
-import {useSelector,useDispatch} from 'react-redux';
-import { selectLoggedInUser,logout } from '../../redux/features/authSlice';
-import {toast} from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { IMAGE_BASEURL } from '../../constants/baseURL';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectLoggedInUser, logout } from '../../redux/features/authSlice';
+import { toast } from 'react-toastify';
 import jwtDecode from 'jwt-decode';
 
 import Box from '@mui/material/Box';
@@ -56,101 +56,101 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 
 const AuthMenu = () => {
-    const dispatch=useDispatch();
-    const {user,accessToken} =useSelector(selectLoggedInUser);
-    let role;
-    if(accessToken){
-      const {UserInfo}=jwtDecode(accessToken);
-      role=UserInfo.roles[0];
-    }
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
+  const dispatch = useDispatch();
+  const { user, accessToken } = useSelector(selectLoggedInUser);
+  let role;
+  if (accessToken) {
+    const { UserInfo } = jwtDecode(accessToken);
+    role = UserInfo.roles[0];
+  }
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-    const navigate=useNavigate();
-    
-    const auth=()=>navigate('/auth');
-    const dashboard=()=>navigate('/authorized/dashboard');
-    const orders=()=>navigate('/order');
-    const profile=()=>navigate('/profile');
-    const logoutUser=()=>{
-      dispatch(logout({toast}));
-      navigate('/');
-    };
+  const navigate = useNavigate();
+
+  const auth = () => navigate('/auth');
+  const dashboard = () => navigate('/authorized/dashboard');
+  const orders = () => navigate('/order');
+  const profile = () => navigate('/profile');
+  const logoutUser = () => {
+    dispatch(logout({ toast }));
+    navigate('/');
+  };
   return (
     <>
-    <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2 }}
+            sx={{ ml: 2, backgroundColor: 'white' }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            
+
             {user?.avatar?.url ?
-                <StyledBadge
+              <StyledBadge
                 overlap="circular"
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                 variant="dot"
-                >
+              >
                 <Avatar sx={{ width: 32, height: 32 }}>
-                  <img src={user.avatar.url} 
-                      alt={user.name}
-                      style={{width:32,height:32}}/>
+                  <img src={user.avatar.url}
+                    alt={user.name}
+                    style={{ width: 32, height: 32 }} />
                 </Avatar>
-                </StyledBadge>
-            :
-              <AccountCircleIcon/>
-            }              
-            
+              </StyledBadge>
+              :
+              <AccountCircleIcon />
+            }
+
           </IconButton>
         </Tooltip>
       </Box>
       {accessToken ?
-            <Menu
-            anchorEl={anchorEl}
-            id="account-menu"
-            open={open}
-            onClose={handleClose}
-            onClick={handleClose}
-            PaperProps={{
-              elevation: 0,
-              sx: {
-                overflow: 'visible',
-                filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                mt: 1.5,
-                '& .MuiAvatar-root': {
-                  width: 32,
-                  height: 32,
-                  ml: -0.5,
-                  mr: 1,
-                },
-                '&:before': {
-                  content: '""',
-                  display: 'block',
-                  position: 'absolute',
-                  top: 0,
-                  right: 14,
-                  width: 10,
-                  height: 10,
-                  bgcolor: 'background.paper',
-                  transform: 'translateY(-50%) rotate(45deg)',
-                  zIndex: 0,
-                },
+        <Menu
+          anchorEl={anchorEl}
+          id="account-menu"
+          open={open}
+          onClose={handleClose}
+          onClick={handleClose}
+          PaperProps={{
+            elevation: 0,
+            sx: {
+              overflow: 'visible',
+              filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+              mt: 1.5,
+              '& .MuiAvatar-root': {
+                width: 32,
+                height: 32,
+                ml: -0.5,
+                mr: 1,
               },
-            }}
-            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-          >
-            {role!=='user'?
+              '&:before': {
+                content: '""',
+                display: 'block',
+                position: 'absolute',
+                top: 0,
+                right: 14,
+                width: 10,
+                height: 10,
+                bgcolor: 'background.paper',
+                transform: 'translateY(-50%) rotate(45deg)',
+                zIndex: 0,
+              },
+            },
+          }}
+          transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+          anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+        >
+          {role !== 'user' ?
             <MenuItem onClick={dashboard}>
               <ListItemIcon>
                 <DashboardIcon fontSize="small" />
@@ -158,73 +158,73 @@ const AuthMenu = () => {
               Dashboard
             </MenuItem>
             : ''}
-            {role!=='user'?
-              <Divider/>
+          {role !== 'user' ?
+            <Divider />
             : ''}
-            <MenuItem onClick={orders}>
-              <ListItemIcon>
-                <SummarizeIcon fontSize="small" />
-              </ListItemIcon>
-              Orders
-            </MenuItem>
-            <Divider/>
-            <MenuItem onClick={profile}>
-              <ListItemIcon>
-                <PersonIcon fontSize="small" />
-              </ListItemIcon>
-              Profile
-            </MenuItem>
-            <Divider/>
-            <MenuItem onClick={logoutUser}>
-              <ListItemIcon>
-                <Logout fontSize="small" />
-              </ListItemIcon>
-              Logout
-            </MenuItem>
-          </Menu>
-      :
-      <Menu
-        anchorEl={anchorEl}
-        id="account-menu"
-        open={open}
-        onClose={handleClose}
-        onClick={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            overflow: 'visible',
-            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-            mt: 1.5,
-            '& .MuiAvatar-root': {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
+          <MenuItem onClick={orders}>
+            <ListItemIcon>
+              <SummarizeIcon fontSize="small" />
+            </ListItemIcon>
+            Orders
+          </MenuItem>
+          <Divider />
+          <MenuItem onClick={profile}>
+            <ListItemIcon>
+              <PersonIcon fontSize="small" />
+            </ListItemIcon>
+            Profile
+          </MenuItem>
+          <Divider />
+          <MenuItem onClick={logoutUser}>
+            <ListItemIcon>
+              <Logout fontSize="small" />
+            </ListItemIcon>
+            Logout
+          </MenuItem>
+        </Menu>
+        :
+        <Menu
+          anchorEl={anchorEl}
+          id="account-menu"
+          open={open}
+          onClose={handleClose}
+          onClick={handleClose}
+          PaperProps={{
+            elevation: 0,
+            sx: {
+              overflow: 'visible',
+              filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+              mt: 1.5,
+              '& .MuiAvatar-root': {
+                width: 32,
+                height: 32,
+                ml: -0.5,
+                mr: 1,
+              },
+              '&:before': {
+                content: '""',
+                display: 'block',
+                position: 'absolute',
+                top: 0,
+                right: 14,
+                width: 10,
+                height: 10,
+                bgcolor: 'background.paper',
+                transform: 'translateY(-50%) rotate(45deg)',
+                zIndex: 0,
+              },
             },
-            '&:before': {
-              content: '""',
-              display: 'block',
-              position: 'absolute',
-              top: 0,
-              right: 14,
-              width: 10,
-              height: 10,
-              bgcolor: 'background.paper',
-              transform: 'translateY(-50%) rotate(45deg)',
-              zIndex: 0,
-            },
-          },
-        }}
-        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-      >
-        <MenuItem onClick={auth}>
-          <ListItemIcon>
-            <LoginIcon fontSize="small" />
-          </ListItemIcon>
-          Login or Registration
-        </MenuItem>
-      </Menu>
+          }}
+          transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+          anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+        >
+          <MenuItem onClick={auth}>
+            <ListItemIcon>
+              <LoginIcon fontSize="small" />
+            </ListItemIcon>
+            Login or Registration
+          </MenuItem>
+        </Menu>
       }
     </>
   )

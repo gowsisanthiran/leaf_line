@@ -90,6 +90,7 @@ const ProductCard = React.forwardRef(({product},ref) => {
               : ''
           }
           alt={product && product.title}
+          style={{padding:'5px'}}
         />
         {product.discount>0?
         <Typography variant='button' display='block' className='sale'>Sale</Typography>
