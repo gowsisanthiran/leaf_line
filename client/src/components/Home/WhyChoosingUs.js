@@ -82,11 +82,11 @@ const WhyChoosingUs = () => {
 
     <Box className={classes.background}>
       <Box className={classes.container} textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }} data-aos="fade-up">
-        <Typography variant="h6" className={classes.title} sx={{fontFamily: 'Jack Rooney , sans-serif', paddingTop: '30px'}}>
-          Why Choosing Us!
+        <Typography variant="h6" className={classes.title} sx={{fontFamily: 'Jack Rooney , sans-serif', fontSize:'30px', paddingTop: '30px'}}>
+          <span style={{color: 'green'}}>Why Choosing </span> Us!
         </Typography>
-        <Box mt={4} style={{ textAlign: 'center', fontFamily: 'Open Sans, sans-serifcursive' }} data-aos="fade-up" data-aos-delay="100">
-          <Typography variant="h4">Few Reasons Why People Choose Us!</Typography>
+        <Box mt={4} data-aos="fade-up" data-aos-delay="100">
+          <Typography style={{textAlign: 'center',fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '#555'}}>Few Reasons Why People Choose Us!</Typography>
 
           <Grid container className={classes.cardContainer} data-aos="fade-up" data-aos-delay="200">
             <div className={classes.imageCard}>
@@ -113,7 +113,7 @@ const WhyChoosingUs = () => {
 
           <Grid>
             <Grid item className={classes.description} data-aos="fade-up" data-aos-delay="300">
-              <Typography variant="body1" style={{ lineHeight: '1.6', width: '' }}>
+              <Typography variant="body1" style={{fontFamily: 'Poppins, sans-serif', lineHeight: '1.6', width: '' }}>
                 Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
                 the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
               </Typography>

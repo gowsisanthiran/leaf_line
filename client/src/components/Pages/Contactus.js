@@ -14,23 +14,23 @@ const Contactus = () => {
 
   return (
     
-    <Box component="section" py={12 } data-aos="fade-up">
+    <Box component="section" py={12 } data-aos="fade-up" style={{backgroundColor: '#f5f5f5'}}>
       
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
-          <Typography variant="h3" mb={1}>
-            Contact Us
+          <Typography  mb={1} sx={{fontFamily: 'Jack Rooney, sans-serif',fontSize: '1.5rem',fontWeight: 'bold' }}>
+            Contact <span style={{color: 'green '}}>Us</span>
           </Typography>
         </Grid>
         <Grid container item xs={12} lg={7} sx={{ mx: "auto" }}>
           <Box width="100%" component="form" method="post" autoComplete="off">
             <Box p={3}>
               <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
-                  <TextField label="First Name" variant="standard" fullWidth />
+                <Grid item xs={12} md={6} sx={{fontFamily: 'Poppins, sans-serif',fontSize:'15px'}}>
+                  <TextField label="First Name" variant="standard" fullWidth  />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <TextField label="Last Name" variant="standard" fullWidth />
+                  <TextField label="Last Name" variant="standard" fullWidth  />
                 </Grid>
                 <Grid item xs={12}>
                   <TextField label="Email Address" variant="standard" type="email" fullWidth />
@@ -45,7 +45,7 @@ const Contactus = () => {
                     fontWeight="regular"
                     color="text"
                     ml={-1}
-                    sx={{ cursor: "pointer", userSelect: "none" }}
+                    sx={{ cursor: "pointer", userSelect: "none" ,fontFamily: 'Poppins, sans-serif'}}
                     onClick={handleChecked}
                   >
                     &nbsp;&nbsp;I agree to the&nbsp;

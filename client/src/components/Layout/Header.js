@@ -4,6 +4,7 @@ import DrawerMenu from './DrawerMenu';
 import AuthMenu from './AuthMenu';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
 import { Tooltip } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
@@ -45,7 +46,7 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <Link to="/" className="navbar-brand">
-        <span className="logo">LEAFLINE</span>
+        <span className="logo" style={{fontFamily: 'Jack Rooney , sans-serif'}}>LEAFLINE</span>
       </Link>
         <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
@@ -56,7 +57,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink to="/product" className="nav-link" activeClassName="active" style={{color:'white'}}>
-                Product
+                <Inventory2Icon/> Product
               </NavLink>
             </li>
             <li className="nav-item">
@@ -88,7 +89,7 @@ const Header = () => {
           <h3 class="subtitle">Fine Dinning</h3>
         </div>
         <div class="col-xs-12 explore">
-          <a href="#"><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></a>
+          <Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
         </div>
       </div>
 

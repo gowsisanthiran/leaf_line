@@ -16,62 +16,6 @@ import './WhyWorkingWithUs.css'
 
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    margin: '0 auto',
-    marginTop: '10px',
-    textAlign: 'left',
-  },
-  title: {
-    fontFamily: 'Jack Rooney , sans-serif',
-    marginTop: '0rem',
-    textAlign: 'center',
-  },
-  subtitle: {
-    textAlign: 'center',
-    fontFamily: 'cursive',
-  },
-  cardContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginTop: '1.5rem',
-  },
-  imageCard: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '250px',
-    width: '300px',
-    margin: '18px',
-    position: 'relative',
-    cursor: 'pointer',
-    transition: 'transform 0.3s ease',
-    border: '1px solid #ddd',
-    borderRadius: '4px',
-    overflow: 'hidden',
-    '&:hover': {
-      transform: 'scale(1.05)',
-    },
-  },
-  overlay: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    color: '#fff',
-    padding: '8px',
-    textAlign: 'center',
-  },
-  card: {
-    height: '100%',
-    width: '50%',
-    display: 'grid',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-  },
   icon: {
     marginTop: '10px',
     marginBottom: '20px',
@@ -95,75 +39,29 @@ const WhyWorkWithUs = () => {
 
   return (
 
-    // <Box className={classes.background}>
-    //   <Box className={classes.container} textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }} data-aos="fade-up">
-    //     <Typography variant="h6" className={classes.title}>
-    //       Why Working With Us!
-    //     </Typography>
-    //     <Box mt={4} style={{ textAlign: 'center', fontFamily: 'cursive' }} data-aos="fade-up" data-aos-delay="100">
-    //       <Typography variant="h4">Few Reasons Why People Choose Us!</Typography>
-
-    //       <Grid container className={classes.cardContainer} data-aos="fade-up" data-aos-delay="200">
-    //         <div className={classes.imageCard}>
-    //           <WorkIcon className={classes.icon} />
-    //           <Typography variant="h5" component="h2" className={classes.heading} sx={{ fontFamily: 'Jack Rooney, sans-serif' }}>
-    //             Experience
-    //           </Typography>
-    //           <div className={classes.overlay}>
-    //             <Typography variant="body1">Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-    //               laoreet tempus blandit pretium etc.</Typography>
-    //           </div>
-    //         </div>
-
-    //         <div className={classes.imageCard}>
-    //           <SettingsIcon className={classes.icon} />
-    //           <Typography variant="h5" component="h2" className={classes.heading} sx={{ fontFamily: 'Jack Rooney, sans-serif' }}>
-    //             Flexibility
-    //           </Typography>
-    //           <div className={classes.overlay}>
-    //             <Typography variant="body1">Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-    //               laoreet tempus blandit pretium etc.</Typography>
-    //           </div>
-    //         </div>
-
-    //         <div className={classes.imageCard}>
-    //           <StarIcon className={classes.icon} />
-    //           <Typography variant="h5" component="h2" className={classes.heading} sx={{ fontFamily: 'Jack Rooney, sans-serif' }}>
-    //             Results
-    //           </Typography>
-    //           <div className={classes.overlay}>
-    //             <Typography variant="body1">Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-    //               laoreet tempus blandit pretium etc.</Typography>
-    //           </div>
-    //         </div>
-    //       </Grid>
-
-    //     </Box>
-    //   </Box>
-    // </Box>
     <div style={{ backgroundColor: '#f5f5f5' }}>
-      <section id="whyworkwithus" >
+      <section id="whyworkwithus" data-aos="fade-up" >
         <div class="row">
-          <div class="box">
+          <div class="box" >
             <WorkIcon className={classes.icon} />
             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Experience</Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>
               Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
               laoreet tempus blandit pretium etc.
             </Typography>
           </div>
-          <div class="box">
+          <div class="box" >
             <SettingsIcon className={classes.icon} />
             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Flexibility</Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>
               Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
               laoreet tempus blandit pretium etc.
             </Typography>
           </div>
-          <div class="box">
+          <div class="box" >
             <StarIcon className={classes.icon} />
             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Results</Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>
               Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
               laoreet tempus blandit pretium etc.
             </Typography>
@@ -171,52 +69,6 @@ const WhyWorkWithUs = () => {
         </div>
       </section>
     </div>
-    // <div className={classes.section} id="learn">
-    //   <Grid container spacing={3} md={12} justify="center">
-    //     <Grid item xs={12} sm={6} md={4} data-aos="fade-up">
-    //       <Card className={classes.card}>
-    //         <CardContent>
-    //           <WorkIcon className={classes.icon} />
-    //           <Typography variant="h5" component="h2" className={classes.heading} sx={{ fontFamily: 'Jack Rooney, sans-serif' }}>
-    //             
-    //           </Typography>
-    //           <Typography variant="body2">
-    //             Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-    //             laoreet tempus blandit pretium etc.
-    //           </Typography>
-    //         </CardContent>
-    //       </Card>
-    //     </Grid>
-    //     <Grid item xs={12} sm={6} md={4} data-aos="fade-up" data-aos-delay="100">
-    //       <Card className={classes.card}>
-    //         <CardContent>
-    //           <SettingsIcon className={classes.icon} />
-    //           <Typography variant="h5" component="h2" className={classes.heading} sx={{ fontFamily: 'Jack Rooney, sans-serif' }}>
-    //             Flexibility
-    //           </Typography>
-    //           <Typography variant="body2">
-    //             Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-    //             laoreet tempus blandit pretium etc.
-    //           </Typography>
-    //         </CardContent>
-    //       </Card>
-    //     </Grid>
-    //     <Grid item xs={12} sm={6} md={4} data-aos="fade-up" data-aos-delay="200">
-    //       <Card className={classes.card}>
-    //         <CardContent>
-    //           <StarIcon className={classes.icon} />
-    //           <Typography variant="h5" component="h2" className={classes.heading} sx={{ fontFamily: 'Jack Rooney, sans-serif' }}>
-    //             Results
-    //           </Typography>
-    //           <Typography variant="body2">
-    //             Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-    //             laoreet tempus blandit pretium etc.
-    //           </Typography>
-    //         </CardContent>
-    //       </Card>
-    //     </Grid>
-    //   </Grid>
-    // </div>
   );
 };
 

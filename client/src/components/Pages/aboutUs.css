@@ -12,17 +12,15 @@
     border-radius: 5px;
     background-color: #ddd;
 }
-.single-team-item {
-    position: relative;
-}
+
 .team-bg-2{
- background-image: url(../../images/Logo.png);
+    background-image: url(../../images/Logo.png);
 }
 .team-bg-3{
     background-image: url(../../images/Logo.png);
-   }.team-bg-1{
+}.team-bg-1{
     background-image: url(../../images/Logo.png);
-   }
+}
 .feature-bg::after {
     background-image: url(../../images/Bg2.jpeg);
     position: relative;

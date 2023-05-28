@@ -4,7 +4,7 @@ import {toast} from 'react-toastify';
 import axiosPrivate from '../../redux/axiosPrivate';
 import {useNavigate} from 'react-router-dom';
 import { clearCart} from '../../redux/features/cartSlice';
-import logo from '../../images/Logo.png'
+import logo from '../../images/LOGO.png'
 import {CardNumberElement,CardCvcElement, CardExpiryElement,useStripe,useElements} from '@stripe/react-stripe-js';
 
 import {Box, Card, Avatar, Typography, Grid, Divider} from '@mui/material';
