@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/krylon');
+@import url('https://fonts.cdnfonts.com/css/jack-rooney');
+
 .container-fluid.main{
   position: relative; /* To make the navbar positions relative to this container */
   padding: 0;
@@ -22,7 +25,7 @@
 }
 
 .navbar-default .navbar-brand {
-  font-family: Verdana;
+  font-family: 'Krylon', sans-serif;
   color: #ffffff;
   font-size: 20px;
 }
@@ -63,7 +66,7 @@
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 700px;
+  height:900px;
 }
 
 @media (max-width:991px) {
@@ -76,14 +79,6 @@
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
 }
 
-.carousel .background.b {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOIWrmXiOuyDfXkcVIj1AVJkhZh5GqCiGnOY5pk7kZPWn1IdXQHc9e_b6crW4Uw55ErHw&usqp=CAU");
-}
-
-.carousel .background.c {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/76827/bahia-ocean-bay-boat-76827-large.jpeg");
-}
-
 .carousel-fade .carousel-inner .item {
   opacity: 0;
   transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
@@ -94,29 +89,6 @@
 }
 
 /* CSS Hack to trigger GPU for smooth transition */
-@media all and (transform-3d),
-(-webkit-transform-3d) {
-  .carousel-fade .carousel-inner > .item.next,
-  .carousel-fade .carousel-inner > .item.active.right {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-fade .carousel-inner > .item.prev,
-  .carousel-fade .carousel-inner > .item.active.left {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-fade .carousel-inner > .item.next.left,
-  .carousel-fade .carousel-inner > .item.prev.right,
-  .carousel-fade .carousel-inner > .item.active {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-/* CSS Hack to trigger GPU for smooth transition */
 
 .covertext {
   position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
@@ -126,10 +98,6 @@
 }
 
 .title {
-  font-family: Verdana;
-  font-weight: 600;
-  font-size: 60px;
-  color: #ffffff;
   text-align: center;
 }
 

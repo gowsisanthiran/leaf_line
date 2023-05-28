@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,9 +6,12 @@ import Grid from '@mui/material/Grid';
 import sl9 from '../../images/image1.jpeg';
 import sl10 from '../../images/image02.jpeg';
 import sl11 from '../../images/image03.jpeg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   background: {
+    background: 'darkgrey'
     // Add your custom styles for the background container
   },
   container: {
@@ -17,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   title: {
-    fontFamily: 'cursive',
+    fontFamily: 'Jack Rooney , sans-serif',
     marginTop: '0rem',
     textAlign: 'center',
   },
@@ -64,23 +67,26 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     marginTop: '3rem',
     textAlign: 'center',
-    padding: '0 2rem',
+    padding: '0 2rem 2rem',
   },
 }));
 
 const WhyChoosingUs = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const classes = useStyles();
 
   return (
     <Box className={classes.background}>
-      <Box className={classes.container} textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }}>
+      <Box className={classes.container} textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }} data-aos="fade-up">
         <Typography variant="h6" className={classes.title}>
           Why Choosing Us!
         </Typography>
-        <Box mt={4} style={{ textAlign: 'center', fontFamily: 'cursive' }}>
+        <Box mt={4} style={{ textAlign: 'center', fontFamily: 'cursive' }} data-aos="fade-up" data-aos-delay="100">
           <Typography variant="h4">Few Reasons Why People Choose Us!</Typography>
 
-          <Grid container className={classes.cardContainer}>
+          <Grid container className={classes.cardContainer} data-aos="fade-up" data-aos-delay="200">
             <div className={classes.imageCard}>
               <img src={sl9} style={{ height: '250px', width: '300px', margin: '18px' }} alt="Image" />
               <div className={classes.overlay}>
@@ -104,8 +110,8 @@ const WhyChoosingUs = () => {
           </Grid>
 
           <Grid>
-            <Grid item className={classes.description}>
-              <Typography variant="body1" style={{ lineHeight: '1.6' }}>
+            <Grid item className={classes.description} data-aos="fade-up" data-aos-delay="300">
+              <Typography variant="body1" style={{ lineHeight: '1.6', width: '' }}>
                 Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
                 the leaves of the banana plant, which are biodegradable and renewable. In our Leafline, it's very clean.
               </Typography>

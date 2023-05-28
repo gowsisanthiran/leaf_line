@@ -1,0 +1,39 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.bg{
+    background-image: url(../../images/image1.jpeg);
+    
+}
+.team-bg {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+.single-team-item {
+    position: relative;
+}
+.team-bg-2{
+ background-image: url(../../images/Logo.png);
+}
+.team-bg-3{
+    background-image: url(../../images/Logo.png);
+   }.team-bg-1{
+    background-image: url(../../images/Logo.png);
+   }
+.feature-bg::after {
+    background-image: url(../../images/Bg2.jpeg);
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 5px;
+    -webkit-box-shadow: 0 0 20px #cacaca;
+    box-shadow: 0 0 20px #cacaca;
+    border-bottom-left-radius: 5px;
+}

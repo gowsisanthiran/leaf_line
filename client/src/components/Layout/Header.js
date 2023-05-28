@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
-import logo from '../../images/logo.png'
+import logo from '../../images/Logo.png'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -50,17 +50,17 @@ const Header = () => {
         <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link " activeClassName="active">
+              <NavLink to="/" className="nav-link " activeClassName="active" style={{color:'white'}}>
                 <HomeIcon /> Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/product" className="nav-link" activeClassName="active">
+              <NavLink to="/product" className="nav-link" activeClassName="active" style={{color:'white'}}>
                 Product
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/cart" className="nav-link" activeClassName="active">
+              <NavLink to="/cart" className="nav-link" activeClassName="active" style={{color:'white'}}>
                 <StyledBadge badgeContent={products.length} color="secondary">
                   <ShoppingCartIcon />
                 </StyledBadge>
@@ -84,7 +84,7 @@ const Header = () => {
 
       <div class="covertext">
         <div class="col-lg-10" style={{ float: "none", margin: "0 auto" }}>
-          <h1 class="title">LEAFLINE</h1>
+          <h1 class="title"><img src={logo} alt=''/></h1>
           <h3 class="subtitle">Fine Dinning</h3>
         </div>
         <div class="col-xs-12 explore">

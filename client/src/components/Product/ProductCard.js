@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import {formatCurrency} from '../../utility/formatCurrency';
 import {useDispatch,useSelector} from 'react-redux';
 import {toast} from 'react-toastify';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
 
 import Card from '@mui/material/Card';
@@ -74,89 +74,139 @@ const ProductCard = React.forwardRef(({product},ref) => {
   const linkToDetails=()=>{navigate(`/product/${product._id}`);}
   
   return (
-    <Box className='productCard'>
+    // <Box className='productCard'>
     
-      <CardActionArea>
-      <Card className='box-shadow' 
-            onClick={linkToDetails}
-            sx={{position:'relative',overflow:'hidden', minHeight:'365px'}}>
+    //   <CardActionArea>
+    //   <Card className='box-shadow' 
+    //         onClick={linkToDetails}
+    //         sx={{position:'relative',overflow:'hidden', minHeight:'365px'}}>
               
-        <CardMedia
-          component="img"
-          height="140"
-          image={
-            product && product.images && product.images.length > 0
-              ? product.images[0].url || 'placeholder.jpg'
-              : ''
-          }
-          alt={product && product.title}
-          style={{padding:'5px'}}
-        />
-        {product.discount>0?
-        <Typography variant='button' display='block' className='sale'>Sale</Typography>
-        :
-        ''}
-        <CardContent>
-            <Typography gutterBottom
-                        variant='button'
-                        component='h1'>{product?.title && product.title.length>15?product.title.slice(0,14):product.title}
-            </Typography>
-            <Stack spacing={1} sx={{display:'block'}}>
-                <Rating name="half-rating-read" value={product.ratings} precision={0.1} readOnly />
-            </Stack>
-            <Typography gutterBottom
-                        sx={{display:'block'}}
-                        variant='caption'
-                        component='span'>Reviews : ({product.numOfReviews})
-            </Typography>
-            {product.discount>0 ?
-                <Box>
-                    <Typography sx={{display:'block', textDecoration:'line-through',color:'red'}}
-                                variant='caption'>Price : ({formatCurrency(product.price)})
-                    </Typography>
-                    <Typography sx={{display:'block'}}
-                                variant='caption'>Price : ({formatCurrency(product.price-product.discount)})
-                    </Typography>                   
-                </Box>
-            :
-                <Typography sx={{display:'block'}}
-                    variant='caption'>Price : {formatCurrency(product.price)}
-                </Typography>       
-            }
-            {
-                product.localShipmentPolicy==='free' ?
-                <Box sx={{display:'flex', justifyContent:'center',alignItems:'center'}}>
-                    <LocalShippingIcon sx={{mr:1, color:'#458a6f'}} />
-                    <Typography variant='caption'>Free Shipping</Typography>                
-                </Box>
+    //     <CardMedia
+    //       component="img"
+    //       height="140"
+    //       image={
+    //         product && product.images && product.images.length > 0
+    //           ? product.images[0].url || 'placeholder.jpg'
+    //           : ''
+    //       }
+    //       alt={product && product.title}
+    //       style={{padding:'5px'}}
+    //     />
+    //     {product.discount>0?
+    //     <Typography variant='button' display='block' className='sale'>Sale</Typography>
+    //     :
+    //     ''}
+    //     <CardContent>
+    //         <Typography gutterBottom
+    //                     variant='button'
+    //                     component='h1'>{product?.title && product.title.length>15?product.title.slice(0,14):product.title}
+    //         </Typography>
+    //         <Stack spacing={1} sx={{display:'block'}}>
+    //             <Rating name="half-rating-read" value={product.ratings} precision={0.1} readOnly />
+    //         </Stack>
+    //         <Typography gutterBottom
+    //                     sx={{display:'block'}}
+    //                     variant='caption'
+    //                     component='span'>Reviews : ({product.numOfReviews})
+    //         </Typography>
+    //         {product.discount>0 ?
+    //             <Box>
+    //                 <Typography sx={{display:'block', textDecoration:'line-through',color:'red'}}
+    //                             variant='caption'>Price : ({formatCurrency(product.price)})
+    //                 </Typography>
+    //                 <Typography sx={{display:'block'}}
+    //                             variant='caption'>Price : ({formatCurrency(product.price-product.discount)})
+    //                 </Typography>                   
+    //             </Box>
+    //         :
+    //             <Typography sx={{display:'block'}}
+    //                 variant='caption'>Price : {formatCurrency(product.price)}
+    //             </Typography>       
+    //         }
+    //         {
+    //             product.localShipmentPolicy==='free' ?
+    //             <Box sx={{display:'flex', justifyContent:'center',alignItems:'center'}}>
+    //                 <LocalShippingIcon sx={{mr:1, color:'#458a6f'}} />
+    //                 <Typography variant='caption'>Free Shipping</Typography>                
+    //             </Box>
+    //             :
+    //             ''
+    //         }
+    //           <Typography sx={{display:'block'}}
+    //                       variant='button'>View details &#38; buy.
+    //           </Typography>
+
+    //     </CardContent>
+    //     </Card>
+    //   </CardActionArea>
+    //   <Box sx={{mt:2}} >
+    //         {ref? 
+    //             <Button variant='outlined'
+    //                     ref={ref}
+    //                     fullWidth
+    //                     color="primary"
+    //                     startIcon={icon}
+    //                     onClick={cartHandler}
+    //                     style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
+    //         :
+    //           <Button variant='outlined'
+    //                     fullWidth
+    //                     color="primary"
+    //                     startIcon={icon}
+    //                     onClick={cartHandler} style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
+    //         }
+    //   </Box>
+    // </Box>
+
+<Box className=''>
+    <CardActionArea onClick={linkToDetails}>
+        <Card className='box-shadow' sx={{ position: 'relative', overflow: 'hidden', minHeight: '365px' }}>
+            <CardMedia
+                component="img"
+                height="140"
+                image={product && product.images && product.images.length > 0 ? product.images[0].url || 'placeholder.jpg' : ''}
+                alt={product && product.title}
+                style={{ padding: '5px' }}
+            />
+            {product.discount > 0 ?
+                <Typography variant='button' display='block' className='sale'>Sale</Typography>
                 :
                 ''
             }
-              <Typography sx={{display:'block'}}
-                          variant='button'>View details &#38; buy.
-              </Typography>
-
-        </CardContent>
-        </Card>
-      </CardActionArea>
-      <Box sx={{mt:2}} >
-            {ref? 
+            <CardContent>
+                <Typography gutterBottom variant='button' component='h3'>
+                    {product?.title && product.title.length > 15 ? product.title.slice(0, 14) : product.title}
+                </Typography>
+                {product.discount > 0 ?
+                    <Typography sx={{ display: 'block', textDecoration: 'line-through', color: 'red' }} variant='caption'>
+                        Price: {formatCurrency(product.price)}
+                    </Typography>
+                    :
+                    <Typography sx={{ display: 'block' }} variant='caption'>
+                        Price: {formatCurrency(product.price)}
+                    </Typography>
+                }
+                <Box sx={{mt:2}} >
+             {ref? 
                 <Button variant='outlined'
-                        ref={ref}
-                        fullWidth
-                        color="primary"
-                        startIcon={icon}
-                        onClick={cartHandler}
-                        style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
-            :
-              <Button variant='outlined'
-                        fullWidth
-                        color="primary"
-                        startIcon={icon}
-                        onClick={cartHandler} style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
-            }
-      </Box>
-    </Box>
+                         ref={ref}
+                         fullWidth
+                         color="primary"
+                         startIcon={icon}
+                         onClick={cartHandler}
+                         style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
+             :
+               <Button variant='outlined'
+                         fullWidth
+                         color="primary"
+                         startIcon={icon}
+                         onClick={cartHandler} style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
+             }
+       </Box>
+            </CardContent>
+        </Card>
+    </CardActionArea>
+</Box>
   )
 })
 
