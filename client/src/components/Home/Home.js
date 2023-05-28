@@ -17,6 +17,7 @@ import '../Home/home.css';
 
 import { alignPropType } from 'react-bootstrap/esm/types';
 import Header from '../Layout/Header';
+import VideoPopup from './VideoPopup';
 
 
 
@@ -42,7 +43,8 @@ const Home = () => {
 
       {/* end div 3 */}
 
-      <AboutUs />
+      {/* <AboutUs /> */}
+      <VideoPopup/>
       <ContactUs />
       <AboutUs2/>
     </Box>

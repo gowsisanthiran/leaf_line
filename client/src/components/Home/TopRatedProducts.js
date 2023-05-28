@@ -31,8 +31,8 @@ function TopRatedProducts() {
   }, []);
 
   return (
-    <div>
-      <div className='col-lg-12  text-center'>
+    <div style={{display: 'block'}}>
+      <div className='col-lg-12   text-center'style={{marginTop:'150px', marginBottom: '150px'}}>
         <Box className="containerx col-lg-8 offset-lg-2 text-center" sx={{ textAlign: 'center', fontFamily: 'serif' }}>
           <Typography variant="h5" className="m-4 p-1 text-dark text-center" sx={{fontFamily: 'Jack Rooney , sans-serif'}}>
             <span style={{color:'green'}}>Top-Rated</span><span>&nbsp;&nbsp;</span>  Products

@@ -1,8 +1,8 @@
-import React,{useEffect,useState} from 'react';
-import {formatCurrency} from '../../utility/formatCurrency';
-import {useDispatch,useSelector} from 'react-redux';
-import {toast} from 'react-toastify';
-import {useNavigate, Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { formatCurrency } from '../../utility/formatCurrency';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 import Card from '@mui/material/Card';
@@ -14,55 +14,56 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-import {addItemsToCart,selectCartItems, removeItem} from '../../redux/features/cartSlice';
+import { addItemsToCart, selectCartItems, removeItem } from '../../redux/features/cartSlice';
+import { Opacity } from '@mui/icons-material';
 
 
-const ProductCard = React.forwardRef(({product},ref) => {
-  const dispatch=useDispatch();
-  const [exist,setExist]=useState(false);
-  const [color,setColor]=useState('info');
-  const [icon,setIcon]=useState(<AddShoppingCartIcon/>);
-  const [text,setText]=useState('Add to cart');
+const ProductCard = React.forwardRef(({ product }, ref) => {
+  const dispatch = useDispatch();
+  const [exist, setExist] = useState(false);
+  const [color, setColor] = useState('info');
+  const [icon, setIcon] = useState(<AddShoppingCartIcon />);
+  const [text, setText] = useState('Add to cart');
 
-  const {products}=useSelector(selectCartItems);
+  const { products } = useSelector(selectCartItems);
 
-  const remove=()=>{
+  const remove = () => {
     setExist(true);
     setColor('error');
-    setIcon(<DeleteIcon/>);
+    setIcon(<DeleteIcon />);
     setText('Remove from cart');
   }
 
-  const add=()=>{
+  const add = () => {
     setExist(false);
     setColor('info');
-    setIcon(<AddShoppingCartIcon/>);
+    setIcon(<AddShoppingCartIcon />);
     setText('Add to cart');
   }
 
-  const cartHandler=()=>{
-    const _id=product._id;
-    const quantity=1;
+  const cartHandler = () => {
+    const _id = product._id;
+    const quantity = 1;
 
-    if(exist){
+    if (exist) {
       dispatch(removeItem(_id));
       toast.error('Item remove from cart');
       add();
       return;
     }
-    if(!exist){
-      dispatch(addItemsToCart({_id,quantity,toast}))
+    if (!exist) {
+      dispatch(addItemsToCart({ _id, quantity, toast }))
       toast.success('Item added to cart');
       remove();
       return;
     }
-    
+
   }
 
-  const getExist=()=>{
-    if(products){
-      const e=products.some(p=>p._id===product._id);
-      if(e===true){
+  const getExist = () => {
+    if (products) {
+      const e = products.some(p => p._id === product._id);
+      if (e === true) {
         remove();
       }
     }
@@ -70,17 +71,17 @@ const ProductCard = React.forwardRef(({product},ref) => {
   useEffect(() => {
     getExist();
   }, [])
-  const navigate=useNavigate();
-  const linkToDetails=()=>{navigate(`/product/${product._id}`);}
-  
+  const navigate = useNavigate();
+  const linkToDetails = () => { navigate(`/product/${product._id}`); }
+
   return (
     // <Box className='productCard'>
-    
+
     //   <CardActionArea>
     //   <Card className='box-shadow' 
     //         onClick={linkToDetails}
     //         sx={{position:'relative',overflow:'hidden', minHeight:'365px'}}>
-              
+
     //     <CardMedia
     //       component="img"
     //       height="140"
@@ -158,55 +159,59 @@ const ProductCard = React.forwardRef(({product},ref) => {
     //   </Box>
     // </Box>
 
-<Box className=''>
-    <CardActionArea onClick={linkToDetails}>
-        <Card className='box-shadow' sx={{ position: 'relative', overflow: 'hidden', minHeight: '365px' }}>
-            <CardMedia
-                component="img"
-                height="140"
-                image={product && product.images && product.images.length > 0 ? product.images[0].url || 'placeholder.jpg' : ''}
-                alt={product && product.title}
-                style={{ padding: '5px' }}
-            />
+    <Box className=''>
+      <CardActionArea>
+        <Card className='box-shadow' sx={{ position: 'relative', overflow: 'hidden', minHeight: '365px',borderRadius: '10px' }}>
+          <CardMedia
+            component="img"
+            height="140"
+            image={product && product.images && product.images.length > 0 ? product.images[0].url || 'placeholder.jpg' : ''}
+            alt={product && product.title}
+            style={{ padding: '5px', Opacity: '0.5' }}
+          />
+          {product.discount > 0 ?
+            <Typography variant='button' display='block' className='sale'>Sale</Typography>
+            :
+            ''
+          }
+          <CardContent>
+            <Typography gutterBottom variant='button' component='h3'>
+              {product?.title && product.title.length > 15 ? product.title.slice(0, 14) : product.title}
+            </Typography>
             {product.discount > 0 ?
-                <Typography variant='button' display='block' className='sale'>Sale</Typography>
-                :
-                ''
+              <Typography sx={{ display: 'block', textDecoration: 'line-through', color: 'red' }} variant='caption'>
+                Price: {formatCurrency(product.price)}
+              </Typography>
+              :
+              <Typography sx={{ display: 'block' }} variant='caption'>
+                Price: {formatCurrency(product.price)}
+              </Typography>
             }
-            <CardContent>
-                <Typography gutterBottom variant='button' component='h3'>
-                    {product?.title && product.title.length > 15 ? product.title.slice(0, 14) : product.title}
-                </Typography>
-                {product.discount > 0 ?
-                    <Typography sx={{ display: 'block', textDecoration: 'line-through', color: 'red' }} variant='caption'>
-                        Price: {formatCurrency(product.price)}
-                    </Typography>
-                    :
-                    <Typography sx={{ display: 'block' }} variant='caption'>
-                        Price: {formatCurrency(product.price)}
-                    </Typography>
-                }
-                <Box sx={{mt:2}} >
-             {ref? 
-                <Button variant='outlined'
-                         ref={ref}
-                         fullWidth
-                         color="primary"
-                         startIcon={icon}
-                         onClick={cartHandler}
-                         style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
-             :
-               <Button variant='outlined'
-                         fullWidth
-                         color="primary"
-                         startIcon={icon}
-                         onClick={cartHandler} style={{backgroundColor:"rgb(225,225,222)"}}>{text}</Button>
-             }
-       </Box>
-            </CardContent>
+          </CardContent>
         </Card>
-    </CardActionArea>
-</Box>
+      </CardActionArea>
+      <Box sx={{ mt: 2 }} >
+              {ref ?
+                <Button variant='outlined'
+                  ref={ref}
+                  fullWidth
+                  color="primary"
+                  startIcon={icon}
+                  onClick={cartHandler}
+                  sx={{ backgroundColor: '#F28123',borderRadius:'25px' }}
+                >{text}</Button>
+                :
+                <Button variant='outlined'
+                  fullWidth
+                  color="primary"
+                  startIcon={icon}
+                  onClick={cartHandler}
+                  sx={{ backgroundColor: '#F28123', borderRadius:'25px' }}
+                >{text}</Button>
+              }
+            </Box>
+    </Box>
+    
   )
 })
 

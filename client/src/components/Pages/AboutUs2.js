@@ -111,11 +111,11 @@ function AboutUs2() {
 
             <ThemeProvider theme={theme}>
 
-                <section className='bg'>
+                <section className='bg' style={{marginTop: '150px', marginBottom: '150px'}}>
                     <Container>
-                        <Typography variant="h3">
+                        <Typography variant="h3" style={{paddingTop: '100px', paddingBottom: '20px',color:"white"}}>
                             December sale is on! <br />
-                            with big <span className={classes.orangeText}>Discount...</span>
+                            with big <span className={classes.orangeText}> Discount...</span>
                         </Typography>
                         <div className={classes.salePercent}>
                             <span>Sale! <br /> Upto</span> 50% <span>off</span>
@@ -126,6 +126,7 @@ function AboutUs2() {
                             variant="contained"
                             size="large"
                             startIcon={<ShoppingCartIcon />}
+                            sx={{marginBottom: '50px'}}
                         >
                             Shop Now
                         </Button>

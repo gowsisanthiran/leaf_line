@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
-import logo from '../../images/Logo.png'
+import logo from '../../images/LOGO.png'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {

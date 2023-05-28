@@ -1,8 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 .bg{
-    background-image: url(../../images/image1.jpeg);
-    
+    background-image: url(../../images/eco-friendly-natural-plate-with-spoon-fork-knife-set-of-disposable-ecological-dishes-in-hands-on-green-grass-background-sustainability-of-planet-2E9P0CJ-transformed\ \(1\).jpeg);
+    background-repeat:no-repeat ;
+    background-size: cover;
 }
 .team-bg {
     height: 400px;

@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    background: 'darkgrey'
+    background: '#f5f5f5'
     // Add your custom styles for the background container
   },
   container: {
@@ -78,12 +78,14 @@ const WhyChoosingUs = () => {
   const classes = useStyles();
 
   return (
+
+
     <Box className={classes.background}>
       <Box className={classes.container} textAlign="left" style={{ margin: '0 auto', marginTop: '10px' }} data-aos="fade-up">
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" className={classes.title} sx={{fontFamily: 'Jack Rooney , sans-serif', paddingTop: '30px'}}>
           Why Choosing Us!
         </Typography>
-        <Box mt={4} style={{ textAlign: 'center', fontFamily: 'cursive' }} data-aos="fade-up" data-aos-delay="100">
+        <Box mt={4} style={{ textAlign: 'center', fontFamily: 'Open Sans, sans-serifcursive' }} data-aos="fade-up" data-aos-delay="100">
           <Typography variant="h4">Few Reasons Why People Choose Us!</Typography>
 
           <Grid container className={classes.cardContainer} data-aos="fade-up" data-aos-delay="200">
