@@ -36,7 +36,7 @@ const Products = () => {
 
       dispatch(resetProducts());
     }
-    const ratingHandler=(e)=>{
+    const   ratingHandler=(e)=>{
       setRatingsFilter(e.target.value);
       setCurrentPage(1);
       dispatch(resetProducts());
@@ -81,6 +81,15 @@ const Products = () => {
       }
     }, [filteredProductsCount,resultPerPage,currentPage])
     
+    // Reset the price range to its initial values
+  const resetPriceRange = () => {
+    setPriceRange([minPrice, maxPrice]);
+  };
+
+  // Reset the rating to its initial value
+  const resetRating = () => {
+    setRatingsFilter(0);
+  };  
     
   return (
     <Box className='wrapper' style={{marginTop:'5rem'}}>
@@ -137,6 +146,8 @@ const Products = () => {
               onChange={(e,newPriceRange)=>priceHandler(e,newPriceRange)}
               valueLabelDisplay="on"
             />
+                  <button onClick={resetPriceRange}>Reset Price</button>
+
           </AccordionDetails>
         </Accordion>
         </Box>
@@ -159,6 +170,8 @@ const Products = () => {
               onChange={ratingHandler}
               valueLabelDisplay="on"
             />
+                  <button onClick={resetRating}>Reset Rating</button>
+
           </AccordionDetails>
         </Accordion>
         </Box>

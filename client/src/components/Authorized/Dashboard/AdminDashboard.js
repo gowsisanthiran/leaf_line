@@ -38,7 +38,7 @@ const AdminDashboard = () => {
     dispatch(getProductsByAuthorizeRoles({ toast }));
     dispatch(getAllOrders({ toast }));
     dispatch(getAllUsers({ toast }));
-  })
+  }, []);
   const lineData = {
     labels: ['Initial Amount', 'Amount Earned'],
     datasets: [
@@ -61,7 +61,7 @@ const doughnutData={
         }
     ]
   }
-  // Create the bar chart data
+//   // Create the bar chart data
   const barData = {
     labels: products && products.map((product) => product.name),
     datasets: [
@@ -86,9 +86,8 @@ const doughnutData={
           boxShadow: '0px 3px 5px 0px #415d43',
           height: '100%',
           minHeight: '100vh',
-        }}
-      >
-        <Grid container spacing={2}>
+        }}>
+        <Grid container spacing={2}> 
           <Grid item xs={12} sm={6} md={3}>
             <Box
               className='box'
@@ -184,9 +183,9 @@ const doughnutData={
          <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
         <Grid item xs={5}><Line data={lineData}/></Grid>
         <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
-        {/* <Grid item xs={12}>
+        <Grid item xs={12}>
             <Bar data={barData} />
-          </Grid> */}
+          </Grid>
         </Grid>
       </Box>
     </>

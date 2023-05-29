@@ -22,7 +22,7 @@ exports.authorizeRoles=(...allowedRoles)=>{
     return (req,res,next)=>{
         if(!req?.userInfo?.roles) return  next(new ErrorHandler('Unauthorized',401));
         const rolesArray=[...allowedRoles];
-        const result=req.userInfo.roles.map(role=>rolesArray.includes(role)).find(val=>val===true);
+        const result = req.userInfo.roles.some(role => rolesArray.includes(role));
         if(!result) return next(new ErrorHandler('Unauthorized',401));
         next();
     }

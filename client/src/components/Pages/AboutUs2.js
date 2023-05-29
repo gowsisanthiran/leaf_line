@@ -1,8 +1,6 @@
 import React,{useEffect} from 'react'
 import './aboutUs.css'
-import { Row, Col } from 'react-bootstrap';
-import { Facebook, Twitter, Instagram } from '@mui/icons-material';
-// import { makeStyles } from '@mui/styles';
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { Container, Typography, Button } from '@mui/material';
@@ -102,7 +100,7 @@ function AboutUs2() {
                                             </div>
                                             <div class="content">
                                                 <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '25px' }}>Home Delivery</h3>
-                                                <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555' }}>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                                <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555', textAlign: 'justify' }}>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                             </div>
                                         </div>
                                     </div>

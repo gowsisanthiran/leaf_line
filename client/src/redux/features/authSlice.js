@@ -5,7 +5,7 @@ import axiosPrivate from '../axiosPrivate';
 export const registration=createAsyncThunk('auth/registration',async({formData,toast},{rejectWithValue})=>{
     try{
         const {data}=await axiosPublic.post(`/register`,formData,{headers:{'Content-type':'multipart/form-data'}});
-        toast.success('Successfully regstered.');
+        toast.success('Successfully registered.');
         console.log(data.user);
         return data;
 

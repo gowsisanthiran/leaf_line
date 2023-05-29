@@ -34,20 +34,20 @@ const AuthorizedRoute = () => {
                     <Box className='mTreeMenu' sx={{ minWidth: '225px', mr: 1 }}>
                         <DrawerTreeMenu />
                     </Box>
-                    <Box sx={{ flexGrow: 1 }}>
+                    <Box sx={{ flexGrow: 1 ,paddingTop: '10px'}}>
                         <Link to="dashboard" className="link-no-underline">
                             <Typography
-                            component='div'
-                            variant='h6'
-                            sx={{
-                                textAlign: 'left',
-                                color: '#132a13',
-                                textShadow: '1px 1px 1px #555',
-                                marginLeft: "20px",
-                            }}
-                        >
-                            Dashboard
-                        </Typography>
+                                component='div'
+                                variant='h6'
+                                sx={{
+                                    textAlign: 'left',
+                                    color: '#132a13',
+                                    textShadow: '1px 1px 1px #555',
+                                    marginLeft: "20px",
+                                }}
+                            >
+                                Dashboard
+                            </Typography>
                         </Link>
                     </Box>
                 </Box>
