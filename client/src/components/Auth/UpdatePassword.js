@@ -3,10 +3,11 @@ import {useSelector,useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import {changePassword,selectMutationResult,resetMutationResult} from '../../redux/features/authSlice';
+import { Button, Form } from 'react-bootstrap';
 
 
-
-import {Box, Typography, TextField, Button} from '@mui/material';
+import './UserProfile.css'
+import {Box, Typography, TextField} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 
 const UpdatePassword = () => {
@@ -39,57 +40,48 @@ const UpdatePassword = () => {
     }, [success, navigate, dispatch])
     
   return (
-    <Box sx={{maxWidth:'550px', m:'0 auto',textAlign:'center'}}>
-        <Box sx={{m:1}}>
-        <Typography component='h1' 
-                    variant='h6'>Change Password
-        </Typography>
-        <Box sx={{bgcolor:'primary.main',color:'#fff',borderRadius:1,mb:3}}>
-            <StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/>
-        </Box>
 
-        <Box component='form' onSubmit={handleSubmit}>
-        <TextField type='password'
-                        id='oldPassword'
-                        label='Old Password'
-                        name='oldPassword'
-                        margin='normal'
-                        required
-                        fullWidth
-                        autoFocus
-                        value={oldPassword}
-                        onChange={(e=>setOldPassword(e.target.value))}
-        />
-        <TextField type='password'
-                        id='newPassword'
-                        label='New Password'
-                        name='newPassword'
-                        margin='normal'
-                        required
-                        fullWidth
-                        value={newPassword}
-                        onChange={(e=>setNewPassword(e.target.value))}
-        />
-        <TextField type='password'
-                        id='confirmPassword'
-                        label='Confirm Password'
-                        name='confirmPassword'
-                        margin='normal'
-                        required
-                        fullWidth
-                        value={confirmPassword}
-                        onChange={(e=>setConfirmPassword(e.target.value))}
-        />
-        <Button type='submit'
-                        fullWidth
-                        disabled={loading?true:false}
-                        variant='contained'
-                        sx={{mt:3,mb:2}}
-                        >Update
-        </Button>
-        </Box>
-        </Box>
-    </Box>
+    <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',height: '100vh',backgroundColor: '#f1f1f1'}}>
+      <div className="card border-0 bg-transparent mx-auto mt-4" style={{ maxWidth: '550px' }}>
+        <h1 className="text-center mb-4">Change Password</h1>
+        
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="oldPassword">
+            <Form.Label style={{color:'black'}}>Old Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Enter old password"
+              value={oldPassword}
+              style={{color:'black'}}
+              onChange={(e) => setOldPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="newPassword">
+            <Form.Label style={{color:'black'}}>New Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Enter new password"
+              value={newPassword}
+              style={{color:'black'}}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="confirmPassword">
+            <Form.Label style={{color:'black'}}>Confirm Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Confirm new password"
+              value={confirmPassword}
+              style={{color:'black'}}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Button type="submit" variant="primary" className="w-100 mt-3 mb-2">
+            Update
+          </Button>
+        </Form>
+      </div>
+    </div>
   )
 }
 
