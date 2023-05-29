@@ -22,18 +22,18 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
               LEAFLINE
             </Typography>
-            <Typography variant="body2" color="textSecondary">
+            <Typography variant="body2"  style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px'}}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique laborum quos rem, assumenda, unde dolorum enim voluptate harum at obcaecati doloribus, beatae aliquid! Quasi quod recusandae, cupiditate dolores nulla in.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
               Navigation
             </Typography>
-            <nav>
+            <nav style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', textDecoration: 'none'}}>
               <Link
                 variant="button"
                 color="textPrimary"
@@ -69,10 +69,10 @@ const Footer = () => {
             </nav>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
               Legal
             </Typography>
-            <nav>
+            <nav style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555'}}>
               <Link
                 variant="button"
                 color="textPrimary"
@@ -92,7 +92,7 @@ const Footer = () => {
             </nav>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
               Social
             </Typography>
               <nav>

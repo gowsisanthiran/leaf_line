@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './aboutUs.css'
 import { Row, Col } from 'react-bootstrap';
 import { Facebook, Twitter, Instagram } from '@mui/icons-material';
@@ -9,6 +9,10 @@ import { Container, Typography, Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { spacing } from '@mui/system'; // Import the spacing function separately
 import sl17 from '../../images/pic05.jpeg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -48,7 +52,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AboutUs2() {
-
+    useEffect(() => {
+        AOS.init();
+      }, []);
     const classes = useStyles();
 
     return (
@@ -80,15 +86,15 @@ function AboutUs2() {
                     </section>
                 </ThemeProvider>
 
-                <div class="container" style={{paddingBottom: '20px'}}>
+                <div class="container" style={{paddingBottom: '20px'}} data-aos="fade-up">
                     <div class="row" >
                         <div class="col-lg-5">
-                            <img src={sl17} alt="about something" style={{width: '100%', borderBottomLeftRadius: '20px',borderTopLeftRadius: '20px',    boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)'}}/>
+                            <img src={sl17} alt="about something" style={{width: '100%', borderBottomLeftRadius: '20px',borderTopLeftRadius: '20px',    boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)'}} data-aos="fade-up" data-aos-delay="100"/>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-7"data-aos="fade-up" data-aos-delay="200">
                             <div class="featured-text">
                                 <h2 class="pb-3" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Why <span class="orange-text" style={{ color: 'green' }}>LEAFLINE</span></h2>
-                                <div class="row">
+                                <div class="row" data-aos="fade-up" data-aos-delay="300">
                                     <div class="col-lg-6 col-md-6 mb-4 mb-md-5">
                                         <div class="list-box d-flex">
                                             <div class="list-icon">
@@ -107,7 +113,7 @@ function AboutUs2() {
                                             </div>
                                             <div class="content">
                                                 <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '25px' }}>Best Price</h3>
-                                                <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555' }}>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                                <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555',textAlign: 'justify' }}>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +124,7 @@ function AboutUs2() {
                                             </div>
                                             <div class="content">
                                                 <h3 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '25px' }}>Custom Box</h3>
-                                                <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555' }}>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                                <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555',textAlign: 'justify' }}>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                             </div>
                                         </div>
                                     </div>
