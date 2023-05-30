@@ -51,17 +51,17 @@ const AdminDashboard = () => {
     ]
   }
 
-const doughnutData={
-    labels:['Out Of Stock','In Stock'],
-    datasets:[
-        {
-            backgroundColor:['red','#285430'],
-            hoverBackgroundColor:['black','#FF6000'],
-            data:[outOfStock,products.length-outOfStock]
-        }
+  const doughnutData = {
+    labels: ['Out Of Stock', 'In Stock'],
+    datasets: [
+      {
+        backgroundColor: ['red', '#285430'],
+        hoverBackgroundColor: ['black', '#FF6000'],
+        data: [outOfStock, products.length - outOfStock]
+      }
     ]
   }
-//   // Create the bar chart data
+
   const barData = {
     labels: products && products.map((product) => product.name),
     datasets: [
@@ -74,97 +74,89 @@ const doughnutData={
       }
     ]
   };
+
   return (
     <>
       <Box
         className='dash-box'
         sx={{
-          borderRadius: '8px',
-          marginLeft: '10px',
-          marginRight: '11px',
-          padding: '50px',
-          boxShadow: '0px 3px 5px 0px #415d43',
-          height: '100%',
+          backgroundColor: '#E9EDC9',
+          padding: '10px',
           minHeight: '100vh',
-        }}>
-        <Grid container spacing={2}> 
+        }}
+      >
+        <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>
             <Box
-              className='box'
+              className='Box'
               sx={{
-                backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adjust the opacity for the glass effect
-                backdropFilter: 'blur(10px)', // Apply blur effect for glass
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
                 color: 'black',
                 padding: '20px',
-                borderRadius: '8px',
                 boxShadow: '0px 3px 5px 0px #415d43',
               }}
             >
-              
-                <ShoppingCartOutlinedIcon />
-                <Typography variant='h6' textAlign='center'>
-                  Products
-                </Typography>
-                <Divider />
-                <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                  {products && products.length}
-                </Typography>
+              <ShoppingCartOutlinedIcon />
+              <Typography variant='h6' textAlign='center'>
+                Products
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {products && products.length}
+              </Typography>
             </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-          <Box
-            className='box'
-            sx={{
-              backgroundColor: 'white',
-              color: 'black',
-              padding: '20px',
-              borderRadius: '8px',
-              boxShadow: '0px 3px 5px 0px #415d43',
-            }}
-          >
-
-            <GroupOutlinedIcon />
-            <Typography variant='h6' textAlign='center'>
-              Users
-            </Typography>
-            <Divider />
-            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-              {users && users.length}
-            </Typography>
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={3}>
-          <Box
-            className='box'
-            sx={{
-              backgroundColor: 'white',
-              color: 'black',
-              padding: '20px',
-              borderRadius: '8px',
-              boxShadow: '0px 3px 5px 0px #415d43',
-            }}
-          >
-            <ListAltOutlinedIcon />
-            <Typography variant='h6' textAlign='center'>
-              Orders
-            </Typography>
-            <Divider />
-            <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-              {orders && orders.length}
-            </Typography>
-          </Box>
-        </Grid>
+          </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <Box
-              className='box'
+              className='Box'
               sx={{
                 backgroundColor: 'white',
                 color: 'black',
                 padding: '20px',
-                borderRadius: '8px',
+                boxShadow: '0px 3px 5px 0px #415d43',
+              }}
+            >
+              <GroupOutlinedIcon />
+              <Typography variant='h6' textAlign='center'>
+                Users
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {users && users.length}
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
+              className='Box'
+              sx={{
+                backgroundColor: 'white',
+                color: 'black',
+                padding: '20px',
+                boxShadow: '0px 3px 5px 0px #415d43',
+              }}
+            >
+              <ListAltOutlinedIcon />
+              <Typography variant='h6' textAlign='center'>
+                Orders
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {orders && orders.length}
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
+              className='Box'
+              sx={{
+                backgroundColor: 'white',
+                color: 'black',
+                padding: '20px',
                 boxShadow: '0px 3px 5px 0px #415d43',
               }}
             >
@@ -180,10 +172,14 @@ const doughnutData={
           </Grid>
         </Grid>
 
-         <Grid container sx={{alignItems:'center',mt:1,textAlign:'center'}} spacing={3}>
-        <Grid item xs={5}><Line data={lineData}/></Grid>
-        <Grid item xs={5}> <Doughnut data={doughnutData}/></Grid>
-        <Grid item xs={12}>
+        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
+          <Grid item xs={12} md={6} lg={6}>
+            <Line data={lineData} />
+          </Grid>
+          <Grid item xs={12} md={6} lg={6}>
+            <Doughnut data={doughnutData} />
+          </Grid>
+          <Grid item xs={12}>
             <Bar data={barData} />
           </Grid>
         </Grid>
