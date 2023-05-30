@@ -26,6 +26,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Header = () => {
 
   const { products } = useSelector(selectCartItems);
+
+  
   
 
   return (
@@ -34,7 +36,7 @@ const Header = () => {
 
       
       {/* <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default"> */}
-      <nav className="navbar navbar-expand navbar-light  navbar navbar navbar-default fixed-top navbar-transparent" style={{position: 'fixed'}}>
+      <nav className="navbar scrolled navbar-expand navbar-light  navbar navbar navbar-default fixed-top navbar-transparent" style={{position: 'fixed'}}>
 
         <button
           className="navbar-toggler"
@@ -49,9 +51,9 @@ const Header = () => {
         </button>
         
        <Link to="/" className="navbar-brand">
-          <img src={logoo} alt="Logo" className="logo" style={{ height: '100px', width: '100px', marginLeft:'50px'}} />
+          <img src={logoo} alt="Logo" className="logo" style={{ height: '150px', width: '150px', marginLeft:'50px',marginTop:'-100px'}} />
         </Link>
-        <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
+        <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav" >
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink to="/" className="nav-link " activeClassName="active" style={{color:'white'}}>

@@ -12,7 +12,7 @@ import './WhyChoosingUs.css';
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    background: '#919f81',
+    background: '#7eaf6c',
     // Add your custom styles for the background container
     marginTop:'0.5rem',
     padding:'10px',
