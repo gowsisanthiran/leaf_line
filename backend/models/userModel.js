@@ -7,7 +7,14 @@ const userSchema=new mongoose.Schema({
     name:{
         type:String,
         required:[true, 'Please enter name'],
-        trim:true
+        trim:true,
+        validate: {
+            validator: function (value) {
+                // Check if the first character is an alphabet
+                return /^[A-Za-z]/.test(value);
+            },
+            message: 'Name must start with an alphabet.'
+        }
     },
     email:{
         type:String,
