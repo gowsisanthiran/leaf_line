@@ -17,9 +17,12 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'right',
     padding: spacing(2),
     backgroundColor: 'transparent',
+    fixed:top,
+    zIndex: 1,
+    
   },
   logo: {
     fontSize: '1.5rem',
@@ -29,14 +32,15 @@ const useStyles = makeStyles((theme) => ({
   },
   navbarNav: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'right ',
+   
   },
   navItem: {
     marginRight: spacing(2),
     '& .nav-link': {
       color: "",
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'right',
       textDecoration: 'none',
       '&.active': {
         color: "",
@@ -149,7 +153,7 @@ const CoverText = () => {
   return (
     <div className={classes.coverText}>
       <div className="col-lg-10" style={{ float: 'none', margin: '0 auto' }}>
-        <h1 className={classes.title}>LEAFLINE</h1>
+        <h1 className={classes.title}></h1>
         <h3 className={classes.subtitle}>Fine Dining</h3>
       </div>
       <div className="col-xs-12 explore">

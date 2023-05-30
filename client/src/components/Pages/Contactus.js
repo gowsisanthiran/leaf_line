@@ -14,7 +14,7 @@ const Contactus = () => {
 
   return (
     
-    <Box component="section" py={12 } data-aos="fade-up" style={{backgroundColor: '#f5f5f5'}}>
+    <Box component="section" py={12 } data-aos="fade-up" style={{backgroundColor: '#919f81'}}>
       
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
