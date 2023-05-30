@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
 import logo from '../../images/LOGO.png'
+import logoo from '../../images/logoo.png'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -25,6 +26,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Header = () => {
 
   const { products } = useSelector(selectCartItems);
+
+  
   
 
   return (
@@ -32,7 +35,8 @@ const Header = () => {
     <div class="container-fluid main">
 
       
-      <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default">
+      {/* <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default"> */}
+      <nav className="navbar scrolled navbar-expand navbar-light  navbar navbar navbar-default fixed-top navbar-transparent" style={{position: 'fixed'}}>
 
         <button
           className="navbar-toggler"
@@ -45,10 +49,11 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <Link to="/" className="navbar-brand">
-        <span className="logo" style={{fontFamily: 'Jack Rooney , sans-serif'}}>LEAFLINE</span>
-      </Link>
-        <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
+        
+       <Link to="/" className="navbar-brand">
+          <img src={logoo} alt="Logo" className="logo" style={{ height: '150px', width: '150px', marginLeft:'50px',marginTop:'-100px'}} />
+        </Link>
+        <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav" >
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink to="/" className="nav-link " activeClassName="active" style={{color:'white'}}>
@@ -57,7 +62,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink to="/product" className="nav-link" activeClassName="active" style={{color:'white'}}>
-                <Inventory2Icon/> Product
+                 Product
               </NavLink>
             </li>
             <li className="nav-item">

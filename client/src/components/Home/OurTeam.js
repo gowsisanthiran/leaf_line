@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     cardContainer: {
         display: 'flex',
         justifyContent: 'center',
-        marginTop: '1.5rem',
+        marginTop: '0.5rem',
     },
     imageCard: {
         display: 'flex',
@@ -82,7 +82,7 @@ const OurTeam = () => {
     return (
         <div>
             <div className="mt-150" data-aos="fade-up">
-                <Container style={{maxWidth:'1140px', paddingRight: '15px', paddingLeft: '15px' }}>
+                <Container style={{maxWidth:'1140px', paddingRight: '20px', paddingLeft: '20px' }}>
                     <Row className='col-lg-8 offset-lg-2 text-center'>
                         <Col className={classes.description} >
                             <div className="section-title" style={{marginBottom: '0px'}}>

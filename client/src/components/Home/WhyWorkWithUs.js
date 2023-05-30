@@ -39,32 +39,23 @@ const WhyWorkWithUs = () => {
 
   return (
 
-    <div style={{ backgroundColor: '#f5f5f5' }}>
+    <div style={{ backgroundColor: '#84b768',borderRadius: '15px' }}>
       <section id="whyworkwithus" data-aos="fade-up" >
         <div class="row">
           <div class="box" >
-            <WorkIcon className={classes.icon} />
-            <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Experience</Typography>
-            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-              laoreet tempus blandit pretium etc.
-            </Typography>
+            <WorkIcon className={classes.icon}style={{color:'#244c2c',width:'100px', height:'100px'}} />
+            <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif',color:'#1c3414'  }}>Experience</Typography>
+            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>Unique and Memorable</Typography>
           </div>
           <div class="box" >
-            <SettingsIcon className={classes.icon} />
-            <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Flexibility</Typography>
-            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-              laoreet tempus blandit pretium etc.
-            </Typography>
+            <SettingsIcon className={classes.icon} style={{color:'#244c2c',width:'100px', height:'100px'}}/>
+            <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif',color:'#1c3414' }}>Flexibility</Typography>
+            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555',marginLeft:'20px',marginRight:'20px'}}>ECO-friendliness</Typography>
           </div>
           <div class="box" >
-            <StarIcon className={classes.icon} />
-            <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' }}>Results</Typography>
-            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit primis rutrum, nullam tempor malesuada
-              laoreet tempus blandit pretium etc.
-            </Typography>
+            <StarIcon className={classes.icon} style={{color:'#244c2c',width:'100px', height:'100px'}}/>
+            <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' ,color:'#1c3414' }}>Results</Typography>
+            <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>Environmental consciousness</Typography>
           </div>
         </div>
       </section>
