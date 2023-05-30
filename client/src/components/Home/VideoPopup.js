@@ -12,13 +12,13 @@ const VideoPopup = () => {
     <div>
 
 <div className="abt-section mb-150" data-aos="fade-up">
-      <Container sx={{marginTop: '50px', marginBottom: '50px', marginLeft:'160px'}}>
+      <Container sx={{marginTop: '100px', marginBottom: '50px', marginLeft:'200px'}}>
         <Grid container spacing={2}>
           <Grid item lg={6} md={12}>
             <div className="abt-bg" data-aos="fade-up" data-aos-delay="100">
             <iframe 
-                  width="560"
-                  height="315"
+                  width="700"
+                  height="500"
                   src="https://youtu.be/61IBKTD03fM"
                   title="leafLine Video"
                   allowFullScreen
@@ -26,14 +26,14 @@ const VideoPopup = () => {
             </div>
           </Grid>
           <Grid item lg={6} md={12}>
-            <div className="abt-text" data-aos="fade-up" data-aos-delay="200">
-              <Typography variant="subtitle1" className="top-sub" sx={{fontFamily: 'Open Sans, sans-serif'}}>
+            <div className="abt-text" data-aos="fade-up" data-aos-delay="200" style={{marginLeft:'200px'}}>
+              <Typography variant="subtitle1" className="top-sub" sx={{fontFamily: 'Open Sans, sans-serif',}}>
                 Since Year 1999
               </Typography>
               <Typography variant="h2" component="h2" style={{ fontFamily: 'Jack Rooney, sans-serif',fontSize: '42px' }}>
-                We are <span style={{color: 'green'}} data-aos="fade-up" data-aos-delay="300">LEAFLINE</span>
+                We are <span style={{color: '#7eaf6c'}} data-aos="fade-up" data-aos-delay="300">LEAFLINE</span>
               </Typography>
-              <Typography variant="body1" sx={{fontSize: '15px', fontFamily: 'Poppins, sans-serif', fontWeight:'400',marginRight:'50px'}} data-aos="fade-up" data-aos-delay="300">
+              <Typography variant="body1" sx={{fontSize: '20px', fontFamily: 'Poppins, sans-serif', fontWeight:'400',marginRight:'50px'}} data-aos="fade-up" data-aos-delay="300">
               A typical banana leaf meal consists of various dishes served on different parts of the leaf. Rice is usually placed at the center, while an array of curries, chutneys, pickles, and side dishes are served around it. This communal-style dining allows for a diverse and satisfying culinary experience.
               </Typography>
               <Typography variant="body1" sx={{fontSize: '15px', fontFamily: 'Poppins, sans-serif', fontWeight:'400'}}data-aos="fade-up" data-aos-delay="300">

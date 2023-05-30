@@ -32,7 +32,7 @@ const Header2 = () => {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon" style={{marginTop:'-100px'}}></span>
             </button>
             <Link to="/" className="navbar-brand">
             <img src={logoo} alt="Logo" className="logo" style={{ height: '100px', width: '100px', marginLeft:'50px'}} />

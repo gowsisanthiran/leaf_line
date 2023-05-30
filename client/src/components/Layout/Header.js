@@ -51,7 +51,7 @@ const Header = () => {
         </button>
         
        <Link to="/" className="navbar-brand">
-          <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft:'50px'}} />
+          <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft:'180px'}} />
         </Link>
         <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav" >
           <ul className="navbar-nav">
@@ -91,8 +91,8 @@ const Header = () => {
       <div class="covertext">
         <div class="col-lg-10" style={{ float: "none", margin: "0 auto" ,marginTop:'10rem',fontFamily:'Verdana', color:'#7eaf6c'}}>
           <h1 class="title">BIO-DEGRADABLE PLATES FOR A CLEANER PLANET</h1>
-          <h3 class="subtitle">Fine Dinning</h3>
-        </div>
+          <h1 class="title">CLEANER PLANET</h1>
+          </div>
         <div class="col-xs-12 explore">
           <Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
         </div>

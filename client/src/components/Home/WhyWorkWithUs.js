@@ -39,7 +39,7 @@ const WhyWorkWithUs = () => {
 
   return (
 
-    <div style={{ backgroundColor: '#DAE2B6',borderRadius: '15px' }}>
+    <div style={{ backgroundColor: '#DAE2B6'}}>
       <section id="whyworkwithus" data-aos="fade-up" >
         <div class="row">
           <div class="box" >

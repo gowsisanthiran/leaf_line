@@ -19,7 +19,7 @@ const Contactus = () => {
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
           <Typography  mb={1} sx={{fontFamily: 'Jack Rooney, sans-serif',fontSize: '1.5rem',fontWeight: 'bold' }}>
-            Contact <span style={{color: 'green '}}>Us</span>
+            Contact <span style={{color: '#7eaf6c '}}>Us</span>
           </Typography>
         </Grid>
         <Grid container item xs={12} lg={7} sx={{ mx: "auto" }}>
