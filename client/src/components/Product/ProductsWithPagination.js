@@ -50,8 +50,8 @@ const Products = () => {
     }, [dispatch,search,currentPage,priceRange,category,ratingsfilter])
     
   return (
-    <Box className='wrapper'>
-        <Box className='filter-box'>
+    <Box className='wrapper' >
+        <Box className='filter-box' >
         <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

@@ -159,9 +159,9 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
     //   </Box>
     // </Box>
 
-    <Box className=''>
+    <Box className='' sx={{backgroundColor:"white"}}>
       <CardActionArea>
-        <Card className='box-shadow' sx={{ position: 'relative', overflow: 'hidden', minHeight: '365px',borderRadius: '10px' }}>
+        <Card className='box-shadow' sx={{ position: 'relative', overflow: 'hidden', minHeight: '250px',borderRadius: '10px' }}>
           <CardMedia
             component="img"
             height="140"
@@ -195,18 +195,18 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
                 <Button variant='outlined'
                   ref={ref}
                   fullWidth
-                  color="primary"
+                  // color="primary"
                   startIcon={icon}
                   onClick={cartHandler}
-                  sx={{ backgroundColor: '#F28123',borderRadius:'25px' }}
+                  sx={{ color:"#D2FBA4",backgroundColor: '#1A2902',borderRadius:'15px' }}
                 >{text}</Button>
                 :
                 <Button variant='outlined'
                   fullWidth
-                  color="primary"
+                  // color="#D2FBA4"
                   startIcon={icon}
                   onClick={cartHandler}
-                  sx={{ backgroundColor: '#F28123', borderRadius:'25px' }}
+                  sx={{   color:"#D2FBA4",backgroundColor: '#1A2902', borderRadius:'15px' }}
                 >{text}</Button>
               }
             </Box>
