@@ -206,7 +206,7 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
                   // color="#D2FBA4"
                   startIcon={icon}
                   onClick={cartHandler}
-                  sx={{ backgroundColor: '#3c9474', borderRadius:'25px' }}
+                  sx={{ color:"#D2FBA4",backgroundColor: '#1A2902',borderRadius:'15px' }}
                 >{text}</Button>
               }
             </Box>
