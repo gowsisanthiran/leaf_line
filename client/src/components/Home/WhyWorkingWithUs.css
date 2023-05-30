@@ -11,6 +11,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
+    padding: 20px;
+    margin-top: 1px;
    
   }
   div .box{
@@ -22,16 +24,18 @@
     align-items: center;
     text-align: justify;
     border-radius: 15px;
-    background: linear-gradient(to top, #F28123 50%, white 50%);
+    background: linear-gradient(to top, #23f234 50%, );
     background-size: 100% 200%;
-    transition: all .3s;
+    transition: all .10s;
+    
   
   }
   div .box:hover{
     background-position: left bottom;
     color: white;
     border: none;
-    box-shadow: 0 0 20px #F28123;
+    box-shadow: 0 0 20px #6c744c
+    ;
   }
   div .box img{
     width: 80px;
@@ -39,3 +43,5 @@
     padding: 10px;
     background-color: white;
   }
+
+  

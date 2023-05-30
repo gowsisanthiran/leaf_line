@@ -1,23 +1,66 @@
 @import url('https://fonts.cdnfonts.com/css/krylon');
 @import url('https://fonts.cdnfonts.com/css/jack-rooney');
 
+
+.navbar-nav{
+  margin-top: 2px;
+  margin-left:800px;
+ 
+
+ 
+}
+/* .navbar{
+  transition: background-color 0.3s ease-in-out;
+  background-color: #ddb1b1;
+} */
+.navbar.transparent {
+  background-color: transparent !important;
+}
+
 .container-fluid.main{
   position: relative; /* To make the navbar positions relative to this container */
   padding: 0;
-}
+  margin-top: 0%;
+  margin-bottom: 0%;
+  }
+/* .container-fluid.main .navbar{
+  position :fixed;
+
+
+  
+} */
 
 .navbar-default {
   background-image: none;
-  background-color: transparent; /* Make the menu become transparent */
-  border-radius: 0px;
-  border: 0;
+  background-color: transparent;
+  /* background-color: black; */
+  transition: background-color 0.3s; /* Make the menu become transparent */
+  border-radius: 10px;
+  border: 5;
   box-shadow: none;
-  padding: 10px;
+  padding: 15px;
   position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
-  top: 0;
+  
   left: 0;
   right: 0;
-  z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+  z-index: 100; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+}
+
+.navbar{
+ 
+  transition: background-color 0.3s;
+  overflow:visible;
+
+}
+.navbar.active{
+  position: fixed;
+  background-color: aqua;
+  z-index: 999;
+  top:0%;
+  width:100%;
+  height: 10%;
+  box-shadow: 0 2px 5px #000;
+  left:0;
 }
 .navbar-center {
   display: flex;
@@ -76,7 +119,7 @@
 }
 
 .carousel .background.a {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
+  background-image: linear-gradient( rgba(0, 0, 0, 1.1), rgba(0, 0, 0, 1.1)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
 }
 
 .carousel-fade .carousel-inner .item {
@@ -119,8 +162,8 @@
   padding: 15px 25px;
   font-size: 22px;
   background-image: none;
-  background-color: #FF4000;
-  border-color: #FF4000;
+  background-color: #5f8273;
+  border-color:#5f8273;
   color: #ffffff;
 }
 
@@ -128,8 +171,8 @@
 .btn:hover {
   border-radius: 0px;
   background-image: none;
-  background-color: #FF4000;
-  border-color: #FF4000;
+  background-color:#5f8273;
+  border-color: #5f8273;
   color: #ffffff;
   margin-bottom: 20px;
   box-shadow: none;

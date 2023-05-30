@@ -7,6 +7,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useSelector } from 'react-redux';
 import { selectCartItems } from '../../redux/features/cartSlice';
+import logoo from '../../images/logoo.png'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -34,7 +35,7 @@ const Header2 = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <Link to="/" className="navbar-brand">
-                <span className="logo">LEAFLINE</span>
+            <img src={logoo} alt="Logo" className="logo" style={{ height: '100px', width: '100px', marginLeft:'50px'}} />
             </Link>
             <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav">
                 <ul className="navbar-nav">
