@@ -235,7 +235,7 @@ const Products = () => {
           }
 
 
-            <Box className='card-container'>
+            <Box className='card-container' sx={{textAlign:'left'}}>
                 {products && products.map((product,index)=>
                     products.length===index+1 ?
                     <ProductCard ref={lastElementRef} product={product} key={product._id}/>
