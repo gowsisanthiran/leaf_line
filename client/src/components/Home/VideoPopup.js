@@ -26,8 +26,8 @@ const VideoPopup = () => {
             </div>
           </Grid>
           <Grid item lg={6} md={12} >
-            <div className="abt-text" data-aos="fade-up" data-aos-delay="200" style={{marginLeft:'200px'}}>
-              <Typography variant="subtitle1" className="top-sub" sx={{fontFamily: 'Open Sans, sans-serif',marginLeft:'200px'}}>
+            <div className="abt-text" data-aos="fade-up" data-aos-delay="200" style={{paddingLeft:'200px'}}>
+              <Typography variant="subtitle1" className="top-sub" sx={{fontFamily: 'Open Sans, sans-serif',paddingLeft:'200px'}}>
                 Since Year 1999
               </Typography>
               <Typography variant="h2" component="h2" style={{ fontFamily: 'Jack Rooney, sans-serif',fontSize: '42px' }}>
