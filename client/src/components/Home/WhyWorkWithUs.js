@@ -42,17 +42,17 @@ const WhyWorkWithUs = () => {
     <div style={{ backgroundColor: '#DAE2B6'}}>
       <section id="whyworkwithus" data-aos="fade-up" >
         <div class="row">
-          <div class="box" >
+          <div class="box" style={{ marginLeft:'180px'}}>
             <WorkIcon className={classes.icon}style={{color:'#244c2c',width:'100px', height:'100px'}} />
             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif',color:'#1c3414'  }}>Experience</Typography>
             <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>Unique and Memorable</Typography>
           </div>
-          <div class="box" >
+          <div class="box" style={{ marginLeft:'80px'}} >
             <SettingsIcon className={classes.icon} style={{color:'#244c2c',width:'100px', height:'100px'}}/>
             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif',color:'#1c3414' }}>Flexibility</Typography>
             <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555',marginLeft:'20px',marginRight:'20px'}}>ECO-friendliness</Typography>
           </div>
-          <div class="box" >
+          <div class="box" style={{ marginRight:'160px'}}>
             <StarIcon className={classes.icon} style={{color:'#244c2c',width:'100px', height:'100px'}}/>
             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' ,color:'#1c3414' }}>Results</Typography>
             <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>Environmental consciousness</Typography>

@@ -13,7 +13,7 @@ const MainLayout = () => {
         <>
             <div className='site'>
                 <div className='header'>
-                    {isHomePage ? '' : <Header2 />}
+                    {isHomePage ? <Header/> : <Header2 />}
                 </div>
                 {isHomePage ? '': <div className="content"></div> }
                 

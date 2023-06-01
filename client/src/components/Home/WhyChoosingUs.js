@@ -95,32 +95,32 @@ const WhyChoosingUs = () => {
           <Typography style={{textAlign: 'center',fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '#555'}}>Few Reasons Why People Choose Us!</Typography>
 
           <Grid container className={classes.cardContainer} data-aos="fade-up" data-aos-delay="200">
-            <div className={classes.imageCard} style={{ margin:'100px',height: '400px', width: '350px'} }>
+            <div className={classes.imageCard } style={{ padding:'50px',height: '400px', width: '350px'} }>
               <img src={sl9} style={{ height: '500px', width: '350px', margin: '0px' }} alt="Image" />
               <div className={classes.overlay}>
                 <Typography variant="body1">Image 1</Typography>
               </div>
             </div>
 
-            <div className={classes.imageCard}style={{margin:'100px',height: '400px', width: '350px'} }>
+            <div className={classes.imageCard}style={{padding:'50px',height: '400px', width: '350px'} }>
               <img src={sl10} style={{ height: '500px', width: '350px', margin: '0px' }} alt="Image" />
               <div className={classes.overlay}>
                 <Typography variant="body1">Image 2</Typography>
               </div>
             </div>
 
-            <div className={classes.imageCard}style={{ margin:'100px',height: '400px', width: '350px'} }>
-              <img src={sl11} style={{ height: '500px', width: '350px', margin: '5px' }} alt="Image" />
+            <div className={classes.imageCard}style={{padding:'50px',height: '400px', width: '350px'} }>
+              <img src={sl10} style={{ height: '500px', width: '350px', margin: '0px' }} alt="Image" />
               <div className={classes.overlay}>
-                <Typography variant="body1">Image 3</Typography>
+                <Typography variant="body1">Image 2</Typography>
               </div>
             </div>
           </Grid>
 
           <Grid>
             <Grid item className={classes.description} data-aos="fade-up" data-aos-delay="300">
-              <Typography variant="body1" style={{fontFamily: 'Poppins, sans-serif', lineHeight: '1.2', width: '',paddingLeft:'5px',
-    paddingRight:'5px',margin:'150px',textAlign:'justify' ,marginTop:'-60px',marginBottom:'60px'}}>
+              <Typography variant="body1" style={{fontFamily: 'Poppins, sans-serif', lineHeight: '1.2', width: '',paddingLeft:'350px',
+    paddingRight:'350px',textAlign:'justify' ,paddingTop:'-60px',paddingBottom:'60px'}}>
                 Banana leaf plates are an eco-friendly alternative to traditional disposable plates. They are made from
                 the leaves of the banana plant, which are biodegradable and renewable. 
               </Typography>
