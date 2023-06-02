@@ -3,7 +3,7 @@
 
 
 .navbar-nav{
-  margin-top: 2px;
+  margin-top: 10px;
   margin-left:800px;
  
 
@@ -23,12 +23,12 @@
   margin-top: 0%;
   margin-bottom: 0%;
   }
-/* .container-fluid.main .navbar{
+.container-fluid.main .navbar{
   position :fixed;
 
 
   
-} */
+}
 
 .navbar-default {
   background-image: none;
@@ -119,7 +119,7 @@
 }
 
 .carousel .background.a {
-  background-image: linear-gradient( rgba(0, 0, 0, 1.1), rgba(0, 0, 0, 1.1)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
 }
 
 .carousel-fade .carousel-inner .item {
@@ -153,12 +153,12 @@
 
 .explore {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .explore .btn-lg,
 .explore .btn-lg:hover {
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 15px 25px;
   font-size: 22px;
   background-image: none;
@@ -188,3 +188,5 @@
   color: #ffffff;
   outline: none;
 }
+
+

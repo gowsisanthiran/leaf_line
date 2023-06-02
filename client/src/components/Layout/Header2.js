@@ -12,7 +12,7 @@ import logoo from '../../images/logoo.png'
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         right: 6,
-        top: 13,
+        top: -50,
         border: `2px solid ${theme.palette.background.paper}`,
         padding: '0 4px',
     },
@@ -22,7 +22,7 @@ const Header2 = () => {
     const { products } = useSelector(selectCartItems);
 
     return (
-        <nav className="navbar navbar-expand navbar-dark bg-dark navbar-default">
+        <nav className="navbar navbar-expand   navbar-default" style={{marginTop:'-20px'}}>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -32,7 +32,7 @@ const Header2 = () => {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon" style={{marginTop:'-10px'}}></span>
             </button>
             <Link to="/" className="navbar-brand">
             <img src={logoo} alt="Logo" className="logo" style={{ height: '100px', width: '100px', marginLeft:'50px'}} />

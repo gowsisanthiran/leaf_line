@@ -17,7 +17,7 @@ import logoo from '../../images/logoo.png'
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     right: 6,
-    top: 13,
+    top: 5,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: '0 4px',
   },
@@ -36,7 +36,7 @@ const Header = () => {
 
       
       {/* <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default"> */}
-      <nav className="navbar scrolled navbar-expand navbar-light  navbar navbar navbar-default fixed-top navbar-transparent" style={{position: 'fixed',marginTop:'-100px'}}>
+      <nav className="navbar scrolled navbar-expand navbar-dark  navbar navbar navbar-default fixed-top navbar-transparent" style={{position: 'fixed',marginTop:'-150px'}}>
 
         <button
           className="navbar-toggler"
@@ -51,23 +51,23 @@ const Header = () => {
         </button>
         
        <Link to="/" className="navbar-brand">
-          <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft:'50px'}} />
+          <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft:'150px',marginTop:'20px'}} />
         </Link>
         <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav" >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link " activeClassName="active" style={{color:'white'}}>
+              <NavLink to="/" className="nav-link " activeClassName="active" style={{color:'Black'}}>
                 <HomeIcon /> Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/product" className="nav-link" activeClassName="active" style={{color:'white'}}>
+              <NavLink to="/product" className="nav-link" activeClassName="active" style={{color:'Black'}}>
                  Product
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/cart" className="nav-link" activeClassName="active" style={{color:'white'}}>
-                <StyledBadge badgeContent={products.length} color="secondary">
+              <NavLink to="/cart" className="nav-link" activeClassName="active" style={{color:'Black'}}>
+                <StyledBadge badgeContent={products.length} color="dark">
                   <ShoppingCartIcon />
                 </StyledBadge>
                 Cart
@@ -75,7 +75,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="d-flex align-items-center justify-content-end">
+        <div className="d-flex align-items-center justify-content-end" style={{marginTop:'20px'}}>
           <div className="auth-area text-left">
             <AuthMenu />
           </div>
@@ -91,8 +91,8 @@ const Header = () => {
       <div class="covertext">
         <div class="col-lg-10" style={{ float: "none", margin: "0 auto" ,marginTop:'10rem',fontFamily:'Verdana', color:'#7eaf6c'}}>
           <h1 class="title">BIO-DEGRADABLE PLATES FOR A CLEANER PLANET</h1>
-          <h3 class="subtitle">Fine Dinning</h3>
-        </div>
+          <h1 class="title">CLEANER PLANET</h1>
+          </div>
         <div class="col-xs-12 explore">
           <Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
         </div>

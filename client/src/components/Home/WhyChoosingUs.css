@@ -1,4 +1,10 @@
-.background{
-    background-color: #919f81
+.imageCard{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 
 }

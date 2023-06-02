@@ -25,7 +25,7 @@ import OurTeam from './OurTeam';
 const Home = () => {
   return (
     <Box className='fullDiv'>
-      <Header />
+      {/* <Header /> */}
 
       {/*div02  */}
       <div className='WhyWorkWithUs'>
