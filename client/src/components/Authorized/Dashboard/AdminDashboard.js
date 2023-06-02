@@ -172,15 +172,26 @@ const AdminDashboard = () => {
           </Grid>
         </Grid>
 
-        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
-          <Grid item xs={12} md={6} lg={6}>
+        {/* <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
+          <Grid item xs={12} md={5} lg={5} style={{  marginLeft: '120px', marginTop: '80px' }}>
             <Line data={lineData} />
           </Grid>
-          <Grid item xs={12} md={6} lg={6}>
+
+          <Grid item xs={12} md={4} lg={4} style={{ marginLeft: '140px',  marginTop: '80px' }}>
             <Doughnut data={doughnutData} />
           </Grid>
-          <Grid item xs={12}>
-            <Bar data={barData} />
+         
+        </Grid> */}
+
+
+
+        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
+          <Grid item xs={12} md={5} lg={5} style={{ marginLeft: '120px', marginTop: '80px' }}>
+              <Line data={lineData} />
+          </Grid>
+
+          <Grid item xs={12} md={4} lg={4} style={{ marginLeft: '140px', marginTop: '80px' }}>
+              <Doughnut data={doughnutData} />
           </Grid>
         </Grid>
       </Box>

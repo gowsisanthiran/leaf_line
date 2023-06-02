@@ -100,7 +100,7 @@ const AuthorizedRoute = () => {
                     sx={{
                         display: 'flex',
                         flexGrow: 1,
-                        marginTop: '60px',
+                        marginTop: '90px',
                         // marginLeft: "20px",
                         // borderRadius: '8px',
                         overflow: 'hidden',
