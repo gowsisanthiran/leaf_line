@@ -15,9 +15,9 @@ const useStyles = makeStyles((theme) => ({
     background: '#DAE2B6',
     // Add your custom styles for the background container
     marginTop:'0.5rem',
-    padding:'10px',
-    paddingLeft:'20px',
-    paddingRight:'20px',
+    padding:'20px',
+    paddingLeft:'50px',
+    paddingRight:'50px',
   },
   container: {
     margin: '0 auto',
