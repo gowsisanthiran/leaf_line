@@ -33,10 +33,8 @@ const Header = () => {
   return (
 
     <div class="container-fluid main">
-
-      
-      {/* <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default"> */}
-      <nav className="navbar scrolled navbar-expand navbar-dark  navbar navbar navbar-default fixed-top navbar-transparent" style={{position: 'fixed',marginTop:'-150px'}}>
+    
+      <nav className="navbar scrolled navbar-expand navbar-dark navbar navbar navbar-default fixed-top navbar-transparent" style={{ position: 'fixed', marginTop: '-150px' }}>
 
         <button
           className="navbar-toggler"
@@ -49,25 +47,24 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        
-       <Link to="/" className="navbar-brand">
-          <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft:'150px',marginTop:'20px'}} />
+        <Link to="/" className="navbar-brand">
+          <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft: '150px', marginTop: '20px' }} />
         </Link>
         <div className="collapse navbar-collapse text-center justify-content-center" id="navbarNav" >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link " activeClassName="active" style={{color:'Black'}}>
+              <NavLink to="/" className="nav-link " activeClassName="active" style={{ color: 'Black' }}>
                 <HomeIcon /> Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/product" className="nav-link" activeClassName="active" style={{color:'Black'}}>
-                 Product
+              <NavLink to="/product" className="nav-link" activeClassName="active" style={{ color: 'Black' }}>
+                Product
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/cart" className="nav-link" activeClassName="active" style={{color:'Black'}}>
-                <StyledBadge badgeContent={products.length} color="dark">
+              <NavLink to="/cart" className="nav-link" activeClassName="active" style={{ color: 'Black' }}>
+                <StyledBadge badgeContent={products.length} >
                   <ShoppingCartIcon />
                 </StyledBadge>
                 Cart
@@ -75,33 +72,40 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="d-flex align-items-center justify-content-end" style={{marginTop:'20px'}}>
+        <div className="d-flex align-items-center justify-content-end" style={{ marginTop: '20px' }}>
           <div className="auth-area text-left">
             <AuthMenu />
           </div>
         </div>
       </nav>
-
+      
       <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active background a"></div>
-        </div>
-      </div>
+<div class="carousel-inner" role="listbox">
+<div class="item active background a"></div>
+</div>
+</div>
 
-      <div class="covertext">
-        <div class="col-lg-10" style={{ float: "none", margin: "0 auto" ,marginTop:'10rem',fontFamily:'Verdana', color:'#7eaf6c'}}>
-          <h1 class="title">BIO-DEGRADABLE PLATES FOR A CLEANER PLANET</h1>
-          <h1 class="title">CLEANER PLANET</h1>
-          </div>
-        <div class="col-xs-12 explore">
-          <Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
-        </div>
-      </div>
+<div class="covertext">
+<div class="col-lg-10" style={{ float: "none", margin: "0 auto" ,marginTop:'10rem',fontFamily:' NunitoSans,Verdana', color:'#7eaf6c',border: '2px '}}>
+<h1 class="title">BIO-DEGRADABLE PLATES FOR A CLEANER PLANET</h1>
+<h1 class="title">CLEANER PLANET</h1>
+</div>
+<div class="col-xs-12 explore">
+<Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
+</div>
+
+
+</div>
 
     </div>
+
+
 
     
   );
 };
 
 export default Header;
+
+
+    
