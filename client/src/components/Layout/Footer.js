@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: '#4d5744', 
+    backgroundColor: '#DAE2B6', 
     padding: '24px 0', 
   },
   link: {

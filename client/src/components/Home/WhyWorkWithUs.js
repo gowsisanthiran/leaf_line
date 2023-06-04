@@ -83,14 +83,14 @@ const WhyWorkWithUs = () => {
 
 
 return (
- <div style={{backgroundColor: '#DAE2B6',marginTop:'20px'}}>
-   <section className="eco_services_environment" style={{sectionStyle, }}>
-    <Container>
+ <div style={{backgroundColor: '#DAE2B6',boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)' }}>
+   <section className="eco_services_environment" style={{sectionStyle }}>
+    <Container >
       <div className="eco_headings">
         <h3>
-          <b style={{ color: 'green' }}>ECO</b> SERVICES
+          <b style={{ color: 'green',paddingTop:'50px' ,fontFamily: 'Open Sans',fontWeight: 'bold'}}>ECO</b> SERVICES
         </h3>
-        <h6 style={{ color: 'green' }}>Promote Your Environment</h6>
+        <h6 style={{ color: 'green' ,fontFamily: 'Open Sans'}}>Promote Your Environment</h6>
         <span style={iconStyle}>
         
         </span>
@@ -103,8 +103,8 @@ return (
                 <span style={iconStyle}>
               <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>              </span>
                 <div>
-                  <h4 style={serviceHeadingStyle}>Recycling</h4>
-                  <p style={serviceParagraphStyle}>
+                  <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Recycling</h4>
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
                   Reuse items whenever possible before considering recycling.
                   </p>
                 </div>
@@ -117,8 +117,8 @@ return (
                 </span>
               
                 <div>
-                  <h4 style={serviceHeadingStyle}>ECO System</h4>
-                  <p style={serviceParagraphStyle}>
+                <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>ECO System</h4>
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
                   Eco systems support biodiversity by providing habitats and food sources for a variety of species.
                   </p>
                 </div>
@@ -139,8 +139,8 @@ return (
                    {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
                   <SpaTwoToneIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>               </span>
                 <div>
-                  <h4 style={serviceHeadingStyle}>Organic</h4>
-                  <p style={serviceParagraphStyle}>
+                <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Organic</h4>
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
                   Organic agriculture helps protect water quality by reducing pollution from synthetic chemicals.                  </p>
                 </div>
               </div>
@@ -150,8 +150,8 @@ return (
                 {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
                 </span>
                 <div>
-                  <h4 style={serviceHeadingStyle}>Nature friendly</h4>
-                  <p style={serviceParagraphStyle}>
+                <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Nature friendly</h4>
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
                   A Taste of Sustainability for a Greener World, Rediscover Nature's Bounty with Banana Plates!                  </p>
                 </div>
               </div>
