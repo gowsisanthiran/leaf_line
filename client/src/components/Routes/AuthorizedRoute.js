@@ -16,7 +16,6 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 
-
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         right: 6,
@@ -57,18 +56,20 @@ const AuthorizedRoute = () => {
                     }}
                 >
                     <Box className='mTreeMenu' sx={{ minWidth: '225px', mr: 1 }}>
-                        <DrawerTreeMenu />
+                        <DrawerTreeMenu/>
                     </Box>
                     <Box sx={{ flexGrow: 1, paddingTop: '10px' }}>
                         <Link to="dashboard" className="link-no-underline">
-                            <Typography
+                         <Typography
                                 component='div'
                                 variant='h6'
+                                // marginTop={"50px"}
                                 sx={{
                                     textAlign: 'left',
                                     color: '#132a13',
                                     textShadow: '1px 1px 1px #555',
                                     marginLeft: "20px",
+                                    marginTop: "25px"
                                 }}
                             >
                                 Dashboard
@@ -100,7 +101,7 @@ const AuthorizedRoute = () => {
                     sx={{
                         display: 'flex',
                         flexGrow: 1,
-                        marginTop: '60px',
+                        marginTop: '90px',
                         // marginLeft: "20px",
                         // borderRadius: '8px',
                         overflow: 'hidden',
@@ -114,14 +115,14 @@ const AuthorizedRoute = () => {
                             minWidth: '240px',
                             maxHeight: '100%',
                             mr: 1,
-                            
+
                             // borderRadius: '10px',
                         }}
                     >
                         <TreeMenu />
                     </Box>
                     <Box sx={{ flexGrow: 1 }}>
-                        <Box sx={{ }}>
+                        <Box sx={{}}>
                             <Outlet />
                         </Box>
                     </Box>

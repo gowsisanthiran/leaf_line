@@ -15,10 +15,11 @@ import './WhyWorkingWithUs.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import sl001 from '../../images/eco.png';
 import sl002 from '../../images/ecobg.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
-
+import SpaTwoToneIcon from '@mui/icons-material/SpaTwoTone';
+import RecyclingIcon from '@mui/icons-material/Recycling';
+import WaterDropTwoToneIcon from '@mui/icons-material/WaterDropTwoTone';
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
+import sl0001 from '../../images/bg1.jpeg';
 import { faRecycle } from '@fortawesome/free-solid-svg-icons';
 // import { faLeaf } from 'font-awesome-library';
 // import { solid } from 'font-awesome-library';
@@ -77,32 +78,7 @@ const WhyWorkWithUs = () => {
     // Define your inline CSS styles for the service paragraph
   };
 
-  // return (
-
-//     <div style={{ backgroundColor: '#DAE2B6'}}>
-//       <section id="whyworkwithus" data-aos="fade-up" >
-//         <div class="row">
-//           <div class="box" style={{ marginLeft:'180px'}}>
-//             <WorkIcon className={classes.icon}style={{color:'#244c2c',width:'100px', height:'100px'}} />
-//             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif',color:'#1c3414'  }}>Experience</Typography>
-//             <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>Unique and Memorable</Typography>
-//           </div>
-//           <div class="box" style={{ marginLeft:'80px'}} >
-//             <SettingsIcon className={classes.icon} style={{color:'#244c2c',width:'100px', height:'100px'}}/>
-//             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif',color:'#1c3414' }}>Flexibility</Typography>
-//             <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555',marginLeft:'20px',marginRight:'20px'}}>ECO-friendliness</Typography>
-//           </div>
-//           <div class="box" style={{ marginRight:'160px'}}>
-//             <StarIcon className={classes.icon} style={{color:'#244c2c',width:'100px', height:'100px'}}/>
-//             <Typography className={classes.heading} class="headings" style={{ fontFamily: 'Jack Rooney, sans-serif' ,color:'#1c3414' }}>Results</Typography>
-//             <Typography variant="body2" style={{fontFamily: 'Poppins, sans-serif',fontSize:'15px',color: '#555'}}>Environmental consciousness</Typography>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
+  
 
 
 
@@ -125,8 +101,7 @@ return (
             <div className="eco_items-services">
               <div className="eco_service_cols">
                 <span style={iconStyle}>
-                <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
-                </span>
+              <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>              </span>
                 <div>
                   <h4 style={serviceHeadingStyle}>Recycling</h4>
                   <p style={serviceParagraphStyle}>
@@ -136,8 +111,11 @@ return (
               </div>
               <div className="eco_service_cols">
                 <span style={iconStyle}>
-                 <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
+                 
+                {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
+                <WaterDropTwoToneIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>
                 </span>
+              
                 <div>
                   <h4 style={serviceHeadingStyle}>ECO System</h4>
                   <p style={serviceParagraphStyle}>
@@ -158,8 +136,8 @@ return (
             <div className="eco_items-services">
               <div className="eco_service_cols rtl_service">
                 <span style={iconStyle}>
-                   <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
-                </span>
+                   {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
+                  <SpaTwoToneIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>               </span>
                 <div>
                   <h4 style={serviceHeadingStyle}>Organic</h4>
                   <p style={serviceParagraphStyle}>
@@ -168,13 +146,13 @@ return (
               </div>
               <div className="eco_service_cols rtl_service">
                 <span style={iconStyle}>
-                <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
+                <FavoriteTwoToneIcon style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
+                {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
                 </span>
                 <div>
-                  <h4 style={serviceHeadingStyle}>BIOLOGY</h4>
+                  <h4 style={serviceHeadingStyle}>Nature friendly</h4>
                   <p style={serviceParagraphStyle}>
-                  Biology is the scientific study of life and living organisms.
-                  </p>
+                  A Taste of Sustainability for a Greener World, Rediscover Nature's Bounty with Banana Plates!                  </p>
                 </div>
               </div>
             </div>

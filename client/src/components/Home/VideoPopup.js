@@ -3,7 +3,7 @@ import { Grid, Container, Typography, Button } from '@mui/material';
 import { PlayCircleFilled } from '@mui/icons-material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import sl0001 from '../../images/bg1.jpeg';
 const VideoPopup = () => {
   useEffect(() => {
     AOS.init();
@@ -11,39 +11,67 @@ const VideoPopup = () => {
       return (
     <div>
 
-<div className="abt-section mb-150" data-aos="fade-up">
-      <Container sx={{marginTop: '100px', marginBottom: '50px', marginLeft:'300px'}}>
+<div className="abt-section mb-150" data-aos="fade-up"style={{ backgroundImage: `url(${sl0001})` }}>
+      <Container sx={{marginTop: '50px', marginBottom: '50px', marginLeft:'300px',}}>
         <Grid container spacing={2}>
-          <Grid item lg={6} md={12} style={{}}>
-            <div className="abt-bg" data-aos="fade-up" data-aos-delay="100" >
+          
+             <Grid>
+          <Typography variant="h3" component="h3" style={{ fontFamily: 'Open Sans',fontSize: '46px',display:'block',paddingLeft:'300px' , margin: '0 ',paddingTop:'20px'}}>
+                How to prepare  <span style={{color: 'green'}} data-aos="fade-up" data-aos-delay="500">Our Plates</span>
+              </Typography>
+              </Grid>
+              <Grid>
+              <Typography variant="h6" component="h6" style={{ fontFamily: 'Poppins',fontSize: '20px',display:'block',paddingLeft:'350px' , margin: '0 ',paddingTop:'20px'}}>
+                 <span  data-aos="fade-up" data-aos-delay="500">Watch our amazing video tutorial</span>
+              </Typography>
+              </Grid>
+              <Grid item lg={6} md={12} style={{textAlign: 'center'}}>
+            <div className="abt-bg" data-aos="fade-up" data-aos-delay="100"
+                            
+                            style={{
+                              position: 'relative',
+                              paddingBottom: '85.25%',
+                              paddingTop: '40px',
+                              height: '0',
+                              // overflow: 'hidden',
+                              paddingRight:'80px',
+                              paddingLeft:'80px'
+
+
+                            }}
+                          >
+           
             <iframe 
-                  width="700"
-                  height="500"
-                  src="https://youtu.be/61IBKTD03fM"
+                  width="900"
+                  height="550"
+                  src="https://youtube.com/shorts/ERzXLqR3B1c?feature=share"
                   title="leafLine Video"
+                  
                   allowFullScreen
+                  
                 />
+                 {/* <img
+                    src="`url(${sl0001})`"
+                    alt="Video Overlay"
+                    style={{
+                      position: 'absolute',
+                      top: '0',
+                      left: '0',
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                    }}
+                  /> */}
             </div>
           </Grid>
-          <Grid item lg={6} md={12} >
-            <div className="abt-text" data-aos="fade-up" data-aos-delay="200" style={{paddingLeft:'200px'}}>
-              <Typography variant="subtitle1" className="top-sub" sx={{fontFamily: 'Open Sans, sans-serif',paddingLeft:'200px'}}>
-                Since Year 1999
-              </Typography>
-              <Typography variant="h2" component="h2" style={{ fontFamily: 'Jack Rooney, sans-serif',fontSize: '42px' }}>
-                We are <span style={{color: '#7eaf6c'}} data-aos="fade-up" data-aos-delay="300">LEAFLINE</span>
-              </Typography>
-              <Typography variant="body1" sx={{fontSize: '20px', fontFamily: 'Poppins, sans-serif', fontWeight:'400',marginRight:'10px'}} data-aos="fade-up" data-aos-delay="300">
-              A typical banana leaf meal consists of various dishes served on different parts of the leaf. Rice is usually placed at the center, while an array of curries, chutneys, pickles, and side dishes are served around it. This communal-style dining allows for a diverse and satisfying culinary experience.
-              </Typography>
-              <Typography variant="body1" sx={{fontSize: '20px', fontFamily: 'Poppins, sans-serif', fontWeight:'400'}}data-aos="fade-up" data-aos-delay="300">
-              Dining on a banana leaf plate offers a unique and memorable experience.
-              </Typography>
-              <Button href="about.html" variant="contained" className="boxed-btn mt-4" sx={{fontFamily: 'Poppins, sans-serif',fontSize:'15px', backgroundColor: '#5f8273', borderRadius:'50px'}} data-aos="fade-up" data-aos-delay="400">
+          
+          
+              
+              {/* <Button href="about.html" variant="contained" className="boxed-btn mt-4" sx={{fontFamily: 'Poppins, sans-serif',fontSize:'15px', backgroundColor: '#5f8273', borderRadius:'50px'}} data-aos="fade-up" data-aos-delay="400">
                 know more
-              </Button>
-            </div>
-          </Grid>
+              </Button> */}
+            
+          
         </Grid>
       </Container>
     </div>
@@ -52,3 +80,5 @@ const VideoPopup = () => {
 }
 
 export default VideoPopup
+
+

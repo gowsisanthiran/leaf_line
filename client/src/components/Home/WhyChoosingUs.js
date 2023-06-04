@@ -87,6 +87,8 @@ const WhyChoosingUs = () => {
 
 
     <Box className={classes.background}>
+
+
       <Box className={classes.container} textAlign="left" style={{ margin: '0 auto', marginTop: '15px' }} data-aos="fade-up">
         <Typography variant="h6" className={classes.title} sx={{fontFamily: 'Jack Rooney , sans-serif', fontSize:'30px', paddingTop: '30px'}}>
           <span style={{color: '#7eaf6c'}}>Why Choosing </span> Us!
@@ -96,6 +98,19 @@ const WhyChoosingUs = () => {
 
           <Grid container className={classes.cardContainer} data-aos="fade-up" data-aos-delay="200">
             <div className={classes.imageCard } style={{ padding:'50px',height: '400px', width: '350px'} }>
+            <div class="swiper-slide item col-lg-4 col-sm-4">
+    <article class="post-5099 services type-services status-publish has-post-thumbnail hentry services-category-assortment">
+        <a href="/shop/" class="photo">
+            <div class="descr">
+                <h5 class="header">Green Tea</h5>
+                <p>Nullam dictum molestie quam, non feugiat dui eleifend eget.</p>
+            </div>
+            <span class="watermark">
+            </span>
+        </a>
+    </article>
+</div>
+
               <img src={sl9} style={{ height: '500px', width: '350px', margin: '0px' }} alt="Image" />
               <div className={classes.overlay}>
                 <Typography variant="body1">Image 1</Typography>
