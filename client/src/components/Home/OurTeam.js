@@ -86,9 +86,9 @@ const OurTeam = () => {
                     <Row className='col-lg-8 offset-lg-2 text-center'>
                         <Col className={classes.description} >
                             <div className="section-title" style={{marginBottom: '0px'}}>
-                                <h3 style={{fontFamily: 'Jack Rooney , sans-serif', fontSize:'30px'}}>Our <span style={{color: '#7eaf6c'}}>Team</span></h3>
+                                <h3 style={{fontFamily: 'Open Sans , sans-serif', fontSize:'30px',fontWeight: 'bold'}}>Our <span style={{color: 'green'}}>Team</span></h3>
                             </div>
-                            <p style={{fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '#555', paddingTop:'20px'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+                            <p style={{fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '#555', paddingTop:'20px'}}>This is our wondeful team members feel free to contact us</p>
 
                         </Col>
                     </Row>

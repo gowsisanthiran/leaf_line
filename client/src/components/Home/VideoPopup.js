@@ -32,17 +32,18 @@ const VideoPopup = () => {
                             style={{
                               position: 'relative',
                               paddingBottom: '85.25%',
-                              paddingTop: '40px',
+                              paddingTop: '80px',
                               height: '0',
                               // overflow: 'hidden',
-                              paddingRight:'80px',
-                              paddingLeft:'80px'
+                              paddingRight:'100px',
+                              paddingLeft:'10px'
 
 
                             }}
                           >
            
-           <video width="600" height="360" controls autoPlay muted style={{ objectFit: 'cover' }}>
+           <video width="1050"  controls autoPlay muted style={{ objectFit: 'cover' ,paddingRight:'100px',
+                              paddingLeft:'80px',paddingTop: '80px', paddingBottom: '85.25%', position: 'relative'}}>
                         <source src={video} type="video/mp4" autoplay />
                     </video>
                 
