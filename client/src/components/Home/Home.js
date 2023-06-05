@@ -41,14 +41,15 @@ const Home = () => {
       </div>
       {/* div 3 */}
 
-
+      <AboutUs2/>
       {/* end div 3 */}
 
       {/* <AboutUs /> */}
       <VideoPopup/>
-      <OurTeam/>
       <ContactUs />
-      <AboutUs2/>
+      <OurTeam/>
+      
+      
     </Box>
   );
 };
