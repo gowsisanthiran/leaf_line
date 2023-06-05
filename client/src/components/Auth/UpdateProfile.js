@@ -61,7 +61,7 @@ const UpdateProfile = () => {
     < div className="container" style={{ padding: '150px', fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '' }}>
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card" style={{ background: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(10px)', borderRadius: '10px', boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)' }}>
+          <div className="" style={{ background: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(10px)', borderRadius: '10px', boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)' }}>
             <div className="card-body">
               <h3 className="card-title text-center">Update Profile</h3>
               <form onSubmit={handleSubmit}>

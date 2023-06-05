@@ -44,6 +44,7 @@ const AdminDashboard = () => {
     datasets: [
       {
         label: 'Total Amount',
+        fill: true,
         backgroundColor: ['tomato'],
         hoverBackgroundColor: ['orange'],
         data: [0, totalAmount]
@@ -56,7 +57,7 @@ const AdminDashboard = () => {
     datasets: [
       {
         backgroundColor: ['red', '#285430'],
-        hoverBackgroundColor: ['black', '#FF6000'],
+        hoverBackgroundColor: ['black', '#969B40'],
         data: [outOfStock, products.length - outOfStock]
       }
     ]
@@ -80,7 +81,7 @@ const AdminDashboard = () => {
       <Box
         className='dash-box'
         sx={{
-          backgroundColor: '#E9EDC9',
+          backgroundColor: 'white',
           padding: '10px',
           minHeight: '100vh',
         }}
@@ -90,17 +91,18 @@ const AdminDashboard = () => {
             <Box
               className='Box'
               sx={{
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                backgroundColor: '#E9EDC9',
+                //  'rgba(255, 255, 255, 0.8)'
                 backdropFilter: 'blur(10px)',
-                borderRadius:"10px",
+                borderRadius: "10px",
                 color: 'black',
-                padding: '20px',
+                padding: '30px',
                 boxShadow: '0px 3px 5px 0px #415d43',
               }}
             >
-              <ShoppingCartOutlinedIcon />
+
               <Typography variant='h6' textAlign='center'>
-                Products
+                <ShoppingCartOutlinedIcon /> Products
               </Typography>
               <Divider />
               <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
@@ -109,76 +111,76 @@ const AdminDashboard = () => {
             </Box>
           </Grid>
 
-          
 
-            <Grid item xs={12} sm={6} md={3}>
-              <Box
-                className='Box'
-                sx={{
-                  backgroundColor: 'white',
-                  borderRadius:"10px",
-                  color: 'black',
-                  padding: '20px',
-                  boxShadow: '0px 3px 5px 0px #415d43',
-                }}
-              >
-                <GroupOutlinedIcon />
-                <Typography variant='h6' textAlign='center'>
-                  Users
-                </Typography>
-                <Divider />
-                <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                  {users && users.length}
-                </Typography>
-              </Box>
-            </Grid>
 
-            <Grid item xs={12} sm={6} md={3}>
-              <Box
-                className='Box'
-                sx={{
-                  backgroundColor: 'white',
-                  borderRadius:"10px",
-                  color: 'black',
-                  padding: '20px',
-                  boxShadow: '0px 3px 5px 0px #415d43',
-                }}
-              >
-                <ListAltOutlinedIcon />
-                <Typography variant='h6' textAlign='center'>
-                  Orders
-                </Typography>
-                <Divider />
-                <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                  {orders && orders.length}
-                </Typography>
-              </Box>
-            </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
+              className='Box'
+              sx={{
+                backgroundColor: '#E9EDC9',
+                borderRadius: "10px",
+                color: 'black',
+                padding: '30px',
+                boxShadow: '0px 3px 5px 0px #415d43',
+              }}
+            >
 
-            <Grid item xs={12} sm={6} md={3}>
-              <Box
-                className='Box'
-                sx={{
-                  backgroundColor: 'white',
-                  color: 'black',
-                  borderRadius:"10px",
-                  padding: '20px',
-                  boxShadow: '0px 3px 5px 0px #415d43',
-                }}
-              >
-                <MonetizationOnOutlinedIcon />
-                <Typography variant='h6' textAlign='center'>
-                  Revenue
-                </Typography>
-                <Divider />
-                <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
-                  {orders && totalAmount}
-                </Typography>
-              </Box>
-            </Grid>
+              <Typography variant='h6' textAlign='center'>
+                <GroupOutlinedIcon /> Users
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {users && users.length}
+              </Typography>
+            </Box>
           </Grid>
 
-          {/* <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
+              className='Box'
+              sx={{
+                backgroundColor: '#E9EDC9',
+                borderRadius: "10px",
+                color: 'black',
+                padding: '30px',
+                boxShadow: '0px 3px 5px 0px #415d43',
+              }}
+            >
+
+              <Typography variant='h6' textAlign='center'>
+                <ListAltOutlinedIcon /> Orders
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {orders && orders.length}
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Box
+              className='Box'
+              sx={{
+                backgroundColor: '#E9EDC9',
+                color: 'black',
+                borderRadius: "10px",
+                padding: '30px',
+                boxShadow: '0px 3px 5px 0px #415d43',
+              }}
+            >
+
+              <Typography variant='h6' textAlign='center'>
+                <MonetizationOnOutlinedIcon /> Revenue
+              </Typography>
+              <Divider />
+              <Typography variant='subtitle1' fontWeight='bold' textAlign='center'>
+                {orders && totalAmount}
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+
+        {/* <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
           <Grid item xs={12} md={5} lg={5} style={{  marginLeft: '120px', marginTop: '80px' }}>
             <Line data={lineData} />
           </Grid>
@@ -191,15 +193,21 @@ const AdminDashboard = () => {
 
 
 
-          <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
-            <Grid item xs={12} md={5} lg={5} style={{ marginLeft: '120px', marginTop: '80px' }}>
+        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
+          <div style={{ border: '1px solid black', padding: "30px", width: '500px', height: "400px" }}>
+
+            <Grid item xs={12} md={10} lg={10} style={{ marginLeft: '120px', marginTop: '80px' }}>
               <Line data={lineData} />
             </Grid>
+          </div>
 
-            <Grid item xs={12} md={4} lg={4} style={{ marginLeft: '140px', marginTop: '80px' }}>
+          <div style={{ border: '1px solid black', padding: "30px", width: '500px', height: "400px" }}>
+            <Grid item xs={12} md={10} lg={10} style={{ marginLeft: "40px", marginRight: "40px" }} >
               <Doughnut data={doughnutData} />
             </Grid>
-          </Grid>
+          </div>
+
+        </Grid>
       </Box>
     </>
   );

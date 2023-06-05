@@ -139,7 +139,9 @@ const AddNewProduct = () => {
         backgroundColor: '#fff',
         padding: '55px',
         justifyContent: "center",
-        marginLeft: "400px"
+        marginLeft: "400px",
+        marginTop:"20px",
+                marginBottom:"20px"
       }}
     >
       <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>

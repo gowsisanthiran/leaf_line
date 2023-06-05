@@ -39,7 +39,7 @@ const AuthorizedRoute = () => {
             <>
                 <Box
                     sx={{
-                        backgroundColor: "#E9EDC9",
+                        backgroundColor: "#CDD193",
                         transition: ".4s all",
                         overflow: "visible",
                         top: "0",
@@ -71,7 +71,8 @@ const AuthorizedRoute = () => {
                                     color: '#132a13',
                                     textShadow: '1px 1px 1px #555',
                                     marginLeft: "20px",
-                                    marginTop: "25px"
+                                    marginTop: "35px"
+
                                 }}
                             >
                                 Dashboard
@@ -86,7 +87,7 @@ const AuthorizedRoute = () => {
                     <div className="d-flex align-items-center justify-content-end">
 
                         <NavLink to="/" className="nav-link " activeClassName="active" style={{ color: '#263A29' }}>
-                            <HomeIcon /> Home
+                            <HomeIcon /> 
                         </NavLink>
                         <NavLink to="/product" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
                             <Inventory2Icon />
@@ -107,19 +108,20 @@ const AuthorizedRoute = () => {
                     sx={{
                         display: 'flex',
                         flexGrow: 1,
-                        marginTop: '90px',
                         // marginLeft: "20px",
-                        // borderRadius: '8px',
+                        // height:'1000px',
                         overflow: 'hidden',
+                        marginTop:'45px',
+                        marginBottom: '-48px'
                     }}
                 >
                     <Box
                         className='dTreeMenu'
                         sx={{
-                            backgroundColor: '#263A29',
+                            backgroundColor:'#CDD193', 
+                            // '#E9EDC9',
                             boxShadow: '2px 2px 15px #7b9c56',
                             minWidth: '240px',
-                            maxHeight: '100%',
                             mr: 1,
 
                             // borderRadius: '10px',

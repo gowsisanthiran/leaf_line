@@ -41,8 +41,7 @@ const OrderDetails = () => {
                 padding: '50px',
                 backgroundColor: '#fff',
                 height: "100% !important",
-                width: "580px",
-                marginLeft: "450px"
+                width: "auto",
 
             }}
         >
