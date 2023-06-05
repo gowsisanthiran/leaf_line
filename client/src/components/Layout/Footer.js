@@ -22,18 +22,17 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney , sans-serif', fontSize: '40px',fontWeight: 'bold', marginLeft:'30px',color:'green'}}>
               LEAFLINE
             </Typography>
-            <Typography variant="body2"  style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px'}}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique laborum quos rem, assumenda, unde dolorum enim voluptate harum at obcaecati doloribus, beatae aliquid! Quasi quod recusandae, cupiditate dolores nulla in.
-            </Typography>
+            <Typography variant="body2"  style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px',marginLeft:'30px'}}>
+            "Leafline banana leaf plates are lightweight and easy to handle, making them convenient for both hosts and guests."            </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif',marginLeft:'150px', }}>
               Navigation
             </Typography>
-            <nav style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', textDecoration: 'none'}}>
+            <nav style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', textDecoration: 'none',marginLeft:'150px'}}>
               <Link
                 variant="button"
                 color="textPrimary"
@@ -69,10 +68,10 @@ const Footer = () => {
             </nav>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif',marginLeft:'150px' }}>
               Legal
             </Typography>
-            <nav style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555'}}>
+            <nav style={{ fontFamily: 'Poppins, sans-serif', fontSize: '15px', color: '#555',marginLeft:'150px'}}>
               <Link
                 variant="button"
                 color="textPrimary"
@@ -92,10 +91,10 @@ const Footer = () => {
             </nav>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' }}>
+            <Typography variant="h6" gutterBottom style={{ fontFamily: 'Jack Rooney, sans-serif' ,marginLeft:'150px'}}>
               Social
             </Typography>
-              <nav>
+              <nav style={{marginLeft:'150px'}}>
                 <Grid item xs={12} sm={6} md={2}>
               <Link
                 variant="button"
