@@ -222,6 +222,7 @@ const AddNewProduct = () => {
                 value={stock}
                 onChange={(e => setStock(e.target.value))}
                 color="success"
+                min="10"
               />
             </Grid>
           </Grid>
