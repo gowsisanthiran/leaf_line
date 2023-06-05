@@ -56,11 +56,11 @@ const Login = () => {
         border: '1px solid rgba(255, 255, 255, 0.18)', // Adjust the border color and opacity as desired
         padding: '10px',
         margin: '0 auto',
-        maxWidth: 500,
+        
     };
     return (
         <>
-            <MDBContainer fluid className="p-3 my-5" >
+            <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
                 <MDBRow>
                     <MDBCol col='10' md='6'>
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" />
@@ -69,6 +69,9 @@ const Login = () => {
                     <MDBCol col='4' md='6'>
                         <MDBCol>
                             < LockOutlinedIcon />
+                        </MDBCol>
+                        <MDBCol>
+                            <h5>Login</h5>
                         </MDBCol>
                         <form onSubmit={handleSubmit}>
                             <MDBInput
@@ -108,11 +111,11 @@ const Login = () => {
                             </div>
 
                             <Button type='submit'
-                        fullWidth
-                        color="primary"
-                        variant='contained'
-                        sx={{mt:3,mb:2}}
-            >Login</Button>
+                                fullWidth
+                                color="primary"
+                                variant='contained'
+                                sx={{ mt: 3, mb: 2 }}
+                            >Login</Button>
 
                         </form>
                     </MDBCol>

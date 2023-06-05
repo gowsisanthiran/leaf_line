@@ -58,10 +58,20 @@ const Registration = () => {
   const handleKeepMeLoggedIn = () => {
 
   }
+  const glassmorphismStyles = {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adjust the opacity as desired
+    backdropFilter: 'blur(10px)',
+    boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)', // Adjust the shadow properties as desired
+    borderRadius: '10px',
+    border: '1px solid rgba(255, 255, 255, 0.18)', // Adjust the border color and opacity as desired
+    padding: '10px',
+    margin: '0 auto',
+    
+};
   return (
     <>
 
-      <MDBContainer fluid className="p-3 my-5">
+      <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
         <MDBRow>
           <MDBCol col='10' md='6'>
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" />
@@ -139,16 +149,22 @@ const Registration = () => {
                     </Button>
                   </MDBCol>
                 </MDBRow>
-                <MDBBtn type="submit" color="success" className="mt-3 mb-2">
-                  Registration & Login
-                </MDBBtn>
+                <Button type='submit'
+                  fullWidth
+                  variant='contained'
+                  color="primary"
+                  sx={{ mt: 3, mb: 2 }}
+                >Registration & Login</Button>
                 <MDBRow className="mt-2">
                   <MDBCol>
-                    <MDBCheckbox
-                      label="Keep me logged in."
-                      checked={checked}
-                      onChange={handleKeepMeLoggedIn}
-                    />
+                  <MDBCheckbox
+                                    name='keepLoggedIn'
+                                    value=''
+                                    id='keepLoggedIn'
+                                    label='Keep Me Logged-In'
+                                    checked={checked}
+                                    onChange={handleKeepMeLoggedIn}
+                                />
                   </MDBCol>
                 </MDBRow>
               </form>
