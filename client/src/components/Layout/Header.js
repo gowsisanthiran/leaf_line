@@ -13,6 +13,8 @@ import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
 import logo from '../../images/LOGO.png'
 import logoo from '../../images/logoo.png'
+import { MDBBadge } from 'mdb-react-ui-kit';
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -27,14 +29,16 @@ const Header = () => {
 
   const { products } = useSelector(selectCartItems);
 
-  
-  
+
+
 
   return (
 
     <div class="container-fluid main">
-    
-      <nav className="navbar scrolled navbar-expand navbar-dark navbar navbar navbar-default fixed-top navbar-transparent" style={{ position: 'fixed', marginTop: '-150px' }}>
+
+
+      {/* <nav className="navbar navbar-expand navbar-light bg-transparent navbar navbar navbar-default"> */}
+      <nav className="navbar scrolled navbar-expand navbar-dark  navbar navbar navbar-default fixed-top navbar-transparent" style={{ position: 'fixed', marginTop: '-150px' }}>
 
         <button
           className="navbar-toggler"
@@ -47,6 +51,7 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <Link to="/" className="navbar-brand">
           <img src={logoo} alt="Logo" className="logo" style={{ height: '300px', width: '300px', marginLeft: '150px', marginTop: '20px' }} />
         </Link>
@@ -64,9 +69,14 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink to="/cart" className="nav-link" activeClassName="active" style={{ color: 'Black' }}>
-                <StyledBadge badgeContent={products.length} >
-                  <ShoppingCartIcon />
-                </StyledBadge>
+
+                <MDBBadge
+                  badgeContent={products.length}
+                  color='danger'
+                  className='position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle'
+                >
+                </MDBBadge>
+                <ShoppingCartIcon />
                 Cart
               </NavLink>
             </li>
@@ -78,34 +88,27 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      
+
       <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
-<div class="carousel-inner" role="listbox">
-<div class="item active background a"></div>
-</div>
-</div>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active background a"></div>
+        </div>
+      </div>
 
-<div class="covertext">
-<div class="col-lg-10" style={{ float: "none", margin: "0 auto" ,marginTop:'10rem',fontFamily:' NunitoSans,Verdana', color:'#7eaf6c',border: '2px '}}>
-<h1 class="title">BIO-DEGRADABLE PLATES FOR A CLEANER PLANET</h1>
-<h1 class="title">CLEANER PLANET</h1>
-</div>
-<div class="col-xs-12 explore">
-<Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
-</div>
-
-
-</div>
+      <div class="covertext">
+        <div class="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem', fontFamily: 'Verdana', color: '#7eaf6c' }}>
+          <h1 class="title">BIO-DEGRADABLE PLATES FOR A CLEANER PLANET</h1>
+          <h1 class="title">CLEANER PLANET</h1>
+        </div>
+        <div class="col-xs-12 explore">
+          <Link to='/product'><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></Link>
+        </div>
+      </div>
 
     </div>
 
 
-
-    
   );
 };
 
 export default Header;
-
-
-    

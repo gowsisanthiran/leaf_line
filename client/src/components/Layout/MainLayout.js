@@ -19,7 +19,7 @@ const MainLayout = () => {
 
                 <Outlet />
                 <div className="content"></div>
-                {isHomePage ? <Footer /> : <FooterSmall />}
+                 <Footer /> 
             </div>
         </>
     )
