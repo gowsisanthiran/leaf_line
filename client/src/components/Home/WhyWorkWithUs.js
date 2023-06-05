@@ -86,7 +86,7 @@ return (
  <div style={{backgroundColor: '#DAE2B6',boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)' }}>
    <section className="eco_services_environment" style={{sectionStyle }} data-aos="fade-up">
     <Container >
-      <div className="eco_headings" data-aos="fade-up" data-aos-delay="100">
+      {/* <div className="eco_headings" data-aos="fade-up" data-aos-delay="100">
         <h3>
           <b style={{ color: 'green',paddingTop:'50px' ,fontFamily: 'Open Sans',fontWeight: 'bold'}}>ECO</b> SERVICES
         </h3>
@@ -94,7 +94,7 @@ return (
         <span style={iconStyle}>
         
         </span>
-      </div>
+      </div> */}
       <div className="eco_services" data-aos="fade-up" data-aos-delay="100">
         <Row>
           <Col md={4} sm={6} xs={12}>

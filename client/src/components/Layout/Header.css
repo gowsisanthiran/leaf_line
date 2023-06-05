@@ -159,7 +159,7 @@
 .explore .btn-lg,
 .explore .btn-lg:hover {
   border-radius: 10px;
-  padding: 15px 25px;
+  padding: 5px 15px;
   font-size: 22px;
   background-image: none;
   background-color: #5f8273;
@@ -169,12 +169,12 @@
 
 .btn,
 .btn:hover {
-  border-radius: 0px;
+  border-radius: 10px;
   background-image: none;
   background-color:#5f8273;
   border-color: #5f8273;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: none;
   outline: none;
 }
@@ -190,3 +190,46 @@
 }
 
 
+
+.zoom-effect {
+  animation: zoom 10s infinite;
+  transform-origin: center;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.explore {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.explorebtn {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.explorebtn:hover {
+  background-color: #000;
+  color: #fff;
+}

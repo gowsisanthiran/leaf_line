@@ -197,22 +197,43 @@ const Header = () => {
         </div>
       </nav>
 
-      <div id="myCarousel" className="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
+      {/* <div id="myCarousel" className="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
         <div className="carousel-inner" role="listbox">
           <div className="item active background a"></div>
         </div>
       </div>
 
       <div className="covertext">
-        <div className="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem', fontFamily: 'NunitoSans,Verdana', color: '#7eaf6c', border: '2px ' }}>
+        <div className="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem', fontFamily: 'NunitoSans,Verdana', color: '#fff', border: '2px ' }}>
           <h1 className="title">BIO-DEGRADABLE PLATES FOR A </h1>
           <h1 className="title">CLEANER PLANET</h1>
         </div>
         <div className="col-xs-12 explore">
           <Link to='/product'><button type="button" className="btn btn-lg explorebtn">EXPLORE</button></Link>
         </div>
-      </div>
+      </div> */}
+
+<div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active background a"></div>
+  </div>
+</div>
+
+<div class="covertext zoom-effect">
+  <div class="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem', fontFamily: 'NunitoSans,Verdana', color: '#fff', border: '2px ' }}>
+    <h1 class="title">BIO-DEGRADABLE PLATES FOR A</h1>
+    <h1 class="title">CLEANER PLANET</h1>
+  </div>
+  <div class="col-xs-12 explore">
+    <a href="/product"><button type="button" class="btn btn-lg explorebtn">EXPLORE</button></a>
+  </div>
+</div>
+
+
+
     </div>
+
+
   );
 };
 
