@@ -114,17 +114,17 @@ function AboutUs2() {
                                             <span className="latest_list-preview">
 
                                                 <picture>
-                                                    <img src={sl18} alt="about something" style={{ width: '175px', height: '175px', borderRadius: '20px', borderTopLeftRadius: '20px', marginTop: '10px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} data-aos="fade-up" data-aos-delay="100" />
+                                                    <img src={sl18} alt="about something" style={{ width: '175px', height: '175px', borderRadius: '20px', borderTopLeftRadius: '20px',marginTop:'5px'  ,boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} data-aos="fade-up" data-aos-delay="100" />
                                                 </picture>
 
 
                                             </span>
 
-                                            <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{ textAlign: 'center', display: 'Block' ,marginTop:'40px',marginLeft:'20px'}}>
+                                            <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{ textAlign: 'center', display: 'Block' ,marginTop:'30px',marginLeft:'20px'}}>
                                                 <span>
-                                                    <h4 className="title"  style={{ textAlign: 'center',color:'green',fontFamily: 'Open Sans' }}>
+                                                    <h3 className="title"  style={{ textAlign: 'center',color:'green',fontFamily: 'Open Sans',fontSize:'30px' }}>
                                                     Environmentally Friendly
-                                                    </h4>
+                                                    </h3>
                                                     <p className="text"style={{fontFamily: 'Poppins, sans-serif'}}>
                                                     Banana leaf plates are a great choice for those looking to reduce their carbon footprint. 
                                                     </p>
@@ -136,14 +136,14 @@ function AboutUs2() {
                                         <li className="list-item d-flex flex-column flex-sm-row aos-init aos-animate" data-aos="fade-up">
                                             <span className="latest_list-preview">
                                                 <picture>
-                                                    <img src={sl19} alt="about something" style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '20px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} data-aos="fade-up" data-aos-delay="100" />
+                                                    <img src={sl19} alt="about something" style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '35px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} data-aos="fade-up" data-aos-delay="100" />
 
                                                 </picture>
                                             </span>
                                             <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1"style={{ textAlign: 'center', display: 'Block' ,marginTop:'40px',marginLeft:'20px'}}>
                                                 <span className="metadata">
                                                    
-                                                <h4 className="title"  style={{ textAlign: 'center',color:'green' ,fontFamily: 'Open Sans'}}>
+                                                <h4 className="title"  style={{ textAlign: 'center',color:'green' ,fontFamily: 'Open Sans',fontSize:'30px' }}>
                                                 Natural and Chemical-Free
                                                     </h4>
                                                
@@ -156,13 +156,13 @@ function AboutUs2() {
                                         <li className="list-item d-flex flex-column flex-sm-row aos-init aos-animate" data-aos="fade-up">
                                             <span className="latest_list-preview">
                                                 <picture>
-                                                    <img src={sl17} alt="about something" style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '20px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} data-aos="fade-up" data-aos-delay="100" />
+                                                    <img src={sl17} alt="about something" style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '35px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} data-aos="fade-up" data-aos-delay="100" />
 
                                                 </picture>
                                             </span>
                                             <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1"style={{ textAlign: 'center', display: 'Block' ,marginTop:'40px',marginLeft:'20px'}}>
                                                 <span className="metadata">
-                                                <h4 className="title"  style={{ textAlign: 'center',color:'green',fontFamily: 'Open Sans' }}>
+                                                <h4 className="title"  style={{ textAlign: 'center',color:'green',fontFamily: 'Open Sans' ,fontSize:'30px' }}>
                                                 Cultural Significance
                                                     </h4>
                                                
