@@ -164,6 +164,7 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <Link to="/" className="navbar-brand">
           <img src={logoo} alt="Logo" className="logo" style={{  width: '150px', marginLeft: '150px',marginTop:'40px',marginBottom:'-40px' }} />
         </Link >
@@ -216,3 +217,4 @@ const Header = () => {
 };
 
 export default Header;
+
