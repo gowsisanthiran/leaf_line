@@ -15,6 +15,8 @@ import { selectCartItems } from '../../redux/features/cartSlice';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
+import logoo from '../../images/logoo.png';
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -56,11 +58,11 @@ const AuthorizedRoute = () => {
                     }}
                 >
                     <Box className='mTreeMenu' sx={{ minWidth: '225px', mr: 1 }}>
-                        <DrawerTreeMenu/>
+                        <DrawerTreeMenu />
                     </Box>
                     <Box sx={{ flexGrow: 1, paddingTop: '10px' }}>
                         <Link to="dashboard" className="link-no-underline">
-                         <Typography
+                            <Typography
                                 component='div'
                                 variant='h6'
                                 // marginTop={"50px"}
@@ -82,6 +84,10 @@ const AuthorizedRoute = () => {
 
                     </Box>
                     <div className="d-flex align-items-center justify-content-end">
+
+                        <NavLink to="/" className="nav-link " activeClassName="active" style={{ color: '#263A29' }}>
+                            <HomeIcon /> Home
+                        </NavLink>
                         <NavLink to="/product" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
                             <Inventory2Icon />
                         </NavLink>

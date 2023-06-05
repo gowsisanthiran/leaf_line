@@ -4,6 +4,7 @@ import { PlayCircleFilled } from '@mui/icons-material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import sl0001 from '../../images/bg1.jpeg';
+import video from '/home/ukijaffna/Documents/Final_Project/client/src/images/video.mp4'
 const VideoPopup = () => {
   useEffect(() => {
     AOS.init();
@@ -41,15 +42,10 @@ const VideoPopup = () => {
                             }}
                           >
            
-            <iframe 
-                  width="900"
-                  height="550"
-                  src="https://youtube.com/shorts/ERzXLqR3B1c?feature=share"
-                  title="leafLine Video"
-                  
-                  allowFullScreen
-                  
-                />
+           <video width="600" height="360" controls autoPlay muted style={{ objectFit: 'cover' }}>
+                        <source src={video} type="video/mp4" autoplay />
+                    </video>
+                
                  {/* <img
                     src="`url(${sl0001})`"
                     alt="Video Overlay"
