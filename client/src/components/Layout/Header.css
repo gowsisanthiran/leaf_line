@@ -2,17 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/jack-rooney');
 
 
-.navbar-nav{
- 
-  margin-left:800px;
- 
 
- 
-}
-/* .navbar{
-  transition: background-color 0.3s ease-in-out;
-  background-color: #ddb1b1;
-} */
 .navbar.transparent {
   background-color: transparent !important;
 }
@@ -38,12 +28,12 @@
   border-radius: 10px;
   border: 5;
   box-shadow: none;
-  padding: 15px;
+  padding: 5px;
   position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
   
   left: 0;
   right: 0;
-  z-index: 100; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+  z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
 }
 
 .navbar{
@@ -240,14 +230,14 @@
   transform-origin: center;
 }
 @keyframes zoom {
-  0% {
-    transform: scale(2);
+  20% {
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.0);
+    transform: scale(1.2);
   }
   100% {
-    transform: scale(2);
+    transform: scale(1);
   }
 }
 
@@ -259,6 +249,22 @@ nav.navbar .container {
 .navbar-logo {
   text-align: center;
   padding: 22px 0 34px;
+}
+.nav-link {
+  margin-right: 200px;
+}
+.nav-link {
+  padding-right: 150px;
+}
+
+
+.preview__header {
+  font-size: 12px;
+  height: 54px;
+  background-color: #262626;
+  z-index: 100;
+  line-height: 54px;
+  margin-bottom: 1px;
 }
 
 
