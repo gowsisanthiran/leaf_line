@@ -42,7 +42,7 @@ const UpdatePassword = () => {
   return (
 
     <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center',height: '100vh',backgroundColor: '#f1f1f1'}}>
-      <div className="card border-0 bg-transparent mx-auto mt-4" style={{ maxWidth: '550px' }}>
+      <div className=" border-0 bg-transparent mx-auto mt-4" style={{ maxWidth: '550px' }}>
         <h1 className="text-center mb-4">Change Password</h1>
         
         <Form onSubmit={handleSubmit}>

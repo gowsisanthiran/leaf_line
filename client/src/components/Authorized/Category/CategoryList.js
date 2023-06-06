@@ -190,10 +190,12 @@ const CategoryList = () => {
           backgroundColor: '#fff',
           padding: '55px',
           marginBottom: '20px',
+          marginTop:"20px",
+                
         }}
       >
         <Typography component='h1' color='#1b5e20' variant='h5' sx={{ m: 4 }}>
-          Full list of categories
+          List of categories
         </Typography>
         {loading ? (
           <BoxShadowLoader />

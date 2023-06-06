@@ -15,6 +15,8 @@ import { selectCartItems } from '../../redux/features/cartSlice';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
+import logoo from '../../images/logoo.png';
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -37,7 +39,7 @@ const AuthorizedRoute = () => {
             <>
                 <Box
                     sx={{
-                        backgroundColor: "#E9EDC9",
+                        backgroundColor: "#CDD193",
                         transition: ".4s all",
                         overflow: "visible",
                         top: "0",
@@ -56,11 +58,11 @@ const AuthorizedRoute = () => {
                     }}
                 >
                     <Box className='mTreeMenu' sx={{ minWidth: '225px', mr: 1 }}>
-                        <DrawerTreeMenu/>
+                        <DrawerTreeMenu />
                     </Box>
                     <Box sx={{ flexGrow: 1, paddingTop: '10px' }}>
                         <Link to="dashboard" className="link-no-underline">
-                         <Typography
+                            <Typography
                                 component='div'
                                 variant='h6'
                                 // marginTop={"50px"}
@@ -69,7 +71,8 @@ const AuthorizedRoute = () => {
                                     color: '#132a13',
                                     textShadow: '1px 1px 1px #555',
                                     marginLeft: "20px",
-                                    marginTop: "25px"
+                                    marginTop: "35px"
+
                                 }}
                             >
                                 Dashboard
@@ -82,6 +85,10 @@ const AuthorizedRoute = () => {
 
                     </Box>
                     <div className="d-flex align-items-center justify-content-end">
+
+                        <NavLink to="/" className="nav-link " activeClassName="active" style={{ color: '#263A29' }}>
+                            <HomeIcon /> 
+                        </NavLink>
                         <NavLink to="/product" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
                             <Inventory2Icon />
                         </NavLink>
@@ -101,19 +108,20 @@ const AuthorizedRoute = () => {
                     sx={{
                         display: 'flex',
                         flexGrow: 1,
-                        marginTop: '90px',
                         // marginLeft: "20px",
-                        // borderRadius: '8px',
+                        // height:'1000px',
                         overflow: 'hidden',
+                        marginTop:'45px',
+                        marginBottom: '-48px'
                     }}
                 >
                     <Box
                         className='dTreeMenu'
                         sx={{
-                            backgroundColor: '#263A29',
+                            backgroundColor:'#CDD193', 
+                            // '#E9EDC9',
                             boxShadow: '2px 2px 15px #7b9c56',
                             minWidth: '240px',
-                            maxHeight: '100%',
                             mr: 1,
 
                             // borderRadius: '10px',

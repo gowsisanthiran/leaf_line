@@ -80,13 +80,15 @@ const ProductList = () => {
                 backgroundColor: '#fff',
                 padding: '55px',
                 justifyContent: "center",
-                marginLeft: "105px"
+                marginLeft: "105px",
+                marginTop:"20px",
+                marginBottom:"20px"
             }}
         >
 
 
             <Box style={{ displya: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
-                <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20'>Full list of products</Typography>
+                <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20'>List of products</Typography>
                 {loading ? <BoxShadowLoader /> :
                     <DataGrid rows={rows}
                         columns={columns}

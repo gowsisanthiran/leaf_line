@@ -162,7 +162,7 @@ const AddNewCategory = () => {
           <TextField
             type="text"
             id="title"
-            label="Title"
+            label="Category Name"
             name="title"
             margin="normal"
             required

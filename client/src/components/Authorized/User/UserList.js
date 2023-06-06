@@ -92,7 +92,9 @@ const UserList = () => {
                 backgroundColor: '#fff',
                 padding: '55px',
                 justifyContent: "center",
-                marginLeft: "105px"
+                marginLeft: "105px",
+                marginTop:"20px",
+                marginBottom:"20px"
             }}
         >
             <Box style={{ displya: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>

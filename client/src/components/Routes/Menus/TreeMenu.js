@@ -166,43 +166,43 @@ return (
       label="New Category"
       icon={<Category sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('category')}
-      style={{ color: "#fff", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
     />
     <Tab
       label="Category List"
       icon={<ListAlt sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('categorylist')}
-      style={{ color: "#fff", display: 'flex', alignItems:"flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems:"flex-start" }}
     />
     <Tab
       label="Add New Product"
       icon={<AddCircle sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('product')}
-      style={{ color: "#fff", display: 'flex', alignItems:"flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems:"flex-start" }}
     />
     <Tab
       label="Product List"
       icon={<ListAlt sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('productlist')}
-      style={{ color: "#fff", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
     />
     <Tab
       label="Review List"
       icon={<RateReview sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('reviewlist')}
-      style={{ color: "#fff", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
     />
     <Tab
       label="Order List"
       icon={<ShoppingBasket sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('orderlist')}
-      style={{ color: "#fff", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
     />
     <Tab
       label="User List"
       icon={<Person sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('userlist')}
-      style={{ color: "#fff", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
     />
   </Tabs>
 );

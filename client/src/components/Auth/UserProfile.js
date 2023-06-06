@@ -11,8 +11,8 @@ const UserProfile = () => {
   const { UserInfo } = jwtDecode(accessToken);
 
   return (
-    <div class="container" style={{paddingTop: '100px', fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: ''}}>
-      <div class="card">
+    <div class="container" style={{paddingTop: '100px', fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '', width:'auto'}}>
+      <div class="">
         <div class="card-header">
           <h3 class="card-title">Account Details</h3>
           <img class="card-img-top user-profile-avatar" src={user.avatar.url} alt={user.name} style={{width: '80px',height: '80px',borderRadius: '50%',margin: '0 auto',marginBottom: '1rem'
