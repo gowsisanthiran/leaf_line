@@ -18,8 +18,9 @@ const MainLayout = () => {
                 {isHomePage ? '' : <div className="content"></div>}
 
                 <Outlet />
-                <div className="content"></div>
-                 <Footer /> 
+                <div className="footerBottom">
+                {isHomePage ? <Footer /> : <FooterSmall />}
+                </div>
             </div>
         </>
     )
