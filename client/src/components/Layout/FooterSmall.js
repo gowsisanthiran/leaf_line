@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   const FooterSmall = () => {
  const classes = useStyles();
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', py: 2, textAlign: 'center' }}>
+    <Box sx={{ bgcolor: '#DAE2B6', py: 2, textAlign: 'center' }}>
       <Typography variant="body2" color="textSecondary">
         <Link
             variant="button"

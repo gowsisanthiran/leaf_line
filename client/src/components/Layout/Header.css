@@ -109,7 +109,8 @@
 }
 
 .carousel .background.a {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
+   background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg="); 
+  /* background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),  url("../../images/bgimg.jpg"); */
 }
 
 .carousel-fade .carousel-inner .item {
@@ -182,16 +183,16 @@
 
 
 .zoom-effect {
-  animation: zoom 20s infinite;
+  animation: zoom 10s infinite;
   transform-origin: center;
 }
 
 @keyframes zoom {
   0% {
-    transform: scale(1);
+    transform: scale(0);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);

@@ -148,25 +148,25 @@ const teamMembers = [
 ];
 
 const TeamCarousel = () => {
-  return (
-    <Carousel
-      showArrows={true}
-      infiniteLoop={true}
-      showThumbs={false}
-      showStatus={false}
-      autoPlay={true}
-      interval={3000}
-    >
-      {teamMembers.map((member, index) => (
-        <div key={index}>
-          <Grid container justifyContent="center">
-            <Avatar alt={member.name} src={member.avatarUrl} style={{ width: '150px', height: '150px' }} />
-          </Grid>
-          <p style={{ textAlign: 'center' }}>{member.name}</p>
-        </div>
-      ))}
-    </Carousel>
-  );
+  // return (
+  //   // <Carousel
+  //   //   showArrows={true}
+  //   //   infiniteLoop={true}
+  //   //   showThumbs={false}
+  //   //   showStatus={false}
+  //   //   autoPlay={true}
+  //   //   interval={3000}
+  //   // >
+  //   //   {teamMembers.map((member, index) => (
+  //   //     <div key={index}>
+  //   //       <Grid container justifyContent="center">
+  //   //         <Avatar alt={member.name} src={member.avatarUrl} style={{ width: '150px', height: '150px' }} />
+  //   //       </Grid>
+  //   //       <p style={{ textAlign: 'center' }}>{member.name}</p>
+  //   //     </div>
+  //   //   ))}
+  //   // </Carousel>
+  // );
 };
 
 export default TeamCarousel;

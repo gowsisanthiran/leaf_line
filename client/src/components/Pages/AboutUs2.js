@@ -231,6 +231,7 @@ import sl19 from '../../images/img1.jpeg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -337,6 +338,7 @@ function AboutUs2() {
                     <div className="row">
                         <section className="latest section">
                             <div className="container">
+                            
                                 <h2 className="pb-3" style={{ fontFamily: 'Open Sans' }}>
                                     About <span className="orange-text" style={{ color: 'green' }}>us</span>
                                 </h2>
@@ -386,6 +388,7 @@ function AboutUs2() {
                                         <li className="list-item d-flex flex-column flex-sm-row aos-init aos-animate" data-aos="fade-up">
                                             <span className="latest_list-preview">
                                                 <picture>
+                                              
                                                     <img
                                                         src={sl18}
                                                         alt="about something"
@@ -443,6 +446,10 @@ function AboutUs2() {
                         </section>
                         {/* Rest of the code */}
                     </div>
+                </div>
+                <div>
+
+
                 </div>
 
             </div>

@@ -17,12 +17,12 @@ const VideoPopup = () => {
           <Grid container spacing={2}>
 
             <Grid>
-              <Typography variant="h3" component="h3" style={{ fontFamily: 'Open Sans', fontSize: '46px', display: 'block', paddingLeft: '300px', margin: '0 ', paddingTop: '20px' }}>
+              <Typography variant="h3" component="h3" style={{ fontFamily: 'Open Sans', fontSize: '46px', display: 'block', paddingLeft: '350px', margin: '0 ', paddingTop: '20px',textAlign:'center' }}>
                 How to prepare  <span style={{ color: 'green' }} data-aos="fade-up" data-aos-delay="500">Our Plates</span>
               </Typography>
             </Grid>
             <Grid>
-              <Typography variant="h6" component="h6" style={{ fontFamily: 'Poppins', fontSize: '20px', display: 'block', paddingLeft: '350px', margin: '0 ', paddingTop: '10px', color: 'green' }}>
+              <Typography variant="h6" component="h6" style={{ fontFamily: 'Poppins', fontSize: '20px', display: 'block', paddingLeft: '400px', margin: '0 ', paddingTop: '10px', color: 'green' }}>
                 <span data-aos="fade-up" data-aos-delay="500">Watch our amazing video tutorial</span>
               </Typography>
             </Grid>
@@ -42,9 +42,15 @@ const VideoPopup = () => {
                 }}
               >
 
-                <video width="1000" controls autoPlay muted style={{
-                  objectFit: 'cover', paddingRight: '100px',
-                  paddingLeft: '80px', paddingBottom: '8px', position: 'relative'
+                <video width="1200" controls autoPlay muted style={{
+                 objectFit: 'cover',
+                 margin: '0 auto',
+                 display: 'block',
+                 paddingRight: '120px',
+                 paddingLeft: '90px',
+                 paddingBottom: '8px',
+                 position: 'relative',
+                  
                 }}>
                   <source src={video} type="video/mp4" autoplay />
                 </video>
