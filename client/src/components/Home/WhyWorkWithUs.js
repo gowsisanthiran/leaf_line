@@ -83,7 +83,7 @@ const WhyWorkWithUs = () => {
 
 
 return (
- <div style={{backgroundColor: '#DAE2B6',boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)' }}>
+ <div style={{backgroundColor: '#DAE2B6',boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)',marginTop:'50px' }}>
    <section className="eco_services_environment" style={{sectionStyle }} data-aos="fade-up">
     <Container >
       {/* <div className="eco_headings" data-aos="fade-up" data-aos-delay="100">
@@ -128,7 +128,7 @@ return (
           <Col md={4} sm={6} xs={12} className="hidden-sm-down">
             <figure data-aos="fade-up" data-aos-delay="100">
               <div className="thumb-widthout-layer">
-                <img src={sl001} alt="" />
+                <img src={sl001} alt=""  style={{padding:'50px' }} />
               </div>
             </figure>
           </Col>

@@ -136,7 +136,8 @@ import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
 import logo from '../../images/LOGO.png';
 import logoo from '../../images/logoo.png';
-
+import bg from '../../images/png1.png';
+import bg1 from '../../images/picc.png';
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     right: 6,
@@ -209,14 +210,19 @@ const Header = () => {
       </nav>
    
 
- <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
-  <div class="carousel-inner" role="listbox">
+ <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000" style={{ backgroundImage: `url(${bg})`}}>
+  <div class="carousel-inner" role="listbox" >
     <div class="item active background a zoom-effect">
-      {/* <img src="your-image-url.jpg" alt="Image" /> */}
+      <img src={bg} alt="Image"style={{ opacity: 0.2 }}  />
+      
     </div>
-   
+    
   </div>
+  
  </div>
+  {/* <div className="item active background a zoom-effect" style={{ backgroundColor: '#5E8862', overflow: 'hidden',paddingTop:'100px',paddingBottom:'100px' }}>
+  <img src={bg} alt="Image" style={{ textAlign: 'center', paddingRight: '100px', paddingTop:'10px',paddingBottom:'100px' }} />
+</div> */}
 
  <div class="covertext zoom-effect">
   <div class="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem', fontFamily: 'NunitoSans,Verdana', color: '#fff', border: '2px ' }}>

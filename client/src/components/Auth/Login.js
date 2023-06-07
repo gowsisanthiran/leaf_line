@@ -14,8 +14,8 @@ import {
 import { login, selectLoggedInUser, persistLogin } from '../../redux/features/authSlice';
 
 import { Box, Avatar, Typography, TextField, Button, Grid, FormGroup, FormControlLabel, Checkbox, Link } from '@mui/material';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
-
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import login1 from '../../images/login3.jpg';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -63,7 +63,9 @@ const Login = () => {
             <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
                 <MDBRow>
                     <MDBCol col='10' md='6'>
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" />
+                        {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
+                        <img src={login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/>
+
                     </MDBCol>
 
                     <MDBCol col='4' md='6'>
@@ -112,9 +114,9 @@ const Login = () => {
 
                             <Button type='submit'
                                 fullWidth
-                                color="primary"
+                                color="success"
                                 variant='contained'
-                                sx={{ mt: 3, mb: 2 }}
+                                sx={{ mt: 3, mb: 2  }}
                             >Login</Button>
 
                         </form>

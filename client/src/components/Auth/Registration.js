@@ -16,6 +16,7 @@ import {
   MDBInput,
   MDBCheckbox
 } from 'mdb-react-ui-kit';
+import reg from '../../images/regbg.png';
 
 const Registration = () => {
   const dispatch = useDispatch();
@@ -74,7 +75,9 @@ const Registration = () => {
       <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
         <MDBRow>
           <MDBCol col='10' md='6'>
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" />
+            {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
+            <img src={reg} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/>
+
           </MDBCol>
           <MDBCol col='4' md='6'>
 
@@ -137,7 +140,7 @@ const Registration = () => {
                     <Button fullWidth
                       variant='contained'
                       component='label'
-                      color="primary"
+                      color="success"
                       startIcon={<PhotoIcon />}
                     >
                       <input type='file'
@@ -152,7 +155,7 @@ const Registration = () => {
                 <Button type='submit'
                   fullWidth
                   variant='contained'
-                  color="primary"
+                  color="success"
                   sx={{ mt: 3, mb: 2 }}
                 >Registration & Login</Button>
                 <MDBRow className="mt-2">
