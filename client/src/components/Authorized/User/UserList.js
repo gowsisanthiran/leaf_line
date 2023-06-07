@@ -87,16 +87,24 @@ const UserList = () => {
                 flexDirection: 'column',
                 width: '85%',
                 textAlign: 'center',
-                boxShadow: '0 2px 4px #285430',
-                borderRadius: '4px',
+                boxShadow: '2px 2px 2px 2px #588157', 
+                borderRadius: '5px',
                 backgroundColor: '#fff',
                 padding: '55px',
                 justifyContent: "center",
                 marginLeft: "105px",
-                marginTop:"20px",
-                marginBottom:"20px"
+                marginTop:"45px",
+
             }}
+
+            
         >
+            <div
+                style={{
+                    maxHeight: '500px',
+                    overflowY: 'scroll',
+                }}
+            >
             <Box style={{ displya: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
                 <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20' fontFamily= 'poppins, sans-serif' >Full list of users</Typography>
                 {loading ? <BoxShadowLoader /> :
@@ -107,6 +115,7 @@ const UserList = () => {
                     />
                 }
             </Box>
+            </div>
         </Box>
 
     )

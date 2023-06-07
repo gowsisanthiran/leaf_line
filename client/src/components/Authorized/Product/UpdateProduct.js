@@ -128,7 +128,7 @@ const UpdateProduct = () => {
         flexDirection: 'column',
         width: '45%',
         textAlign: 'center',
-        boxShadow: '0 2px 4px #285430',
+        boxShadow: '2px 2px 2px 2px #588157',
         borderRadius: '4px',
         backgroundColor: '#fff',
         padding: '55px',
@@ -137,6 +137,12 @@ const UpdateProduct = () => {
         marginTop:"20px",
                 marginBottom:"20px"
       }}
+      >
+      <div
+        style={{
+          maxHeight: '520px',
+          overflowY: 'scroll',
+        }}
     >
       <>
 
@@ -370,7 +376,7 @@ const UpdateProduct = () => {
                 variant='contained'
                 startIcon={<UpdateIcon />}
                 sx={{
-                  mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', fontFamily: 'poppins, sans-serif'
+                  mt: 3, mb: 2, backgroundColor:"#1b4332",borderRadius:"10px", fontFamily: 'poppins, sans-serif'
                 }}
 
               >Update Product</Button>
@@ -379,6 +385,7 @@ const UpdateProduct = () => {
 
         }
       </>
+      </div>
     </Box>
   )
 }

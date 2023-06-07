@@ -164,10 +164,10 @@ const CategoryList = () => {
 
   const rows = categories
     ? categories.map((category) => ({
-        id: category._id,
-        title: category.title,
-        description: category.description,
-      }))
+      id: category._id,
+      title: category.title,
+      description: category.description,
+    }))
     : [];
 
   useEffect(() => {
@@ -185,24 +185,30 @@ const CategoryList = () => {
           flexDirection: 'column',
           width: '100%',
           textAlign: 'center',
-          boxShadow: '0 2px 4px #285430',
+          boxShadow: '2px 2px 2px 2px #588157',
           borderRadius: '4px',
           backgroundColor: '#fff',
           padding: '55px',
-          marginBottom: '20px',
-          marginTop:"20px",
-          fontFamily: 'poppins, sans-serif'
-                
+          marginTop: "45px",
+          fontFamily: 'poppins, sans-serif',
+
         }}
       >
-        <Typography component='h1' color='#1b5e20' variant='h5' sx={{ m: 4 , fontFamily: 'poppins, sans-serif'}}>
-          List of categories
-        </Typography>
-        {loading ? (
-          <BoxShadowLoader />
-        ) : (
-          <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }} autoHeight />
-        )}
+        <div
+          style={{
+            maxHeight: '560px',
+            overflowY: 'scroll',
+          }}
+        >
+          <Typography component='h1' color='#1b5e20' variant='h5' sx={{ m: 4, fontFamily: 'poppins, sans-serif' }}>
+            List of categories
+          </Typography>
+          {loading ? (
+            <BoxShadowLoader />
+          ) : (
+            <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }} autoHeight />
+          )}
+        </div>
       </Box>
     </Container>
   );
