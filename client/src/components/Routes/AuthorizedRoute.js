@@ -18,6 +18,7 @@ import Inventory2Icon from '@mui/icons-material/Inventory2';
 import logoo from '../../images/logoo.png';
 
 
+
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         right: 6,
@@ -39,7 +40,7 @@ const AuthorizedRoute = () => {
             <>
                 <Box
                     sx={{
-                        backgroundColor: "#CDD193",
+                        backgroundColor:  '#CDD193',
                         transition: ".4s all",
                         overflow: "visible",
                         top: "0",
@@ -71,7 +72,8 @@ const AuthorizedRoute = () => {
                                     color: '#132a13',
                                     textShadow: '1px 1px 1px #555',
                                     marginLeft: "20px",
-                                    marginTop: "35px"
+                                    marginTop: "35px",
+                                   
 
                                 }}
                             >
@@ -85,8 +87,10 @@ const AuthorizedRoute = () => {
 
                     </Box>
                     <div className="d-flex align-items-center justify-content-end">
-
-                        <NavLink to="/" className="nav-link " activeClassName="active" style={{ color: '#263A29' }}>
+                        {/* <NavLink to="/" className="navbar-brand">
+                            <img src={logoo} alt="Logo" className="logo" style={{ height:"100px" }} />
+                        </NavLink> */}
+                        <NavLink to="/" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans, sans-serif', color: '#263A29' }}>
                             <HomeIcon /> 
                         </NavLink>
                         <NavLink to="/product" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
@@ -111,14 +115,14 @@ const AuthorizedRoute = () => {
                         // marginLeft: "20px",
                         // height:'1000px',
                         overflow: 'hidden',
-                        marginTop:'45px',
+                        marginTop: '55px',
                         marginBottom: '-48px'
                     }}
                 >
                     <Box
                         className='dTreeMenu'
                         sx={{
-                            backgroundColor:'#CDD193', 
+                            backgroundColor: '#CDD193',
                             // '#E9EDC9',
                             boxShadow: '2px 2px 15px #7b9c56',
                             minWidth: '240px',

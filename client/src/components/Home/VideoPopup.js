@@ -4,7 +4,7 @@ import { PlayCircleFilled } from '@mui/icons-material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import sl0001 from '../../images/rebg.jpg';
-import video from '/home/ukijaffna/Documents/Final_Project/client/src/images/video.mp4'
+import video from '/home/ukistudent/Project/Project/Final_Project/client/src/images/video.mp4'
 const VideoPopup = () => {
   useEffect(() => {
     AOS.init();

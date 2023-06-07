@@ -35,7 +35,7 @@
 //   }, [success, dispatch]);
 
 //   return (
-  
+
 //     <div class="bigbox">
 //       <Box
 //         sx={{
@@ -99,7 +99,7 @@
 //         </Box>
 //       </Box>
 //     </div>
-   
+
 //   );
 // };
 
@@ -153,13 +153,16 @@ const AddNewCategory = () => {
           width: '100%',
           maxWidth: '580px',
           margin: '0 auto',
+          marginTop: "30px",
+          fontFamily: 'poppins, sans-serif'
         }}
       >
-        <Typography component="div" variant="h5" color="#1b5e20">
+        <Typography component="div" variant="h5" color="#1b5e20" fontFamily='poppins, sans-serif'>
           Add new category
         </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
+            fontFamily='poppins, sans-serif'
             type="text"
             id="title"
             label="Category Name"
@@ -173,8 +176,10 @@ const AddNewCategory = () => {
             color="success"
           />
           <TextField
+            fontFamily='poppins, sans-serif'
             type="text"
             id="description"
+
             label="Description"
             name="description"
             margin="normal"
@@ -195,6 +200,7 @@ const AddNewCategory = () => {
               mt: 3,
               mb: 2,
               backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)',
+              fontFamily: 'poppins, sans-serif'
             }}
           >
             Add Category

@@ -83,7 +83,7 @@ const UpdateRole = () => {
       <Box sx={{ maxWidth: '550px', m: '0 auto', display: 'flex', flexGrow: 1, alignItems: 'center' }}>
         <Box>
           <Box sx={{ textAlign: 'center' }}>
-            <Typography component='h1'
+            <Typography component='h1' fontFamily= 'poppins, sans-serif'
               variant='h6'>Account Deatil's
             </Typography>
             <img src={user?.avatar?.url} 
@@ -95,20 +95,20 @@ const UpdateRole = () => {
 
           <Grid container sx={{ alignItems: 'center', mt: 1 }}>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>User's Name</Typography></Grid>
-            <Grid item xs={6}><Typography variant='button' component='div'>{user?.name}</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>User's Name</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>{user?.name}</Typography></Grid>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>User's Email</Typography></Grid>
-            <Grid item xs={6}><Typography variant='button' component='div'>{user?.email}</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>User's Email</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>{user?.email}</Typography></Grid>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>Joined date:</Typography></Grid>
-            <Grid item xs={6}><Typography variant='button' component='div'>{String(user?.createdAt).substr(0, 10)}</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>Joined date:</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>{String(user?.createdAt).substr(0, 10)}</Typography></Grid>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>User's Role</Typography></Grid>
-            <Grid item xs={6}><Typography variant='button' component='div'>{user?.roles}</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>User's Role</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>{user?.roles}</Typography></Grid>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>User's Status</Typography></Grid>
-            <Grid item xs={6}><Typography variant='button' component='div'>{user?.blocked ? 'Blocked' : 'Active'}</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>User's Status</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>{user?.blocked ? 'Blocked' : 'Active'}</Typography></Grid>
 
           </Grid>
 
@@ -116,7 +116,7 @@ const UpdateRole = () => {
 
           <Grid container sx={{ alignItems: 'center', mt: 3 }}>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>Change User's Status</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>Change User's Status</Typography></Grid>
 
             <Grid item xs={6}>
               <FormControl sx={{ width: '100%' }}>
@@ -128,8 +128,8 @@ const UpdateRole = () => {
                   label='Status'
                   onChange={(e => setBlocked(e.target.value))}>
 
-                  <MenuItem value='true'>Block</MenuItem>
-                  <MenuItem value='false'>Active</MenuItem>
+                  <MenuItem value='true' fontFamily= 'poppins, sans-serif'>Block</MenuItem>
+                  <MenuItem value='false' fontFamily= 'poppins, sans-serif'>Active</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -138,7 +138,7 @@ const UpdateRole = () => {
 
           <Grid container sx={{ alignItems: 'center', mt: 3 }}>
 
-            <Grid item xs={6}><Typography variant='button' component='div'>Change User's Role</Typography></Grid>
+            <Grid item xs={6}><Typography variant='button' component='div' fontFamily= 'poppins, sans-serif'>Change User's Role</Typography></Grid>
 
             <Grid item xs={6}>
               <FormControl sx={{ width: '100%' }}>
@@ -150,8 +150,8 @@ const UpdateRole = () => {
                   label='Role'
                   onChange={(e => setRole(e.target.value))}>
 
-                  <MenuItem value='admin'>Admin</MenuItem>
-                  <MenuItem value='user'>User</MenuItem>
+                  <MenuItem value='admin' fontFamily= 'poppins, sans-serif'>Admin</MenuItem>
+                  <MenuItem value='user' fontFamily= 'poppins, sans-serif'>User</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -163,7 +163,7 @@ const UpdateRole = () => {
           <Button variant='contained'
             fullWidth
             startIcon={<UpdateIcon />}
-            sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)' }}
+            sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', fontFamily: 'poppins, sans-serif' }}
             onClick={submitHandler}>Change
           </Button>
         </Box>

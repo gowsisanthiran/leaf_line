@@ -142,7 +142,7 @@ const UpdateProduct = () => {
 
         {loading ? <BoxShadowLoader /> :
           <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>
-            <Typography component='div' variant='h5' color="green">Update product</Typography>
+            <Typography component='div' variant='h5' color="green" fontFamily= 'poppins, sans-serif'>Update product</Typography>
             <Box component='form' onSubmit={handleSubmit} >
               <TextField type='text'
                 id='title'
@@ -158,6 +158,7 @@ const UpdateProduct = () => {
               />
               <TextareaAutosize required
                 aria-label='description'
+                fontFamily= 'poppins, sans-serif'
                 minRows={5}
                 placeholder='Description'
                 value={description}
@@ -171,6 +172,7 @@ const UpdateProduct = () => {
                 <Grid item xs={6}>
                   <TextField type='number'
                     id='price'
+                    fontFamily= 'poppins, sans-serif'
                     label='Price'
                     name='price'
                     margin='normal'
@@ -184,6 +186,7 @@ const UpdateProduct = () => {
                 <Grid item xs={6}>
                   <TextField type='number'
                     id='discount'
+                    fontFamily= 'poppins, sans-serif'
                     label='Discount'
                     name='discount'
                     margin='normal'
@@ -204,6 +207,7 @@ const UpdateProduct = () => {
                     <TextField type='number'
                       id='weight'
                       label='Weight'
+                      fontFamily= 'poppins, sans-serif'
                       name='weight'
                       margin='normal'
                       fullWidth
@@ -218,6 +222,7 @@ const UpdateProduct = () => {
                     id='stock'
                     label='Stock'
                     name='stock'
+                    fontFamily= 'poppins, sans-serif'
                     margin='normal'
                     required
                     fullWidth
@@ -234,6 +239,7 @@ const UpdateProduct = () => {
                     <Select required
                       labelId='category'
                       id='category'
+                      fontFamily= 'poppins, sans-serif'
                       value={category}
                       label='Category'
                       onChange={(e => setCategory(e.target.value))}>
@@ -255,6 +261,7 @@ const UpdateProduct = () => {
                     <InputLabel id='localShipmentPolicy' color="success">Local Shipment Policy</InputLabel>
                     <Select required
                       labelId='localShipmentPolicy'
+                      fontFamily= 'poppins, sans-serif'
                       id='localShipmentPolicy'
                       value={localShipmentPolicy}
                       label='Local Shipment Policy'
@@ -271,6 +278,7 @@ const UpdateProduct = () => {
                     <InputLabel id='internationalShipmentPolicy' color="success">International Shipment Policy</InputLabel>
                     <Select required
                       labelId='internationalShipmentPolicy'
+                      fontFamily= 'poppins, sans-serif'
                       id='internationalShipmentPolicy'
                       value={internationalShipmentPolicy}
                       label='International Shipment Policy'
@@ -289,6 +297,7 @@ const UpdateProduct = () => {
                   {localShipmentPolicy !== 'custom' ? '' :
                     <TextField type='number'
                       id='customLocalShipmentCost'
+                      fontFamily= 'poppins, sans-serif'
                       label='Local Shipment Cost'
                       name='customLocalShipmentCost'
                       margin='normal'
@@ -304,6 +313,7 @@ const UpdateProduct = () => {
                     <TextField type='number'
                       id='customInternationalShipmentCost'
                       label='International Shipment Cost'
+                      fontFamily= 'poppins, sans-serif'
                       name='customInternationalShipmentCost'
                       margin='normal'
                       fullWidth
@@ -319,6 +329,7 @@ const UpdateProduct = () => {
                 <label htmlFor='productImage'>
                   <Input accept='image/*'
                     id='productImage'
+                    fontFamily= 'poppins, sans-serif'
                     multiple
                     type='file'
                     name='productImage'
@@ -329,8 +340,9 @@ const UpdateProduct = () => {
                     component='span'
                     variant='outlined'
                     startIcon={<CollectionsIcon />}
-                    sx={{ m: '16px 0' }}
-                    color="success"
+                    sx={{ m: '16px 0', fontFamily: 'poppins, sans-serif' }}
+                    color="success" 
+                    
                   >Upload photo</Button>
                 </label>
             </Box>
@@ -358,7 +370,7 @@ const UpdateProduct = () => {
                 variant='contained'
                 startIcon={<UpdateIcon />}
                 sx={{
-                  mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)'
+                  mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', fontFamily: 'poppins, sans-serif'
                 }}
 
               >Update Product</Button>

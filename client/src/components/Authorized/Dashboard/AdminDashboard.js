@@ -82,11 +82,11 @@ const AdminDashboard = () => {
         className='dash-box'
         sx={{
           backgroundColor: 'white',
-          padding: '10px',
+          padding: '40px',
           minHeight: '100vh',
         }}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={6}>
           <Grid item xs={12} sm={6} md={3}>
             <Box
               className='Box'
@@ -101,7 +101,7 @@ const AdminDashboard = () => {
               }}
             >
 
-              <Typography variant='h6' textAlign='center'>
+              <Typography variant='h6' textAlign='center' fontFamily= 'poppins, sans-serif'>
                 <ShoppingCartOutlinedIcon /> Products
               </Typography>
               <Divider />
@@ -125,7 +125,7 @@ const AdminDashboard = () => {
               }}
             >
 
-              <Typography variant='h6' textAlign='center'>
+              <Typography variant='h6' textAlign='center' fontFamily= 'poppins, sans-serif'>
                 <GroupOutlinedIcon /> Users
               </Typography>
               <Divider />
@@ -147,7 +147,7 @@ const AdminDashboard = () => {
               }}
             >
 
-              <Typography variant='h6' textAlign='center'>
+              <Typography variant='h6' textAlign='center' fontFamily= 'poppins, sans-serif'>
                 <ListAltOutlinedIcon /> Orders
               </Typography>
               <Divider />
@@ -169,7 +169,7 @@ const AdminDashboard = () => {
               }}
             >
 
-              <Typography variant='h6' textAlign='center'>
+              <Typography variant='h6' textAlign='center' fontFamily= 'poppins, sans-serif'>
                 <MonetizationOnOutlinedIcon /> Revenue
               </Typography>
               <Divider />
@@ -193,15 +193,15 @@ const AdminDashboard = () => {
 
 
 
-        <Grid container sx={{ alignItems: 'center', mt: 1, textAlign: 'center' }} spacing={3}>
-          <div style={{ border: '1px solid black', padding: "30px", width: '500px', height: "400px" }}>
+        <Grid container sx={{ alignItems: 'center', mt: 1, padding:"30px", marginLeft:"230px", marginTop:"120px" }} spacing={3}>
+          <div style={{  padding: "30px", width: '500px', height: "400px",borderRadius: "10px",boxShadow: '0px 3px 5px 0px #415d43', }}>
 
-            <Grid item xs={12} md={10} lg={10} style={{ marginLeft: '120px', marginTop: '80px' }}>
+            <Grid item xs={12} md={10} lg={10} style={{ marginLeft: '60px', marginTop: '80px' }}>
               <Line data={lineData} />
             </Grid>
           </div>
 
-          <div style={{ border: '1px solid black', padding: "30px", width: '500px', height: "400px" }}>
+          <div style={{  padding: "30px", width: '500px', height: "400px",borderRadius: "10px",boxShadow: '0px 3px 5px 0px #415d43' ,marginLeft:"50px"}}>
             <Grid item xs={12} md={10} lg={10} style={{ marginLeft: "40px", marginRight: "40px" }} >
               <Doughnut data={doughnutData} />
             </Grid>

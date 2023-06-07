@@ -141,7 +141,7 @@ const UpdateCategory = () => {
         <BoxShadowLoader />
       ) : (
         <Box sx={{ marginTop: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Typography component='div' color='#1b5e20' variant='h5'>
+          <Typography component='div' color='#1b5e20' variant='h5' fontFamily= 'poppins, sans-serif'>
             Update category
           </Typography>
           <Box component='form' onSubmit={handleSubmit} sx={{ mt: 2 }}>
@@ -157,6 +157,7 @@ const UpdateCategory = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               color='success'
+              fontFamily= 'poppins, sans-serif'
             />
             <TextField
               type='text'
@@ -170,6 +171,7 @@ const UpdateCategory = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               color='success'
+              fontFamily= 'poppins, sans-serif'
             />
             <Button
               type='submit'
@@ -178,7 +180,7 @@ const UpdateCategory = () => {
               disabled={isUpdating ? true : false}
               variant='contained'
               startIcon={<UpdateIcon />}
-              sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)' }}
+              sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)',  fontFamily:'poppins, sans-serif' }}
             >
               Update Category
             </Button>

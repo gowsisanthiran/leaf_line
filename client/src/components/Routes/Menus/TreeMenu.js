@@ -163,46 +163,46 @@ return (
     sx={{ overflow: 'hidden', color: '#fff' }}
   >
    <Tab
-      label="New Category"
+      label="New Category" 
       icon={<Category sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('category')}
-      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start",fontFamily: 'poppins, sans-serif', marginTop:"20px" }}
     />
     <Tab
       label="Category List"
       icon={<ListAlt sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('categorylist')}
-      style={{ color: "black", display: 'flex', alignItems:"flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems:"flex-start", fontFamily: 'poppins, sans-serif', marginTop:"20px"}}
     />
     <Tab
       label="Add New Product"
       icon={<AddCircle sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('product')}
-      style={{ color: "black", display: 'flex', alignItems:"flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems:"flex-start", fontFamily: 'poppins, sans-serif', marginTop:"20px" }}
     />
     <Tab
       label="Product List"
       icon={<ListAlt sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('productlist')}
-      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start",fontFamily: 'poppins, sans-serif', marginTop:"20px"}}
     />
     <Tab
       label="Review List"
       icon={<RateReview sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('reviewlist')}
-      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start", fontFamily: 'poppins, sans-serif', marginTop:"20px" }}
     />
     <Tab
       label="Order List"
       icon={<ShoppingBasket sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('orderlist')}
-      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start", fontFamily: 'poppins, sans-serif', marginTop:"20px" }}
     />
     <Tab
       label="User List"
       icon={<Person sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('userlist')}
-      style={{ color: "black", display: 'flex', alignItems: "flex-start" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start", fontFamily: 'poppins, sans-serif', marginTop:"20px" }}
     />
   </Tabs>
 );

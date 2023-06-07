@@ -89,7 +89,7 @@ const OrderList = () => {
             }}
         >
             <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
-                <Typography component='h1' color="#1b5e20" variant='h5' sx={{ m: 4 }}>List of Orders</Typography>
+                <Typography component='h1' color="#1b5e20" variant='h5' fontFamily= 'poppins, sans-serif' sx={{ m: 4 }}>List of Orders</Typography>
                 {loading ? <BoxShadowLoader /> :
                     <DataGrid rows={rows}
                         columns={columns}

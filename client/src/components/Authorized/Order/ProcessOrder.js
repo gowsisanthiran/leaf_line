@@ -52,15 +52,147 @@ const ProcessOrder = () => {
         <>
             {loading ? <BoxShadowLoader /> :
                 <>
-                    <Typography component='h1' variant='h5' gutterBottom sx={{ textAlign: 'center' }}>
+                    <Typography component='h1' variant='h5' gutterBottom sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>
                         Order details
                     </Typography>
 
+                    <Box sx={{ display: 'flex', flexDirection: 'row', marginLeft: "50px" }}>
 
-                    <Box sx={{ m: '20px 10px' }}>
+                        <Box className='base-div3' >
+                            <Box className='div3' sx={{ flex: 1, border: '1px solid black', width: "500px" }}>
+                                <Box className='title'>
+                                    <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}><LocalShippingIcon /></Avatar>
+                                    <Typography variant='button'
+                                        component='div'
+                                        fontFamily='poppins, sans-serif'
+                                        gutterBottom >Shipping
+                                    </Typography>
+                                </Box>
+                                <Box>
+                                    <List>
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <Avatar>
+                                                    <PhoneIcon />
+                                                </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText>{order?.shippingInfo?.phone}</ListItemText>
+                                        </ListItem>
+
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <Avatar>
+                                                    <LocationOnIcon />
+                                                </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary={order && `${order?.shippingInfo?.address},${order?.shippingInfo?.city},${order?.shippingInfo?.zipCode},${order?.shippingInfo?.state},${order?.shippingInfo?.country}`} />
+                                        </ListItem>
+                                    </List>
+                                </Box>
+                            </Box>
+
+                            <Box className='div3' sx={{ flex: 1, border: '1px solid black', width: "500px", padding: "30px", marginLeft: "20px" }}>
+                                <Box className='title'>
+                                    <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}>
+                                        <ShoppingCartIcon />
+                                    </Avatar>
+                                    <Typography component='div'
+                                        variant='button'
+                                        sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Cart Items Info
+                                    </Typography>
+                                </Box>
+                                <Box>
+                                    {order.orderItems && order.orderItems.map((item, i) => (
+                                        <Box key={item._id} sx={{ display: 'flex', width: '30', mb: 2 }}>
+                                            <Box>
+                                                <img src={item.product.images[0].url} alt={item.title} style={{ maxWidth: 100 }} />
+                                            </Box>
+                                            <Box>
+                                                <Typography component='div'
+                                                    variant='button'>
+                                                    <Link to={`/product/${item.product._id}`}>{item.product.title}</Link>
+
+                                                </Typography>
+                                                <Typography component='div'
+                                                    variant='button'>
+                                                    Price : {formatCurrency(item.price)} x {item.quantity}={formatCurrency(item.price * item.quantity)}
+                                                </Typography>
+                                            </Box>
+
+                                        </Box>
+                                    ))}
+                                </Box>
+                            </Box>
+
+                            <Box className='div3' sx={{ flex: 1, border: '1px solid black', width: "500px", padding: "30px", marginRight: "60px" }}>
+                                <Box className='title'>
+                                    <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}>
+                                        <FactCheckIcon />
+                                    </Avatar>
+                                    <Typography component='div'
+                                        variant='button'
+                                        sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Orders Info
+                                    </Typography>
+                                </Box>
+
+                                <Grid container>
+                                    <Grid item xs>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            Subtotal :
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant='button' component='div'>
+                                            {formatCurrency(order && order.itemsPrice)}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                                <Grid container>
+                                    <Grid item xs>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            Shipping Charges :
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            {formatCurrency(order && order.shippingPrice)}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+
+                                <Grid container>
+                                    <Grid item xs>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            Tax :
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            {formatCurrency(order && order.taxPrice)}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+
+                                <Grid container>
+                                    <Grid item xs>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            Total :
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant='button' component='div' fontFamily='poppins, sans-serif'>
+                                            {formatCurrency(order && order.totalPrice)}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+
+                            </Box>
+                        </Box>
+                    </Box>
+                    <Box sx={{ m: '20px 10px', flex: 1, border: '1px solid black' }}>
                         <Box className='title'>
-                            <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}><MonitorHeartIcon /></Avatar>
-                            <Typography variant='button'
+                            <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', minWidth: "130px", height: 30 }}><MonitorHeartIcon /></Avatar>
+                            <Typography variant='button' fontFamily='poppins, sans-serif'
                                 component='div'
                                 gutterBottom>Order Status
                             </Typography>
@@ -119,7 +251,7 @@ const ProcessOrder = () => {
                                 :
                                 <Box sx={{ display: 'flex', flexDirection: 'column', minWidth: '150px', mt: '20px' }}>
                                     <FormControl sx={{ mb: '5px' }}>
-                                        <InputLabel id='status'>Select process</InputLabel>
+                                        <InputLabel id='status' fontFamily='poppins, sans-serif'>Select process</InputLabel>
                                         <Select labelId='status'
                                             id='status'
                                             value={status}
@@ -144,137 +276,6 @@ const ProcessOrder = () => {
                     </Box>
 
 
-
-                    <Box className='base-div3'>
-                        <Box className='div3'>
-                            <Box className='title'>
-                                <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}><LocalShippingIcon /></Avatar>
-                                <Typography variant='button'
-                                    component='div'
-                                    gutterBottom>Shipping
-                                </Typography>
-                            </Box>
-                            <Box>
-                                <List>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <PhoneIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText>{order?.shippingInfo?.phone}</ListItemText>
-                                    </ListItem>
-
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <LocationOnIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={order && `${order?.shippingInfo?.address},${order?.shippingInfo?.city},${order?.shippingInfo?.zipCode},${order?.shippingInfo?.state},${order?.shippingInfo?.country}`} />
-                                    </ListItem>
-                                </List>
-                            </Box>
-                        </Box>
-
-                        <Box className='div3'>
-                            <Box className='title'>
-                                <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}>
-                                    <ShoppingCartIcon />
-                                </Avatar>
-                                <Typography component='div'
-                                    variant='button'
-                                    sx={{ textAlign: 'center' }}>Cart Items Info
-                                </Typography>
-                            </Box>
-                            <Box>
-                                {order.orderItems && order.orderItems.map((item, i) => (
-                                    <Box key={item._id} sx={{ display: 'flex', width: '100%', mb: 2 }}>
-                                        <Box>
-                                            <img src={item.product.images[0].url} alt={item.title} style={{ maxWidth: 100, marginRight: '5px' }} />
-                                        </Box>
-                                        <Box>
-                                            <Typography component='div'
-                                                variant='button'>
-                                                <Link to={`/product/${item.product._id}`}>{item.product.title}</Link>
-
-                                            </Typography>
-                                            <Typography component='div'
-                                                variant='button'>
-                                                Price : {formatCurrency(item.price)} x {item.quantity}={formatCurrency(item.price * item.quantity)}
-                                            </Typography>
-                                        </Box>
-
-                                    </Box>
-                                ))}
-                            </Box>
-                        </Box>
-
-                        <Box className='div3'>
-                            <Box className='title'>
-                                <Avatar sx={{ mr: 1, background: '#fff', color: '#43a047', width: 30, height: 30 }}>
-                                    <FactCheckIcon />
-                                </Avatar>
-                                <Typography component='div'
-                                    variant='button'
-                                    sx={{ textAlign: 'center' }}>Orders Info
-                                </Typography>
-                            </Box>
-
-                            <Grid container>
-                                <Grid item xs>
-                                    <Typography variant='button' component='div'>
-                                        Subtotal :
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography variant='button' component='div'>
-                                        {formatCurrency(order && order.itemsPrice)}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                            <Grid container>
-                                <Grid item xs>
-                                    <Typography variant='button' component='div'>
-                                        Shipping Charges :
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography variant='button' component='div'>
-                                        {formatCurrency(order && order.shippingPrice)}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-
-                            <Grid container>
-                                <Grid item xs>
-                                    <Typography variant='button' component='div'>
-                                        Tax :
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography variant='button' component='div'>
-                                        {formatCurrency(order && order.taxPrice)}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-
-                            <Grid container>
-                                <Grid item xs>
-                                    <Typography variant='button' component='div'>
-                                        Total :
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography variant='button' component='div'>
-                                        {formatCurrency(order && order.totalPrice)}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-
-                        </Box>
-                    </Box>
-
                 </>
             }
         </>
@@ -282,3 +283,4 @@ const ProcessOrder = () => {
 }
 
 export default ProcessOrder
+

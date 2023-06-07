@@ -14,6 +14,8 @@ import { addProduct, resetMutationResult, selectProductMutationResult } from '..
 import { POLICIES } from '../../../constants/policies';
 import gallery from '../../../images/gallery.png';
 import galleryback from '../../../images/galleryback.png';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 
 const AddNewProduct = () => {
@@ -106,27 +108,27 @@ const AddNewProduct = () => {
     dispatch(addProduct({ formData, toast }));
   }
 
-    useEffect(() => {
-      dispatch(getCategories({toast}));
-    }, [dispatch]);
-    
-    useEffect(() => {
-      
-      if(success){
-        dispatch(resetMutationResult());
-        setTitle('');
-        setDescription('');
-        setPrice('');
-        setDiscount(0);
-        setWeight(0);
-        setStock(1);
-        setCategory('');
-        
-        setImages([]);
-        setProductFiles([]);
-      }
-    }, [success, dispatch]);
-    
+  useEffect(() => {
+    dispatch(getCategories({ toast }));
+  }, [dispatch]);
+
+  useEffect(() => {
+
+    if (success) {
+      dispatch(resetMutationResult());
+      setTitle('');
+      setDescription('');
+      setPrice('');
+      setDiscount(0);
+      setWeight(0);
+      setStock(1);
+      setCategory('');
+
+      setImages([]);
+      setProductFiles([]);
+    }
+  }, [success, dispatch]);
+
   return (
     <Box
       sx={{
@@ -140,16 +142,22 @@ const AddNewProduct = () => {
         padding: '55px',
         justifyContent: "center",
         marginLeft: "400px",
-        marginTop:"20px",
-                marginBottom:"20px"
-      }}
-    >
+        marginTop: "20px",
+        marginBottom: "20px",
+        cursor: 'pointer', // Add cursor style here
+
+      
+        }}
+      >
+     
       <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>
-        <Typography component='div' color="#1b5e20" variant='h5' sx={{ textAlign: 'center' }}>Add new product</Typography>
+        <Typography component='div' color="#1b5e20" variant='h5' sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Add new product</Typography>
         <Box component='form' onSubmit={handleSubmit}>
           <TextField type='text'
             id='title'
             label='Title'
+            fontFamily='poppins, sans-serif'
+
             name='title'
             margin='normal'
             required
@@ -161,6 +169,7 @@ const AddNewProduct = () => {
           />
           <TextareaAutosize required
             aria-label='description'
+            fontFamily='poppins, sans-serif'
             minRows={5}
             placeholder='Description'
             value={description}
@@ -172,6 +181,7 @@ const AddNewProduct = () => {
             <Grid item xs={6}>
               <TextField type='number'
                 id='price'
+                fontFamily='poppins, sans-serif'
                 label='Price'
                 name='price'
                 margin='normal'
@@ -185,6 +195,7 @@ const AddNewProduct = () => {
             <Grid item xs={6}>
               <TextField type='number'
                 id='discount'
+                fontFamily='poppins, sans-serif'
                 label='Discount'
                 name='discount'
                 margin='normal'
@@ -203,6 +214,7 @@ const AddNewProduct = () => {
                 title='Weight in kg. Put weight if items weight exceed 5kg'>
                 <TextField type='number'
                   id='weight'
+                  fontFamily='poppins, sans-serif'
                   label='Weight'
                   name='weight'
                   margin='normal'
@@ -216,6 +228,7 @@ const AddNewProduct = () => {
             <Grid item xs={6}>
               <TextField type='number'
                 id='stock'
+                fontFamily='poppins, sans-serif'
                 label='Stock'
                 name='stock'
                 margin='normal'
@@ -236,6 +249,7 @@ const AddNewProduct = () => {
                 <Select required
                   labelId='category'
                   id='category'
+                  fontFamily='poppins, sans-serif'
                   value={category}
                   label='Category'
                   onChange={(e => setCategory(e.target.value))}
@@ -258,6 +272,7 @@ const AddNewProduct = () => {
                 <InputLabel id='localShipmentPolicy'>Local Shipment Policy</InputLabel>
                 <Select required
                   labelId='localShipmentPolicy'
+                  fontFamily='poppins, sans-serif'
                   id='localShipmentPolicy'
                   value={localShipmentPolicy}
                   label='Local Shipment Policy'
@@ -276,6 +291,7 @@ const AddNewProduct = () => {
                 <Select required
                   labelId='internationalShipmentPolicy'
                   id='internationalShipmentPolicy'
+                  fontFamily='poppins, sans-serif'
                   value={internationalShipmentPolicy}
                   label='International Shipment Policy'
                   onChange={(e => setInternationalShipmentPolicy(e.target.value))}
@@ -294,6 +310,7 @@ const AddNewProduct = () => {
               {localShipmentPolicy !== 'custom' ? '' :
                 <TextField type='number'
                   id='customLocalShipmentCost'
+                  fontFamily='poppins, sans-serif'
                   label='Local Shipment Cost'
                   name='customLocalShipmentCost'
                   margin='normal'
@@ -309,6 +326,7 @@ const AddNewProduct = () => {
                 <TextField type='number'
                   id='customInternationalShipmentCost'
                   label='International Shipment Cost'
+                  fontFamily='poppins, sans-serif'
                   name='customInternationalShipmentCost'
                   margin='normal'
                   fullWidth
@@ -335,7 +353,9 @@ const AddNewProduct = () => {
                 component='span'
                 variant='outlined'
                 startIcon={<CollectionsIcon />}
-                sx={{ m: '16px 0' }}
+                sx={{
+                  m: '16px 0', fontFamily: 'poppins, sans-serif'
+                }}
                 color="success"
               >Upload photo</Button>
             </label>
@@ -361,8 +381,8 @@ const AddNewProduct = () => {
             variant='contained'
 
             startIcon={<AddBoxOutlinedIcon />}
-            sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)'}}
-          
+            sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', fontFamily: 'poppins, sans-serif' }}
+
           >Add Product</Button>
         </Box>
       </Box>

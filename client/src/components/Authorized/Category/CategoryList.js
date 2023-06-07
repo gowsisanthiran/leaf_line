@@ -191,10 +191,11 @@ const CategoryList = () => {
           padding: '55px',
           marginBottom: '20px',
           marginTop:"20px",
+          fontFamily: 'poppins, sans-serif'
                 
         }}
       >
-        <Typography component='h1' color='#1b5e20' variant='h5' sx={{ m: 4 }}>
+        <Typography component='h1' color='#1b5e20' variant='h5' sx={{ m: 4 , fontFamily: 'poppins, sans-serif'}}>
           List of categories
         </Typography>
         {loading ? (
