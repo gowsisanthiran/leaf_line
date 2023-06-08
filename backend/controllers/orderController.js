@@ -5,6 +5,7 @@ const asyncHandler=require('express-async-handler');
 
 exports.newOrder=asyncHandler(async(req,res,next)=>{
     const {
+        shortId,
         shippingInfo,
         orderItems,
         paymentInfo,
@@ -14,6 +15,7 @@ exports.newOrder=asyncHandler(async(req,res,next)=>{
         totalPrice
     }=req.body;
     const order=await Order.create({
+        shortId,
         shippingInfo,
         orderItems,
         paymentInfo,
