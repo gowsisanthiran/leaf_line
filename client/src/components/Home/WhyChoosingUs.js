@@ -23,7 +23,7 @@
 //     margin: '0 auto',
 //     // marginTop: '3px',
 //     textAlign: 'left',
-    
+
 //   },
 //   title: {
 //     fontFamily: 'Jack Rooney , sans-serif',
@@ -160,11 +160,11 @@ const useStyles = makeStyles((theme) => ({
   background: {
     background: '#DAE2B6',
     // Add your custom styles for the background container
-    marginTop:'0.5rem',
-    padding:'20px',
-    paddingLeft:'50px',
-    paddingRight:'50px',
-    boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)' ,
+    marginTop: '0.5rem',
+    padding: '20px',
+    paddingLeft: '50px',
+    paddingRight: '50px',
+    boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)',
   },
   container: {
     margin: '0 auto',
@@ -184,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     marginTop: '1.5rem',
-    boxSizing:'border-box'
+    boxSizing: 'border-box'
   },
   imageCard: {
     display: 'flex',
@@ -232,7 +232,7 @@ const WhyChoosingUs = () => {
   const classes = useStyles();
 
   const carouselSettings = {
-    
+
     dots: true,
     infinite: true,
     speed: 500,
@@ -257,89 +257,144 @@ const WhyChoosingUs = () => {
   };
 
   return (
-    <Box className={classes.background}>
-      <Box className={classes.container} textAlign="left" style={{ margin: '10 auto', marginTop: '10px' }} data-aos="fade-up">
-        <Typography variant="h6" className={classes.title} sx={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', paddingTop: '30px' ,fontWeight: 'bold'}}>
-          <span style={{ color: 'green' }}>Why Choosing </span> Us!
-        </Typography>
-        <Box mt={4} data-aos="fade-up" data-aos-delay="100">
-          <Typography style={{ textAlign: 'center', fontFamily: 'Poppins, sans-serif', fontSize: '20px', color: 'green', marginTop: '5px'  }}>
-            Few Reasons Why People Choose Us!
-          </Typography>
+    <div id="shopify-section-template--14397371580514__1650880520dc2a6427" class="shopify-section">
+      <div class="our-history-area" id="section-template--14397371580514__1650880520dc2a6427">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-title text-center mb-35">
 
-          <Slider {...carouselSettings}style={{paddingLeft:'0px',paddingRight:'0px' ,paddingTop:'10px',alignItems:'center',padding:'10px'}}>
-            
-            {/* <div className={classes.imageCard} >
-              <img src={sl9} style={{  width: '500px', margin: '0px'}} alt="Image" />
-             
-            </div> */}
-       <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-      <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-        <img src={sl9} style={{ width: '500px', margin: '0px' }} alt="Image" />
-        <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-          <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-            <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-              <h5 className="header">Packaging</h5>
-              <p>Leafline banana leaf packages are sturdy and can hold a variety of hot and cold dishes.
-              </p>
+
+
+                <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Our </span>History</h2>
+
+
+
+
+
+                <span>A little story about us</span>
+
+
+
+              </div>
             </div>
-          </article>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 ml-auto mr-auto">
+              <div class="history-area-content text-center">
+
+
+                <p style={{fontFamily:'Poppins, sans-serif',textAlign:'justify'}}>am liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus. Phasellus eu rhoncus dolor, vitae scelerisque sapien
+                </p>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
         </div>
-      </a>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
-    
 
-    <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-      <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-        <img src={sl12} style={{ width: '500px', margin: '0px' }} alt="Image" />
-        <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-          <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-            <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-              <h5 className="header">Plates</h5>
-              <p>Leafline banana leaf plates are eco-friendly alternatives to traditional disposable plates.
-              </p>
-            </div>
-          </article>
-        </div>
-      </a>
-    </div>
 
-    <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-      <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-        <img src={sl13} style={{ width: '500px', margin: '0px' }} alt="Image" />
-        <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-          <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-            <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-              <h5 className="header">packages</h5>
-              <p>Using Leafline banana leaf plates helps reduce plastic waste and promotes a greener lifestyle
-              </p>
-            </div>
-          </article>
-        </div>
-      </a>
-    </div>
-    <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-      <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-        <img src={sl14} style={{ width: '500px', margin: '0px' }} alt="Image" />
-        <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-          <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-            <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-              <h5 className="header">Packs</h5>
-              <p>Leafline banana leaf packs are lightweight and easy to handle, making them convenient for both hosts and guests.
-              </p>
-            </div>
-          </article>
-        </div>
-      </a>
-    </div>
-          </Slider>
+    // <Box className={classes.background}>
+    //   <Box className={classes.container} textAlign="left" style={{ margin: '10 auto', marginTop: '10px' }} data-aos="fade-up">
+    //     <Typography variant="h6" className={classes.title} sx={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', paddingTop: '30px' ,fontWeight: 'bold'}}>
+    //       <span style={{ color: 'green' }}>Why Choosing </span> Us!
+    //     </Typography>
+    //     <Box mt={4} data-aos="fade-up" data-aos-delay="100">
+    //       <Typography style={{ textAlign: 'center', fontFamily: 'Poppins, sans-serif', fontSize: '20px', color: 'green', marginTop: '5px'  }}>
+    //         Few Reasons Why People Choose Us!
+    //       </Typography>
 
-         
-          
-        </Box>
-      </Box>
-    </Box>
+    //       <Slider {...carouselSettings}style={{paddingLeft:'0px',paddingRight:'0px' ,paddingTop:'10px',alignItems:'center',padding:'10px'}}>
+
+    //         {/* <div className={classes.imageCard} >
+    //           <img src={sl9} style={{  width: '500px', margin: '0px'}} alt="Image" />
+
+    //         </div> */}
+    //    <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
+    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
+    //     <img src={sl9} style={{ width: '500px', margin: '0px' }} alt="Image" />
+    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
+    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
+    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
+    //           <h5 className="header">Packaging</h5>
+    //           <p>Leafline banana leaf packages are sturdy and can hold a variety of hot and cold dishes.
+    //           </p>
+    //         </div>
+    //       </article>
+    //     </div>
+    //   </a>
+    // </div>
+
+
+
+    // <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
+    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
+    //     <img src={sl12} style={{ width: '500px', margin: '0px' }} alt="Image" />
+    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
+    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
+    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
+    //           <h5 className="header">Plates</h5>
+    //           <p>Leafline banana leaf plates are eco-friendly alternatives to traditional disposable plates.
+    //           </p>
+    //         </div>
+    //       </article>
+    //     </div>
+    //   </a>
+    // </div>
+
+    // <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
+    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
+    //     <img src={sl13} style={{ width: '500px', margin: '0px' }} alt="Image" />
+    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
+    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
+    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
+    //           <h5 className="header">packages</h5>
+    //           <p>Using Leafline banana leaf plates helps reduce plastic waste and promotes a greener lifestyle
+    //           </p>
+    //         </div>
+    //       </article>
+    //     </div>
+    //   </a>
+    // </div>
+    // <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
+    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
+    //     <img src={sl14} style={{ width: '500px', margin: '0px' }} alt="Image" />
+    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
+    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
+    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
+    //           <h5 className="header">Packs</h5>
+    //           <p>Leafline banana leaf packs are lightweight and easy to handle, making them convenient for both hosts and guests.
+    //           </p>
+    //         </div>
+    //       </article>
+    //     </div>
+    //   </a>
+    // </div>
+    //       </Slider>
+
+
+
+    //     </Box>
+    //   </Box>
+    // </Box>
   );
 };
 

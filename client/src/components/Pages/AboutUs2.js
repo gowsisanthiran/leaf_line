@@ -339,15 +339,15 @@ function AboutUs2() {
                         <section className="latest section">
                             <div className="container">
                             
-                                <h2 className="pb-3" style={{ fontFamily: 'Open Sans' }}>
-                                    About <span className="orange-text" style={{ color: 'green' }}>us</span>
+                                <h2 className="pb-3" style={{ fontFamily: 'Open Sans',fontSize:'40px',fontWeight:'bold',color: '#008000' }}>
+                                    About <span className="orange-text" style={{ color:'#212529'  }}>us</span>
                                 </h2>
-                                <h5 style={{ fontFamily: ' sans-serif', color: 'green' }}>
+                                <p style={{ fontFamily: 'Poppins, sans-serif' }}>
                                     Welcome to our banana leaf plate e-commerce website!
-                                </h5>
+                                </p>
                                 <div className="latest_wrapper d-flex flex-column-reverse flex-lg-row">
                                     <div className="latest_promo aos-init aos-animate" data-aos="fade-right">
-                                        <pictur>
+                                        <picture>
                                             <img
                                                 src={selectedImage}
                                                 alt="about something"
@@ -355,7 +355,7 @@ function AboutUs2() {
                                                 data-aos="fade-up"
                                                 data-aos-delay="100"
                                                 style={{ width: '600px', borderRadius: '20px', borderTopLeftRadius: '20px', marginLeft: '15px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }} />
-                                        </pictur>
+                                        </picture>
                                     </div>
                                     <ul className="latest_list col-lg-7 col-xl-6">
                                         <li className="list-item d-flex flex-column flex-sm-row aos-init aos-animate" data-aos="fade-up">

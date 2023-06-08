@@ -89,7 +89,7 @@ const AuthMenu = () => {
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2, backgroundColor: 'white' }}
+            sx={{ ml: 2, backgroundColor: '#008000' }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
