@@ -19,43 +19,79 @@ const OrderList = () => {
         dispatch(deleteOrder({ id, toast }));
     }
 
+    // const columns = [
+    //     // { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+    //     { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+    //     { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1, minWidth: 100 },
+    //     { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1, minWidth: 100, type: 'Number' },
+    //     { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1, minWidth: 80, type: 'Number' },
+    //     {
+    //         field: 'actions',
+    //         headerName: 'Actions',
+    //         headerClassName: 'gridHeader',
+    //         flex: .5,
+    //         minWidth: 80,
+    //         type: 'number',
+    //         sortable: false,
+    //         renderCell: (params) => {
+    //             return (
+
+    //                 <>
+    //                     <Link to={`/authorized/order/${params.getValue(params.id, 'id')}`}>
+    //                         <Tooltip title='Edit' placement='top'>
+    //                             <EditIcon sx={{ width: '30px', height: '30px', color: '#1b5e20' }} />
+    //                         </Tooltip>
+    //                     </Link>
+
+    //                     <Tooltip title='Delete' placement='top'>
+    //                         <IconButton color='error'
+    //                             component='span'
+    //                             onClick={() => deleteHandler(params.getValue(params.id, 'id'))}>
+    //                             <DeleteForeeverIcon sx={{ width: '30px', height: '30px' }} />
+    //                         </IconButton>
+    //                     </Tooltip>
+
+    //                 </>
+    //             )
+    //         }
+    //     }
+    // ]
     const columns = [
-        // { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
-        { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
-        { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1, minWidth: 100 },
-        { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1, minWidth: 100, type: 'Number' },
-        { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1, minWidth: 80, type: 'Number' },
+        { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1 },
+        { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1 },
+        { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1 },
+        { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1 },
         {
-            field: 'actions',
-            headerName: 'Actions',
-            headerClassName: 'gridHeader',
-            flex: .5,
-            minWidth: 80,
-            type: 'number',
-            sortable: false,
-            renderCell: (params) => {
-                return (
-
-                    <>
-                        <Link to={`/authorized/order/${params.getValue(params.id, 'id')}`}>
-                            <Tooltip title='Edit' placement='top'>
-                                <EditIcon sx={{ width: '30px', height: '30px', color: '#1b5e20' }} />
-                            </Tooltip>
-                        </Link>
-
-                        <Tooltip title='Delete' placement='top'>
-                            <IconButton color='error'
-                                component='span'
-                                onClick={() => deleteHandler(params.getValue(params.id, 'id'))}>
-                                <DeleteForeeverIcon sx={{ width: '30px', height: '30px' }} />
-                            </IconButton>
-                        </Tooltip>
-
-                    </>
-                )
-            }
-        }
-    ]
+          field: 'actions',
+          headerName: 'Actions',
+          headerClassName: 'gridHeader',
+          flex: 1,
+          sortable: false,
+          renderCell: (params) => {
+            return (
+              <>
+                <Link to={`/authorized/order/${params.getValue(params.id, 'id')}`}>
+                  <Tooltip title='Edit' placement='top'>
+                    <EditIcon sx={{ width: '30px', height: '30px', color: '#1b5e20' }} />
+                  </Tooltip>
+                </Link>
+      
+                <Tooltip title='Delete' placement='top'>
+                  <IconButton
+                    color='error'
+                    component='span'
+                    onClick={() => deleteHandler(params.getValue(params.id, 'id'))}
+                  >
+                    <DeleteForeeverIcon sx={{ width: '30px', height: '30px' }} />
+                  </IconButton>
+                </Tooltip>
+              </>
+            );
+          },
+        },
+      ];
+      
+      
     const rows = [];
     orders && orders.forEach(order => {
         rows.push({
@@ -74,6 +110,14 @@ const OrderList = () => {
     }, [dispatch, success])
 
     return (
+        <>
+        <Box
+          className='dash-box'
+          sx={{
+            padding: '40px',
+            minHeight: '100vh',
+          }}
+        >
         <Box
             sx={{
                 display: 'flex',
@@ -85,8 +129,8 @@ const OrderList = () => {
                 backgroundColor: '#fff',
                 padding: '55px',
                 justifyContent: "center",
-                marginLeft: "105px",
-                marginTop: "30px",
+                marginLeft: "124px",
+                marginTop: "75px",
 
             }}
         >
@@ -108,6 +152,8 @@ const OrderList = () => {
                 </Box>
             </div>
         </Box>
+        </Box>
+        </>
     )
 }
 

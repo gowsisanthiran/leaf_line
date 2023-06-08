@@ -81,7 +81,7 @@ const AdminDashboard = () => {
       <Box
         className='dash-box'
         sx={{
-          backgroundColor: '#bcbd8b',
+          backgroundColor: '#F6F7C1',
           padding: '40px',
           minHeight: '100vh',
         }}

@@ -103,6 +103,14 @@ const ReviewList = () => {
 
     return (
         <>
+        <Box
+          className='dash-box'
+          sx={{
+            padding: '40px',
+            minHeight: '100vh',
+          }}
+        >
+        <>
             <Box sx={{ textAlign: 'center', boxShadow: '2px 2px 2px 2px #588157', borderRadius: '5px', padding: '20px', height: "100% !important",   
  }}>
                 <Box sx={{ maxWidth: "500px", m: '30px auto', textAlign: 'left', boxShadow: '0px 0px 5px #006400', borderRadius: '5px', padding: '20px' }} color='white' >
@@ -144,6 +152,8 @@ const ReviewList = () => {
                         <Typography sx={{ mt: 3, fontFamily: 'poppins, sans-serif' }}>Select a product to view reviews.</Typography>
                 }
             </Box>
+        </>
+        </Box>
         </>
     )
 }

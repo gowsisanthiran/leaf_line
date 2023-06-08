@@ -111,7 +111,8 @@ import { toast } from 'react-toastify';
 
 import { Box, Typography, TextField, Button } from '@mui/material';
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
-
+//import bg1 from "../../images/background1.jpg"
+//import sl0001 from '../../images/bg1.jpeg';
 import {
   addCategory,
   resetMutationResult,
@@ -140,6 +141,15 @@ const AddNewCategory = () => {
   }, [success, dispatch]);
 
   return (
+    <>
+      <Box
+        className='dash-box'
+        sx={{
+          backgroundColor:"##F3EFE0",
+          padding: '40px',
+          minHeight: '100vh',
+        }}
+      >
     <div className="bigbox" >
       <Box
         sx={{
@@ -153,7 +163,7 @@ const AddNewCategory = () => {
           width: '100%',
           maxWidth: '580px',
           margin: '0 auto',
-          marginTop: "40px",
+          marginTop: "180px",
                     fontFamily: 'poppins, sans-serif',
         }}
       >
@@ -197,7 +207,7 @@ const AddNewCategory = () => {
             variant="contained"
             startIcon={<AddBoxOutlinedIcon />}
             sx={{
-              mt: 3,
+              mt: 4,
               mb: 2,
               fontFamily: 'poppins, sans-serif',
               backgroundColor:"#1b4332",            
@@ -209,6 +219,8 @@ const AddNewCategory = () => {
         </Box>
       </Box>
     </div>
+    </Box>
+    </>
   );
 };
 

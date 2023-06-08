@@ -122,6 +122,14 @@ const UpdateProduct = () => {
   }, [product]);
 
   return (
+    <>
+    <Box
+      className='dash-box'
+      sx={{
+        padding: '40px',
+        minHeight: '100vh',
+      }}
+    >
     <Box
       sx={{
         display: 'flex',
@@ -133,8 +141,8 @@ const UpdateProduct = () => {
         backgroundColor: '#fff',
         padding: '55px',
         justifyContent: "center",
-        marginLeft: "400px",
-        marginTop:"20px",
+        marginLeft: "440px",
+        marginTop:"60px",
                 marginBottom:"20px"
       }}
       >
@@ -387,6 +395,8 @@ const UpdateProduct = () => {
       </>
       </div>
     </Box>
+    </Box>
+    </>
   )
 }
 

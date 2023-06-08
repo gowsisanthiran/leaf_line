@@ -130,6 +130,14 @@ const AddNewProduct = () => {
   }, [success, dispatch]);
 
   return (
+    <>
+    <Box
+      className='dash-box'
+      sx={{
+        padding: '40px',
+        minHeight: '100vh',
+      }}
+    >
     <Box
       sx={{
         display: 'flex',
@@ -141,9 +149,10 @@ const AddNewProduct = () => {
         backgroundColor: '#fff',
         padding: '55px',
         justifyContent: "center",
-        marginLeft: "400px",
-        marginTop: "20px",
+        marginLeft: "440px",
+        marginTop: "65px",
         marginBottom: "20px",
+        
         cursor: 'pointer', 
 
 
@@ -393,6 +402,8 @@ const AddNewProduct = () => {
         </Box>
       </div>
     </Box>
+    </Box>
+    </>
   )
 }
 

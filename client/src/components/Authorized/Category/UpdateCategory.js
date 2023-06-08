@@ -136,12 +136,21 @@ const UpdateCategory = () => {
   }, [category]);
 
   return (
+    <>
+    <Box
+      className='dash-box'
+      sx={{
+        
+        padding: '40px',
+        minHeight: '100vh',
+      }}
+    >
     <Container maxWidth="sm">
       {loading ? (
         <BoxShadowLoader />
       ) : (
         <Box sx={{ marginTop: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Typography component='div' color='#1b5e20' variant='h5' fontFamily= 'poppins, sans-serif'>
+          <Typography component='div' color='#1b5e20' variant='h5' fontFamily= 'poppins, sans-serif' marginTop="20px">
             Update category
           </Typography>
           <Box component='form' onSubmit={handleSubmit} sx={{ mt: 2 }}>
@@ -189,6 +198,8 @@ const UpdateCategory = () => {
         </Box>
       )}
     </Container>
+    </Box>
+    </>
   );
 };
 

@@ -49,10 +49,11 @@ const ProcessOrder = () => {
 
 
     return (
+       
         <>
             {loading ? <BoxShadowLoader /> :
                 <>
-                    <Typography component='h1' variant='h5' gutterBottom sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>
+                    <Typography component='h1' variant='h5' gutterBottom sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif', marginTop: "85px", }}>
                         Order details
                     </Typography>
 
@@ -265,7 +266,7 @@ const ProcessOrder = () => {
                                             }
                                         </Select>
                                     </FormControl>
-                                    <Button variant='contained' sx={{backgroundColor:"#4E6C50"}}
+                                    <Button  variant='contained' sx={{backgroundColor:"#1b4332"}}
 
                                         startIcon={<UpdateIcon />}
                                         onClick={submitHandler}
@@ -281,6 +282,7 @@ const ProcessOrder = () => {
                 </>
             }
         </>
+        
     )
 }
 
