@@ -14,10 +14,7 @@
   margin-bottom: 0%;
   }
 .container-fluid.main .navbar{
-  position :fixed;
-
-
-  
+  position :fixed
 }
 
 .navbar-default {
@@ -37,7 +34,6 @@
 }
 
 .navbar{
- 
   transition: background-color 0.3s;
   overflow:visible;
 

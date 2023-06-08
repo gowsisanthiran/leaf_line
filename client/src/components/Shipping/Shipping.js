@@ -199,7 +199,7 @@ const Shipping = () => {
           <Button type='submit'
             variant='contained'
             startIcon={<LocalShippingIcon />}
-            sx={{ m: 4, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)' }}>
+            sx={{ m: 4, backgroundColor: '#617A55' }}>
             Continue
           </Button>
 

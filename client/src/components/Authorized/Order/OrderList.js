@@ -20,7 +20,8 @@ const OrderList = () => {
     }
 
     const columns = [
-        { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+        // { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+        { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
         { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1, minWidth: 100 },
         { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1, minWidth: 100, type: 'Number' },
         { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1, minWidth: 80, type: 'Number' },
@@ -58,6 +59,7 @@ const OrderList = () => {
     const rows = [];
     orders && orders.forEach(order => {
         rows.push({
+            orderId:order.shortId,
             id: order._id,
             status: order.orderStatus,
             itemsQty: order.orderItems.length,

@@ -14,7 +14,8 @@ const MyOrders = () => {
   const { loading, orders } = useSelector(selectAllOrders);
 
   const columns = [
-    { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+    // { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+    { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
     { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1, minWidth: 100 },
     { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1, minWidth: 100, type: 'number' },
     { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1, minWidth: 80, type: 'number' },
@@ -42,6 +43,7 @@ const MyOrders = () => {
 
   const rows = orders?.map((order) => ({
     id: order._id,
+    orderId:order.shortId,
     status: order.orderStatus,
     itemsQty: order.orderItems.length,
     amount: order.totalPrice,

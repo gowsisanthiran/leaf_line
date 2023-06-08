@@ -92,7 +92,7 @@ const Cart = () => {
       <Box sx={{ textAlign: 'center' }}>
         <Button
           variant='contained'
-          sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)' }}
+          sx={{ backgroundColor: '#617A55 ','&:hover': { backgroundColor: '#CCD5AE' }}}
           startIcon={<ShoppingCartCheckoutIcon />}
           onClick={checkOutHandler}
         >

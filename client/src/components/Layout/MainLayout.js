@@ -13,15 +13,14 @@ const MainLayout = () => {
         <>
             <div className='site'>
                 <div className='header'>
-                    {isHomePage ? <Header /> : <Header2 />}
+                    {isHomePage ? <Header /> : ''}
                 </div>
-                {isHomePage ? '' : <div className="content"></div>}
+                {/* {isHomePage ? '' : <div className="content"></div>} */}
 
                 <Outlet />
-                <div className="footerBottom">
-                {isHomePage ? <Footer /> : <FooterSmall />}
-                </div>
             </div>
+             <Footer /> 
+
         </>
     )
 }

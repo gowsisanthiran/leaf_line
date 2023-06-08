@@ -178,15 +178,15 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto justify-content-center align-items-center "style={{marginRight:'20px'}}>
+            {/* <ul className="navbar-nav ml-auto justify-content-center align-items-center "style={{marginRight:'20px'}}>
               <li className="nav-item"style={{marginLeft:'100px'}}>
                 <NavLink to="/" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans, sans-serif',color:'#BACC81' }}>
-                  <HomeIcon /> Home
+                  <HomeIcon /> 
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/product" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans, sans-serif',color:'#BACC81'  }}>
-                  <Inventory2Icon/>Product
+                  <Inventory2Icon/>
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -194,12 +194,41 @@ const Header = () => {
                   <StyledBadge badgeContent={products.length}>
                     <ShoppingCartIcon />
                   </StyledBadge>
-                  Cart
+                  
                 </NavLink>
               </li>
-            </ul>
+              <li className="nav-item">
+                <NavLink  className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans',color:'#BACC81'  }}>
+                <AuthMenu />
+                </NavLink>
+              </li>
+            </ul> */}
+            <ul className="navbar-nav ml-auto justify-content-center align-items-center" style={{ marginRight: '10px' }}>
+  <li className="nav-item" style={{ marginLeft: '65%' }}>
+    <NavLink to="/" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans, sans-serif', color: '#BACC81'}}>
+      <HomeIcon style={{color: "#5f8273" ,width:'30px', height:'30px'}}/> 
+    </NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink to="/product" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans, sans-serif', color: '#BACC81', }}>
+      <Inventory2Icon style={{color: "#5f8273" ,width:'30px', height:'30px'}}/>
+    </NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink to="/cart" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans', color: '#BACC81' }}>
+      <StyledBadge badgeContent={products.length}>
+        <ShoppingCartIcon style={{color: "#5f8273" ,width:'30px', height:'30px'}}/>
+      </StyledBadge>
+    </NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans', color: '#BACC81' }}>
+    </NavLink>
+  </li>
+</ul>
             <div className="auth-area text-left">
-            <AuthMenu />
+            <AuthMenu style={{color: "#5f8273" ,width:'30px', height:'30px'}}/>
+
           </div>
           </div>
           {/* <div className="d-flex align-items-center justify-content-end" style={{ marginTop: '80px',color:'#bdf890' }}>
@@ -213,7 +242,7 @@ const Header = () => {
  <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000" style={{ backgroundImage: `url(${bg})`}}>
   <div class="carousel-inner" role="listbox" >
     <div class="item active background a zoom-effect">
-      <img src={bg} alt="Image"style={{ opacity: 0.2 }}  />
+      {/* <img src={bg} alt="Image"style={{ opacity: 0.2 }}  /> */}
       
     </div>
     

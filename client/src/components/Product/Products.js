@@ -92,6 +92,46 @@ const Products = () => {
   };  
     
   return (
+    <div className="breadcrumb-tow" style={{ background: '#f4f4f4', paddingTop: '55px', paddingBottom: '50px' }}>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+
+            <div className="breadcrumb-title"style={{color:'#40513B'}}>
+              <h1 style={{fontSize: '40px',fontFamily: 'Open Sans',color: 'green',fontWeight: 'bold'}}>Products</h1>
+            </div>
+
+            <div className="breadcrumb-content breadcrumb-content-tow"style={{backgroundColor:'#E9EDC9'}}>
+
+              <nav className="link " role="navigation" aria-label="breadcrumbs" style={{marginLeft:"43%"}}>
+                <ul className="breadcrumb-list"style={{color:'#609966',textDecoration: 'none',}}>
+
+                  <li>
+                    <a href="/" title="Back to the home page"style={{color:'#609966',textDecoration: 'none',fontFamily: 'Poppins, sans-serif'}}>Home </a>
+                  </li>
+                  <li>
+                   <span style={{color:'#609966',textDecoration: 'none',marginRight:'5px'}}>|</span>
+                  </li>
+                  <li>
+                  <a href="/cart" title="Back to the cart page"style={{color:'#609966',textDecoration: 'none',marginRight:'35px',fontFamily: 'Poppins, sans-serif'}}>Cart </a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="breadcrumb-one mb-70">
+      <div className="breadcrumb-img">
+        <a href="/">
+          <img src="https://i.ndtvimg.com/i/2015-12/banana-leaf_625x350_51450425264.jpg" alt="banner-img" style={{marginLeft:'325px',width:'1250px',height:'350px',boxSizing: 'border-box',
+}} />
+        </a>
+      </div>
+    </div>
+    
     <Box className='wrapper' style={{marginTop:'5rem'}}>
         <Box className='filter-box'>
         <Accordion>
@@ -251,6 +291,7 @@ const Products = () => {
             }
         </Box>
     </Box>
+    </div>
   )
 }
 
