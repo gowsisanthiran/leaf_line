@@ -180,7 +180,8 @@ const UpdateCategory = () => {
               disabled={isUpdating ? true : false}
               variant='contained'
               startIcon={<UpdateIcon />}
-              sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)',  fontFamily:'poppins, sans-serif' }}
+              sx={{ mt: 3, mb: 2,  fontFamily:'poppins, sans-serif', backgroundColor:"#1b4332",            
+              borderRadius:"10px"}}
             >
               Update Category
             </Button>

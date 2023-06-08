@@ -83,7 +83,7 @@ const WhyWorkWithUs = () => {
 
 
 return (
- <div style={{backgroundColor: '#DAE2B6',boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)',marginTop:'50px' }}>
+ <div style={{backgroundColor: '#DAE2B6',boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
    <section className="eco_services_environment" style={{sectionStyle }} data-aos="fade-up">
     <Container >
       {/* <div className="eco_headings" data-aos="fade-up" data-aos-delay="100">
@@ -97,28 +97,27 @@ return (
       </div> */}
       <div className="eco_services" data-aos="fade-up" data-aos-delay="100">
         <Row>
-          <Col md={4} sm={6} xs={12}>
+          <Col md={4} sm={6} xs={12} style={{paddingTop:'50px'}} >
             <div className="eco_items-services">
               <div className="eco_service_cols">
                 <span style={iconStyle}>
               <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>              </span>
                 <div data-aos="fade-up" data-aos-delay="100">
                   <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Recycling</h4>
-                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
-                  Reuse items whenever possible before considering recycling.
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify'}} >
+                     Reuse items whenever possible before considering recycling.
                   </p>
                 </div>
               </div>
               <div className="eco_service_cols">
                 <span style={iconStyle}>
                  
-                {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
                 <WaterDropTwoToneIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>
                 </span>
               
                 <div data-aos="fade-up" data-aos-delay="100">
                 <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>ECO System</h4>
-                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify'}} >
                   Eco systems support biodiversity by providing habitats and food sources for a variety of species.
                   </p>
                 </div>
@@ -132,7 +131,7 @@ return (
               </div>
             </figure>
           </Col>
-          <Col md={4} sm={6} xs={12}>
+          <Col md={4} sm={6} xs={12} style={{paddingTop: '50px'}}>
             <div className="eco_items-services">
               <div className="eco_service_cols rtl_service">
                 <span style={iconStyle}>
@@ -140,18 +139,17 @@ return (
                   <SpaTwoToneIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>               </span>
                 <div data-aos="fade-up" data-aos-delay="100">
                 <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Organic</h4>
-                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
-                  Organic agriculture helps protect water quality by reducing pollution from synthetic chemicals.                  </p>
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify'}} >
+                  Organic agriculture helps protect water quality.</p>
                 </div>
               </div>
               <div className="eco_service_cols rtl_service">
                 <span style={iconStyle}>
                 <FavoriteTwoToneIcon style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
-                {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
                 </span>
-                <div data-aos="fade-up" data-aos-delay="100">
+                <div data-aos="fade-up" data-aos-delay="100" >
                 <h4 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Nature friendly</h4>
-                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif'}} >
+                  <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify'}} >
                   A Taste of Sustainability for a Greener World, Rediscover Nature's Bounty with Banana Plates!                  </p>
                 </div>
               </div>

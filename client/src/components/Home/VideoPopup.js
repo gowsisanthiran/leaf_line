@@ -13,12 +13,12 @@ const VideoPopup = () => {
     <div>
 
       <div className="abt-section mb-150" data-aos="fade-up" style={{ backgroundImage: `url(${sl0001})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <Container sx={{ marginTop: '50px', marginBottom: '100px', }}>
+        <Container sx={{ marginTop: '50px', marginBottom: '50px', }}>
           <Grid container spacing={2}>
 
             <Grid>
               <Typography variant="h3" component="h3" style={{ fontFamily: 'Open Sans', fontSize: '46px', display: 'block', paddingLeft: '350px', margin: '0 ', paddingTop: '20px',textAlign:'center' }}>
-                How to prepare  <span style={{ color: 'green' }} data-aos="fade-up" data-aos-delay="500">Our Plates</span>
+              <span style={{ color: 'green' }} data-aos="fade-up" data-aos-delay="500">How </span>to prepare Our Plates
               </Typography>
             </Grid>
             <Grid>

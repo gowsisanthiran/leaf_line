@@ -5,15 +5,22 @@
 
  
 
-.fullDiv{
+/* .fullDiv{
   margin-top: -5px;
-}
+} */
 
 .WhyWorkWithUs{
-  padding-top: 15px;
+  margin-top:50px;
+
 }
 
 .WhyChoosingUs{
-  padding-top: 15px;
+  margin-top:50px;
 }
 
+.topRated{
+  margin-top:50px;
+}
+.aboutUs{
+  margin-top:50px;
+}

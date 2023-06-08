@@ -75,29 +75,37 @@ const ProductList = () => {
                 flexDirection: 'column',
                 width: '85%',
                 textAlign: 'center',
-                boxShadow: '0 2px 4px #285430',
+                boxShadow: '2px 2px 2px 2px #588157',                
                 borderRadius: '4px',
                 backgroundColor: '#fff',
                 padding: '55px',
                 justifyContent: "center",
                 marginLeft: "105px",
-                marginTop: "20px",
-                marginBottom: "20px"
+                marginTop: "45px",
+
+                // marginBottom: "20px",
             }}
         >
+            <div
+                style={{
+                    maxHeight: '520px',
+                    overflowY: 'scroll',
+                }}
+            >
 
 
-            <Box style={{ displya: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
-                <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20' fontFamily='poppins, sans-serif'
-                >List of products</Typography>
-                {loading ? <BoxShadowLoader /> :
-                    <DataGrid rows={rows}
-                        columns={columns}
-                        components={{ Toolbar: GridToolbar }}
-                        autoHeight
-                    />
-                }
-            </Box>
+                <Box style={{ displya: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
+                    <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20' fontFamily='poppins, sans-serif'
+                    >List of products</Typography>
+                    {loading ? <BoxShadowLoader /> :
+                        <DataGrid rows={rows}
+                            columns={columns}
+                            components={{ Toolbar: GridToolbar }}
+                            autoHeight
+                        />
+                    }
+                </Box>
+            </div>
         </Box>
     )
 }

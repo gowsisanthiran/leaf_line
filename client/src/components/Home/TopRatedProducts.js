@@ -34,13 +34,13 @@ const TopRatedProducts=()=> {
   }, []);
 
   return (
-    <div style={{display: 'block'}} data-aos="fade-up">
-      <div className='col-lg-12   text-center'style={{marginTop:'150px', marginBottom: '50px'}}>
-        <Box className="containerx col-lg-8 offset-lg-2 text-center" sx={{ textAlign: 'center', fontFamily: 'serif' }}>
-          <Typography variant="h5" className="m-4 p-1 text-dark text-center" sx={{fontFamily: 'Open Sans , sans-serif',fontWeight: 'bold'}}>
+    <div style={{display: 'block',backgroundColor: ' #DAE2B6',boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)',paddingBottom:'10px'}} data-aos="fade-up">
+      <div className='col-lg-12 text-center'>
+        <Box className="containerx col-lg-8 offset-lg-2 text-center" sx={{ textAlign: 'center'}}>
+          <Typography variant="h5" className="m-4 p-1 text-dark text-center" sx={{fontFamily: 'Open Sans , sans-serif',fontWeight: 'bold',fontSize:'40px'}}>
             <span style={{color:'green'}}>Top-Rated</span><span>&nbsp;&nbsp;</span>  Products
           </Typography>
-          <Typography variant="" className="m-4 p-1 text-dark text-center"sx={{ fontFamily: 'Poppins, sans-serif', textAlign: 'center',fontSize: '15px',}}  data-aos="fade-up" data-aos-delay="100">
+          <Typography variant="" className="m-4 p-1 text-dark text-center"sx={{ fontFamily: 'Poppins, sans-serif', textAlign: 'justify',fontSize: '20px'}}  data-aos="fade-up" data-aos-delay="100">
           Banana leaf plates, also known as "vaazhai ilai" in some regions, are a traditional and eco-friendly alternative to disposable plates. In our LEAFLINE this products are very unique.         </Typography>
           <Grid container spacing={5} justifyContent="center"sx={{paddingTop:'20px'}}  data-aos="fade-up" data-aos-delay="200">
             {topRatedProduct &&

@@ -109,14 +109,6 @@
   /* background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),  url("../../images/bgimg.jpg"); */
 }
 
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
-}
-
-.carousel-fade .carousel-inner .active {
-  opacity: 1;
-}
 
 /* CSS Hack to trigger GPU for smooth transition */
 
@@ -177,7 +169,7 @@
 }
 
 
-
+/* 
 .zoom-effect {
   animation: zoom 10s infinite;
   transform-origin: center;
@@ -193,7 +185,7 @@
   100% {
     transform: scale(1);
   }
-}
+} */
 
 .title {
   font-size: 3rem;
@@ -222,7 +214,7 @@
 }
 
 
-.zoom-effect {
+/* .zoom-effect {
   animation: zoom 20s infinite;
   transform-origin: center;
 }
@@ -236,7 +228,7 @@
   100% {
     transform: scale(1);
   }
-}
+} */
 
 
 nav.navbar .container {

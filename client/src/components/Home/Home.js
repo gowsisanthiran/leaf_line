@@ -25,25 +25,25 @@ import OurTeam from './OurTeam';
 const Home = () => {
   return (
     <Box className='fullDiv'>
-      {/* <Header /> */}
 
       {/*div02  */}
       <div className='WhyWorkWithUs'>
         <WhyWorkWithUs />
       </div>
 
-      <div>
-        <TopRatedProducts />
-      </div>
-      {/* end div 2 */}
       <div className='WhyChoosingUs'>
         <WhyChoosingUs />
       </div>
+
+      <div className='topRated'>
+        <TopRatedProducts />
+      </div>
+      {/* end div 2 */}
+      
       {/* div 3 */}
-
+<div className='aboutsUs'>
       <AboutUs2/>
-      {/* end div 3 */}
-
+      </div>
       {/* <AboutUs /> */}
       <VideoPopup/>
       <ContactUs />

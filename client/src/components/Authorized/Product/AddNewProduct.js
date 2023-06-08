@@ -136,7 +136,7 @@ const AddNewProduct = () => {
         flexDirection: 'column',
         width: '45%',
         textAlign: 'center',
-        boxShadow: '0 2px 4px #285430',
+        boxShadow: '2px 2px 2px 2px #588157',
         borderRadius: '4px',
         backgroundColor: '#fff',
         padding: '55px',
@@ -144,248 +144,254 @@ const AddNewProduct = () => {
         marginLeft: "400px",
         marginTop: "20px",
         marginBottom: "20px",
-        cursor: 'pointer', // Add cursor style here
+        cursor: 'pointer', 
 
-      
+
+      }}
+    >
+      <div
+        style={{
+          maxHeight: '520px',
+          overflowY: 'scroll',
         }}
       >
-     
-      <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>
-        <Typography component='div' color="#1b5e20" variant='h5' sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Add new product</Typography>
-        <Box component='form' onSubmit={handleSubmit}>
-          <TextField type='text'
-            id='title'
-            label='Title'
-            fontFamily='poppins, sans-serif'
+        <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>
+          <Typography component='div' color="#1b5e20" variant='h5' sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Add new product</Typography>
+          <Box component='form' onSubmit={handleSubmit}>
+            <TextField type='text'
+              id='title'
+              label='Title'
+              fontFamily='poppins, sans-serif'
 
-            name='title'
-            margin='normal'
-            required
-            fullWidth
-            autoFocus
-            value={title}
-            onChange={(e => setTitle(e.target.value))}
-            color="success"
-          />
-          <TextareaAutosize required
-            aria-label='description'
-            fontFamily='poppins, sans-serif'
-            minRows={5}
-            placeholder='Description'
-            value={description}
-            style={{ width: '100%', marginTop: '16px' }}
-            onChange={(e => setDescription(e.target.value))}
-            color="green"
-          />
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <TextField type='number'
-                id='price'
-                fontFamily='poppins, sans-serif'
-                label='Price'
-                name='price'
-                margin='normal'
-                required
-                fullWidth
-                value={price}
-                onChange={(e => setPrice(e.target.value))}
-                color="success"
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <TextField type='number'
-                id='discount'
-                fontFamily='poppins, sans-serif'
-                label='Discount'
-                name='discount'
-                margin='normal'
-                required
-                fullWidth
-                value={discount}
-                onChange={(e => setDiscount(e.target.value))}
-                color="success"
-              />
-            </Grid>
-          </Grid>
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <InfoTooltip placement='right'
-                arrow
-                title='Weight in kg. Put weight if items weight exceed 5kg'>
+              name='title'
+              margin='normal'
+              required
+              fullWidth
+              autoFocus
+              value={title}
+              onChange={(e => setTitle(e.target.value))}
+              color="success"
+            />
+            <TextareaAutosize required
+              aria-label='description'
+              fontFamily='poppins, sans-serif'
+              minRows={5}
+              placeholder='Description'
+              value={description}
+              style={{ width: '100%', marginTop: '16px' }}
+              onChange={(e => setDescription(e.target.value))}
+              color="green"
+            />
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
                 <TextField type='number'
-                  id='weight'
+                  id='price'
                   fontFamily='poppins, sans-serif'
-                  label='Weight'
-                  name='weight'
+                  label='Price'
+                  name='price'
                   margin='normal'
+                  required
                   fullWidth
-                  value={weight}
-                  onChange={(e => setWeight(e.target.value))}
+                  value={price}
+                  onChange={(e => setPrice(e.target.value))}
                   color="success"
                 />
-              </InfoTooltip>
-            </Grid>
-            <Grid item xs={6}>
-              <TextField type='number'
-                id='stock'
-                fontFamily='poppins, sans-serif'
-                label='Stock'
-                name='stock'
-                margin='normal'
-                required
-                fullWidth
-                value={stock}
-                onChange={(e => setStock(e.target.value))}
-                color="success"
-                min="10"
-              />
-            </Grid>
-          </Grid>
-
-          <Grid container spacing={2} sx={{ mt: '4px' }}>
-            <Grid item xs={6}>
-              <FormControl fullWidth>
-                <InputLabel id='category'>Category</InputLabel>
-                <Select required
-                  labelId='category'
-                  id='category'
-                  fontFamily='poppins, sans-serif'
-                  value={category}
-                  label='Category'
-                  onChange={(e => setCategory(e.target.value))}
-                  color="success"
-                >
-
-                  {categories && categories.map((cat) =>
-                    <MenuItem key={cat._id} value={cat._id}>{cat.title}</MenuItem>
-                  )}
-                </Select>
-              </FormControl>
-            </Grid>
-
-          </Grid>
-
-
-          <Grid container spacing={2} sx={{ mt: '16px' }}>
-            <Grid item xs={6}>
-              <FormControl fullWidth>
-                <InputLabel id='localShipmentPolicy'>Local Shipment Policy</InputLabel>
-                <Select required
-                  labelId='localShipmentPolicy'
-                  fontFamily='poppins, sans-serif'
-                  id='localShipmentPolicy'
-                  value={localShipmentPolicy}
-                  label='Local Shipment Policy'
-                  onChange={(e => setLocalShipmentPolicy(e.target.value))}
-                  color="success">
-
-                  {POLICIES && POLICIES.map((policy) =>
-                    <MenuItem key={policy.id} value={policy.type}>{policy.title}</MenuItem>
-                  )}
-                </Select>
-              </FormControl>
-            </Grid>
-            <Grid item xs={6}>
-              <FormControl fullWidth>
-                <InputLabel id='internationalShipmentPolicy'>International Shipment Policy</InputLabel>
-                <Select required
-                  labelId='internationalShipmentPolicy'
-                  id='internationalShipmentPolicy'
-                  fontFamily='poppins, sans-serif'
-                  value={internationalShipmentPolicy}
-                  label='International Shipment Policy'
-                  onChange={(e => setInternationalShipmentPolicy(e.target.value))}
-                  color="success">
-
-                  {POLICIES && POLICIES.map((policy) =>
-                    <MenuItem key={policy.id} value={policy.type}>{policy.title}</MenuItem>
-                  )}
-                </Select>
-              </FormControl>
-            </Grid>
-          </Grid>
-
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              {localShipmentPolicy !== 'custom' ? '' :
+              </Grid>
+              <Grid item xs={6}>
                 <TextField type='number'
-                  id='customLocalShipmentCost'
+                  id='discount'
                   fontFamily='poppins, sans-serif'
-                  label='Local Shipment Cost'
-                  name='customLocalShipmentCost'
+                  label='Discount'
+                  name='discount'
                   margin='normal'
+                  required
                   fullWidth
-                  value={customLocalShipmentCost}
-                  onChange={(e => setCustomLocalShipmentCost(e.target.value))}
+                  value={discount}
+                  onChange={(e => setDiscount(e.target.value))}
                   color="success"
                 />
-              }
+              </Grid>
             </Grid>
-            <Grid item xs={6}>
-              {internationalShipmentPolicy !== 'custom' ? '' :
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+                <InfoTooltip placement='right'
+                  arrow
+                  title='Weight in kg. Put weight if items weight exceed 5kg'>
+                  <TextField type='number'
+                    id='weight'
+                    fontFamily='poppins, sans-serif'
+                    label='Weight'
+                    name='weight'
+                    margin='normal'
+                    fullWidth
+                    value={weight}
+                    onChange={(e => setWeight(e.target.value))}
+                    color="success"
+                  />
+                </InfoTooltip>
+              </Grid>
+              <Grid item xs={6}>
                 <TextField type='number'
-                  id='customInternationalShipmentCost'
-                  label='International Shipment Cost'
+                  id='stock'
                   fontFamily='poppins, sans-serif'
-                  name='customInternationalShipmentCost'
+                  label='Stock'
+                  name='stock'
                   margin='normal'
+                  required
                   fullWidth
-                  value={customInternationalShipmentCost}
-                  onChange={(e => setCustomInternationalShipmentCost(e.target.value))}
+                  value={stock}
+                  onChange={(e => setStock(e.target.value))}
+                  color="success"
+                  min="10"
+                />
+              </Grid>
+            </Grid>
+
+            <Grid container spacing={2} sx={{ mt: '4px' }}>
+              <Grid item xs={6}>
+                <FormControl fullWidth>
+                  <InputLabel id='category'>Category</InputLabel>
+                  <Select required
+                    labelId='category'
+                    id='category'
+                    fontFamily='poppins, sans-serif'
+                    value={category}
+                    label='Category'
+                    onChange={(e => setCategory(e.target.value))}
+                    color="success"
+                  >
+
+                    {categories && categories.map((cat) =>
+                      <MenuItem key={cat._id} value={cat._id}>{cat.title}</MenuItem>
+                    )}
+                  </Select>
+                </FormControl>
+              </Grid>
+
+            </Grid>
+
+
+            <Grid container spacing={2} sx={{ mt: '16px' }}>
+              <Grid item xs={6}>
+                <FormControl fullWidth>
+                  <InputLabel id='localShipmentPolicy'>Local Shipment Policy</InputLabel>
+                  <Select required
+                    labelId='localShipmentPolicy'
+                    fontFamily='poppins, sans-serif'
+                    id='localShipmentPolicy'
+                    value={localShipmentPolicy}
+                    label='Local Shipment Policy'
+                    onChange={(e => setLocalShipmentPolicy(e.target.value))}
+                    color="success">
+
+                    {POLICIES && POLICIES.map((policy) =>
+                      <MenuItem key={policy.id} value={policy.type}>{policy.title}</MenuItem>
+                    )}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={6}>
+                <FormControl fullWidth>
+                  <InputLabel id='internationalShipmentPolicy'>International Shipment Policy</InputLabel>
+                  <Select required
+                    labelId='internationalShipmentPolicy'
+                    id='internationalShipmentPolicy'
+                    fontFamily='poppins, sans-serif'
+                    value={internationalShipmentPolicy}
+                    label='International Shipment Policy'
+                    onChange={(e => setInternationalShipmentPolicy(e.target.value))}
+                    color="success">
+
+                    {POLICIES && POLICIES.map((policy) =>
+                      <MenuItem key={policy.id} value={policy.type}>{policy.title}</MenuItem>
+                    )}
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+                {localShipmentPolicy !== 'custom' ? '' :
+                  <TextField type='number'
+                    id='customLocalShipmentCost'
+                    fontFamily='poppins, sans-serif'
+                    label='Local Shipment Cost'
+                    name='customLocalShipmentCost'
+                    margin='normal'
+                    fullWidth
+                    value={customLocalShipmentCost}
+                    onChange={(e => setCustomLocalShipmentCost(e.target.value))}
+                    color="success"
+                  />
+                }
+              </Grid>
+              <Grid item xs={6}>
+                {internationalShipmentPolicy !== 'custom' ? '' :
+                  <TextField type='number'
+                    id='customInternationalShipmentCost'
+                    label='International Shipment Cost'
+                    fontFamily='poppins, sans-serif'
+                    name='customInternationalShipmentCost'
+                    margin='normal'
+                    fullWidth
+                    value={customInternationalShipmentCost}
+                    onChange={(e => setCustomInternationalShipmentCost(e.target.value))}
+                    color="success"
+                  />
+                }
+              </Grid>
+            </Grid>
+
+            <Box>
+              <label htmlFor='productImage'>
+                <Input accept='image/'
+                  id='productImage'
+                  multiple
+                  type='file'
+                  name='productImage'
+                  onChange={imageHandler}
                   color="success"
                 />
-              }
-            </Grid>
-          </Grid>
+                <Button type='button'
+                  fullWidth
+                  component='span'
+                  variant='outlined'
+                  startIcon={<CollectionsIcon />}
+                  sx={{
+                    m: '16px 0', fontFamily: 'poppins, sans-serif'
+                  }}
+                  color="success"
+                >Upload photo</Button>
+              </label>
+            </Box>
+            {images.length > 0 ?
+              <Box className='galleryback'>
+                {images.map((image, index) => (
+                  <img key={index} src={image} alt='product image' style={{ maxWidth: 90, maxHeight: 80, padding: '0 5px' }} color="success" />
+                ))}
 
-          <Box>
-            <label htmlFor='productImage'>
-              <Input accept='image/'
-                id='productImage'
-                multiple
-                type='file'
-                name='productImage'
-                onChange={imageHandler}
-                color="success"
-              />
-              <Button type='button'
-                fullWidth
-                component='span'
-                variant='outlined'
-                startIcon={<CollectionsIcon />}
-                sx={{
-                  m: '16px 0', fontFamily: 'poppins, sans-serif'
-                }}
-                color="success"
-              >Upload photo</Button>
-            </label>
+              </Box>
+              :
+              <Box className='galleryback' style={{ backgroundImage: `url("${galleryback}")` }}>
+                <img src={gallery} alt='LeafLine nophoto' color="success" />
+              </Box>
+            }
+
+
+
+            <Button type='submit'
+              fullWidth
+              disabled={loading ? true : false}
+              variant='contained'
+
+              startIcon={<AddBoxOutlinedIcon />}
+              sx={{ mt: 3, mb: 2,backgroundColor:"#1b4332",borderRadius:"10px", fontFamily: 'poppins, sans-serif' }}
+
+            >Add Product</Button>
           </Box>
-          {images.length > 0 ?
-            <Box className='galleryback'>
-              {images.map((image, index) => (
-                <img key={index} src={image} alt='product image' style={{ maxWidth: 90, maxHeight: 80, padding: '0 5px' }} color="success" />
-              ))}
-
-            </Box>
-            :
-            <Box className='galleryback' style={{ backgroundImage: `url("${galleryback}")` }}>
-              <img src={gallery} alt='LeafLine nophoto' color="success" />
-            </Box>
-          }
-
-
-
-          <Button type='submit'
-            fullWidth
-            disabled={loading ? true : false}
-            variant='contained'
-
-            startIcon={<AddBoxOutlinedIcon />}
-            sx={{ mt: 3, mb: 2, backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', fontFamily: 'poppins, sans-serif' }}
-
-          >Add Product</Button>
         </Box>
-      </Box>
+      </div>
     </Box>
   )
 }

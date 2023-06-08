@@ -140,21 +140,21 @@ const AddNewCategory = () => {
   }, [success, dispatch]);
 
   return (
-    <div className="bigbox">
+    <div className="bigbox" >
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          boxShadow: '0 2px 4px #5F8D4E',
+          boxShadow: '2px 2px 2px 2px #588157',
           borderRadius: '4px',
           padding: '50px',
           backgroundColor: '#fff',
           width: '100%',
           maxWidth: '580px',
           margin: '0 auto',
-          marginTop: "30px",
-          fontFamily: 'poppins, sans-serif'
+          marginTop: "40px",
+                    fontFamily: 'poppins, sans-serif',
         }}
       >
         <Typography component="div" variant="h5" color="#1b5e20" fontFamily='poppins, sans-serif'>
@@ -199,8 +199,9 @@ const AddNewCategory = () => {
             sx={{
               mt: 3,
               mb: 2,
-              backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)',
-              fontFamily: 'poppins, sans-serif'
+              fontFamily: 'poppins, sans-serif',
+              backgroundColor:"#1b4332",            
+              borderRadius:"10px"
             }}
           >
             Add Category
