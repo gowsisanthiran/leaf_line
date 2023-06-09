@@ -15,7 +15,7 @@ import { login, selectLoggedInUser, persistLogin } from '../../redux/features/au
 
 import { Box, Avatar, Typography, TextField, Button, Grid, FormGroup, FormControlLabel, Checkbox, Link } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import login1 from '../../images/login3.jpg';
+import login1 from '../../images/loginn.png';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -64,7 +64,7 @@ const Login = () => {
                 <MDBRow>
                     <MDBCol col='10' md='6'>
                         {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
-                        <img src={login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/>
+                        <img src = {login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'10px'}}/>
 
                     </MDBCol>
 

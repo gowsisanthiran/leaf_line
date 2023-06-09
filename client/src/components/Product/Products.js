@@ -126,8 +126,8 @@ const Products = () => {
       <div className="breadcrumb-one mb-70">
       <div className="breadcrumb-img">
         <a href="/">
-          <img src="https://i.ndtvimg.com/i/2015-12/banana-leaf_625x350_51450425264.jpg" alt="banner-img" style={{marginLeft:'325px',width:'1250px',height:'350px',boxSizing: 'border-box',
-}} />
+          {/* <img src="https://i.ndtvimg.com/i/2015-12/banana-leaf_625x350_51450425264.jpg" alt="banner-img" style={{marginLeft:'325px',width:'1250px',height:'350px',boxSizing: 'border-box',
+}} /> */}
         </a>
       </div>
     </div>

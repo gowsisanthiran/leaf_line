@@ -1,5 +1,6 @@
 .wrapper{
     display: flex;
+    
 }
 .container{
     width:100%;
@@ -52,6 +53,36 @@
     margin-left: 50px;
     position: static;
   }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-box {
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-filter-box,
+  .price-filter-box,
+  .rating-filter-box,
+  .category-filter-box {
+    margin-bottom: 1rem;
+  }
+  
+  .container {
+    width: 100%;
+    /* Add other styles for the container */
+  }
+  
+  .navigation-bar {
+    width: 100%;
+    /* Add styles for the navigation bar */
+  }
+  
   
 @media only screen and (max-width:768px){
     .wrapper{

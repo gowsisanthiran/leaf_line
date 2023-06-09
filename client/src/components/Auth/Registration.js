@@ -16,7 +16,7 @@ import {
   MDBInput,
   MDBCheckbox
 } from 'mdb-react-ui-kit';
-import reg from '../../images/regbg.png';
+import reg from '../../images/regg.png';
 
 const Registration = () => {
   const dispatch = useDispatch();

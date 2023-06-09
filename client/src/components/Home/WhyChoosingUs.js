@@ -272,7 +272,7 @@ const WhyChoosingUs = () => {
 
 
 
-                <span>A little story about us</span>
+                <span style={{fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green'}}>A little story about us</span>
 
 
 
@@ -282,9 +282,11 @@ const WhyChoosingUs = () => {
           <div class="row">
             <div class="col-lg-8 ml-auto mr-auto">
               <div class="history-area-content text-center">
+              <img src="https://linguini.akamaized.net/starchef2_website/idli_sambar.png" alt="Image 1" style={{ width: '200px', height: '200px' }} />
+          <img src="https://cdn.shopify.com/s/files/1/0518/1980/6879/articles/IMG_1_2_a5e73e89-8457-4b59-b9b8-d2d82a78b5f3_1200x1200.jpg?v=1649835611" alt="Image 2" style={{ width: '200px', height: '200px' }} />
+          <img src="https://i.pinimg.com/736x/df/13/0a/df130a5def95229783839705e55dcd94.jpg" alt="Image 3" style={{ width: '200px', height: '200px' }} />
 
-
-                <p style={{fontFamily:'Poppins, sans-serif',textAlign:'justify'}}>am liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus. Phasellus eu rhoncus dolor, vitae scelerisque sapien
+                <p style={{fontFamily:'Poppins, sans-serif',textAlign:'justify',fontSize:'20px'}}>Located in the heart of the city, our banana leaf plates shop is a haven for eco-conscious individuals seeking sustainable alternatives to disposable dinnerware. We offer a wide selection of beautifully crafted plates made from naturally fallen banana leaves. Each plate is meticulously cleaned and shaped, showcasing the intricate veins and vibrant hues of the leaves. Our shop is committed to promoting environmentally friendly practices, providing customers with a guilt-free dining experience that combines elegance and sustainability.
                 </p>
 
 

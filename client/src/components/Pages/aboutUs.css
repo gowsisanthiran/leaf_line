@@ -4,6 +4,7 @@
     background-image: url(../../images/eco-friendly-natural-plate-with-spoon-fork-knife-set-of-disposable-ecological-dishes-in-hands-on-green-grass-background-sustainability-of-planet-2E9P0CJ-transformed\ \(1\).jpeg);
     background-repeat:no-repeat ;
     background-size: cover;
+    opacity: 0.9; 
 }
 .team-bg {
     height: 400px;
@@ -23,6 +24,7 @@
 }
 .feature-bg::after {
     background-image: url(../../images/Bg2.jpeg);
+    background-color: rgba(0, 0, 0, 0.3);
     position: relative;
     right: 0;
     top: 0;

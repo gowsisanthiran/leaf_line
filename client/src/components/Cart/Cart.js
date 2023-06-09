@@ -13,7 +13,7 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import { addItemsToCart, selectCartItems, removeItem } from '../../redux/features/cartSlice';
 import './Cart.css';
 import CartItemCard from './CartItemCard';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const Cart = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -35,6 +35,7 @@ const Cart = () => {
       const checkOutHandler=()=>{
         navigate('/auth',{state:{path:'/shipping'}});
       }
+      
     return (
         <Box
   sx={{
@@ -101,14 +102,21 @@ const Cart = () => {
       </Box>
     </Box>
   ) : (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, justifyContent: 'center' }}>
+    <Box sx={{ marginTop:'5rem',padding:'5rem'}}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, justifyContent: 'center', fontFamily: 'Open Sans , sans-serif' }}>
       <Typography variant='h4' component='div' gutterBottom>
         Cart is Empty
       </Typography>
-      <AddShoppingCartIcon sx={{ width: '80px', height: '80px', color: 'red' }} />
-      <Typography sx={{ mt: 4 }}>
-        <Link to='/'>Back to home</Link>
+      <Typography variant='h4' component='div' gutterBottom>
+        Add something to make me happy :)
       </Typography>
+        <img src="https://st2.depositphotos.com/4060975/9124/v/600/depositphotos_91240944-stock-illustration-remove-cart-colored-vector-illustration.jpg" alt="banner-img" style={{width:'150px'
+}} />
+      {/* <ShoppingCartIcon sx={{ width: '100px', height: '100px', color: '#355e3b' }} /> */}
+      <Typography sx={{ mt: 4 }}>
+        <Link to='/'style={{color:'#609966',textDecoration: 'none',fontFamily: 'Poppins, sans-serif',fontSize:'20px'}}>Back to home</Link>
+      </Typography>
+    </Box>
     </Box>
   )}
 </Box>

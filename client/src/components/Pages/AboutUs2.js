@@ -309,13 +309,9 @@ function AboutUs2() {
                             <Typography variant="h3" style={{ fontFamily: 'Open Sans, sans-serif', paddingTop: '100px', paddingBottom: '20px', color: "#D1E2C4", fontWeight: 'bold' }}>
                                 December sale is on! <br />
                                 with big <span className={classes.orangeText} style={{
-                                    fontFamily: 'Jack Rooney, sans-serif', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                                    outline: '2px solid #ffffff', outlineOffset: '-2px',fontFamily: 'Jack Rooney, sans-serif',
-                                    textShadow: '5px 5px 5px #fff',
-                                    border: '2px solid white',
-                                    padding: '5px 10px',
-                                    display: 'inline-block',
-                                    borderRadius: '5px'
+                                    fontFamily: 'Open Sans, sans-serif', 
+                                   color:' #123524'
+                                   
                                 }}> Discount...</span>
                             </Typography>
                             <div className={classes.salePercent} style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -326,7 +322,7 @@ function AboutUs2() {
                                 variant="contained"
                                 size="large"
                                 startIcon={<ShoppingCartIcon />}
-                                sx={{ marginBottom: '50px', color: "#D2FBA4", backgroundColor: '#1A2902', borderRadius: '15px' }}
+                                sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }}
                             >
                                 Shop Now
                             </Button>
@@ -342,7 +338,7 @@ function AboutUs2() {
                                 <h2 className="pb-3" style={{ fontFamily: 'Open Sans',fontSize:'40px',fontWeight:'bold',color: '#008000' }}>
                                     About <span className="orange-text" style={{ color:'#212529'  }}>us</span>
                                 </h2>
-                                <p style={{ fontFamily: 'Poppins, sans-serif' }}>
+                                <p style={{ fontFamily: 'Poppins, sans-serif',fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green' }}>
                                     Welcome to our banana leaf plate e-commerce website!
                                 </p>
                                 <div className="latest_wrapper d-flex flex-column-reverse flex-lg-row">
