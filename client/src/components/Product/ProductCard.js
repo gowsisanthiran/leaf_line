@@ -52,13 +52,19 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
 
     if (exist) {
       dispatch(removeItem(_id));
-      toast.error('Item remove from cart');
+      toast('Item remove from cart',{
+        className: 'custom-toast', // Add the custom class here
+        bodyClassName: 'custom-toast-body', // Add a separate class for the toast body if needed
+      });
       add();
       return;
     }
     if (!exist) {
       dispatch(addItemsToCart({ _id, quantity, toast }))
-      toast.success('Item added to cart');
+      toast('Item added to cart',{
+        className: 'custom-toast', // Add the custom class here
+        bodyClassName: 'custom-toast-body', // Add a separate class for the toast body if needed
+      });
       remove();
       return;
     }

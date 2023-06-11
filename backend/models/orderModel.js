@@ -5,18 +5,26 @@ const shortid = require('shortid');
 const orderSchema=new mongoose.Schema({
     shortId: {
         type: String,
-        default: shortid.generate,
+        default: shortid.generate(),
         unique: true,
       },
     shippingInfo:{
+        firstname:{
+            type:String,
+            required:true
+        },
+        lastname:{
+            type:String,
+            required:true
+        },
         address:{
             type:String,
             required:true
         },
-        state:{
-            type:String,
-            required:true
-        },
+        // state:{
+        //     type:String,
+        //     required:true
+        // },
         city:{
             type:String,
             required:true

@@ -89,7 +89,7 @@ const OrderDetails = () => {
 
 
 
-                        <Box className='base-div3'>
+                        <Box className='base-div4'>
                             <Box className='div3'>
                                 <Box className='title'>
                                     <Avatar sx={{ mr: 1, background: '#fff', color: '#9c27b0', width: 30, height: 30 }}><LocalShippingIcon /></Avatar>

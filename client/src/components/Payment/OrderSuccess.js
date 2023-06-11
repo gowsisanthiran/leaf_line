@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import {Box, Avatar, Typography} from '@mui/material';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
+import TopRatedProducts from '../Home/TopRatedProducts';
 
 const OrderSuccess = () => {
   return (
@@ -15,7 +16,8 @@ const OrderSuccess = () => {
             <Link to='/order' style={{marginRight:'50px'}}>View orders</Link>
             <Link to='/'>Go Home</Link>
     </Box>
-    
+
+    <TopRatedProducts/>
     </>
   )
 }
