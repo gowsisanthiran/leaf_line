@@ -115,8 +115,8 @@ const AuthorizedRoute = () => {
                         // marginLeft: "20px",
                         // height:'1000px',
                         overflow: 'hidden',
-                        marginTop: '55px',
-                        marginBottom: '-48px'
+                        marginTop: '75px',
+                        marginBottom: '0px'
                     }}
                 >
                     <Box

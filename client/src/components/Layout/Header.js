@@ -168,7 +168,7 @@ const Header = () => {
 
 
     <div className={`container-fluid main ${scrolled ? 'scrolled' : ''}`}>
-      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'rgba(8, 57, 43, 0.4)' : '' }}>
+      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'rgba(0, 66, 37, 0.8)' : '' }}>
         <div className="container" style={{ marginTop: '-40px', marginBottom: '-40px' }}>
           <NavLink to="/" className="navbar-brand">
             <img src={logoo} alt="Logo" className="logo" style={{ height: 'auto', aspectRatio: '3/2', width: '50%' }} />
@@ -178,30 +178,30 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto justify-content-center align-items-center" style={{ marginRight: '20px' }}>
-              <li className="nav-item" style={{ marginLeft: '100px' }}>
-                <NavLink to="/" className="" activeClassName="active" style={{ color: '#008000' }}>
+              <li className="nav-item" style={{ marginLeft: '100px',marginRight: '15px' }}>
+                <NavLink to="/" className="" activeClassName="active" style={{ color: '#9DC183' }}>
                   <HomeIcon />
                 </NavLink>
               </li>
               <li className="nav-item mr-sm-2">
-                <NavLink to="/product" className="" activeClassName="active" style={{ color: '#008000' }}>
+                <NavLink to="/product" className="" activeClassName="active" style={{ color: '#9DC183',marginRight: '15px' }}>
                   <Inventory2Icon />
                 </NavLink>
               </li>
               <li className="nav-item mr-sm-2">
-                <NavLink to="/cart" className="" activeClassName="active" style={{ color: '#008000' }}>
+                <NavLink to="/cart" className="" activeClassName="active" style={{ color: '#9DC183' ,marginRight: '5px'}}>
                   <StyledBadge badgeContent={products.length}>
                     <ShoppingCartIcon />
                   </StyledBadge>
                 </NavLink>
               </li>
               <li className="nav-item mr-sm-2">
-                <NavLink className="" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans', color: '#008000' }}>
+                <NavLink className="" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans', color: '#9DC183' }}>
                 </NavLink>
               </li>
             </ul>
 
-            <AuthMenu />
+            <AuthMenu style={{ color: '#9DC183' ,marginRight: '5px'}}/>
 
           </div>
           {/* <div className="d-flex align-items-center justify-content-end" style={{ marginTop: '80px',color:'#bdf890' }}>
@@ -215,7 +215,7 @@ const Header = () => {
       <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000" style={{ backgroundImage: `url(${bg})` }}>
         <div class="carousel-inner" role="listbox" >
           <div class="item active background a zoom-effect">
-            <img src={bg} alt="Image" style={{ opacity: 0.2 }} />
+            {/* <img src={bg} alt="Image" style={{ opacity: 0.2 }} /> */}
 
           </div>
 

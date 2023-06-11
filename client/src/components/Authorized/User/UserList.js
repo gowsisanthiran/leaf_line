@@ -20,49 +20,97 @@ const UserList = () => {
         dispatch(deleteUser({ id, toast }));
     }
 
+    // const columns = [
+    //     {
+    //         field: 'image', headerName: 'Avatar', headerClassName: 'gridHeader', flex: .4, minWidth: 60,
+    //         renderCell: (params) => {
+    //             return (
+    //                 params.value === '' ? '' :
+    //                     <img src={params.value} height='100%' />
+    //             )
+    //         }
+    //     },
+    //     { field: 'name', headerName: 'Name', headerClassName: 'gridHeader', flex: 1, minWidth: 170 },
+    //     { field: 'email', headerName: 'Email', headerClassName: 'gridHeader', flex: 1.5, minWidth: 250 },
+    //     { field: 'role', headerName: 'Role', headerClassName: 'gridHeader', flex: 1.5, minWidth: 250 },
+    //     {
+    //         field: 'actions',
+    //         headerName: 'Actions',
+    //         headerClassName: 'gridHeader',
+    //         flex: .5,
+    //         minWidth: 80,
+    //         type: 'number',
+    //         sortable: false,
+    //         renderCell: (params) => {
+    //             return (
+    //                 <>
+    //                     <Link to={`/authorized/user/${params.getValue(params.id, 'id')}`}>
+    //                         <Tooltip title='Edit' placement='top'>
+    //                             <EditIcon sx={{ width: '30px', height: '30px', color: '#1b5e20' }} />
+    //                         </Tooltip>
+    //                     </Link>
+
+    //                     <Tooltip title='Delete' placement='top'>
+    //                         <IconButton color='error'
+    //                             component='span'
+    //                             onClick={() => deleteHandler(params.getValue(params.id, 'id'))}>
+    //                             <DeleteForeeverIcon sx={{ width: '30px', height: '30px' }} />
+    //                         </IconButton>
+    //                     </Tooltip>
+
+    //                 </>
+    //             )
+    //         }
+    //     }
+    // ]
     const columns = [
         {
-            field: 'image', headerName: 'Avatar', headerClassName: 'gridHeader', flex: .4, minWidth: 60,
-            renderCell: (params) => {
-                return (
-                    params.value === '' ? '' :
-                        <img src={params.value} height='100%' />
-                )
-            }
+          field: 'image',
+          headerName: 'Avatar',
+          headerClassName: 'gridHeader',
+          flex: 1,
+          minWidth: 60,
+          renderCell: (params) => {
+            return params.value === '' ? '' : <img src={params.value} height='100%' />;
+          },
         },
-        { field: 'name', headerName: 'Name', headerClassName: 'gridHeader', flex: 1, minWidth: 170 },
-        { field: 'email', headerName: 'Email', headerClassName: 'gridHeader', flex: 1.5, minWidth: 250 },
-        { field: 'role', headerName: 'Role', headerClassName: 'gridHeader', flex: 1.5, minWidth: 250 },
+        { field: 'name', headerName: 'Name', headerClassName: 'gridHeader', flex: 1 },
+        { field: 'email', headerName: 'Email', headerClassName: 'gridHeader', flex: 1 },
+        { field: 'role', headerName: 'Role', headerClassName: 'gridHeader', flex: 1 },
         {
-            field: 'actions',
-            headerName: 'Actions',
-            headerClassName: 'gridHeader',
-            flex: .5,
-            minWidth: 80,
-            type: 'number',
-            sortable: false,
-            renderCell: (params) => {
-                return (
-                    <>
-                        <Link to={`/authorized/user/${params.getValue(params.id, 'id')}`}>
-                            <Tooltip title='Edit' placement='top'>
-                                <EditIcon sx={{ width: '30px', height: '30px', color: '#1b5e20' }} />
-                            </Tooltip>
-                        </Link>
+          field: 'actions',
+          headerName: 'Actions',
+          headerClassName: 'gridHeader',
+          flex: 1,
+          minWidth: 80,
+          type: 'number',
+          sortable: false,
+          renderCell: (params) => {
+            return (
+              <>
+                <Link to={`/authorized/user/${params.getValue(params.id, 'id')}`}>
+                  <Tooltip title='Edit' placement='top'>
+                    <EditIcon sx={{ width: '30px', height: '30px', color: '#1b5e20' }} />
+                  </Tooltip>
+                </Link>
+      
+                <Tooltip title='Delete' placement='top'>
+                  <IconButton
+                    color='error'
+                    component='span'
+                    onClick={() => deleteHandler(params.getValue(params.id, 'id'))}
+                  >
+                    <DeleteForeeverIcon sx={{ width: '30px', height: '30px' }} />
+                  </IconButton>
+                </Tooltip>
+              </>
+            );
+          },
+        },
+      ];
+      
 
-                        <Tooltip title='Delete' placement='top'>
-                            <IconButton color='error'
-                                component='span'
-                                onClick={() => deleteHandler(params.getValue(params.id, 'id'))}>
-                                <DeleteForeeverIcon sx={{ width: '30px', height: '30px' }} />
-                            </IconButton>
-                        </Tooltip>
-
-                    </>
-                )
-            }
-        }
-    ]
+      
     const rows = [];
     users && users.forEach(user => {
         rows.push({
@@ -81,6 +129,14 @@ const UserList = () => {
     }, [dispatch, success])
 
     return (
+        <>
+        <Box
+          className='dash-box'
+          sx={{
+            padding: '40px',
+            minHeight: '100vh',
+          }}
+        >
         <Box
             sx={{
                 display: 'flex',
@@ -92,8 +148,8 @@ const UserList = () => {
                 backgroundColor: '#fff',
                 padding: '55px',
                 justifyContent: "center",
-                marginLeft: "105px",
-                marginTop:"45px",
+                marginLeft: "124px",
+                marginTop:"95px",
 
             }}
 
@@ -117,6 +173,8 @@ const UserList = () => {
             </Box>
             </div>
         </Box>
+        </Box>
+        </>
 
     )
 }

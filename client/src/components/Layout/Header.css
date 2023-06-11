@@ -141,7 +141,7 @@
   padding: 5px 15px;
   font-size: 22px;
   background-image: none;
-  background-color: #5f8273;
+  background-color: rgb(70, 88, 73);
   border-color:#5f8273;
   color: #ffffff;
 }
@@ -150,8 +150,8 @@
 .btn:hover {
   border-radius: 10px;
   background-image: none;
-  background-color:#5f8273;
-  border-color: #5f8273;
+  background-color:rgb(70, 88, 73);
+  border-color: #9DC183;
   color: #ffffff;
   margin-bottom: 10px;
   box-shadow: none;

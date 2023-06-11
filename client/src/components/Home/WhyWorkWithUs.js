@@ -84,20 +84,12 @@ const WhyWorkWithUs = () => {
 
 return (
  <div style={{backgroundColor: '#DAE2B6',boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
-   <section className="eco_services_environment" style={{sectionStyle }} data-aos="fade-up">
+   <section className="eco_services_environment" style={{sectionStyle, }} data-aos="fade-up">
     <Container >
-      {/* <div className="eco_headings" data-aos="fade-up" data-aos-delay="100">
-        <h3>
-          <b style={{ color: 'green',paddingTop:'50px' ,fontFamily: 'Open Sans',fontWeight: 'bold'}}>ECO</b> SERVICES
-        </h3>
-        <h6 style={{ color: 'green' ,fontFamily: 'Open Sans'}}>Promote Your Environment</h6>
-        <span style={iconStyle}>
-        
-        </span>
-      </div> */}
+    
       <div className="eco_services" data-aos="fade-up" data-aos-delay="100">
         <Row>
-          <Col md={4} sm={6} xs={12} style={{paddingTop:'50px'}} >
+          <Col md={4} sm={6} xs={12} style={{paddingTop:'50px', marginTop:'50px',marginBottom:'25px' }}>
             <div className="eco_items-services">
               <div className="eco_service_cols">
                 <span style={iconStyle}>
@@ -131,7 +123,7 @@ return (
               </div>
             </figure>
           </Col>
-          <Col md={4} sm={6} xs={12} style={{paddingTop: '50px'}}>
+          <Col md={4} sm={6} xs={12} style={{paddingTop: '50px', marginTop:'65px',marginBottom:'25px'}}>
             <div className="eco_items-services">
               <div className="eco_service_cols rtl_service">
                 <span style={iconStyle}>
