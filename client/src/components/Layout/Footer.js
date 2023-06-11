@@ -44,7 +44,7 @@ import logoo from '../../images/logoo.png';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: '#DAE2B6', 
+    backgroundColor: '#043927', 
     padding: '10px ', 
     // position: 'fixed',
     bottom: 5,
@@ -75,8 +75,8 @@ const Footer = () => {
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Box className={classes.logo}>
-              <img src={logoo} alt="Logo" className={classes.logoImg} style= {{width:'100px'}}/>
-              <Typography variant="body2" color="textSecondary">
+              {/* <img src={logoo} alt="Logo" className={classes.logoImg} style= {{width:'100px'}}/> */}
+              <Typography variant="body2" color="white">
                 {'© '}
                 {new Date().getFullYear()}
                 {' LEAFLINE. All rights reserved.'}
@@ -85,13 +85,13 @@ const Footer = () => {
           </Grid>
           <Grid item>
             <Link href="#" className={classes.link}>
-              <FacebookIcon style={{color: "#0a330d" ,width:'20px', height:'20px'}}/>
+              <FacebookIcon style={{color: "#fff" ,width:'20px', height:'20px'}}/>
             </Link>
             <Link href="#" className={classes.link}>
-              <InstagramIcon style={{color: "#0a330d" ,width:'20px', height:'20px'}}/>
+              <InstagramIcon style={{color: "#fff" ,width:'20px', height:'20px'}}/>
             </Link>
             <Link href="#" className={classes.link}>
-              <TwitterIcon style={{color: "#0a330d" ,width:'20px', height:'20px'}}/>
+              <TwitterIcon style={{color: "#fff" ,width:'20px', height:'20px'}}/>
             </Link>
           </Grid>
         </Grid>
