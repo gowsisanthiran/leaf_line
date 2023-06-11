@@ -1,109 +1,166 @@
-.wrapper{
-    display: flex;
-    
-}
-.container{
-    width:100%;
-    text-align:center;
-}
-.filter-box{
-    padding: 0 5px;
-    min-width: 310px;
-    
+.banner {
+  background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=');
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
-.card-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 20px;
-    width: 98%;
-    margin: 0 auto;
-    justify-content: center;
+
+.banner.productpage {
+
+  background-position: 100% 100%;
+  padding: 200px 0;
 }
-.productCard{
-    margin-bottom: 100px;
+
+.banner .banner-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
 }
-.sale{
-    position: absolute;
-    top:20px;
-    left: -40px;
-    /* background: #2ea05f; */
-    padding: 3px 0;
-    width:150px;
-    transform: rotate(-45deg);
-    opacity: 0.7;
+
+.fast-breadcrumb li {
+  padding-right: 20px;
+}
+
+.fast-breadcrumb li a{
+  text-decoration: none;
+  color: white;
+  font-size: 16;
+}
+
+.fast-breadcrumb li.active {
+  color: green;
+}
+.fast-breadcrumb li:last-child {
+  padding-right: 0;
+}
+
+.fast-breadcrumb li.active::before {
+  content: '/';
+  position: relative;
+  top: 2px;
+  left: -10px;
+  background-size: 13px;
+  width: 12px;
+  height: 17px;
+  color:white
+}
+
+.wrapper {
+  display: flex;
+
+}
+
+.container2 {
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+}
+
+.filter-box {
+  padding: 0 5px;
+  min-width: 310px;
+
+
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  width: 98%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.productCard {
+  margin-bottom: 100px;
+}
+
+.sale {
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  /* background: #2ea05f; */
+  padding: 3px 0;
+  width: 150px;
+  transform: rotate(-45deg);
+  opacity: 0.7;
 }
 
 
 .breadcrumb-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .breadcrumb-list li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .breadcrumb-list li:last-child {
-    margin-right: 0px;
-  }
-  link{
-    text-align: center;
-    margin-left: 50px;
-    position: static;
-  }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .filter-box {
-    width: 100%;
-    background-color: #f1f1f1;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .search-filter-box,
-  .price-filter-box,
-  .rating-filter-box,
-  .category-filter-box {
-    margin-bottom: 1rem;
-  }
-  
-  .container {
-    width: 100%;
-    /* Add other styles for the container */
-  }
-  
-  .navigation-bar {
-    width: 100%;
-    /* Add styles for the navigation bar */
-  }
-  
-  
-@media only screen and (max-width:768px){
-    .wrapper{
-        flex-direction: column;
-    }
-    }
+  display: flex;
+  align-items: center;
+}
 
-@media only screen and (max-width:1100px){
-.card-container{
+.breadcrumb-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.breadcrumb-list li:last-child {
+  margin-right: 0px;
+}
+
+link {
+  text-align: center;
+  margin-left: 50px;
+  position: static;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-box {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-filter-box,
+.price-filter-box,
+.rating-filter-box,
+.category-filter-box {
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: 100%;
+  /* Add other styles for the container */
+}
+
+.navigation-bar {
+  width: 100%;
+  /* Add styles for the navigation bar */
+}
+
+
+@media only screen and (max-width:768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:1100px) {
+  .card-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
 }
+
+@media only screen and (max-width:960px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-@media only screen and (max-width:960px){
-    .card-container{
-        grid-template-columns: 1fr 1fr;
-    }  
-}
-@media only screen and (max-width:530px){
-    .card-container{
-        grid-template-columns: 1fr;
-        width: 90%;
-        grid-row-gap: 25px;
-    }
+
+@media only screen and (max-width:530px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    grid-row-gap: 25px;
+  }
 }

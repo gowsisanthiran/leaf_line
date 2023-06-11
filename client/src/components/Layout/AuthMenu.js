@@ -89,7 +89,7 @@ const AuthMenu = () => {
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2, backgroundColor: '#008000' }}
+            sx={{ ml: 2, backgroundColor: '#9DC183',height: 30 ,width:30 }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
@@ -101,10 +101,10 @@ const AuthMenu = () => {
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                 variant="dot"
               >
-                <Avatar sx={{ width: 32, height: 32 }}>
+                <Avatar sx={{ width: 28, height: 28 }}>
                   <img src={user.avatar.url}
                     alt={user.name}
-                    style={{ width: 32, height: 32 }} />
+                    style={{ width: 30, height: 30 }} />
                 </Avatar>
               </StyledBadge>
               :

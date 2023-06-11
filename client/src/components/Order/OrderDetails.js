@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { getOrderDetails, selectOrderDetails } from '../../redux/features/orderSlice';
 import BoxShadowLoader from '../Skeletons/BoxShadowLoader';
-import { IMAGE_BASEURL } from '../../constants/baseURL';
 import { formatCurrency } from '../../utility/formatCurrency';
+import HomeIcon from '@mui/icons-material/Home';
 
 import { Box, Typography, Avatar, List, ListItem, ListItemAvatar, ListItemText, Grid } from '@mui/material';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -16,6 +16,7 @@ import FactCheckIcon from '@mui/icons-material/FactCheck';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import TakeoutDiningIcon from '@mui/icons-material/TakeoutDining';
+import Header2 from '../Layout/Header2';
 
 
 const OrderDetails = () => {
@@ -29,6 +30,27 @@ const OrderDetails = () => {
     }, [id, dispatch])
 
     return (
+        <>
+        <Header2/>
+        {/*Banner starts*/}
+        <section class="banner productpage">
+                        <div class="container container2">
+                            <div class="row">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <div class="text-center">
+                                        <h2 class="banner-title">Order Details</h2>
+                                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {/*Banner Ends*/}
         <Box
             sx={{
                 marginTop: 8,
@@ -46,8 +68,10 @@ const OrderDetails = () => {
             }}
         >
             <>
+            
                 {loading ? <BoxShadowLoader /> :
                     <>
+                    
                         <Typography component='h1' variant='h5' gutterBottom sx={{ textAlign: 'center' }}>
                             Order details
                         </Typography>
@@ -223,6 +247,7 @@ const OrderDetails = () => {
                 }
             </>
         </Box>
+        </>
     )
 }
 

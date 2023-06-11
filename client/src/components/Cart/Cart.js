@@ -3,6 +3,7 @@ import { formatCurrency } from '../../utility/formatCurrency';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
+import HomeIcon from '@mui/icons-material/Home';
 
 import { Button, Box, Typography, IconButton, Tooltip } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -14,6 +15,7 @@ import { addItemsToCart, selectCartItems, removeItem } from '../../redux/feature
 import './Cart.css';
 import CartItemCard from './CartItemCard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Header2 from '../Layout/Header2';
 const Cart = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -37,6 +39,25 @@ const Cart = () => {
       }
       
     return (
+      <>
+      <Header2/>
+      <section class="banner productpage">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 d-flex justify-content-center">
+                  <div class="text-center">
+                      <h2 class="banner-title">Cart</h2>
+                      <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                          <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                          </ol>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
         <Box
   sx={{
     display: 'flex',
@@ -53,6 +74,7 @@ const Cart = () => {
   }}
 >
   {products.length > 0 ? (
+    
     <Box className='cart-items'>
       <Box className='cart-header'>
         <Typography variant='button' display='block' color='#1b5e20'>Product</Typography>
@@ -120,6 +142,7 @@ const Cart = () => {
     </Box>
   )}
 </Box>
+</>
     )
 }
 

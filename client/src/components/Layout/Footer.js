@@ -75,7 +75,6 @@ const Footer = () => {
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Box className={classes.logo}>
-              <img src={logoo} alt="Logo" className={classes.logoImg} style= {{width:'100px'}}/>
               <Typography variant="body2" color="textSecondary">
                 {'© '}
                 {new Date().getFullYear()}

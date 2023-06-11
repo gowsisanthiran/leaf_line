@@ -8,6 +8,7 @@ import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import './shipping.css'
 import { Box, Typography, TextField, Button, TextareaAutosize, Grid, Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
 
 // import './ConfirmOrder.css';
 import { formatCurrency } from '../../utility/formatCurrency';
@@ -17,6 +18,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PaidIcon from '@mui/icons-material/Paid';
 import { selectCartItems } from '../../redux/features/cartSlice';
+import Header2 from '../Layout/Header2';
 
 const Shipping = () => {
   const dispatch = useDispatch();
@@ -176,7 +178,26 @@ const Shipping = () => {
   }
   return (
     <>
-
+    <Header2/>
+      {/*Banner starts*/}
+      <section class="banner productpage">
+        <div class="container container2">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="text-center">
+                        <h2 class="banner-title">Checkout</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Checkout </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      {/*Banner Ends*/}
 
       <form id="myform" className='glassmorphism-form' onSubmit={handleSubmit} >
         <header>CheckOut Page

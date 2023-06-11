@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMyOrders, selectAllOrders } from '../../redux/features/orderSlice';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
 
 import { Box, Typography, Tooltip } from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 import BoxShadowLoader from '../Skeletons/BoxShadowLoader';
+import Header2 from '../Layout/Header2';
 
 const MyOrders = () => {
   const dispatch = useDispatch();
@@ -54,6 +56,25 @@ const MyOrders = () => {
   }, [dispatch]);
 
   return (
+    <>
+    <Header2/>
+    <section class="banner productpage">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <div class="text-center">
+                    <h2 class="banner-title">My Orders</h2>
+                    <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                          <li class="breadcrumb-item active" aria-current="page">My Orders</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <Box
       sx={{
         marginTop: 8,
@@ -72,7 +93,6 @@ const MyOrders = () => {
 
       }}
     >
-
       <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
         {loading ? (
           <BoxShadowLoader />
@@ -81,6 +101,7 @@ const MyOrders = () => {
         )}
       </Box>
     </Box>
+    </>
   );
 };
 
