@@ -225,9 +225,9 @@ import { makeStyles } from '@mui/styles';
 import { Container, Typography, Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { spacing } from '@mui/system';
-import sl17 from '../../images/pic05.jpeg';
-import sl18 from '../../images/image1.jpeg';
-import sl19 from '../../images/img1.jpeg';
+import sl17 from '../../images/bana1.JPG';
+import sl18 from '../../images/bana5.JPG';
+import sl19 from '../../images/bana7.JPG';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -306,15 +306,15 @@ function AboutUs2() {
 
                     <section className='bg' style={{ marginTop: '100px', marginBottom: '50px' }}>
                         <Container>
-                            <Typography variant="h3" style={{ fontFamily: 'Open Sans, sans-serif', paddingTop: '100px', paddingBottom: '20px', color: "#D1E2C4", fontWeight: 'bold' }}>
+                            <Typography variant="h3" style={{ fontFamily: 'Poppins, sans-serif', paddingTop: '150px', paddingBottom: '50px', color: "white", fontWeight: 'bold',paddingRight:'20px' }}>
                                 December sale is on! <br />
                                 with big <span className={classes.orangeText} style={{
-                                    fontFamily: 'Open Sans, sans-serif', 
-                                   color:' #123524'
+                                    fontFamily: 'Poppins, sans-serif', 
+                                   color:' #8FD400'
                                    
                                 }}> Discount...</span>
                             </Typography>
-                            <div className={classes.salePercent} style={{ fontFamily: 'Poppins, sans-serif' }}>
+                            <div className={classes.salePercent} style={{ fontFamily: 'Poppins, sans-serif' ,color:'#74C365'}}>
                                 <span>Sale! <br /> Upto</span> 50% <span>off</span>                             </div>
                             <Button
                                 href="shop.html"
@@ -335,10 +335,10 @@ function AboutUs2() {
                         <section className="latest section">
                             <div className="container">
                             
-                                <h2 className="pb-3" style={{ fontFamily: 'Open Sans',fontSize:'40px',fontWeight:'bold',color: '#008000' }}>
+                                <h2 className="pb-3" style={{ fontFamily: 'Open Sans',fontSize:'40px',fontWeight:'bold',color: '#008000',textAlign:"center" }}>
                                     About <span className="orange-text" style={{ color:'#212529'  }}>us</span>
                                 </h2>
-                                <p style={{ fontFamily: 'Poppins, sans-serif',fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green' }}>
+                                <p style={{ fontFamily: 'Poppins, sans-serif',fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green',textAlign:"center" }}>
                                     Welcome to our banana leaf plate e-commerce website!
                                 </p>
                                 <div className="latest_wrapper d-flex flex-column-reverse flex-lg-row">
@@ -364,15 +364,15 @@ function AboutUs2() {
                                                         data-aos="fade-up"
                                                         data-aos-delay="100"
                                                         onClick={() => handleImageClick(sl17)}
-                                                        style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '5px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }}
+                                                        style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '1px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }}
 
                                                     />
                                                 </pictur>
                                             </span>
                                             {/* Rest of the code */}
-                                            <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{ textAlign: 'center', display: 'Block', marginLeft: '20px' }}>
+                                            <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{  display: 'Block', marginLeft: '20px' }}>
                                                 <span>
-                                                    <h3 className="title" style={{ textAlign: 'center', color: 'green', fontFamily: 'Open Sans', fontSize: '30px' }}>
+                                                    <h3 className="title" style={{  color: 'green', fontFamily: 'Open Sans', fontSize: '30px',textAlign: 'justify' }}>
                                                         Environmentally Friendly
                                                     </h3>
                                                     <p className="text" style={{ fontFamily: 'Poppins, sans-serif', textAlign: 'justify' }}>
@@ -392,7 +392,7 @@ function AboutUs2() {
                                                         data-aos="fade-up"
                                                         data-aos-delay="100"
                                                         onClick={() => handleImageClick(sl18)}
-                                                        style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '35px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }}
+                                                        style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '40px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }}
 
                                                     />
                                                 </picture>
@@ -400,7 +400,7 @@ function AboutUs2() {
                                             {/* Rest of the code */}
                                             <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{ textAlign: 'center', display: 'Block', marginTop: '40px', marginLeft: '20px' }}>
                                                 <span className="metadata">
-                                                    <h4 className="title" style={{ textAlign: 'center', color: 'green', fontFamily: 'Open Sans', fontSize: '30px' }}>
+                                                    <h4 className="title" style={{ textAlign: 'justify', color: 'green', fontFamily: 'Open Sans', fontSize: '30px' }}>
                                                         Natural and Chemical-Free
                                                     </h4>
                                                     <p className="text" style={{ fontFamily: 'Poppins, sans-serif', textAlign: 'justify' }}>
@@ -426,7 +426,7 @@ function AboutUs2() {
                                             {/* Rest of the code */}
                                             <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{ textAlign: 'center', display: 'Block', marginTop: '40px', marginLeft: '20px' }}>
                                                 <span className="metadata">
-                                                    <h4 className="title" style={{ textAlign: 'center', color: 'green', fontFamily: 'Open Sans', fontSize: '30px' }}>
+                                                    <h4 className="title" style={{textAlign: 'justify', color: 'green', fontFamily: 'Open Sans', fontSize: '30px' }}>
                                                         Cultural Significance
                                                     </h4>
                                                     <p className="text" style={{ fontFamily: 'Poppins, sans-serif', textAlign: 'justify' }}>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { selectProductDetails, productDetails } from '../../redux/features/productSlice';
 import { toast } from 'react-toastify';
@@ -16,6 +16,7 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Box, Button, Dialog, IconButton, Tooltip, DialogActions, DialogContent, DialogTitle, TextareaAutosize, Stack, Rating, Typography } from '@mui/material';
+import Header2 from '../Layout/Header2';
 
 const ProductDetails = () => {
     const [submitRating, setSubmitRating] = useState(5);
@@ -74,8 +75,28 @@ const ProductDetails = () => {
         <>
             {loading ? <BoxShadowLoader /> :
                 <>
+                <Header2/>
+                    {/*Banner starts*/}
+                    <section class="banner productpage">
+                        <div class="container container2">
+                            <div class="row">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <div class="text-center">
+                                        <h2 class="banner-title">Detailed Product</h2>
+                                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><Link to='/'> Home</Link></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Product</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {/*Banner Ends*/}
                     <main>
-                            <div class="container3">
+                        <div class="container3">
                             <div class="card__title">
                                 <div class="icon">
                                     <a href="/product"><ArrowBackIcon /></a>
@@ -125,64 +146,64 @@ const ProductDetails = () => {
                                         <button class="arrow" onclick={decreaseQuantity}>&#8249;</button>
                                         <span id="number">{quantity}</span>
                                         <button class="arrow" onclick={increaseQuantity}>&#8250;</button>
+                                    </div>
+
+
                                 </div>
 
-                                    
                             </div>
-                            
-                        </div>
-                        <div class="card__footer">
-                            <div class="recommend">
-                                <p>Produced by</p>
-                                <h3>Leaf Line</h3>
-                            </div>
-                            <div class="action">
-                                <button type="button" onClick={addToCartHandler}>Add to cart</button>
+                            <div class="card__footer">
+                                <div class="recommend">
+                                    <p>Produced by</p>
+                                    <h3>Leaf Line</h3>
+                                </div>
+                                <div class="action">
+                                    <button type="button" onClick={addToCartHandler}>Add to cart</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </main>
-            <Box className='product-reviews' style={{ marginTop: '50px' }}>
-                <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
-                    <Button variant="outlined" onClick={handleClickOpen} color="success" >Submit Review</Button>
-                    <Dialog open={open} onClose={handleClose}>
-                        <DialogTitle sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', color: '#fff', mb: 2 }}>Review &#38; Rating</DialogTitle>
-                        <DialogContent sx={{ minWidth: '350px' }} fullWidth>
-                            <Stack spacing={1} sx={{ display: 'block' }}>
-                                <Rating value={submitRating}
-                                    precision={0.1}
-                                    onChange={((e, newValue) => setSubmitRating(newValue))}
-                                />
-                            </Stack>
-                            <TextareaAutosize
-                                id="review"
-                                style={{ width: '100%', margin: '10px 0', padding: "10px", borderRadius: "20px" }}
-                                minRows={5}
-                                value={submitReview}
-                                variant="standard"
-                                onChange={(e => setSubmitReview(e.target.value))}
-                            />
-                        </DialogContent>
-                        <DialogActions>
-                            <Button onClick={handleClose}>Cancel</Button>
-                            <Button onClick={handleSubmitReviewRating} color="success" >Submit</Button>
-                        </DialogActions>
-                    </Dialog>
+                    </main>
+                    <Box className='product-reviews' style={{ marginTop: '50px' }}>
+                        <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
+                            <Button variant="outlined" onClick={handleClickOpen} color="success" >Submit Review</Button>
+                            <Dialog open={open} onClose={handleClose}>
+                                <DialogTitle sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', color: '#fff', mb: 2 }}>Review &#38; Rating</DialogTitle>
+                                <DialogContent sx={{ minWidth: '350px' }} fullWidth>
+                                    <Stack spacing={1} sx={{ display: 'block' }}>
+                                        <Rating value={submitRating}
+                                            precision={0.1}
+                                            onChange={((e, newValue) => setSubmitRating(newValue))}
+                                        />
+                                    </Stack>
+                                    <TextareaAutosize
+                                        id="review"
+                                        style={{ width: '100%', margin: '10px 0', padding: "10px", borderRadius: "20px" }}
+                                        minRows={5}
+                                        value={submitReview}
+                                        variant="standard"
+                                        onChange={(e => setSubmitReview(e.target.value))}
+                                    />
+                                </DialogContent>
+                                <DialogActions>
+                                    <Button onClick={handleClose}>Cancel</Button>
+                                    <Button onClick={handleSubmitReviewRating} color="success" >Submit</Button>
+                                </DialogActions>
+                            </Dialog>
 
-                    {product?.reviews && product.reviews[0] ?
-                        <Box className='review'>
-                            {product?.reviews && product.reviews.map(review =>
-                                <ReviewListCard review={review} />
-                            )}
+                            {product?.reviews && product.reviews[0] ?
+                                <Box className='review'>
+                                    {product?.reviews && product.reviews.map(review =>
+                                        <ReviewListCard review={review} />
+                                    )}
+                                </Box>
+                                :
+                                <Typography variant='button' spacing={10} marginLeft="20px">No reviews yet</Typography>
+                            }
+
                         </Box>
-                        :
-                        <Typography variant='button' spacing={10} marginLeft="20px">No reviews yet</Typography>
-                    }
+                    </Box>
 
-                </Box>
-            </Box>
-
-            {/* <div class="container3">
+                    {/* <div class="container3">
                         <nav>
                             Back
                         </nav>
@@ -281,7 +302,7 @@ const ProductDetails = () => {
 
 
 
-            {/* <Box className='product-details'style={{marginTop:'5rem'}}>
+                    {/* <Box className='product-details'style={{marginTop:'5rem'}}>
                     <Box className='product-image-carousel'>
                         {product?.images && <ProductDetailsImageCarouselCard images={product.images}/>}
                     </Box>
@@ -331,7 +352,7 @@ const ProductDetails = () => {
 
                     </Box>                
                 </Box> */}
-        </>
+                </>
             }
         </>
     )

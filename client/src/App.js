@@ -95,16 +95,16 @@ function App() {
 
     <div className="App">
       <ToastContainer
-        position="top-center"
-        autoClose={5000}
+        position="bottom-left"
+        autoClose={2000}
         hideProgressBar={false}
-        newestOnTop={false}
+        newestOnTop
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
-        draggable
         pauseOnHover
-        theme="colored"
+        pauseOnFocusLoss={false}
+        className="custom-toast" // Add the custom class here
+        draggable
        
       />
 

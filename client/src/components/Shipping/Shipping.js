@@ -1,20 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
-import { useNavigate } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import delivery from '../../images/delivery.svg'
 import { selectShippingInfo, saveShippingInfo } from '../../redux/features/shippingSlice';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import './shipping.css'
+import { Box, Typography, TextField, Button, TextareaAutosize, Grid, Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
 
+// import './ConfirmOrder.css';
+import { formatCurrency } from '../../utility/formatCurrency';
 
-import { Box, Typography, TextField, Button, TextareaAutosize, Grid, Avatar } from '@mui/material';
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PaidIcon from '@mui/icons-material/Paid';
+import { selectCartItems } from '../../redux/features/cartSlice';
+import Header2 from '../Layout/Header2';
 
 const Shipping = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { shipInfo } = useSelector(selectShippingInfo);
   const validationCriteria = {
+    firstname: {
+      required: true,
+    },
+    lastname: {
+      required: true,
+    },
     address: {
       required: true,
       minLength: 5, // Example: Address should have at least 5 characters
@@ -26,9 +42,9 @@ const Shipping = () => {
       required: true,
       pattern: /^\d{5}$/ // Example: Zip code should be a 5-digit number
     },
-    state: {
-      required: true,
-    },
+    // state: {
+    //   required: true,
+    // },
     country: {
       required: true,
     },
@@ -38,7 +54,8 @@ const Shipping = () => {
     },
   };
 
-
+  const [firstname, setFirstname] = useState(shipInfo.firstname || '')
+  const [lastname, setLastname] = useState(shipInfo.lastname || '')
   const [address, setAddress] = useState(shipInfo.address || '');
   const [city, setCity] = useState(shipInfo.city || '');
   const [zipCode, setZipCode] = useState(shipInfo.zipCode || '');
@@ -82,132 +99,345 @@ const Shipping = () => {
     return Object.keys(newErrors).length === 0; // Return true if there are no errors
   };
 
+  const { products } = useSelector(selectCartItems);
+
+  const addres = shipInfo.address + ' , ' + shipInfo.zipCode + ' , ' + shipInfo.city + ' , ' + shipInfo.country;
+
+  let subTotal = products.reduce((acc, item) => acc + item.quantity * item.price, 0);
+  let tax = 0;
+
+  let unitShippingCharge = [];
+  let shippingCharge = 0;
+  if (shipInfo.country === 'IN') {
+    tax = subTotal * 0.10;
+    for (let i = 0; i < products.length; i++) {
+
+      if (products[i].localShipmentPolicy === 'free') {
+        shippingCharge = shippingCharge + 0;
+        unitShippingCharge[i] = 0;
+      }
+      if (products[i].localShipmentPolicy === 'custom') {
+        shippingCharge = shippingCharge + (products[i].quantity * products[i].customLocalShipmentCost);
+        unitShippingCharge[i] = products[i].quantity * products[i].customLocalShipmentCost;
+      }
+      if (products[i].localShipmentPolicy === 'standard') {
+
+        if (products[i].weight && products[i].weight > 5) {
+          products[i].weight = Math.ceil(products[i].weight / 5);
+          shippingCharge = shippingCharge + (products[i].weight * products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE);
+          unitShippingCharge[i] = products[i].weight * products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE;
+        } else {
+          shippingCharge = shippingCharge + (products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE);
+          unitShippingCharge[i] = products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE;
+        }
+
+      }
+
+    }
+  } else {
+    tax = subTotal * 0.50;
+    for (let i = 0; i < products.length; i++) {
+
+      if (products[i].internationalShipmentPolicy === 'free') {
+        shippingCharge = shippingCharge + 0;
+        unitShippingCharge[i] = 0;
+      }
+      if (products[i].internationalShipmentPolicy === 'custom') {
+        shippingCharge = shippingCharge + (products[i].quantity * products[i].customInternationShipmentCost);
+        unitShippingCharge[i] = products[i].quantity * products[i].customInternationShipmentCost;
+      }
+      if (products[i].internationalShipmentPolicy === 'standard') {
+
+        if (products[i].weight && products[i].weight > 5) {
+          products[i].weight = Math.ceil(products[i].weight / 5);
+          shippingCharge = shippingCharge + (products[i].weight * products[i].quantity * process.env.REACT_APP_INTER_CHARGE);
+          unitShippingCharge[i] = products[i].weight * products[i].quantity * process.env.REACT_APP_INTER_CHARGE;
+        } else {
+          shippingCharge = shippingCharge + (products[i].quantity * process.env.REACT_APP_INTER_CHARGE);
+          unitShippingCharge[i] = products[i].quantity * process.env.REACT_APP_INTER_CHARGE;
+        }
+      }
+    }
+  }
+  const totalPrice = subTotal + shippingCharge + tax;
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateShippingInfo()) {
-      dispatch(saveShippingInfo({ address, phone, city, zipCode, state, country }));
-      navigate('/confirm-order');
+      dispatch(saveShippingInfo({ firstname, lastname, address, phone, city, zipCode, country }));
+      // navigate('/confirm-order');
     }
   }
+  const proccedToPayment = () => {
+    const data = {
+      subTotal, shippingCharge, tax, totalPrice
+    }
+    sessionStorage.setItem('orderInfo', JSON.stringify(data));
+    navigate('/payment');
+  }
   return (
-    <Box
-      sx={{
-        marginTop: 8,
+    <>
+    <Header2/>
+      {/*Banner starts*/}
+      <section class="banner productpage">
+        <div class="container container2">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="text-center">
+                        <h2 class="banner-title">Checkout</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Checkout </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      {/*Banner Ends*/}
 
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        boxShadow: '0 2px 4px #5F8D4E',
-        borderRadius: '4px',
-        padding: '50px',
-        backgroundColor: '#fff',
-        height: "100% !important",
-        width: "580px",
-        marginLeft: "560px"
+      <form id="myform" className='glassmorphism-form' onSubmit={handleSubmit} >
+        <header>CheckOut Page
+        </header>
+        <div class="grid-container">
+          <div className="area">
+            <div class="grid-child purple">
+              <div className="row2">
+                <div className="col2">
+                  <input
+                    type="text"
+                    name="firstname"
+                    value={firstname}
+                    onChange={(e => setFirstname(e.target.value))}
+                  />
+                  <label htmlFor="firstname">First Name</label>
+                  {errors.firstname && <p className='validationError' color="red">{errors.firstname}</p>}
 
-      }}
-    >
-      <Box sx={{ m: '0 auto', marginTop: 2, textAlign: 'center', maxWidth: '550px' }}>
-        <LocationOnIcon sx={{ width: 100, height: 100, borderRadius: "25px", backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)' }} />
-        <Typography component='div' variant='h5'>Shipping Information</Typography>
-        <Box component='form' onSubmit={handleSubmit} sx={{ p: 1 }}>
-          <TextareaAutosize required
-            aria-label='address'
-            minRows={5}
-            placeholder='Address'
-            value={address}
-            style={{ width: '100%', marginTop: '16px' }}
-            onChange={(e => setAddress(e.target.value))}
-          />
-          {errors.address && <Typography color="error">{errors.address}</Typography>}
+                </div>
+                <div className="col2">
+                  <input
+                    type="text"
+                    name="lastname"
+                    value={lastname}
+                    onChange={(e => setLastname(e.target.value))}
+                  />
+                  <label htmlFor="lastname">Last Name</label>
+                  {errors.lastname && <p className='validationError' color="red">{errors.lastname}</p>}
 
-          <TextField type='text'
-            id='phone'
-            label='Phone'
-            name='phone'
-            margin='normal'
-            required
-            fullWidth
-            color="success"
-            value={phone}
-            onChange={(e => setPhone(e.target.value))}
-          />
-          {errors.phone && <Typography color="error">{errors.phone}</Typography>}
+                </div>
+              </div>
+              <div className="row">
+                <label htmlFor="phone">Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={phone}
+                  onChange={(e => setPhone(e.target.value))}
+                />
+                {errors.phone && <p className='validationError'>{errors.phone}</p>}
+              </div>
+              <div className="row">
+                <label htmlFor="address">Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  value={address}
+                  onChange={(e => setAddress(e.target.value))}
+                />
+                {errors.address && <p className='validationError'>{errors.address}</p>}
 
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <TextField type='text'
-                id='city'
-                label='City'
-                name='city'
-                margin='normal'
-                color="success"
-                required
-                fullWidth
-                value={city}
-                onChange={(e => setCity(e.target.value))}
-              />
-              {errors.city && <Typography color="error">{errors.city}</Typography>}
+              </div>
+            </div>
+            <div className="area">
+              <div className="ckeckarea">
 
-            </Grid>
-            <Grid item xs={6}>
-              <TextField type='text'
-                id='zipCode'
-                label='Zip'
-                name='zipCode'
-                margin='normal'
-                color="success"
-                required
-                fullWidth
-                value={zipCode}
-                onChange={(e => setZipCode(e.target.value))}
-              />
-              {errors.zipCode && <Typography color="error">{errors.zipCode}</Typography>}
+              </div>
+              <div className="row2">
+                <div className="col2">
+                  <input
+                    type="text"
+                    name="newfirstname"
+                    value={city}
+                    onChange={(e => setCity(e.target.value))}
+                  />
+                  {errors.city && <p className='validationError'>{errors.city}</p>}
 
-            </Grid>
-          </Grid>
+                  <label htmlFor="newfirstname">City</label>
+                </div>
+                <div className="col2">
+                  <input
+                    type="text"
+                    name="newlastname"
+                    value={zipCode}
+                    onChange={(e => setZipCode(e.target.value))}
+                  />
+                  <label htmlFor="newlastname">Zip Code</label>
+                  {errors.zipCode && <p className='validationError'>{errors.zipCode}</p>}
+                </div>
+              </div>
+              <div className="row">
+                <label htmlFor="selectTheCountry">Select The Country</label>
+                <CountryDropdown classes='ship-drop-down'
+                  defaultOptionLabel=''
+                  id='selectTheCountry'
+                  style={{ width: '100%', backgroundColor: '#ffffff', color: '#000', border: '2px solid #000' }}
+                  value="LK"
+                  valueType='short'
+                  priorityOptions={['CA', 'US', 'IN', 'GB', 'LK']}
+                  onChange={(e => setCountry(e))}
+                />
+                {errors.country && <p className='validationError'>{errors.country}</p>}
 
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <CountryDropdown classes='ship-drop-down'
-                defaultOptionLabel='Select a coutry'
-                style={{ width: '100%' }}
-                value={country}
-                valueType='short'
-                priorityOptions={['CA', 'US', 'IN', 'GB']}
-                onChange={(e => setCountry(e))}
-              />
-              {errors.country && <Typography color="error">{errors.country}</Typography>}
+              </div>
+            </div>
+            <div className="row">
+              <button type="submit" value="Submit" className="btn01"><LocalShippingIcon />Checkout</button>
 
-            </Grid>
-            <Grid item xs={6}>
-              <RegionDropdown classes='ship-drop-down'
-                defaultOptionLabel='Now select a region'
-                blankOptionLabel='No country selected'
-                style={{ width: '100%' }}
-                value={state}
-                country={country}
-                countryValueType='short'
-                onChange={(e => setState(e))}
-              />
-              {errors.state && <Typography color="error">{errors.state}</Typography>}
+              <button type="submit" value="Cancel" className="btn01"><Link to='/cart' style={{ textDecoration: 'none', color: '#000' }}> <ArrowCircleLeftIcon />Back</Link></button>
 
-            </Grid>
-          </Grid>
+            </div>
+          </div>
 
-          <Button type='submit'
-            variant='contained'
-            startIcon={<LocalShippingIcon />}
-            sx={{ m: 4, backgroundColor: '#617A55' }}>
-            Continue
-          </Button>
+          <div class="grid-child green">
+            {/* <header>Cart & Shipping Information</header> */}
+            <Divider />
+            <Box className='base-div3'>
+              <div id='cardDiv'>
+                <Box className='div1'>
+                  <Box className='confirmOrderTitle '>
+                    <p component='div' variant='button' sx={{ textAlign: 'center' }}>
+                      Shipping Address
+                    </p>
+                  </Box>
+                  <Box>
+                    <List>
+                      <ListItem>
+                        <ListItemAvatar>
+                          <Avatar>
+                            <PhoneIcon />
+                          </Avatar>
+                        </ListItemAvatar>
+                        <ListItemText>{shipInfo && shipInfo.phone}</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemAvatar>
+                          <Avatar>
+                            <LocationOnIcon />
+                          </Avatar>
+                        </ListItemAvatar>
+                        <ListItemText>{addres}</ListItemText>
+                      </ListItem>
+                    </List>
+                  </Box>
+                </Box>
+
+                <Box className='div2'>
+                  <Box className='confirmOrderTitle'>
+                    <p component='div' variant='button' sx={{ textAlign: 'center' }}>
+                      Cart Items Info
+                    </p>
+                  </Box>
+                  <Box>
+                    {products &&
+                      products.map((item, i) => (
+                        <Box key={item._id} sx={{ display: 'flex', width: '100%', mb: 2 }}>
+                          <Box>
+                            <img src={item.image} alt={item.title} style={{ maxWidth: 100, marginRight: '5px' }} />
+                          </Box>
+                          <Box>
+                            <Typography component='div' variant='button'>
+                              <Link to={`/product/${item._id}`}>{item.title}</Link>
+                            </Typography>
+                            <Typography component='div' variant='button'>
+                              Price : {formatCurrency(item.price)} x {item.quantity}={formatCurrency(item.price * item.quantity)}
+                            </Typography>
+                            <Typography component='div' variant='button'>
+                              Shipping charge : {formatCurrency(unitShippingCharge[i])}
+                            </Typography>
+                          </Box>
+                        </Box>
+                      ))}
+                  </Box>
+                </Box>
+
+                <Box className='div3'>
+                  <Box className='confirmOrderTitle'>
+                    <p component='div' variant='button' sx={{ textAlign: 'center' }}>
+                      Orders Info
+                    </p>
+                  </Box>
+                  <Box>
+                    <Grid container>
+                      <Grid item xs>
+                        <Typography component='div' variant='button'>
+                          Subtotal :
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography component='div' variant='button'>
+                          {formatCurrency(subTotal)}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid container>
+                      <Grid item xs>
+                        <Typography component='div' variant='button'>
+                          Shipping charges :
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography component='div' variant='button'>
+                          {formatCurrency(shippingCharge)}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid container>
+                      <Grid item xs>
+                        <Typography component='div' variant='button'>
+                          Tax :
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography component='div' variant='button'>
+                          {formatCurrency(tax)}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+
+                    <Grid container sx={{ paddingTop: '100px' }}>
+                      <Grid item xs>
+                        <Typography component='div' variant='button'>
+                          Total :
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography component='div' variant='button'>
+                          {formatCurrency(totalPrice)}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Box>
+              </div>
+            </Box>
+            <Box>
+            </Box>
+          </div>
+        </div>
+      </form>
+      <button
+        className='btn02'
+        onClick={proccedToPayment}
+      >
+        <PaidIcon/>
+        Proceed to payment
+      </button>
 
 
-        </Box>
-      </Box>
-    </Box>
-
+    </>
   )
 }
 

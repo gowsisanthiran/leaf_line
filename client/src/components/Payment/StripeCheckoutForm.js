@@ -105,12 +105,15 @@ const StripeCheckoutForm = (props) => {
     }, [dispatch,success,navigate]);
     
   return (
+    
     <Box component='form'
+
             onSubmit={(e)=>submitHandler(e)}
-            sx={{m:'0 auto', maxWidth:'550px',textAlign:'center',minWidth:'500px'}}>
+            sx={{m:'0 auto', maxWidth:'550px',textAlign:'center',minWidth:'500px', paddingTop:'5rem'}}>
         <Card sx={{p:1,pt:3}}>
-            <Avatar sx={{bgcolor:'white',height:'100px',width:'100px',m:'0 auto'}}>
-                <img src={logo} alt="" style={{height:'150px',width:'200px'}} />
+            
+            <Avatar sx={{bgcolor:'white',height:'150px',width:'400px',m:'0 auto'}}>
+                <img src={logo} alt="" style={{width:'400px'}} />
             </Avatar>
         
         <Divider sx={{m:'10px 0'}}/>

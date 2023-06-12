@@ -34,3 +34,10 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+.caartRemoveBtn{
+    border: transparent;
+    background-color: transparent;
+    padding-left: 50px;
+    color: red;
+}

@@ -9,69 +9,15 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import logo from '../../images/Bg2.jpeg'
+import Header2 from '../Layout/Header2'
 import Login from './Login';
 import Registration from './Registration';
 import { MDBContainer, MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
-
-// function TabPanel(props) {
-//   const { children, value, index, ...other } = props;
-
-//   return (
-//     <div
-//       role="tabpanel"
-//       hidden={value !== index}
-//       id={`full-width-tabpanel-${index}`}
-//       aria-labelledby={`full-width-tab-${index}`}
-//       {...other}
-//     >
-//       {value === index && (
-//         <Box sx={{ p: 3 }}>
-//           <Box>{children}</Box>
-//         </Box>
-//       )}
-//     </div>
-//   );
-// }
-
-// TabPanel.propTypes = {
-//   children: PropTypes.node,
-//   index: PropTypes.number.isRequired,
-//   value: PropTypes.number.isRequired,
-// };
-
-// function a11yProps(index) {
-//   return {
-//     id: `full-width-tab-${index}`,
-//     'aria-controls': `full-width-tabpanel-${index}`,
-//   };
-// }
+import HomeIcon from '@mui/icons-material/Home';
+import { Link } from 'react-router-dom';
+import './auth.css'
 
 const Auth = () => {
-  // const theme = useTheme();
-  // const [value, setValue] = React.useState(0);
-
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
-
-  // const handleChangeIndex = (index) => {
-  //   if (index > 1) {
-  //     index = 1;
-  //   }
-  //   setValue(index);
-  // };
-  // const glassmorphismStyles = {
-
-  //   bgcolor: 'transparent',
-  //   maxWidth: 500,
-  //   minHeight: '800px',
-  //   margin: '0 auto',
-  //   backdropFilter: 'blur(10px)',
-  //   boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-  //   borderRadius: '10px',
-  //   border: '1px solid rgba(255, 255, 255, 0.2)',
-
-  // };
 
   const [justifyActive, setJustifyActive] = useState('tab1');;
 
@@ -84,7 +30,27 @@ const Auth = () => {
   };
 
   return (
-    
+    <>
+    <Header2/>
+{/*Banner starts*/}
+<section class="banner productpage">
+                        <div class="container container2">
+                            <div class="row">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <div class="text-center">
+                                        <h2 class="banner-title">Login | Register</h2>
+                                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><Link to='/'> Home</Link></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Login | Register</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {/*Banner Ends*/}
     <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
       <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between'>
         <MDBTabsItem>
@@ -107,6 +73,7 @@ const Auth = () => {
         </MDBTabsPane>
       </MDBTabsContent>
     </MDBContainer>
+    </>
   );
 }
 

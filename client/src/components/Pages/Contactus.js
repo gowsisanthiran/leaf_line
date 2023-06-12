@@ -120,6 +120,8 @@ import { Avatar, Grid } from '@material-ui/core';
 import sl20 from '../../images/edit.png';
 import sl21 from '../../images/edit1.png';
 import './aboutus.css'
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import contact from '../../images/bana10.JPG';
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
@@ -165,7 +167,7 @@ function ContactPage() {
 <div class="formContainer" style={{background: '#DAE2B6',marginTop:'10rem'}}>
   <div class="formcard">
     <div class="left">
-      <img src="https://piantica.com/wp-content/uploads/2020/08/Untitled-design183-1024x379.png" style={{width:'400px',height:'500px'}}/>
+      <img src={contact} style={{width:'400px',height:'500px'}}/>
     </div>
     <div class="right">
     <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Contact</span>Us</h2>
@@ -183,7 +185,13 @@ function ContactPage() {
               <textarea placeholder="Enter your message" required></textarea>
             </div>
             <div class="usersubmit">
-              <input type="submit" value="Contact Us" />
+              <input type="submit" value="Contact Us"
+              
+              
+              variant="contained"
+              size="large"
+              startIcon={<AddIcCallIcon />}
+              sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }} />
             </div>
           </form>
         </div>

@@ -3,6 +3,7 @@ import { formatCurrency } from '../../utility/formatCurrency';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
+import HomeIcon from '@mui/icons-material/Home';
 
 import { Button, Box, Typography, IconButton, Tooltip } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -14,95 +15,77 @@ import { addItemsToCart, selectCartItems, removeItem } from '../../redux/feature
 import './Cart.css';
 import CartItemCard from './CartItemCard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Parallax } from 'react-parallax';
-import logoo from '../../images/logoo.png';
+import Header2 from '../Layout/Header2';
 const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { products } = useSelector(selectCartItems);
 
-  const deleteCartItems = (_id) => {
-    dispatch(removeItem(_id));
-  }
-  const decreaseQuantity = (_id, qty) => {
-    const quantity = qty - 20;
-    if (qty <= 1) return;
-    dispatch(addItemsToCart({ _id, quantity }));
-  }
-  const increaseQuantity = (_id, qty, stock) => {
-    const quantity = qty + 20;
-    if (stock <= qty) return;
-    dispatch(addItemsToCart({ _id, quantity }));
-  }
-  const checkOutHandler = () => {
-    navigate('/auth', { state: { path: '/shipping' } });
-  }
-
-  return (
-    <Box
-    
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        width: '80%',
-        textAlign: 'center',
-        boxShadow: '0 2px 4px #285430',
-        borderRadius: '4px',
-        backgroundColor: '#fff',
-        padding: '55px',
-        justifyContent: 'center',
-        marginLeft: '170px',
-        marginTop: '30px'
-      }}
-    >
-      {products.length > 0 ? (
-        <Box className='cart-items'>
-          <Box >
-        <Parallax
-          bgImage="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg="
-          strength={500}
-          alt="banner-img"
-          style={{ marginTop: '-50px', width: '100%', height: '400px' }}
-        >
-          <Box className="parallax-content">
-            <div className="breadcrumb-content breadcrumb-content-tow" style={{ backgroundColor: 'rgba(0, 66, 37, 0.8)' }}>
-              <img src={logoo} alt="Logo" className="logo" style={{ width: '150px', aspectRatio: '3/2', alignItems: 'center', paddingLeft: '40px' }} />
-
-              <nav className="link" role="navigation" aria-label="breadcrumbs" style={{ marginLeft: "35%" }}>
-
-                <ul className="breadcrumb-list" style={{ color: '#609966', textDecoration: 'none' }}>
-
-                  <li>
-                    <a href="/" title="Back to the home page" style={{ color: '#9DC183', textDecoration: 'none', fontFamily: 'Poppins, sans-serif', fontSize: '20px', }}>Home</a>
-                  </li>
-                  <li>
-                    <span style={{ color: '#609966', textDecoration: 'none', marginRight: '5px' }}>|</span>
-                  </li>
-                  <li>
-                    <a href="/cart" title="Back to the cart page" style={{ color: '#9DC183', textDecoration: 'none', marginRight: '35px', fontFamily: 'Poppins, sans-serif', fontSize: '20px' }}>Cart</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <Typography variant="h3" className="welcome-text" style={{ color: 'white', textAlign: 'center', paddingTop: '150px', fontFamily: 'NunitoSans,Verdana' }}>
-              Welcome to Our Store
-            </Typography>
-            <div class="carousel-inner" role="listbox">
-              <div class="item active background a zoom-effect">
-                {/* <img src={bg} alt="Image" style={{ opacity: 0.2 }} /> */}
+    const deleteCartItems = (_id) => {
+        dispatch(removeItem(_id));
+    }
+    const decreaseQuantity=(_id,qty)=>{
+        const quantity=qty-20;
+        if(qty<=1) return;
+        dispatch(addItemsToCart({_id,quantity}));
+      }
+      const increaseQuantity=(_id,qty,stock)=>{
+        const quantity=qty+20;
+        if(stock<=qty) return;
+        dispatch(addItemsToCart({_id,quantity}));
+      }
+      const checkOutHandler=()=>{
+        navigate('/auth',{state:{path:'/shipping'}});
+      }
+      
+    return (
+      <>
+      <Header2/>
+      <section class="banner productpage">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 d-flex justify-content-center">
+                  <div class="text-center">
+                      <h2 class="banner-title">Cart</h2>
+                      <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                          <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                          </ol>
+                      </nav>
+                  </div>
               </div>
-            </div>
-          </Box>
-        </Parallax>
+          </div>
+      </div>
+  </section>
+        <Box
+  sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    width: '80%',
+    textAlign: 'center',
+    boxShadow: '0 2px 4px #285430',
+    borderRadius: '4px',
+    backgroundColor: '#fff',
+    padding: '55px',
+    justifyContent: 'center',
+    marginLeft: '170px',
+    marginTop: '30px',
+    marginBottom:'30px'
+  }}
+>
+  {products.length > 0 ? (
+    
+    <Box className='cart-items'>
+      <Box className='cart-header'>
+        <Typography variant='button' display='block' color='#1b5e20'sx={{ textAlign: 'left' }}>Product</Typography>
+        <Typography variant='button' display='block' color='#1b5e20' sx={{ textAlign: 'center' }}>Quantity</Typography>
+        <Typography variant='button' display='block' color='#1b5e20' sx={{ textAlign: 'right' }}>Subtotal</Typography>
       </Box>
-          <Box className='cart-header'>
-            <Typography variant='button' display='block' color='#1b5e20'>Product</Typography>
-            <Typography variant='button' display='block' color='#1b5e20' sx={{ textAlign: 'center' }}>Quantity</Typography>
-            <Typography variant='button' display='block' color='#1b5e20' sx={{ textAlign: 'right' }}>Subtotal</Typography>
-          </Box>
+         
           {products.map((item) => (
             <Box className='cart-body' key={item._id}>
-              <CartItemCard item={item} deleteCartItems={deleteCartItems} />
+              <CartItemCard item={item} deleteCartItems={deleteCartItems} style={{textAlign:'center'}}/>
 
               <Box sx={{ textAlign: 'center' }}>
                 <Box className='btn-quantity' sx={{ m: 0 }}>
@@ -162,7 +145,6 @@ const Cart = () => {
         </Box>
       )}
     </Box>
-  )
-}
-
+    </>
+)}
 export default Cart
