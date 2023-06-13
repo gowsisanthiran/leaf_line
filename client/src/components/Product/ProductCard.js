@@ -458,7 +458,7 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
         } alt=""  style={{height: '100px',width: '100px', objectFit: 'cover'}}/>
       </div>
       <div class="content-wrapper">
-        <h3 class="title" onClick={linkToDetails}>{product?.title && product.title.length > 15
+        <h3 class="title productCardTitle" onClick={linkToDetails}>{product?.title && product.title.length > 15
           ? product.title.slice(0, 14)
           : product.title}</h3>
 

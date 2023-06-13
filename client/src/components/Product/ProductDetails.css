@@ -1,23 +1,30 @@
-
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
 
 main {
-    max-width: 720px;
-    margin:  auto;
-  }
+  max-width: 720px;
+  margin: auto;
+}
 
-  .container3 {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    transition: 200ms;
-  }
-  
-  .container3:hover {
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  }
-  
+.productDetailsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+.container3 {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: 200ms;
+}
+
+.container3:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
 
 .card__title {
   display: flex;
@@ -30,7 +37,7 @@ main {
   text-align: right;
   margin: 0;
   color: #252525;
-  font-family: sans-serif;
+  font-family: Poppins,Opens-serif;
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
@@ -44,7 +51,7 @@ main {
   transition: 200ms;
 }
 
-.card__title .icon > a {
+.card__title .icon>a {
   color: #fff;
 }
 
@@ -59,7 +66,7 @@ main {
   margin-bottom: 25px;
 }
 
-.card__body > .half {
+.card__body>.half {
   box-sizing: border-box;
   padding: 0 15px;
   flex: 1 0 50%;
@@ -69,7 +76,7 @@ main {
   margin: 0;
   padding: 0;
   font-weight: 800;
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins,Opens-serif;
   font-size: 64px;
   line-height: 50px;
   color: #181e28;
@@ -81,7 +88,7 @@ main {
 }
 
 .card__body .featured_text p.sub {
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins,Opens-serif;
   font-size: 26px;
   text-transform: uppercase;
   color: #686e77;
@@ -90,7 +97,7 @@ main {
 }
 
 .card__body .featured_text p.price {
-  font-family: "Fjalla One", sans-serif;
+  font-family: Poppins,Opens-serif;
   color: #252525;
   font-size: 26px;
 }
@@ -113,7 +120,7 @@ main {
 
 .card__body .description p {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: Poppins,Opens-serif;
   font-weight: 300;
   line-height: 27px;
   font-size: 16px;
@@ -121,7 +128,7 @@ main {
 }
 
 .card__body span.stock {
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins,Opens-serif;
   font-weight: 600;
   color: #a1cc16;
 }
@@ -133,8 +140,8 @@ main {
 }
 
 
-.card__body .reviews > span {
-  font-family: "Open Sans", sans-serif;
+.card__body .reviews>span {
+  font-family: Poppins,Opens-serif;
   font-size: 14px;
   margin-left: 5px;
   color: #555;
@@ -166,7 +173,7 @@ main {
 
 .card__footer .recommend p {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins,Opens-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
@@ -176,10 +183,10 @@ main {
 .card__footer .recommend h3 {
   margin: 0;
   font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins,Opens-serif;
   font-weight: 600;
   text-transform: uppercase;
-  color:  #8fba1c;
+  color: #8fba1c;
 }
 
 .card__footer .action button {
@@ -189,7 +196,7 @@ main {
   border-radius: 200px;
   color: #fff;
   background: #8fba1c;
-  font-family: "Open Sans", sans-serif;
+  font-family: Poppins,Opens-serif;
   font-size: 16px;
   transition: 200ms;
 }
@@ -198,10 +205,22 @@ main {
   background: #6f9c05;
   color: #fff;
 }
+
 /* .ratingsDiv{
     position: relative ;
     top: 100px;
 } */
+.product-reviews {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: 200ms;
+}
+
+.product-reviews:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
 
 #grey,
 .arrow {
@@ -217,11 +236,30 @@ main {
 
 #number {
   font-size: 1.8rem;
-  font-family: "Fjalla One", sans-serif
+  font-family: Poppins,Opens-serif
 }
 
 #quantity {
   font-size: 1.3rem;
-  font-family: "Fjalla One", sans-serif;
+  font-family: Poppins,Opens-seriff;
   padding-top: 25px;
+}
+.testimonial-heading{
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins,Opens-serif
+
+}
+
+.testimonial-heading span{
+  font-size: 1.3rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }

@@ -302,7 +302,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-
+import { Link } from 'react-router-dom';
 import { Typography, Box, Accordion, AccordionSummary, AccordionDetails, TextField, Slider, List, ListItemButton, ListItemText } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
@@ -314,10 +314,9 @@ import './Product.css';
 import ProductCard from './ProductCard';
 import ProductCardSkeleton from '../Skeletons/ProductCardSkeleton';
 import HeadingWaveSkeleton from '../Skeletons/HeadingWaveSkeleton';
-import { Carousel } from 'react-bootstrap';
+import HomeIcon from '@mui/icons-material/Home';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Parallax } from 'react-parallax';
-import logoo from '../../images/logoo.png';
+import Header2 from '../Layout/Header2';
 const Products = () => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
@@ -400,50 +399,28 @@ const Products = () => {
 
 
   return (
-    <div className="breadcrumb-tow" style={{ background: '#DAE2B6', paddingTop: '55px', paddingBottom: '50px' }}>
-
-
-      <Box >
-        <Parallax
-          bgImage="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg="
-          strength={500}
-          alt="banner-img"
-          style={{ marginTop: '-50px', width: '100%', height: '400px' }}
-        >
-          <Box className="parallax-content">
-            <div className="breadcrumb-content breadcrumb-content-tow" style={{ backgroundColor: 'rgba(0, 66, 37, 0.8)' }}>
-              {/* <img src={logoo} alt="Logo" className="logo" style={{ width: '100px',height:'100px', aspectRatio: '3/2', alignItems: 'center', paddingLeft: '40px' }} /> */}
-
-              <nav className="link" role="navigation" aria-label="breadcrumbs" style={{ marginLeft: "45%" ,paddingTop:'2rem'}}>
-
-                <ul className="breadcrumb-list" style={{ color: '#609966', textDecoration: 'none' }}>
-
-                  <li>
-                    <a href="/" title="Back to the home page" style={{ color: '#9DC183', textDecoration: 'none', fontFamily: 'Poppins, sans-serif', fontSize: '20px', }}>Home</a>
-                  </li>
-                  <li>
-                    <span style={{ color: '#609966', textDecoration: 'none', marginRight: '5px' }}>|</span>
-                  </li>
-                  <li>
-                    <a href="/cart" title="Back to the cart page" style={{ color: '#9DC183', textDecoration: 'none', marginRight: '35px', fontFamily: 'Poppins, sans-serif', fontSize: '20px' }}>Cart</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <Typography variant="h3" className="welcome-text" style={{ color: 'white', textAlign: 'center', paddingTop: '150px', fontFamily: 'NunitoSans,Verdana' }}>
-              Welcome to Our Store
-            </Typography>
-            <div class="carousel-inner" role="listbox">
-              <div class="item active background a zoom-effect">
-                {/* <img src={bg} alt="Image" style={{ opacity: 0.2 }} /> */}
+    <>
+      <Header2/>
+      <section class="banner productpage">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 d-flex justify-content-center">
+                  <div class="text-center">
+                      <h2 class="banner-title">Cart</h2>
+                      <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                          <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                          </ol>
+                      </nav>
+                  </div>
               </div>
-            </div>
-          </Box>
-        </Parallax>
-      </Box>
+          </div>
+      </div>
+  </section>
 
 
-      <Box className='wrapper'style={{ float: 'right', width: '80%',paddingRight:"23rem",paddingTop:'2rem' }}>
+      <Box className='container wrapper'>
         <Box className='filter-box'>
           <Accordion>
             <AccordionSummary
@@ -572,7 +549,7 @@ const Products = () => {
 
         </Box>
 
-        <Box className='container'style={{ float: 'left', width: '75%' }}>
+        <Box className='container'style={{  }}>
           {loading && loading ? <HeadingWaveSkeleton /> :
             <Typography variant='div'
               component='h5'
@@ -602,7 +579,7 @@ const Products = () => {
           }
         </Box>
       </Box>
-    </div>
+    </>
   )
 }
 

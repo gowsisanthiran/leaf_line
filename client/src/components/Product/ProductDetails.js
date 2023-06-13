@@ -75,7 +75,7 @@ const ProductDetails = () => {
         <>
             {loading ? <BoxShadowLoader /> :
                 <>
-                <Header2/>
+                    <Header2 />
                     {/*Banner starts*/}
                     <section class="banner productpage">
                         <div class="container container2">
@@ -95,7 +95,7 @@ const ProductDetails = () => {
                         </div>
                     </section>
                     {/*Banner Ends*/}
-                    <main>
+                    <main className='productDetailsContainer container'>
                         <div class="container3">
                             <div class="card__title">
                                 <div class="icon">
@@ -162,46 +162,52 @@ const ProductDetails = () => {
                                 </div>
                             </div>
                         </div>
-                    </main>
-                    <Box className='product-reviews' style={{ marginTop: '50px' }}>
-                        <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
-                            <Button variant="outlined" onClick={handleClickOpen} color="success" >Submit Review</Button>
-                            <Dialog open={open} onClose={handleClose}>
-                                <DialogTitle sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', color: '#fff', mb: 2 }}>Review &#38; Rating</DialogTitle>
-                                <DialogContent sx={{ minWidth: '350px' }} fullWidth>
-                                    <Stack spacing={1} sx={{ display: 'block' }}>
-                                        <Rating value={submitRating}
-                                            precision={0.1}
-                                            onChange={((e, newValue) => setSubmitRating(newValue))}
+                        <Box className='product-reviews'>
+                            {/* <!--heading---> */}
+                            <div class="testimonial-heading">
+                                <span>Comments</span>
+                                <h4>Clients Says</h4>
+                            </div>
+                            <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
+                                <Button variant="outlined" onClick={handleClickOpen} color="success" >Submit Review</Button>
+                                <Dialog open={open} onClose={handleClose}>
+                                    <DialogTitle sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', color: '#fff', mb: 2 }}>Review &#38; Rating</DialogTitle>
+                                    <DialogContent sx={{ minWidth: '350px' }} fullWidth>
+                                        <Stack spacing={1} sx={{ display: 'block' }}>
+                                            <Rating value={submitRating}
+                                                precision={0.1}
+                                                onChange={((e, newValue) => setSubmitRating(newValue))}
+                                            />
+                                        </Stack>
+                                        <TextareaAutosize
+                                            id="review"
+                                            style={{ width: '100%', margin: '10px 0', padding: "10px", borderRadius: "20px" }}
+                                            minRows={5}
+                                            value={submitReview}
+                                            variant="standard"
+                                            onChange={(e => setSubmitReview(e.target.value))}
                                         />
-                                    </Stack>
-                                    <TextareaAutosize
-                                        id="review"
-                                        style={{ width: '100%', margin: '10px 0', padding: "10px", borderRadius: "20px" }}
-                                        minRows={5}
-                                        value={submitReview}
-                                        variant="standard"
-                                        onChange={(e => setSubmitReview(e.target.value))}
-                                    />
-                                </DialogContent>
-                                <DialogActions>
-                                    <Button onClick={handleClose}>Cancel</Button>
-                                    <Button onClick={handleSubmitReviewRating} color="success" >Submit</Button>
-                                </DialogActions>
-                            </Dialog>
+                                    </DialogContent>
+                                    <DialogActions>
+                                        <Button onClick={handleClose}>Cancel</Button>
+                                        <Button onClick={handleSubmitReviewRating} color="success" >Submit</Button>
+                                    </DialogActions>
+                                </Dialog>
 
-                            {product?.reviews && product.reviews[0] ?
-                                <Box className='review'>
-                                    {product?.reviews && product.reviews.map(review =>
-                                        <ReviewListCard review={review} />
-                                    )}
-                                </Box>
-                                :
-                                <Typography variant='button' spacing={10} marginLeft="20px">No reviews yet</Typography>
-                            }
+                                {product?.reviews && product.reviews[0] ?
+                                    <Box className='review'>
+                                        {product?.reviews && product.reviews.map(review =>
+                                            <ReviewListCard review={review} />
+                                        )}
+                                    </Box>
+                                    :
+                                    <Typography variant='button' spacing={10} marginLeft="20px">No reviews yet</Typography>
+                                }
 
+                            </Box>
                         </Box>
-                    </Box>
+                    </main>
+
 
                     {/* <div class="container3">
                         <nav>
