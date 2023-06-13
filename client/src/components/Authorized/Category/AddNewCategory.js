@@ -108,7 +108,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-
+import bg from '/home/ukijaffna/Documents/Final_Project/client/src/images/rebg.jpg'
 import { Box, Typography, TextField, Button } from '@mui/material';
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 //import bg1 from "../../images/background1.jpg"
@@ -145,7 +145,9 @@ const AddNewCategory = () => {
       <Box
         className='dash-box'
         sx={{
-          backgroundColor:"##F3EFE0",
+          backgroundImage: 'url({bg})',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
           padding: '40px',
           minHeight: '100vh',
         }}

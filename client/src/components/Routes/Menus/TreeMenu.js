@@ -166,7 +166,7 @@ return (
       label="New Category" 
       icon={<Category sx={{ marginRight: '0.5rem' }} />}
       onClick={() => goto('category')}
-      style={{ color: "black", display: 'flex', alignItems: "flex-start",fontFamily: 'poppins, sans-serif', marginTop:"20px" }}
+      style={{ color: "black", display: 'flex', alignItems: "flex-start",fontFamily: 'poppins, sans-serif', marginTop:"40px" }}
     />
     <Tab
       label="Category List"
