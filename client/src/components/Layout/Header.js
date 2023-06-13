@@ -70,7 +70,7 @@ const Header = () => {
               </li>
               <li className="nav-item mr-sm-2">
                 <NavLink to="/cart" className="" activeClassName="active" style={{ color: '#9DC183' ,marginRight: '5px'}}>
-                  <StyledBadge badgeContent={products.length}>
+                  <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
                     <ShoppingCartIcon />
                   </StyledBadge>
                 </NavLink>

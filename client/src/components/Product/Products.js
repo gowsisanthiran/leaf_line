@@ -302,7 +302,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-
+import { Link } from 'react-router-dom';
 import { Typography, Box, Accordion, AccordionSummary, AccordionDetails, TextField, Slider, List, ListItemButton, ListItemText } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
@@ -315,9 +315,9 @@ import './Product.css';
 import ProductCard from './ProductCard';
 import ProductCardSkeleton from '../Skeletons/ProductCardSkeleton';
 import HeadingWaveSkeleton from '../Skeletons/HeadingWaveSkeleton';
-import { Carousel } from 'react-bootstrap';
+import HomeIcon from '@mui/icons-material/Home';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import logoo from '../../images/logoo.png';
+import Header2 from '../Layout/Header2';
 const Products = () => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
@@ -400,9 +400,8 @@ const Products = () => {
 
 
   return (
-<>
-
-<Header2/>
+    <>
+      <Header2/>
       <section class="banner productpage">
       <div class="container">
           <div class="row">
@@ -420,7 +419,9 @@ const Products = () => {
           </div>
       </div>
   </section>
-      <Box className='container'>
+
+
+      <Box className='container wrapper'>
         <Box className='filter-box'>
           <Accordion>
             <AccordionSummary
@@ -549,7 +550,7 @@ const Products = () => {
 
         </Box>
 
-        <Box className='container'>
+        <Box className='container'style={{  }}>
           {loading && loading ? <HeadingWaveSkeleton /> :
             <Typography variant='div'
               component='h5'

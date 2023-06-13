@@ -36,6 +36,7 @@ const AuthorizedRoute = () => {
     const { UserInfo } = jwtDecode(accessToken);
     role = UserInfo.roles[0].toString();
     if (role === 'admin') {
+        
         return (
             <>
                 <Box
@@ -97,7 +98,7 @@ const AuthorizedRoute = () => {
                             <Inventory2Icon />
                         </NavLink>
                         <NavLink to="/cart" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
-                            <StyledBadge badgeContent={products.length} color="secondary">
+                            <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
                                 <ShoppingCartIcon />
                             </StyledBadge>
 

@@ -132,3 +132,6 @@
   color: #000;
 
 }
+.productCardTitle{
+  cursor: pointer;
+}
