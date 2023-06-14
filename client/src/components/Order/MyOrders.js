@@ -34,7 +34,7 @@ const MyOrders = () => {
           <>
             <Link to={`/order/${params.getValue(params.id, 'id')}`}>
               <Tooltip title='View Details' placement='top'>
-                <LaunchIcon sx={{ width: '30px', height: '30px', color: '#1976d2' }} />
+                <LaunchIcon sx={{ width: '30px', height: '30px', color: 'green' }} />
               </Tooltip>
             </Link>
           </>
@@ -48,7 +48,7 @@ const MyOrders = () => {
     orderId:order.shortId,
     status: order.orderStatus,
     itemsQty: order.orderItems.length,
-    amount: order.totalPrice,
+    amount: 'LKR'+'.'+order.totalPrice,
   }));
 
   useEffect(() => {

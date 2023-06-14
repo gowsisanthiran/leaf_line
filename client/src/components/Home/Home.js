@@ -27,13 +27,15 @@ const Home = () => {
     <Box className='fullDiv'>
 
       {/*div02  */}
+      <div className='WhyChoosingUs'>
+        <WhyChoosingUs />
+      </div>
+
+      
       <div className='WhyWorkWithUs'>
         <WhyWorkWithUs />
       </div>
 
-      <div className='WhyChoosingUs'>
-        <WhyChoosingUs />
-      </div>
 
       <div className='topRated'>
         <TopRatedProducts />

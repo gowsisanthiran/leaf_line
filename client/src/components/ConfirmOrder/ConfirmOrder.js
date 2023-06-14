@@ -21,12 +21,10 @@ const ConfirmOrder = () => {
     const address = shipInfo.address + ' , ' + shipInfo.zipCode + ' , ' + shipInfo.city + ' , ' + shipInfo.country;
 
     let subTotal = products.reduce((acc, item) => acc + item.quantity * item.price, 0);
-    let tax = 0;
 
     let unitShippingCharge = [];
     let shippingCharge = 0;
     if (shipInfo.country === 'IN') {
-        tax = subTotal * 0.10;
         for (let i = 0; i < products.length; i++) {
 
             if (products[i].localShipmentPolicy === 'free') {
@@ -52,7 +50,6 @@ const ConfirmOrder = () => {
 
         }
     } else {
-        tax = subTotal * 0.50;
         for (let i = 0; i < products.length; i++) {
 
             if (products[i].internationalShipmentPolicy === 'free') {
@@ -76,12 +73,12 @@ const ConfirmOrder = () => {
             }
         }
     }
-    const totalPrice = subTotal + shippingCharge + tax;
+    const totalPrice = subTotal + shippingCharge ;
 
     const navigate = useNavigate();
     const proccedToPayment = () => {
         const data = {
-            subTotal, shippingCharge, tax, totalPrice
+            subTotal, shippingCharge, totalPrice
         }
         sessionStorage.setItem('orderInfo', JSON.stringify(data));
         navigate('/payment');
@@ -206,17 +203,7 @@ const ConfirmOrder = () => {
                                             variant='button'>{formatCurrency(shippingCharge)}
                                         </Typography></Grid>
                                 </Grid>
-                                <Grid container>
-                                    <Grid item xs>
-                                        <Typography component='div'
-                                            variant='button'> Tax :
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item>
-                                        <Typography component='div'
-                                            variant='button'> {formatCurrency(tax)}
-                                        </Typography></Grid>
-                                </Grid>
+                                
 
                                 <Grid container sx={{paddingTop:'100px'}}>
                                     <Grid item xs>

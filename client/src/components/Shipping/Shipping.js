@@ -104,12 +104,10 @@ const Shipping = () => {
   const addres = shipInfo.address + ' , ' + shipInfo.zipCode + ' , ' + shipInfo.city + ' , ' + shipInfo.country;
 
   let subTotal = products.reduce((acc, item) => acc + item.quantity * item.price, 0);
-  let tax = 0;
 
   let unitShippingCharge = [];
   let shippingCharge = 0;
   if (shipInfo.country === 'IN') {
-    tax = subTotal * 0.10;
     for (let i = 0; i < products.length; i++) {
 
       if (products[i].localShipmentPolicy === 'free') {
@@ -135,7 +133,6 @@ const Shipping = () => {
 
     }
   } else {
-    tax = subTotal * 0.50;
     for (let i = 0; i < products.length; i++) {
 
       if (products[i].internationalShipmentPolicy === 'free') {
@@ -159,7 +156,7 @@ const Shipping = () => {
       }
     }
   }
-  const totalPrice = subTotal + shippingCharge + tax;
+  const totalPrice = subTotal + shippingCharge ;
 
 
   const handleSubmit = (e) => {
@@ -171,7 +168,7 @@ const Shipping = () => {
   }
   const proccedToPayment = () => {
     const data = {
-      subTotal, shippingCharge, tax, totalPrice
+      subTotal, shippingCharge,  totalPrice
     }
     sessionStorage.setItem('orderInfo', JSON.stringify(data));
     navigate('/payment');
@@ -286,7 +283,7 @@ const Shipping = () => {
                   style={{ width: '100%', backgroundColor: '#ffffff', color: '#000', border: '2px solid #000' }}
                   value={country}
                   valueType='short'
-                  priorityOptions={['CA', 'US', 'IN', 'GB', ]}
+                  priorityOptions={['CA', 'US', 'IN', 'GB' ]}
                   onChange={(e => setCountry(e))}
                 />
                 {errors.country && <p className='validationError'>{errors.country}</p>}
@@ -294,9 +291,9 @@ const Shipping = () => {
               </div>
             </div>
             <div className="row">
+              <button type="submit" value="Cancel" className="btn01"><Link to='/cart' style={{ textDecoration: 'none', color: '#000' }}> <ArrowCircleLeftIcon /><br/>Back</Link></button>
               <button type="submit" value="Submit" className="btn01"><LocalShippingIcon />Checkout</button>
 
-              <button type="submit" value="Cancel" className="btn01"><Link to='/cart' style={{ textDecoration: 'none', color: '#000' }}> <ArrowCircleLeftIcon />Back</Link></button>
 
             </div>
           </div>
@@ -328,7 +325,10 @@ const Shipping = () => {
                             <LocationOnIcon />
                           </Avatar>
                         </ListItemAvatar>
-                        <ListItemText>{addres}</ListItemText>
+                        <ListItemText>{shipInfo && shipInfo.address},</ListItemText>
+                        <ListItemText>{shipInfo && shipInfo.city},</ListItemText>
+                        <ListItemText>{shipInfo && shipInfo.country},</ListItemText>
+                        <ListItemText>{shipInfo && shipInfo.zipCode}</ListItemText>
                       </ListItem>
                     </List>
                   </Box>
@@ -394,19 +394,6 @@ const Shipping = () => {
                         </Typography>
                       </Grid>
                     </Grid>
-                    <Grid container>
-                      <Grid item xs>
-                        <Typography component='div' variant='button'>
-                          Tax :
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography component='div' variant='button'>
-                          {formatCurrency(tax)}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-
                     <Grid container sx={{ paddingTop: '100px' }}>
                       <Grid item xs>
                         <Typography component='div' variant='button'>

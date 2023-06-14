@@ -129,7 +129,7 @@ const ProductDetails = () => {
                                         {product && product.stock > 0 ?
                                             <span class="stock"> In stock</span>
                                             :
-                                            <span class="stock"> Out Of stock</span>
+                                            <span class="stock"></span>
                                         }
                                         <div class="reviews">
                                             <ul class="stars">
@@ -158,7 +158,7 @@ const ProductDetails = () => {
                                     <h3>Leaf Line</h3>
                                 </div>
                                 <div class="action">
-                                    <button type="button" onClick={addToCartHandler}>Add to cart</button>
+                                    <button type="button"  className='explorebtn'onClick={addToCartHandler}>Add to cart</button>
                                 </div>
                             </div>
                         </div>

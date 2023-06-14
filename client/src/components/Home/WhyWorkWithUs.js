@@ -63,11 +63,10 @@ const WhyWorkWithUs = () => {
   };
 
   const iconStyle = {
-
-    display: 'inline-block',
-    
-    borderColor:'white'
-    // Define your inline CSS styles for the icon
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: 'white'
   };
 
   const serviceHeadingStyle = {
@@ -83,9 +82,9 @@ const WhyWorkWithUs = () => {
 
 
 return (
- <div style={{backgroundColor: '#DAE2B6',boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
-   <section className="eco_services_environment" style={{sectionStyle, }} data-aos="fade-up">
     <Container >
+ <div style={{boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
+   <section className="eco_services_environment" style={{sectionStyle, }} data-aos="fade-up">
     
       <div className="eco_services" data-aos="fade-up" data-aos-delay="100">
         <Row>
@@ -93,9 +92,9 @@ return (
             <div className="eco_items-services">
               <div className="eco_service_cols">
                 <span style={iconStyle}>
-              <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>              </span>
+              <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px',paddingLeft:'auto',paddingRight:'auto'}}/></span>
                 <div data-aos="fade-up" data-aos-delay="100">
-                  <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Recycling</h3>
+                  <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green',textAlign:'center'}}>Recycling</h3>
                   <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify',fontSize: '20px'}} >
                      Reuse items whenever possible before considering recycling.It's helps mitigate these environmental risks.
                   </p>
@@ -149,9 +148,9 @@ return (
           </Col>
         </Row>
       </div>
-    </Container>
    </section>
   </div>
+    </Container>
 );
 };
 

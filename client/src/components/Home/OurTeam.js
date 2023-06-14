@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import './ourTeam.css'
 
 const useStyles = makeStyles((theme) => ({
     background: {
@@ -86,13 +87,13 @@ const OurTeam = () => {
                     <Row className='col-lg-8 offset-lg-2 text-center'>
                         <Col className={classes.description} >
                             <div className="section-title" style={{marginBottom: '0px'}}>
-                            <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Who </span>We Are</h2>
+                            <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Our </span>Team</h2>
                             </div>
                             <p style={{fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '#555', paddingTop:'20px',fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green'}}>This is our wondeful team members feel free to contact us</p>
 
                         </Col>
                     </Row>
-                    <Row >
+                    <Row sx={{height:'200px'}}>
                         <Col lg={4} md={6} data-aos="fade-up" data-aos-delay="100">
                             <div className="single-team-item">
                                 <div className="team-bg team-bg-1" style={{borderRadius:'10px'}}></div>
