@@ -145,7 +145,7 @@ const AddNewCategory = () => {
       <Box
         className='dash-box'
         sx={{
-          backgroundImage: 'url({bg})',
+          backgroundColor:"#F6F7C1",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           padding: '40px',
@@ -165,7 +165,7 @@ const AddNewCategory = () => {
           width: '100%',
           maxWidth: '580px',
           margin: '0 auto',
-          marginTop: "180px",
+          marginTop: "200px",
                     fontFamily: 'poppins, sans-serif',
         }}
       >

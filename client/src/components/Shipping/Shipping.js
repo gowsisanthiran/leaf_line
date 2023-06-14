@@ -284,9 +284,9 @@ const Shipping = () => {
                   defaultOptionLabel=''
                   id='selectTheCountry'
                   style={{ width: '100%', backgroundColor: '#ffffff', color: '#000', border: '2px solid #000' }}
-                  value="LK"
+                  value={country}
                   valueType='short'
-                  priorityOptions={['CA', 'US', 'IN', 'GB', 'LK']}
+                  priorityOptions={['CA', 'US', 'IN', 'GB', ]}
                   onChange={(e => setCountry(e))}
                 />
                 {errors.country && <p className='validationError'>{errors.country}</p>}

@@ -116,6 +116,8 @@ const OrderList = () => {
           sx={{
             padding: '40px',
             minHeight: '100vh',
+            backgroundColor:"#F6F7C1"
+
           }}
         >
         <Box
@@ -130,7 +132,7 @@ const OrderList = () => {
                 padding: '55px',
                 justifyContent: "center",
                 marginLeft: "124px",
-                marginTop: "75px",
+                marginTop: "95px",
 
             }}
         >

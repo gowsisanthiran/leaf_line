@@ -67,6 +67,8 @@ const UpdateRole = () => {
         sx={{
           padding: '40px',
           minHeight: '100vh',
+          backgroundColor:"#F6F7C1"
+
         }}
       >
         <Box
@@ -83,7 +85,7 @@ const UpdateRole = () => {
             height: "100% !important",
             width: "580px",
             marginLeft: "530px",
-            marginTop: "85px",
+            marginTop: "105px",
             marginBottom: "20px"
 
           }}
