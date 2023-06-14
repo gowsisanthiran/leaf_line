@@ -45,7 +45,7 @@ const AdminDashboard = () => {
       {
         label: 'Total Amount',
         fill: true,
-        backgroundColor: [ '#285430'],
+        backgroundColor: [ '#E86A33'],
         hoverBackgroundColor: ['orange'],
         data: [0, totalAmount]
       }
