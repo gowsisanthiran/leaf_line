@@ -308,16 +308,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import HomeIcon from '@mui/icons-material/Home';
 import Header2 from '../Layout/Header2';
-import { Link } from 'react-router-dom';
 import { selectAllProducts, getProducts, resetProducts } from '../../redux/features/productSlice';
 import { getCategories, selectAllCategories } from '../../redux/features/categorySlice';
 import './Product.css';
 import ProductCard from './ProductCard';
 import ProductCardSkeleton from '../Skeletons/ProductCardSkeleton';
 import HeadingWaveSkeleton from '../Skeletons/HeadingWaveSkeleton';
-import HomeIcon from '@mui/icons-material/Home';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Header2 from '../Layout/Header2';
+
+
 const Products = () => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
@@ -407,11 +406,11 @@ const Products = () => {
           <div class="row">
               <div class="col-lg-12 d-flex justify-content-center">
                   <div class="text-center">
-                      <h2 class="banner-title">Cart</h2>
+                      <h2 class="banner-title">Product</h2>
                       <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                           <ol class="breadcrumb">
                             <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
-                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                            <li class="breadcrumb-item active" aria-current="page">Product</li>
                           </ol>
                       </nav>
                   </div>

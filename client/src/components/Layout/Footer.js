@@ -41,6 +41,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import logoo from '../../images/logoo.png';
+import SupportEngine from '../../SupportEngine'
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -95,6 +96,7 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Container>
+      <SupportEngine/>
     </Box>
   );
 };

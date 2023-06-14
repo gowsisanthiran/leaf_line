@@ -82,11 +82,11 @@ const ProductDetails = () => {
                             <div class="row">
                                 <div class="col-lg-12 d-flex justify-content-center">
                                     <div class="text-center">
-                                        <h2 class="banner-title">Detailed Product</h2>
+                                        <h2 class="banner-title">Product Details</h2>
                                         <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><Link to='/'> Home</Link></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Product</li>
+                                                <li class="breadcrumb-item active" aria-current="page">Product Details</li>
                                             </ol>
                                         </nav>
                                     </div>
@@ -101,7 +101,7 @@ const ProductDetails = () => {
                                 <div class="icon">
                                     <a href="/product"><ArrowBackIcon /></a>
                                 </div>
-                                <h3>Our products</h3>
+                                <h3></h3>
                             </div>
                             <div class="card__body">
                                 <div class="half">
@@ -165,7 +165,6 @@ const ProductDetails = () => {
                         <Box className='product-reviews'>
                             {/* <!--heading---> */}
                             <div class="testimonial-heading">
-                                <span>Comments</span>
                                 <h4>Clients Says</h4>
                             </div>
                             <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
