@@ -16,6 +16,8 @@ Grid.box{
 }
 
 .Box:hover {
-  background-image: linear-gradient(to right, #143a0d, #a1c282)
+  background-image: linear-gradient(to right, #d9f4d4, #a8c290)
 }
-
+.doughnutData{
+  width:100px
+}

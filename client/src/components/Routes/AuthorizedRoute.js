@@ -21,12 +21,13 @@ import logoo from '../../images/logoo.png';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
-        right: 6,
-        top: 13,
-        border: `2px solid ${theme.palette.background.paper}`,
-        padding: '0 4px',
+      right: 6,
+      top: 5,
+      border: `2px solid ${theme.palette.background.paper}`,
+      background:'#609a33',
+      padding: '0 4px',
     },
-}));
+  }));
 
 const AuthorizedRoute = () => {
     const { products } = useSelector(selectCartItems);
@@ -36,12 +37,12 @@ const AuthorizedRoute = () => {
     const { UserInfo } = jwtDecode(accessToken);
     role = UserInfo.roles[0].toString();
     if (role === 'admin') {
-        
+
         return (
             <>
                 <Box
                     sx={{
-                        backgroundColor:  '#CDD193',
+                        backgroundColor: "white",
                         transition: ".4s all",
                         overflow: "visible",
                         top: "0",
@@ -62,7 +63,7 @@ const AuthorizedRoute = () => {
                     <Box className='mTreeMenu' sx={{ minWidth: '225px', mr: 1 }}>
                         <DrawerTreeMenu />
                     </Box>
-                    <Box sx={{ flexGrow: 1, paddingTop: '10px' }}>
+                    <Box sx={{ flexGrow: 1}}>
                         <Link to="dashboard" className="link-no-underline">
                             <Typography
                                 component='div'
@@ -70,11 +71,12 @@ const AuthorizedRoute = () => {
                                 // marginTop={"50px"}
                                 sx={{
                                     textAlign: 'left',
+                                
                                     color: '#132a13',
                                     textShadow: '1px 1px 1px #555',
                                     marginLeft: "20px",
-                                    marginTop: "35px",
-                                   
+                                   marginTop:"15px"
+
 
                                 }}
                             >
@@ -89,25 +91,48 @@ const AuthorizedRoute = () => {
                     </Box>
                     <div className="d-flex align-items-center justify-content-end">
                         {/* <NavLink to="/" className="navbar-brand">
-                            <img src={logoo} alt="Logo" className="logo" style={{ height:"100px" }} />
-                        </NavLink> */}
-                        <NavLink to="/" className="nav-link" activeClassName="active" style={{ fontWeight: 'bold', fontFamily: 'Open Sans, sans-serif', color: '#263A29' }}>
-                            <HomeIcon /> 
+    <img src={logoo} alt="Logo" className="logo" style={{ height: "100px" }} />
+  </NavLink> */}
+                        <NavLink
+                            to="/"
+                            className="nav-link custom-nav-link"
+                            activeClassName="active"
+                            style={{
+                                fontWeight: 'bold',
+                                fontFamily: 'Open Sans, sans-serif',
+                                color: '#263A29'
+                            }}
+                        >
+                            <HomeIcon />
                         </NavLink>
-                        <NavLink to="/product" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
+                        <NavLink
+                            to="/product"
+                            className="nav-link custom-nav-link"
+                            activeClassName="active"
+                            style={{
+                                color: '#263A29'
+                            }}
+                        >
                             <Inventory2Icon />
                         </NavLink>
-                        <NavLink to="/cart" className="nav-link" activeClassName="active" style={{ color: '#263A29' }}>
-                            <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
+                        <NavLink
+                            to="/cart"
+                            className="nav-link custom-nav-link"
+                            activeClassName="active"
+                            style={{
+                                color: '#263A29'
+                            }}
+                        >
+                            <StyledBadge badgeContent={products.length > 0 ? products.length : '0'} color="secondary">
                                 <ShoppingCartIcon />
                             </StyledBadge>
-
                         </NavLink>
 
                         <div className="auth-area text-left">
                             <AuthMenu />
                         </div>
                     </div>
+
                 </Box>
                 <Box
                     sx={{

@@ -306,9 +306,9 @@ import { Link } from 'react-router-dom';
 import { Typography, Box, Accordion, AccordionSummary, AccordionDetails, TextField, Slider, List, ListItemButton, ListItemText } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import HomeIcon from '@mui/icons-material/Home';
-import Header2 from '../Layout/Header2';
-import { Link } from 'react-router-dom';
+//import HomeIcon from '@mui/icons-material/Home';
+//import Header2 from '../Layout/Header2';
+//import { Link } from 'react-router-dom';
 import { selectAllProducts, getProducts, resetProducts } from '../../redux/features/productSlice';
 import { getCategories, selectAllCategories } from '../../redux/features/categorySlice';
 import './Product.css';
@@ -407,11 +407,11 @@ const Products = () => {
           <div class="row">
               <div class="col-lg-12 d-flex justify-content-center">
                   <div class="text-center">
-                      <h2 class="banner-title">Cart</h2>
+                      <h2 class="banner-title">Our Collections</h2>
                       <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                           <ol class="breadcrumb">
                             <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
-                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                            <li class="breadcrumb-item active" aria-current="page">Product</li>
                           </ol>
                       </nav>
                   </div>

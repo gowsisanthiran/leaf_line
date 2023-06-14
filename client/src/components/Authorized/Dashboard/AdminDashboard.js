@@ -45,7 +45,7 @@ const AdminDashboard = () => {
       {
         label: 'Total Amount',
         fill: true,
-        backgroundColor: ['tomato'],
+        backgroundColor: [ '#285430'],
         hoverBackgroundColor: ['orange'],
         data: [0, totalAmount]
       }
@@ -56,8 +56,8 @@ const AdminDashboard = () => {
     labels: ['Out Of Stock', 'In Stock'],
     datasets: [
       {
-        backgroundColor: ['red', '#285430'],
-        hoverBackgroundColor: ['black', '#969B40'],
+        backgroundColor: ['#884A39', '#285430'],
+        hoverBackgroundColor: ['black', '#9CA777'],
         data: [outOfStock, products.length - outOfStock]
       }
     ]
@@ -193,16 +193,22 @@ const AdminDashboard = () => {
 
 
 
-        <Grid container sx={{ alignItems: 'center', mt: 1, padding: "30px", marginLeft: "230px", marginTop: "120px" }} spacing={3}>
-          <div style={{ padding: "30px", width: '500px', height: "400px", borderRadius: "10px", boxShadow: '0px 3px 5px 0px #415d43', }}>
+        <Grid container sx={{ alignItems: 'center', mt: 1, marginTop: "120px" }} spacing={3}>
+          <div style={{ width: '750px',height:"500px", borderRadius: "10px", boxShadow: '0px 3px 5px 0px #415d43',marginLeft: "30px", backgroundColor:"white"  }}>
+          <Typography component="div" variant="h4" color="#1b5e20" fontWeight='bold' fontFamily='poppins, sans-serif' textAlign="center" marginTop="20px">
+          Revenue
+        </Typography>
 
-            <Grid item xs={12} md={10} lg={10} style={{ marginLeft: '60px', marginTop: '80px' }}>
+            <Grid item xs={12} md={12} lg={12} style={{ marginLeft: '60px', marginTop: '30px'}}>
               <Line data={lineData} />
             </Grid>
           </div>
 
-          <div style={{ padding: "30px", width: '500px', height: "400px", borderRadius: "10px", boxShadow: '0px 3px 5px 0px #415d43', marginLeft: "50px" }}>
-            <Grid item xs={12} md={10} lg={10} style={{ marginLeft: "40px", marginRight: "40px" }} >
+          <div style={{  width: '760px', height:"500px",borderRadius: "10px", boxShadow: '0px 3px 5px 0px #415d43', marginLeft: "50px", backgroundColor:"white" }}>
+          <Typography component="div" variant="h4"  fontWeight='bold' color="#1b5e20" fontFamily='poppins, sans-serif' textAlign="center" marginTop="20px">
+          Stock Of Products
+        </Typography>
+            <Grid item xs={12} md={10} lg={10} style={{width:'550px',paddingLeft:'14rem',marginTop:'2rem',marginBottom:'2rem', alignItems:"center" }} >
               <Doughnut data={doughnutData} />
             </Grid>
           </div>

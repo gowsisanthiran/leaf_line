@@ -51,11 +51,20 @@ const ProcessOrder = () => {
     return (
 
         <>
+        <Box
+          className='dash-box'
+          sx={{
+            padding: '40px',
+            minHeight: '100vh',
+            backgroundColor:"white"
+
+          }}
+        >
             {loading ? <BoxShadowLoader /> :
                 <>
                     <div className='container'>
                         <Typography component='h1' variant='h5' gutterBottom sx={{
-                            textAlign: 'center', fontFamily: 'poppins, sans-serif', marginTop: "85px",color:"#1b5e20"
+                            textAlign: 'center', fontFamily: 'poppins, sans-serif', marginTop: "75px",color:"#1b5e20"
                         }}>
                             Order details
                         </Typography>
@@ -279,6 +288,7 @@ const ProcessOrder = () => {
                     </div>
                 </>
             }
+            </Box>
         </>
 
     )

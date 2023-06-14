@@ -126,6 +126,7 @@ const UpdateProduct = () => {
     <Box
       className='dash-box'
       sx={{
+        backgroundColor:"#F6F7C1",
         padding: '40px',
         minHeight: '100vh',
       }}
@@ -142,7 +143,7 @@ const UpdateProduct = () => {
         padding: '55px',
         justifyContent: "center",
         marginLeft: "440px",
-        marginTop:"60px",
+        marginTop:"90px",
                 marginBottom:"20px"
       }}
       >

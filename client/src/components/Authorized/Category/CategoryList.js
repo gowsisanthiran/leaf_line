@@ -86,7 +86,7 @@ const CategoryList = () => {
     <Box
       className='dash-box'
       sx={{
-        
+        backgroundColor:"#F6F7C1",
         padding: '40px',
         minHeight: '100vh',
       }}
@@ -102,7 +102,7 @@ const CategoryList = () => {
                 borderRadius: '4px',
                 backgroundColor: '#fff',
                 padding: '55px',
-                marginTop: "85px",
+                marginTop: "110px",
                 marginLeft:"-130px"
 
                 // marginBottom: "20px",
