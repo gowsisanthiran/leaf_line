@@ -6,6 +6,7 @@ import { getOrderDetails, selectOrderDetails } from '../../redux/features/orderS
 import BoxShadowLoader from '../Skeletons/BoxShadowLoader';
 import { formatCurrency } from '../../utility/formatCurrency';
 import HomeIcon from '@mui/icons-material/Home';
+import { Container, Row, Col, ListGroup, Image } from 'react-bootstrap';
 
 import { Box, Typography, Avatar, List, ListItem, ListItemAvatar, ListItemText, Grid } from '@mui/material';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -76,9 +77,136 @@ const OrderDetails = () => {
                                 Order details
                             </Typography>
 
-                            <div className='container order-details-base'>
+                            <Container className='order-details-base'>
 
-                            <Box sx={{ m: '20px 10px' }}>
+                                <Col style={{ maxHeight: '100px' }}>
+                                    <div style={{ backgroundColor: 'rgb(70, 88, 73)', borderRadius: '5px' }}>
+                                        <h5 style={{ padding: '5px' }}>
+                                            <span style={{ background: '#fff', color: 'green', width: 30, height: 30 }} className='rounded-circle'>
+                                                <MonitorHeartIcon /></span>
+                                                <span style={{paddingLeft:'10px'}}>Orders Status</span>
+                                        </h5>
+                                    </div>
+                                    <ListGroup>
+                                        <ListGroup.Item>
+                                            <span className='rounded-circle' style={{ paddingRight: '20px' }}>
+                                                <AttachMoneyIcon />
+                                            </span>
+                                            {order?.paymentInfo?.status === 'succeeded' ? 'Paid' : 'Not Paid'}
+                                        </ListGroup.Item>
+
+                                        <ListGroup.Item>
+                                            <span className='rounded-circle' style={{ paddingRight: '20px' }}>
+                                                <TakeoutDiningIcon />
+                                            </span>
+                                            {order?.orderStatus}
+                                        </ListGroup.Item>
+                                    </ListGroup>
+                                </Col>
+
+                                <Col className='base-div4'>
+                                    <Col className='div3'>
+
+                                        <h5>
+                                            <span style={{ background: '#fff', color: 'green', width: 30, height: 30 }} className='rounded-circle'>
+                                                <LocalShippingIcon />
+                                            </span>
+                                            Shipping
+                                        </h5>
+                                        <ListGroup style={{ paddingBottom: '50px', paddingTop: '50px' }}>
+                                            <ListGroup.Item>
+                                                <span className='rounded-circle' style={{ paddingRight: '20px' }}>
+                                                    <PhoneIcon />
+                                                </span>
+                                                {order?.shippingInfo?.phone}
+                                            </ListGroup.Item>
+
+                                            <ListGroup.Item>
+                                                <span className='rounded-circle' style={{ paddingRight: '20px' }}>
+                                                    <LocationOnIcon />
+                                                </span>
+                                                {order && `${order?.shippingInfo?.address}, ${order?.shippingInfo?.city}, ${order?.shippingInfo?.zipCode}, ${order?.shippingInfo?.state}, ${order?.shippingInfo?.country}`}
+                                            </ListGroup.Item>
+                                        </ListGroup>
+                                    </Col>
+
+                                    <Col className='div3'>
+                                        <div style={{ backgroundColor: 'rgb(70, 88, 73)', borderRadius: '5px' }}>
+                                            <h5 style={{ padding: '5px' }}>
+                                                <span style={{ background: '#fff', color: 'green', width: 30, height: 30 }} className='rounded-circle'>
+                                                    <ShoppingCartIcon />
+                                                </span>
+                                                <span style={{paddingLeft:'10px'}}>Cart Info</span>
+                                            </h5>
+                                        </div>
+                                        {order.orderItems && order.orderItems.map((item, i) => (
+                                            <Row key={item._id} className='mb-2' style={{ paddingBottom: '50px', paddingTop: '50px' }}>
+                                                <Col>
+                                                    <Image src={item.product.images[0].url} alt={item.title} style={{ maxWidth: 100, marginRight: '5px' }} />
+                                                </Col>
+                                                <Col>
+                                                    <h6>
+                                                        <Link to={`/product/${item.product._id}`} style={{ color: 'black', }}>{item.product.title}</Link>
+                                                    </h6>
+                                                    <p>
+                                                        Price: {formatCurrency(item.price)} x {item.quantity} = {formatCurrency(item.price * item.quantity)}
+                                                    </p>
+                                                </Col>
+                                            </Row>
+                                        ))}
+                                    </Col>
+
+                                    <Col className='div3'>
+                                        <div style={{ backgroundColor: 'rgb(70, 88, 73)', borderRadius: '5px' }}>
+                                            <h5 style={{padding:'5px'}}>
+                                                <span style={{ background: '#fff', color: 'green', width: 30, height: 30 }} className='rounded-circle'>
+                                                    <FactCheckIcon />
+                                                </span>
+                                                <span style={{paddingLeft:'10px'}}>Orders Info</span>
+                                            </h5>
+                                        </div>
+                                        <Row>
+                                            <Col xs>
+                                                <p>Subtotal :</p>
+                                            </Col>
+                                            <Col>
+                                                <p>{formatCurrency(order && order.itemsPrice)}</p>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col xs>
+                                                <p>Shipping Charges :</p>
+                                            </Col>
+                                            <Col>
+                                                <p>{formatCurrency(order && order.shippingPrice)}</p>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col xs>
+                                                <p>Tax :</p>
+                                            </Col>
+                                            <Col>
+                                                <p>{formatCurrency(order && order.taxPrice)}</p>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col xs>
+                                                <p>Total :</p>
+                                            </Col>
+                                            <Col>
+                                                <p>{formatCurrency(order && order.totalPrice)}</p>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                </Col>
+
+                            </Container>
+
+
+
+                            {/* <div className='container order-details-base'>
+
+                            <Box>
                                 <Box className='title'>
                                     <Typography variant='button'
                                         component='div'
@@ -243,7 +371,7 @@ const OrderDetails = () => {
 
                                 </Box>
                             </Box>
-                            </div>
+                            </div> */}
 
                         </>
                     }

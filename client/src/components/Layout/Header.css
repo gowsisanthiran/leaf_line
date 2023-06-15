@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/krylon');
-@import url('https://fonts.cdnfonts.com/css/jack-rooney');
+@import url('https://fonts.cdnfonts.com/css/bodoni');
 
 
 
@@ -137,13 +137,15 @@
 
 .explore .btn-lg,
 .explore .btn-lg:hover {
-  border-radius: 10px;
-  padding: 5px 15px;
-  font-size: 22px;
-  background-image: none;
-  background-color: rgb(70, 88, 73);
-  border-color:#5f8273;
-  color: #ffffff;
+  cursor: pointer;
+    border: 2px solid #fff;
+    padding: 12px 20px;
+    border-radius: 200px;
+    color: #fff;
+    background: #1b4332;
+    font-family: Poppins,Opens-serif;
+    font-size: 16px;
+    transition: 200ms;
 }
 
 .btn,
@@ -164,8 +166,8 @@
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  color: #ffffff;
-  outline: none;
+  background: #aacb5c;
+  color: #fff;
 }
 
 

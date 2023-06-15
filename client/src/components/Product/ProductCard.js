@@ -104,12 +104,12 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
           product && product.images && product.images.length > 0
             ? product.images[0].url || 'placeholder.jpg'
             : ''
-        } alt="" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+        } alt="" style={{ height: '200px', width: '200px', objectFit: 'cover' }} />
       </div>
       <div class="content-wrapper">
-        <h2 class="title" onClick={linkToDetails}>{product?.title && product.title.length > 15
+        <span class="cardtitle">{product?.title && product.title.length > 15
           ? product.title.slice(0, 14)
-          : product.title}</h2>
+          : product.title}</span>
 
         <p class="price" data-price={product.price}>{product.discount > 0 ? (
           <Box>
@@ -130,16 +130,16 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
         )}</p>
         <div class="inner-content-wrapper">
           <p class="about">
-            {product.localShipmentPolicy === 'free' ? (
+            {/* {product.localShipmentPolicy === 'free' ? (
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <LocalShippingIcon sx={{ mr: 1, color: '#458a6f' }} />
                 <Typography variant="caption">Free Shipping</Typography>
               </Box>
             ) : (
               <br />
-            )}
+            )} */}
           </p>
-          <p class="about">
+          {/* <p class="about">
             <Stack spacing={1} sx={{ display: 'block' }}>
               <Rating
                 name="half-rating-read"
@@ -148,7 +148,7 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
                 readOnly
               />
             </Stack>
-          </p>
+          </p> */}
 
           <div class="icons">
             {ref ? (
@@ -157,6 +157,9 @@ const ProductCard = React.forwardRef(({ product }, ref) => {
               <span class="icon icon1" ref={ref} onClick={cartHandler}>{icon}</span>
             )}
           </div>
+      <div class="icons">
+          <span class="icon icon1" onClick={linkToDetails}>View Product</span>
+      </div>
         </div>
       </div>
     </div>

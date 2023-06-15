@@ -406,7 +406,7 @@ const Products = () => {
           <div class="row">
               <div class="col-lg-12 d-flex justify-content-center">
                   <div class="text-center">
-                      <h2 class="banner-title">Our Collections</h2>
+                      <h2 class="banner-title">Our Products</h2>
                       <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                           <ol class="breadcrumb">
                             <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
@@ -556,7 +556,7 @@ const Products = () => {
               sx={{ ml: '10px', mb: '20px', textAlign: 'center' }}
             >
               {filteredProductsCount && filteredProductsCount > 0 ?
-                `Found ${filteredProductsCount} items`
+                `Found ${filteredProductsCount} Products`
                 :
                 'No product found'}
             </Typography>

@@ -290,9 +290,9 @@ const Shipping = () => {
 
               </div>
             </div>
-            <div className="row">
-              <button type="submit" value="Cancel" className="btn01"><Link to='/cart' style={{ textDecoration: 'none', color: '#000' }}> <ArrowCircleLeftIcon /><br/>Back</Link></button>
-              <button type="submit" value="Submit" className="btn01"><LocalShippingIcon />Checkout</button>
+            <div className="row" style={{padding:'10px'}}>
+              <button type="submit" value="Cancel" className="btn01 btn02"><Link to='/cart' style={{ textDecoration: 'none', color: '#fff'}}> <ArrowCircleLeftIcon /><br/>Back</Link></button>
+              <button type="submit" value="Submit" className="btn01 btn03"style={{ textDecoration: 'none', color: '#fff' }}><LocalShippingIcon />Checkout</button>
 
 
             </div>

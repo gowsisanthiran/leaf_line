@@ -23,16 +23,17 @@ const ProductDetails = () => {
     const [submitReview, setSubmitReview] = useState('');
     const [open, setOpen] = useState(false);
     const [quantity, setQuantity] = useState(1);
-    const decreaseQuantity = () => {
-        if (1 === quantity) return;
-        const qty = quantity - 1;
-        setQuantity(qty);
-    }
-    const increaseQuantity = () => {
-        if (product.stock <= quantity) return;
-        const qty = quantity + 1;
-        setQuantity(qty);
-    }
+    const decreaseQuantity=(_id,qty)=>{
+        const quantity=qty-1;
+        if(qty<=1) return;
+        dispatch(addItemsToCart({_id,quantity}));
+      }
+      const increaseQuantity=(_id,qty,stock)=>{
+        const quantity=qty+1;
+        if(stock<=qty) return;
+        dispatch(addItemsToCart({_id,quantity}));
+      }
+      
     const addToCartHandler = () => {
         const _id = product._id;
         dispatch(addItemsToCart({ _id, quantity, toast }))
@@ -112,8 +113,13 @@ const ProductDetails = () => {
                                         <p class="sub">{product && product.category.title}</p>
                                         <p class="price">{product && formatCurrency(product.price - product.discount)}
                                         </p>
+                                        <p class=''>{product && product.stock > 0 ?
+                                            <span class="stock"> In stock</span>
+                                            :
+                                            <span class="stock"></span>
+                                        }</p>
                                     </div>
-                                    <div class="image">
+                                    <div class="productcardimage">
                                         <img src={
                                             product && product.images && product.images.length > 0
                                                 ? product.images[0].url || 'placeholder.jpg'
@@ -122,35 +128,27 @@ const ProductDetails = () => {
                                     </div>
                                 </div>
                                 <div class="half">
-                                    <div class="description">
-                                        <p>{product && product.description}</p>
-                                    </div>
                                     <div className='ratingsDiv'>
-                                        {product && product.stock > 0 ?
-                                            <span class="stock"> In stock</span>
-                                            :
-                                            <span class="stock"></span>
-                                        }
                                         <div class="reviews">
                                             <ul class="stars">
                                                 <li>
-                                                    <Stack spacing={1} className='rating-review' >
+                                                    <Stack spacing={1} className='rating-review'>
                                                         <Rating value={product && product.ratings} precision={0.1} readOnly />
                                                     </Stack>
                                                 </li>
                                             </ul><br />
-                                            <span>Reviews : ({product && product.numOfReviews})</span>
+                                            <span>Reviews: ({product && product.numOfReviews})</span>
                                         </div>
                                     </div>
-                                    <div id="quantity">QUANTITY
-                                        <button class="arrow" onclick={decreaseQuantity}>&#8249;</button>
-                                        <span id="number">{quantity}</span>
-                                        <button class="arrow" onclick={increaseQuantity}>&#8250;</button>
+                                    <br/>
+                                    <div class="description">
+                                        <p>{product && product.description}</p>
                                     </div>
-
-
+                                    <div id="quantity">
+                                        <label for="quantity-input">Quantity</label>
+                                        <p></p>
+                                    </div>
                                 </div>
-
                             </div>
                             <div class="card__footer">
                                 <div class="recommend">
@@ -158,10 +156,11 @@ const ProductDetails = () => {
                                     <h3>Leaf Line</h3>
                                 </div>
                                 <div class="action">
-                                    <button type="button"  className='explorebtn'onClick={addToCartHandler}>Add to cart</button>
+                                    <button type="button" class='explorebtn' onClick={addToCartHandler}>Add to cart</button>
                                 </div>
                             </div>
                         </div>
+
                         <Box className='product-reviews'>
                             {/* <!--heading---> */}
                             <div class="testimonial-heading">
@@ -182,6 +181,7 @@ const ProductDetails = () => {
                                             id="review"
                                             style={{ width: '100%', margin: '10px 0', padding: "10px", borderRadius: "20px" }}
                                             minRows={5}
+
                                             value={submitReview}
                                             variant="standard"
                                             onChange={(e => setSubmitReview(e.target.value))}

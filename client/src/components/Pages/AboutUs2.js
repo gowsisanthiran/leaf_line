@@ -119,7 +119,7 @@ function AboutUs2() {
                                     About <span className="orange-text" style={{ color:'#212529'  }}>us</span>
                                 </h2>
                                 <p style={{ fontFamily: 'Poppins, sans-serif',fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green',textAlign:"center" }}>
-                                    Welcome to our banana leaf plate e-commerce website!
+                                    Welcome to our LeafLine
                                 </p>
                                 <div className="latest_wrapper d-flex flex-column-reverse flex-lg-row">
                                     <div className="latest_promo aos-init aos-animate" data-aos="fade-right">
@@ -136,7 +136,7 @@ function AboutUs2() {
                                     <ul className="latest_list col-lg-7 col-xl-6">
                                         <li className="list-item d-flex flex-column flex-sm-row aos-init aos-animate" data-aos="fade-up">
                                             <span className="latest_list-preview">
-                                                <pictur>
+                                              
                                                     <img
                                                         src={sl17}
                                                         alt="about something"
@@ -147,7 +147,7 @@ function AboutUs2() {
                                                         style={{ width: '175px', height: '175px', borderRadius: '20px', marginTop: '1px', borderTopLeftRadius: '20px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.9)' }}
 
                                                     />
-                                                </pictur>
+                                              
                                             </span>
                                             {/* Rest of the code */}
                                             <div className="latest_list-main d-sm-flex flex-column justify-content-between flex-grow-1" style={{  display: 'Block', marginLeft: '20px' }}>

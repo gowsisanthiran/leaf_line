@@ -96,7 +96,6 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Container>
-      <SupportEngine/>
     </Box>
   );
 };

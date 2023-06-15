@@ -10,7 +10,7 @@ main {
   grid-template-columns: 1fr 1fr;
   padding-top: 50px;
   padding-bottom: 50px;
-  gap: 50px;
+  gap: 30px;
 }
 
 .container3 {
@@ -24,7 +24,6 @@ main {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
-
 
 .card__title {
   display: flex;
@@ -102,12 +101,12 @@ main {
   font-size: 26px;
 }
 
-.card__body .image {
+.card__body .productcardimage {
   padding-top: 15px;
   width: 100%;
 }
 
-.card__body .image img {
+.card__body .productcardimage img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -116,6 +115,7 @@ main {
 
 .card__body .description {
   margin-bottom: 25px;
+  max-width: 170px;
 }
 
 .card__body .description p {
@@ -164,7 +164,7 @@ main {
   width: calc(100% - 40px);
   height: 3px;
   background: #115dd8;
-  background: linear-gradient(to right, #115dd8 0%, #115dd8 20%, #ddd 20%, #ddd 100%);
+  background: linear-gradient(to right, #8fba1c 0%, #91aa4d 20%, #ddd 20%, #ddd 100%);
 }
 
 .card__footer .recommend {
@@ -191,18 +191,18 @@ main {
 
 .card__footer .action button {
   cursor: pointer;
-  border: 1px solid #609a33;
+  border: 1px solid #1b4333;
   padding: 14px 30px;
   border-radius: 200px;
   color: #fff;
-  background: #8fba1c;
+  background: #253202;
   font-family: Poppins,Opens-serif;
   font-size: 16px;
   transition: 200ms;
 }
 
 .card__footer .action button:hover {
-  background: #6f9c05;
+  background: #b6e745;
   color: #fff;
 }
 
@@ -210,6 +210,7 @@ main {
     position: relative ;
     top: 100px;
 } */
+
 .product-reviews {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
@@ -224,24 +225,24 @@ main {
 
 #grey,
 .arrow {
-  color: #8f9491;
+  color: #121312;
 }
 
 .arrow {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: 'Open Sans';
   background-color: white;
   border: 0;
 }
 
 #number {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-family: Poppins,Opens-serif
 }
 
 #quantity {
-  font-size: 1.3rem;
-  font-family: Poppins,Opens-seriff;
+  font-size: 1rem;
+  font-family: Poppins,Opens-serif;
   padding-top: 25px;
 }
 .testimonial-heading{
