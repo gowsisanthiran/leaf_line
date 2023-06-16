@@ -150,6 +150,7 @@
     font-size: 16px;
     transition: 200ms;
   }
+  /* {
     cursor: pointer;
   border: 2px solid #fff;
   padding: 14px 5px;
@@ -160,7 +161,7 @@
   font-family: Poppins,Opens-serif;
   font-size: 16px;
   transition: 200ms;
-}
+} */
   
   
   .btn01:hover {

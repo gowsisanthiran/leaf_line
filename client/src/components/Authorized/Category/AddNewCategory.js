@@ -165,7 +165,7 @@ const AddNewCategory = () => {
           width: '100%',
           maxWidth: '580px',
           margin: '0 auto',
-          marginTop: "200px",
+          marginTop: "180px",
                     fontFamily: 'poppins, sans-serif',
         }}
       >

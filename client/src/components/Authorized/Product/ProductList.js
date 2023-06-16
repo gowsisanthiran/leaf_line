@@ -124,7 +124,7 @@ const ProductList = () => {
                 padding: '55px',
                 justifyContent: "center",
                 marginLeft: "124px",
-                marginTop: "115px",
+                marginTop: "55px",
 
                 // marginBottom: "20px",
             }}

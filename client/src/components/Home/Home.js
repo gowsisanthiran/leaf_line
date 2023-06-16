@@ -49,7 +49,7 @@ const Home = () => {
       {/* <AboutUs /> */}
       <VideoPopup/>
       <ContactUs />
-      <OurTeam/>
+      {/* <OurTeam/> */}
       
       
     </Box>

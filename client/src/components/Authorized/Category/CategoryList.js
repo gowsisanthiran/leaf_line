@@ -102,7 +102,7 @@ const CategoryList = () => {
                 borderRadius: '4px',
                 backgroundColor: '#fff',
                 padding: '55px',
-                marginTop: "110px",
+                marginTop: "85px",
                 marginLeft:"-130px"
 
                 // marginBottom: "20px",

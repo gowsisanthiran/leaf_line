@@ -151,7 +151,7 @@ const UserList = () => {
                 padding: '55px',
                 justifyContent: "center",
                 marginLeft: "124px",
-                marginTop:"95px",
+                marginTop:"65px",
 
             }}
 

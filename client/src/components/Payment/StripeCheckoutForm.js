@@ -127,9 +127,9 @@ const StripeCheckoutForm = (props) => {
                 </div>
             </section>
             {/*Banner Ends*/}
-            <Box component='form'   
+            <Box component='form'
                 onSubmit={(e) => submitHandler(e)}
-                sx={{ m: '0 auto', maxWidth: '550px', textAlign: 'center', minWidth: '500px', paddingTop: '10rem',paddingBottom:'10rem' }}>
+                sx={{ m: '0 auto', maxWidth: '550px', textAlign: 'center', minWidth: '500px', paddingTop: '10rem', paddingBottom: '10rem' }}>
                 <Card sx={{ p: 1, pt: 3 }}>
                     <Avatar sx={{ bgcolor: 'white', height: '150px', width: '400px', m: '0 auto' }}>
                         <img src={logo} alt="" style={{ width: '400px' }} />
@@ -154,16 +154,18 @@ const StripeCheckoutForm = (props) => {
                     </Box>
 
                     <LoadingButton type='submit'
-        <LoadingButton type='submit' style={{cursor: "pointer",
-    border: "2px solid #fff",
-    padding: "14px 5px",
-    width:"250px",
-    bordeRadius: '200px',
-    color:" #fff",
-    background: "#1b4333",
-    fontFamily: "Poppins,Opens-serif",
-    fontSize: "16px",
-    transition: "200ms"}}
+                          style={{
+                        cursor: "pointer",
+                        border: "2px solid #fff",
+                        padding: "14px 5px",
+                        width: "250px",
+                        bordeRadius: '200px',
+                        color: " #fff",
+                        background: "#1b4333",
+                        fontFamily: "Poppins,Opens-serif",
+                        fontSize: "16px",
+                        transition: "200ms"
+                    }}
                         loading={proccessing}
                         fullWidth
                         loadingPosition='start'
