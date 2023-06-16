@@ -9,7 +9,8 @@
     opacity: 0.9; 
 }
 .team-bg {
-    height: 400px;
+    height: 200px;
+    
     background-size: cover;
     background-position: center;
     border-radius: 5px;

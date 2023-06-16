@@ -266,7 +266,7 @@ const WhyChoosingUs = () => {
 
 
 
-                <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Our </span>History</h2>
+                <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Who </span>We Are</h2>
 
 
 

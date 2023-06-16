@@ -139,6 +139,17 @@
   }
 
   .btn01 {
+    /* height: max-content; */
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: 2px 2px;
+    border-radius: 200px;
+    color: #fff;
+    background: #1b4332;
+    font-family: Poppins,Opens-serif;
+    font-size: 16px;
+    transition: 200ms;
+  }
     cursor: pointer;
   border: 2px solid #fff;
   padding: 14px 5px;
@@ -152,6 +163,10 @@
 }
   
   
+  .btn01:hover {
+    background: #6f9c05;
+  color: #fff;
+  }
    .btn01:hover {
     background: #9BBBAF;
     border-color: #fff;

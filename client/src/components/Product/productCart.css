@@ -13,8 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition: all .6s;
+  transition: all .7s;
 }
 
 .img-wrapper img{
@@ -23,7 +22,7 @@
 
 .card:hover .img-wrapper{
   transform-origin: top;
-  transform: scale(0.6) translateY(20px);
+  transform: scale(0.5) translateY(150px);
 }
 
 .content-wrapper{
@@ -31,7 +30,7 @@
 }
 
 .card:hover .content-wrapper{
-  transform: translateY(-100px);
+  transform: translateY(-180px);
 }
 
 .inner-content-wrapper{
@@ -39,14 +38,18 @@
 }
 
 .card:hover .inner-content-wrapper{
-  transform: translateY(-70px);
+  transform: translateY(40px);
+  font-family: Poppins,sans-serif;
+
 }
 
-.title{
+.cardtitle{
   margin: 15px 0 20px 0;
+  font-size: 2rem;
+  font-family: Poppins,sans-serif;
 }
 
-.card:hover .title{
+.card:hover .cardtitle{
   color: #fe6c2d;
 }
 
@@ -62,7 +65,10 @@
   opacity: 0;
 }
 
+.card:hover .about{
+  opacity: 0;
 
+}
 
 
 .icons{
@@ -96,27 +102,26 @@
 }
 
 .price-corner::before{
-  content: '$ 399';
-  background: #0ac9f5;
+  content: attr(data-content);
+  background: rgb(143, 212, 0);
   display: flex;
   justify-content: center;
   width: 130px;
   align-items: center;
   position: absolute;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   transform-origin: top;
-  padding-top: 20px;
+  padding-top: 30px;
   right: -115px;
   height: 40px;
   top: -50px;
   transform: rotate(45deg);
   z-index: 1;
-
   transition: all .5s;
 }
 
 .card:hover .price-corner::before{
-  padding-top: 96px;
+  padding-top: 125px;
 }
 .custom-toast {
   font-family: 'Poppins', sans-serif;
@@ -132,6 +137,4 @@
   color: #000;
 
 }
-.productCardTitle{
-  cursor: pointer;
-}
+

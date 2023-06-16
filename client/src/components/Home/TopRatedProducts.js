@@ -38,10 +38,10 @@ const TopRatedProducts=()=> {
       <div className='col-lg-12 text-center'>
         <Box className="containerx col-lg-8 offset-lg-2 text-center" sx={{ textAlign: 'center'}}>
           <Typography variant="h5" className="m-4 p-1 text-dark text-center" sx={{fontFamily: 'Open Sans , sans-serif',fontWeight: 'bold',fontSize:'40px'}}>
-            <span style={{color:'green'}}>Top-Rated</span><span>&nbsp;&nbsp;</span>  Products
+            <span style={{color:'green'}}>Top</span><span>&nbsp;</span>  Picks
           </Typography>
           <Typography variant="" className="m-4 p-1 text-dark text-center"sx={{ fontFamily: 'Poppins, sans-serif', textAlign: 'justify',fontSize: '20px'}}  data-aos="fade-up" data-aos-delay="100">
-          Banana leaf plates, also known as "vaazhai ilai" in some regions, are a traditional and eco-friendly alternative to disposable plates. In our LEAFLINE this products are very unique.         </Typography>
+          Banana leaf plates, also known as "vaazhai ilai" in some regions, are a traditional and eco-friendly alternative to disposable plates.          </Typography>
           <Grid container spacing={5} justifyContent="center"sx={{paddingTop:'20px'}}  data-aos="fade-up" data-aos-delay="200">
             {topRatedProduct &&
               topRatedProduct.products.map((product) => (

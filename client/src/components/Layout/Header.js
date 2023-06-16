@@ -107,7 +107,7 @@ const Header = () => {
 </div> */}
 
       <div class="covertext zoom-effect">
-        <div class="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem', fontFamily: 'NunitoSans,Verdana', color: '#fff', border: '2px ' }}>
+        <div class="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem',fontFamily: 'Bodoni, sans-serif', color: '#fff', border: '2px ' }}>
           <h1 class="title">BIO-DEGRADABLE PLATES FOR A</h1>
           <h1 class="title">CLEANER PLANET</h1>
         </div>

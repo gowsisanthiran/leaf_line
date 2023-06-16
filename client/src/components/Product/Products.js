@@ -306,18 +306,17 @@ import { Link } from 'react-router-dom';
 import { Typography, Box, Accordion, AccordionSummary, AccordionDetails, TextField, Slider, List, ListItemButton, ListItemText } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-//import HomeIcon from '@mui/icons-material/Home';
-//import Header2 from '../Layout/Header2';
-//import { Link } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import Header2 from '../Layout/Header2';
 import { selectAllProducts, getProducts, resetProducts } from '../../redux/features/productSlice';
 import { getCategories, selectAllCategories } from '../../redux/features/categorySlice';
 import './Product.css';
 import ProductCard from './ProductCard';
 import ProductCardSkeleton from '../Skeletons/ProductCardSkeleton';
 import HeadingWaveSkeleton from '../Skeletons/HeadingWaveSkeleton';
-import HomeIcon from '@mui/icons-material/Home';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Header2 from '../Layout/Header2';
+
+
 const Products = () => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
@@ -407,6 +406,7 @@ const Products = () => {
           <div class="row">
               <div class="col-lg-12 d-flex justify-content-center">
                   <div class="text-center">
+                      <h2 class="banner-title">Our Products</h2>
                       <h2 class="banner-title">Our Items</h2>
                       <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                           <ol class="breadcrumb">
@@ -557,7 +557,7 @@ const Products = () => {
               sx={{ ml: '10px', mb: '20px', textAlign: 'center' }}
             >
               {filteredProductsCount && filteredProductsCount > 0 ?
-                `Found ${filteredProductsCount} items`
+                `Found ${filteredProductsCount} Products`
                 :
                 'No product found'}
             </Typography>

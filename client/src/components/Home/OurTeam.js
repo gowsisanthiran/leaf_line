@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import './ourTeam.css'
 
 const useStyles = makeStyles((theme) => ({
     background: {
@@ -92,7 +93,7 @@ const OurTeam = () => {
 
                         </Col>
                     </Row>
-                    <Row >
+                    <Row sx={{height:'200px'}}>
                         <Col lg={4} md={6} data-aos="fade-up" data-aos-delay="100">
                             <div className="single-team-item">
                                 <div className="team-bg team-bg-1" style={{borderRadius:'10px'}}></div>

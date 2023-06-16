@@ -20,7 +20,7 @@ import RecyclingIcon from '@mui/icons-material/Recycling';
 import WaterDropTwoToneIcon from '@mui/icons-material/WaterDropTwoTone';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import sl0001 from '../../images/bg1.jpeg';
-import { faRecycle } from '@fortawesome/free-solid-svg-icons';
+import { faBorderTopLeft, faRecycle } from '@fortawesome/free-solid-svg-icons';
 // import { faLeaf } from 'font-awesome-library';
 // import { solid } from 'font-awesome-library';
 
@@ -63,11 +63,10 @@ const WhyWorkWithUs = () => {
   };
 
   const iconStyle = {
-
-    display: 'inline-block',
-    
-    borderColor:'white'
-    // Define your inline CSS styles for the icon
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: 'white'
   };
 
   const serviceHeadingStyle = {
@@ -83,19 +82,19 @@ const WhyWorkWithUs = () => {
 
 
 return (
- <div style={{backgroundColor: '#DAE2B6',boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
-   <section className="eco_services_environment" style={{sectionStyle, }} data-aos="fade-up">
     <Container >
+ <div style={{boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
+   <section className="eco_services_environment" style={{sectionStyle, }} data-aos="fade-up">
     
-      <div className="eco_services" data-aos="fade-up" data-aos-delay="100">
+      <div className="eco_services" data-aos="fade-up" data-aos-delay="100"style={{backgroundColor:'#DAE2B6' ,borderRadius:'10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
         <Row>
           <Col md={4} sm={6} xs={12} style={{paddingTop:'30px', marginTop:'30px',marginBottom:'25px' }}>
             <div className="eco_items-services">
               <div className="eco_service_cols">
                 <span style={iconStyle}>
-              <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>              </span>
+              <RecyclingIcon  style={{color: "#0a330d" ,width:'100px', height:'100px',paddingLeft:'auto',paddingRight:'auto'}}/></span>
                 <div data-aos="fade-up" data-aos-delay="100">
-                  <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Recycling</h3>
+                  <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green',textAlign:'center'}}>Recycling</h3>
                   <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify',fontSize: '20px'}} >
                      Reuse items whenever possible before considering recycling.It's helps mitigate these environmental risks.
                   </p>
@@ -108,7 +107,7 @@ return (
                 </span>
               
                 <div data-aos="fade-up" data-aos-delay="100">
-                <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>ECO System</h3>
+                <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green',textAlign:'center'}}>ECO System</h3>
                   <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify',fontSize: '20px'}} >
                   Eco systems support biodiversity by providing habitats and food sources for a variety of species.
                   </p>
@@ -119,7 +118,7 @@ return (
           <Col md={4} sm={6} xs={12} className="hidden-sm-down">
             <figure data-aos="fade-up" data-aos-delay="100">
               <div className="thumb-widthout-layer">
-                <img src={sl001} alt=""  style={{padding:'50px' }} />
+                <img src={sl001} alt=""  style={{padding:'50px',paddingTop :'4rem'}} />
               </div>
             </figure>
           </Col>
@@ -130,7 +129,7 @@ return (
                    {/* <FontAwesomeIcon icon={faRecycle}style={{color: "#0a330d" ,width:'100px', height:'100px'}} /> */}
                   <SpaTwoToneIcon  style={{color: "#0a330d" ,width:'100px', height:'100px'}}/>               </span>
                 <div data-aos="fade-up" data-aos-delay="100">
-                <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Organic</h3>
+                <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green',textAlign:'center'}}>Organic</h3>
                   <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify',fontSize: '20px'}} >
                   Organic agriculture helps protect water quality.It's promote more sustainable and eco-friendly practices.</p>
                 </div>
@@ -140,7 +139,7 @@ return (
                 <FavoriteTwoToneIcon style={{color: "#0a330d" ,width:'100px', height:'100px'}} />
                 </span>
                 <div data-aos="fade-up" data-aos-delay="100" >
-                <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green'}}>Nature friendly</h3>
+                <h3 style={{serviceHeadingStyle,fontFamily: 'Open Sans',color: 'green',textAlign:'center'}}>Nature friendly</h3>
                   <p style={{serviceParagraphStyle, fontFamily: 'Poppins, sans-serif',textAlign:'justify',fontSize: '20px'}} >
                   A Taste of Sustainability for a Greener World, Rediscover Nature's Bounty with Banana Plates!                  </p>
                 </div>
@@ -149,9 +148,9 @@ return (
           </Col>
         </Row>
       </div>
-    </Container>
    </section>
   </div>
+    </Container>
 );
 };
 

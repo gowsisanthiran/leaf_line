@@ -22,17 +22,30 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header2 = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 0;
+    setScrolled(isScrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const { products } = useSelector(selectCartItems);
 
   
   return (
     
 
-    <div className='' style={{}}>
-      <nav className={`navbar navbar-expand navbar-dark fixed-top`} style={{ backgroundColor:'',maxHeight:'80px'}}>
-        <div className="container" >
+    <div className={`container-fluid main ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'rgb(218, 226, 182)' : '' }}>
+        <div className="container" style={{ marginTop: '-40px', marginBottom: '-40px' }}>
           <NavLink to="/" className="navbar-brand">
-            <img src={logoo} alt="Logo" className="logo" style={{height:'100px',overflow: 'hidden' }} />
+            <img src={logoo}black alt="Logo" className="logo" style={{ height: 'auto', aspectRatio: '3/2', width: '50%' }} />
           </NavLink>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -50,7 +63,7 @@ const Header2 = () => {
                 </NavLink>
               </li>
               <li className="nav-item mr-sm-2">
-              <NavLink to="/cart" className="" activeClassName="active" style={{ color: '#9DC183' ,marginRight: '5px'}}>
+                <NavLink to="/cart" className="" activeClassName="active" style={{ color: '#9DC183' ,marginRight: '5px'}}>
                   <StyledBadge badgeContent={products.length>0?products.length:'0'} color='secondary'>
                     <ShoppingCartIcon />
                   </StyledBadge>
@@ -63,8 +76,11 @@ const Header2 = () => {
             </ul>
 
             <AuthMenu style={{ color: '#9DC183' ,marginRight: '5px'}}/>
-            
+
           </div>
+          {/* <div className="d-flex align-items-center justify-content-end" style={{ marginTop: '80px',color:'#bdf890' }}>
+          
+        </div> */}
         </div>
 
       </nav>

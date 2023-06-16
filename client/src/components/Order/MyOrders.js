@@ -16,22 +16,26 @@ const MyOrders = () => {
   const { loading, orders } = useSelector(selectAllOrders);
 
   const columns = [
-    { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, headerAlign: 'left' },
-    { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1, headerAlign: 'left' },
-    { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1, type: 'number', align: 'left', headerAlign: 'left' },
-    { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1, type: 'number', align: 'left', headerAlign: 'left' },
+    // { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+      // { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+    { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1, maxWidth: 200 },
+    { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1, maxWidth: 200, type: 'number',},
+    { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1, maxWidth: 200, type: 'number' },
     {
       field: 'details',
       headerName: 'Details',
       headerClassName: 'gridHeader',
       flex: 1,
+      maxWidth: 200,
+      type: 'number',
+      flex: 1,
       sortable: false,
       renderCell: (params) => {
         return (
           <>
-            <Link to={`/order/${params.getValue(params.id, 'id')}`}>
+            <Link to={`/order/${params.getValue(params.id,'id')}`}>
               <Tooltip title='View Details' placement='top'>
-                <LaunchIcon sx={{ width: '30px', height: '30px', color: '#1976d2' }} />
+                <LaunchIcon sx={{ width: '40px', height: '40px', color: 'green' }} />
               </Tooltip>
             </Link>
           </>
@@ -45,7 +49,7 @@ const MyOrders = () => {
     orderId: order.shortId,
     status: order.orderStatus,
     itemsQty: order.orderItems.length,
-    amount: order.totalPrice,
+    amount: 'LKR' + '.' + order.totalPrice,
   }));
 
   useEffect(() => {
@@ -71,6 +75,15 @@ const MyOrders = () => {
                     <li class="breadcrumb-item active" aria-current="page">
                       My Orders
                     </li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="text-center">
+                <h2 class="banner-title">My Orders</h2>
+                <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><Link to='/'><HomeIcon /> Home</Link></li>
+                    <li class="breadcrumb-item active" aria-current="page">My Orders</li>
                   </ol>
                 </nav>
               </div>
