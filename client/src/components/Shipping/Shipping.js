@@ -107,16 +107,12 @@ const Shipping = () => {
 
   let unitShippingCharge = [];
   let shippingCharge = 0;
-  if (shipInfo.country === 'IN') {
+  if (shipInfo.country === 'LK') {
     for (let i = 0; i < products.length; i++) {
 
       if (products[i].localShipmentPolicy === 'free') {
         shippingCharge = shippingCharge + 0;
         unitShippingCharge[i] = 0;
-      }
-      if (products[i].localShipmentPolicy === 'custom') {
-        shippingCharge = shippingCharge + (products[i].quantity * products[i].customLocalShipmentCost);
-        unitShippingCharge[i] = products[i].quantity * products[i].customLocalShipmentCost;
       }
       if (products[i].localShipmentPolicy === 'standard') {
 
