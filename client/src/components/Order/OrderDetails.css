@@ -1,3 +1,13 @@
-.order-details-base{
+/* .order-details-base{
     grid-template-columns: 1fr 1fr;
-}
+} */
+.div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  

@@ -142,6 +142,16 @@ const Registration = () => {
                       component='label'
                       color="success"
                       startIcon={<PhotoIcon />}
+                      style={{cursor: "pointer",
+    border: "2px solid #fff",
+    padding: "14px 5px",
+    width:"250px",
+    bordeRadius: '200px',
+    color:" #fff",
+    background: "#1b4333",
+    fontFamily: "Poppins,Opens-serif",
+    fontSize: "16px",
+    transition: "200ms"}}
                     >
                       <input type='file'
                         hidden
@@ -157,6 +167,16 @@ const Registration = () => {
                   variant='contained'
                   color="success"
                   sx={{ mt: 3, mb: 2 }}
+                  style={{cursor: "pointer",
+    border: "2px solid #fff",
+    padding: "14px 5px",
+    width:"250px",
+    bordeRadius: '200px',
+    color:" #fff",
+    background: "#1b4333",
+    fontFamily: "Poppins,Opens-serif",
+    fontSize: "16px",
+    transition: "200ms"}}
                 >Registration & Login</Button>
                 <MDBRow className="mt-2">
                   <MDBCol>

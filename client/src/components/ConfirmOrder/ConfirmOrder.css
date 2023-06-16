@@ -38,17 +38,21 @@
 }
 
 .btn02 {
-    margin: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: 14px 5px;
+    width:250px;
+    border-radius: 200px;
+    color: #fff;
+    background: #1b4333;
+    font-family: Poppins,Opens-serif;
+    font-size: 16px;
+    transition: 200ms;
   }
   
   .btn02:hover {
-    background: #69B692;
-    border-color: #69B692;
+    background: #9BBBAF;
+    border-color: #fff;
     cursor: pointer;
   }
 

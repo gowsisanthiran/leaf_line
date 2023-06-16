@@ -199,10 +199,10 @@ const Shipping = () => {
     </section>
       {/*Banner Ends*/}
 
-      <form id="myform" className='glassmorphism-form' onSubmit={handleSubmit} >
-        <header>CheckOut Page
+      <form id="myform" className='glassmorphism-form'style={{backgroundColor:'#DAE2B6'}} onSubmit={handleSubmit} >
+        <header style={{backgroundColor:'#DAE2B6'}}>CheckOut Page
         </header>
-        <div class="grid-container">
+        <div class="grid-container" style={{backgroundColor:'#DAE2B6'}}>
           <div className="area">
             <div class="grid-child purple">
               <div className="row2">
@@ -308,7 +308,7 @@ const Shipping = () => {
               <div id='cardDiv'>
                 <Box className='div1'>
                   <Box className='confirmOrderTitle '>
-                    <p component='div' variant='button' sx={{ textAlign: 'center' }}>
+                    <p component='div' variant='button' sx={{ textAlign: 'center',    color: "#17432f"}}>
                       Shipping Address
                     </p>
                   </Box>
@@ -336,7 +336,7 @@ const Shipping = () => {
 
                 <Box className='div2'>
                   <Box className='confirmOrderTitle'>
-                    <p component='div' variant='button' sx={{ textAlign: 'center' }}>
+                    <p component='div' variant='button' sx={{ textAlign: 'center', color: "#17432f" }}>
                       Cart Items Info
                     </p>
                   </Box>
@@ -428,7 +428,7 @@ const Shipping = () => {
           </div>
         </div>
       </form>
-      <button
+      <button style={{marginLeft:'800px', marginTop:'1rem',marginBottom:'1rem'}}
         className='btn02'
         onClick={proccedToPayment}
       >

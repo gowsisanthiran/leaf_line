@@ -186,7 +186,16 @@ function ContactPage() {
             </div>
             <div class="usersubmit">
               <input type="submit" value="Contact Us"
-              
+                    style={{cursor: "pointer",
+                    border: "2px solid #fff",
+                    padding: "14px 5px",
+                    width:"250px",
+                    bordeRadius: '200px',
+                    color:" #fff",
+                    background: "#1b4333",
+                    fontFamily: "Poppins,Opens-serif",
+                    fontSize: "16px",
+                    transition: "200ms"}}
               
               variant="contained"
               size="large"

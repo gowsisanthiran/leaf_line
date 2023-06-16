@@ -116,8 +116,17 @@ const Cart = () => {
           </Box>
           <Box sx={{ textAlign: 'center' }}>
             <Button
+            style={{cursor: 'pointer',
+            border: '2px solid #fff',
+            padding: '14px 30px',
+            borderRadius: '200px',
+            color: '#fff',
+            background: '#1b4333',
+            fontFamily: 'Poppins,Opensserif',
+            fontSize: '16px',
+            transition: '200ms',}}
               variant='contained'
-              sx={{ backgroundColor: '#617A55 ', '&:hover': { backgroundColor: '#CCD5AE' } }}
+             // sx={{ backgroundColor: '#617A55 ', '&:hover': { backgroundColor: '#CCD5AE' } }}
               startIcon={<ShoppingCartCheckoutIcon />}
               onClick={checkOutHandler}
             >

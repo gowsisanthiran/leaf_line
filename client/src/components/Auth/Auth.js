@@ -52,15 +52,15 @@ const Auth = () => {
                     </section>
                     {/*Banner Ends*/}
     <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
-      <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between'>
+      <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between' >
         <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleJustifyClick('tab1')} active={justifyActive === 'tab1'}>
-            Login
+          <MDBTabsLink onClick={() => handleJustifyClick('tab1')} active={justifyActive === 'tab1'} style={{background:"#1b4333",width:'450px',height:'50px',textAlign:"center"}}>
+           <p style={{marginLeft:'120px',color:'white',padding:'10px'}}>Login</p> 
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={justifyActive === 'tab2'}>
-            Register
+          <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={justifyActive === 'tab2'}style={{background:"#1b4333",marginLeft:'30rem',width:"450px",height:'50px',marginTop:"-50px",alignItems:"center"}}>
+            <p style={{marginLeft:'120px',color:'white',paddingTop:'10px',paddingBottom:'10px'}}>Register</p>
           </MDBTabsLink>
         </MDBTabsItem>
       </MDBTabs>

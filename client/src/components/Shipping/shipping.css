@@ -9,10 +9,11 @@
   border-radius: 12px;
   border: 1px solid transparent;
   transition: background 0.3s ease;
+  background: #DAE2B6;
 }
 
 .glassmorphism-form:hover {
-  background: rgba(255, 255, 255, 0.25);
+  
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -21,14 +22,14 @@
   #myform {
     margin: 50px auto 0;
     width: 50%;
-    background: #e8edf0;
+    background:  #DAE2B6;
     background: linear-gradient(to top left, #e8edf0, #ffffff);
     font-family: 'Open Sans', sans-serif;
   }
   
   header {
     text-align: center;
-    color: #69B692;
+    color: #17432f;
     font-size: 1.7em;
     padding: 3% 0;
     border-bottom: 2px solid #000;
@@ -65,11 +66,11 @@
   
   input:focus {
     outline: none !important;
-    border-color: #69B692;
+    border-color: #024d2c;
   }
   
   input:focus + label {
-    color: #69b692;
+    color: #18593b;
   }
   .row2 {
     padding-left: 5px;
@@ -138,18 +139,24 @@
   }
 
   .btn01 {
-    width: 30%;
-    margin-right: 3%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
-  }
-  
-  .btn01:hover {
-    background: #69B692;
-    border-color: #69B692;
     cursor: pointer;
-  }
+  border: 2px solid #fff;
+  padding: 14px 5px;
+  width:200px;
+  border-radius: 200px;
+  color: #fff;
+  background: #1b4333;
+  font-family: Poppins,Opens-serif;
+  font-size: 16px;
+  transition: 200ms;
+}
+  
+  
+   .btn01:hover {
+    background: #9BBBAF;
+    border-color: #fff;
+    cursor: pointer;
+  } 
   
   @media screen and (max-width: 800px) {
     #myform {

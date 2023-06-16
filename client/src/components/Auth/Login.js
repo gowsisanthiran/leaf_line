@@ -61,6 +61,7 @@ const Login = () => {
     return (
         <>
             <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
+              
                 <MDBRow>
                     <MDBCol col='10' md='6'>
                         {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
@@ -113,10 +114,20 @@ const Login = () => {
                             </div>
 
                             <Button type='submit'
-                                fullWidth
-                                color="success"
+                                
                                 variant='contained'
+                                color="success"
                                 sx={{ mt: 3, mb: 2  }}
+                                style={{cursor: "pointer",
+    border: "2px solid #fff",
+    padding: "14px 5px",
+    width:"300px",
+    bordeRadius: '200px',
+    color:" #fff",
+    background: "#1b4333",
+    fontFamily: "Poppins,Opens-serif",
+    fontSize: "16px",
+    transition: "200ms"}}
                             >Login</Button>
 
                         </form>

@@ -169,7 +169,15 @@ const ProductDetails = () => {
                                 <h4>Clients Says</h4>
                             </div>
                             <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
-                                <Button variant="outlined" onClick={handleClickOpen} color="success" >Submit Review</Button>
+                                <Button variant="outlined" onClick={handleClickOpen} color="success" style={{cursor: 'pointer',
+  border: '2px solid #fff',
+  padding: '14px 30px',
+  borderRadius: '200px',
+  color: '#fff',
+  background: '#1b4333',
+  fontFamily: 'Poppins,Opensserif',
+  fontSize: '16px',
+  transition: '200ms',}}>Submit Review</Button>
                                 <Dialog open={open} onClose={handleClose}>
                                     <DialogTitle sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', color: '#fff', mb: 2 }}>Review &#38; Rating</DialogTitle>
                                     <DialogContent sx={{ minWidth: '350px' }} fullWidth>

@@ -212,7 +212,8 @@ const AddNewCategory = () => {
               mt: 4,
               mb: 2,
               fontFamily: 'poppins, sans-serif',
-              backgroundColor:"#1b4332",            
+              backgroundColor:"#1b4332",  
+             
               borderRadius:"10px"
             }}
           >

@@ -225,9 +225,9 @@ import { makeStyles } from '@mui/styles';
 import { Container, Typography, Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { spacing } from '@mui/system';
-import sl17 from '../../images/bana1.JPG';
-import sl18 from '../../images/bana5.JPG';
-import sl19 from '../../images/bana7.JPG';
+import sl17 from '../../images/bgrem01.png';
+import sl18 from '../../images/bgrem02.png';
+import sl19 from '../../images/bgrem03.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -314,9 +314,9 @@ function AboutUs2() {
                                    
                                 }}> Discount...</span>
                             </Typography>
-                            <div className={classes.salePercent} style={{ fontFamily: 'Poppins, sans-serif' ,color:'#74C365'}}>
+                            <div className={classes.salePercent} style={{ fontFamily: 'Poppins, sans-serif' ,color:'#E6E8E7'}}>
                                 <span>Sale! <br /> Upto</span> 50% <span>off</span>                             </div>
-                            <Button
+                            {/* <Button
                                 href="shop.html"
                                 className={classes.cartBtn}
                                 variant="contained"
@@ -325,7 +325,7 @@ function AboutUs2() {
                                 sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }}
                             >
                                 Shop Now
-                            </Button>
+                            </Button> */}
                         </Container>
                     </section>
                 </ThemeProvider>
