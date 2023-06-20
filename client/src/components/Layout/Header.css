@@ -7,47 +7,54 @@
   background-color: transparent !important;
 }
 
-.container-fluid.main{
-  position: relative; /* To make the navbar positions relative to this container */
+.container-fluid.main {
+  position: relative;
+  /* To make the navbar positions relative to this container */
   padding: 0;
   margin-top: 0%;
   margin-bottom: 0%;
-  }
-.container-fluid.main .navbar{
-  position :fixed
+}
+
+.container-fluid.main .navbar {
+  position: fixed
 }
 
 .navbar-default {
   background-image: none;
   background-color: transparent;
   /* background-color: black; */
-  transition: background-color 0.3s; /* Make the menu become transparent */
+  transition: background-color 0.3s;
+  /* Make the menu become transparent */
   border-radius: 10px;
   border: 5;
   box-shadow: none;
   padding: 5px;
-  position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
-  
+  position: absolute;
+  /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
+
   left: 0;
   right: 0;
-  z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+  z-index: 10;
+  /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
 }
 
-.navbar{
+.navbar {
   transition: background-color 0.3s;
-  overflow:visible;
+  overflow: visible;
 
 }
-.navbar.active{
+
+.navbar.active {
   position: fixed;
   background-color: aqua;
   z-index: 999;
-  top:0%;
-  width:100%;
+  top: 0%;
+  width: 100%;
   height: 10%;
   box-shadow: 0 2px 5px #000;
-  left:0;
+  left: 0;
 }
+
 .navbar-center {
   display: flex;
   justify-content: center;
@@ -65,12 +72,12 @@
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav>li>a {
   color: #ffffff;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
   color: #ffffff;
   background-color: transparent;
 }
@@ -92,102 +99,64 @@
 }
 
 .carousel .background {
-  background-position: center center;
+  /* background-position: center center; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height:900px;
+  height: 1000px;
 }
 
 @media (max-width:991px) {
   .carousel .background {
-    background-size: cover; /* To make the background image looks good */
+    background-size: cover;
+    /* To make the background image looks good */
   }
 }
 
 .carousel .background.a {
-   background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg="); 
-  /* background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),  url("../../images/bgimg.jpg"); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg="); */
+  background-image:   url("../../images/HomeBG.png");
+  /* background-image: url("../../images/Home\ \(1\).png"); */
+  /* object-fit: cover; */
 }
 
 
 /* CSS Hack to trigger GPU for smooth transition */
 
 .covertext {
-  position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
-  top: 200px; /* The distance between the div with the top of document */
-  left: 0px; /* Make the div full width */
-  right: 0px; /* Make the div full width */
+  position: absolute;
+  width: 40%;
+  /* margin-left: 200px; */
+  /* To make the div to be place anywhere. It is out of the document flow */
+  top: 300px;
+  /* The distance between the div with the top of document */
+  left: 250px;
+  /* Make the div full width */
+  right: 0px;
+  /* Make the div full width */
+  font-family: Poppins,Opens-serif;
+
+}
+.covertext2{
+  left: 280px;
+
 }
 
-.title {
-  text-align: center;
+.title1 {
+  text-align:   center;
+  font-family: Poppins,Opens-serif;
 }
 
-.subtitle {
+/* .subtitle {
   font-family: Verdana;
   font-size: 23px;
   color: #ffffff;
   text-align: center;
-}
+} */
 
 .explore {
   text-align: center;
   margin-top: 25px;
 }
-
-.explore .btn-lg,
-.explore .btn-lg:hover {
-  cursor: pointer;
-    border: 2px solid #fff;
-    padding: 12px 20px;
-    border-radius: 200px;
-    color: #fff;
-    background: #1b4332;
-    font-family: Poppins,Opens-serif;
-    font-size: 16px;
-    transition: 200ms;
-}
-
-.btn,
-.btn:hover {
-  border-radius: 10px;
-  background-image: none;
-  background-color:rgb(70, 88, 73);
-  border-color: #9DC183;
-  color: #ffffff;
-  margin-bottom: 10px;
-  box-shadow: none;
-  outline: none;
-}
-
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-  background: #aacb5c;
-  color: #fff;
-}
-
-
-/* 
-.zoom-effect {
-  animation: zoom 10s infinite;
-  transform-origin: center;
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
 
 .title {
   font-size: 3rem;
@@ -202,48 +171,37 @@
 }
 
 .explorebtn {
-  background-color: #fff;
-  color: #000;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border: none;
   cursor: pointer;
+  border: 1px solid #1b4333;
+  padding: 14px 30px;
+  border-radius: 200px;
+  background-color: rgb(70, 88, 73);
+  border-color: #9DC183;
+  color: #ffffff;
+  font-family: Poppins, Opens-serif;
+  font-size: 20px;
+  transition: 200ms;
 }
 
 .explorebtn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #9DC183;
+  color: #000;
 }
-
-
-/* .zoom-effect {
-  animation: zoom 20s infinite;
-  transform-origin: center;
-}
-@keyframes zoom {
-  20% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
-
 
 nav.navbar .container {
   position: relative;
   overflow: visible;
 }
+
 .navbar-logo {
   text-align: center;
   padding: 22px 0 34px;
 }
+
 .nav-link {
   margin-right: 200px;
 }
+
 .nav-link {
   padding-right: 150px;
 }
@@ -257,8 +215,3 @@ nav.navbar .container {
   line-height: 54px;
   margin-bottom: 1px;
 }
-
-
-
-
-

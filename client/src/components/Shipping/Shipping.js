@@ -109,47 +109,26 @@ const Shipping = () => {
   let shippingCharge = 0;
   if (shipInfo.country === 'LK') {
     for (let i = 0; i < products.length; i++) {
-
       if (products[i].localShipmentPolicy === 'free') {
         shippingCharge = shippingCharge + 0;
         unitShippingCharge[i] = 0;
       }
-      if (products[i].localShipmentPolicy === 'standard') {
-
-        if (products[i].weight && products[i].weight > 5) {
-          products[i].weight = Math.ceil(products[i].weight / 5);
-          shippingCharge = shippingCharge + (products[i].weight * products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE);
-          unitShippingCharge[i] = products[i].weight * products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE;
-        } else {
-          shippingCharge = shippingCharge + (products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE);
-          unitShippingCharge[i] = products[i].quantity * process.env.REACT_APP_LOCAL_CHARGE;
-        }
-
+      if (products[i].internationalShipmentPolicy === 'custom') {
+        shippingCharge = shippingCharge + (products.customLocalShipmentCost);
+        unitShippingCharge[i] = products.customLocalShipmentCost;
       }
-
     }
   } else {
     for (let i = 0; i < products.length; i++) {
-
       if (products[i].internationalShipmentPolicy === 'free') {
         shippingCharge = shippingCharge + 0;
         unitShippingCharge[i] = 0;
       }
       if (products[i].internationalShipmentPolicy === 'custom') {
-        shippingCharge = shippingCharge + (products[i].quantity * products[i].customInternationShipmentCost);
-        unitShippingCharge[i] = products[i].quantity * products[i].customInternationShipmentCost;
+        shippingCharge = shippingCharge + (products[i].customInternationalShipmentCost);
+        unitShippingCharge[i] = products[i].customInternationalShipmentCost;
       }
-      if (products[i].internationalShipmentPolicy === 'standard') {
-
-        if (products[i].weight && products[i].weight > 5) {
-          products[i].weight = Math.ceil(products[i].weight / 5);
-          shippingCharge = shippingCharge + (products[i].weight * products[i].quantity * process.env.REACT_APP_INTER_CHARGE);
-          unitShippingCharge[i] = products[i].weight * products[i].quantity * process.env.REACT_APP_INTER_CHARGE;
-        } else {
-          shippingCharge = shippingCharge + (products[i].quantity * process.env.REACT_APP_INTER_CHARGE);
-          unitShippingCharge[i] = products[i].quantity * process.env.REACT_APP_INTER_CHARGE;
-        }
-      }
+      
     }
   }
   const totalPrice = subTotal + shippingCharge ;
@@ -176,7 +155,7 @@ const Shipping = () => {
       <section class="banner productpage">
         <div class="container container2">
             <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-start">
                     <div class="text-center">
                         <h2 class="banner-title">Checkout</h2>
                         <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
@@ -286,11 +265,9 @@ const Shipping = () => {
 
               </div>
             </div>
-            <div className="row" style={{padding:'10px'}}>
-              <button type="submit" value="Cancel" className="btn01 btn02"><Link to='/cart' style={{ textDecoration: 'none', color: '#fff'}}> <ArrowCircleLeftIcon /><br/>Back</Link></button>
-              <button type="submit" value="Submit" className="btn01 btn03"style={{ textDecoration: 'none', color: '#fff' }}><LocalShippingIcon />Checkout</button>
-
-
+            <div className="row" style={{padding:'10px',display:'inline',marginLeft:'47px'}}>
+            <Link to='/cart' style={{ textDecoration: 'none', color: '#fff'}}><button type="submit" value="Cancel" className="btn01 explorebtn"> <ArrowCircleLeftIcon />Back</button></Link>
+              <button type="submit" value="Submit" className="btn01 explorebtn"><LocalShippingIcon />Checkout</button>
             </div>
           </div>
 
@@ -349,9 +326,6 @@ const Shipping = () => {
                             </Typography>
                             <Typography component='div' variant='button'>
                               Price : {formatCurrency(item.price)} x {item.quantity}={formatCurrency(item.price * item.quantity)}
-                            </Typography>
-                            <Typography component='div' variant='button'>
-                              Shipping charge : {formatCurrency(unitShippingCharge[i])}
                             </Typography>
                           </Box>
                         </Box>
@@ -412,7 +386,7 @@ const Shipping = () => {
         </div>
       </form>
       <button
-        className='btn02'
+        className='btn02 explorebtn'
         onClick={proccedToPayment}
       >
         <PaidIcon/>

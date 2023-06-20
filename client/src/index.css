@@ -12,3 +12,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.banner {
+  background-image:   url("./images/HomeBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 1000px;
+}
+
+.banner.productpage {
+  background-position: 100% 100%;
+  padding: 200px 0;
+}
+
+.banner .banner-title {
+  font-size: 60px;
+  /* font-weight: 00; */
+  color: #000;
+  font-family: Poppins, Opens-serif;
+
+}
+
+.fast-breadcrumb li {
+  padding-right: 20px;
+}
+
+.fast-breadcrumb li a{
+  text-decoration: none;
+  color: white;
+  font-size: 18;
+}
+
+.fast-breadcrumb li.active {
+  color: green;
+}
+.fast-breadcrumb li:last-child {
+  padding-right: 0;
+}
+
+.fast-breadcrumb li.active::before {
+  content: '/';
+  position: relative;
+  top: 2px;
+  left: -10px;
+  background-size: 13px;
+  width: 12px;
+  height: 17px;
+  color:white
+}
+
+.wrapper {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.container2 {
+  max-width: 960px;
+  width: 100%;
+  /* text-align: left; */
+  margin-top: 150px;
+}

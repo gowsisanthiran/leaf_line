@@ -42,22 +42,22 @@ const Cart = () => {
     <>
       <Header2 />
       <section class="banner productpage">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <div class="text-center">
-                <h2 class="banner-title">Cart</h2>
-                <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><Link to='/'><HomeIcon /> Home</Link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
-                  </ol>
-                </nav>
-              </div>
+        <div class="container container2">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-start">
+                    <div class="text-center">
+                        <h2 class="banner-title">Cart</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Cart </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
       <Box
         sx={{
           display: 'flex',
@@ -108,17 +108,7 @@ const Cart = () => {
             <Box sx={{ textAlign: 'center' }}>
               <Button
                 variant='contained'
-                sx={{
-                  cursor: 'pointer',
-                  border: '1px solid #203b0b',
-                  padding: '14px 30px',
-                  borderRadius: '200px',
-                  color: ' #fff',
-                  background: '#1b4332',
-                  fontFamily: 'Poppins,Opens-serif',
-                  fontSize: '16px',
-                  transition: '200ms', '&:hover': { backgroundColor: '#6f9c05' }
-                }}
+                class='explorebtn'
                 startIcon={<ShoppingCartCheckoutIcon />}
                 onClick={checkOutHandler}
               >

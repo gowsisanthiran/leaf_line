@@ -112,7 +112,7 @@ const StripeCheckoutForm = (props) => {
             <section class="banner productpage">
                 <div class="container container2">
                     <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-center">
+                        <div class="col-lg-12 d-flex justify-content-start">
                             <div class="text-center">
                                 <h2 class="banner-title">Payment</h2>
                                 <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
@@ -127,9 +127,9 @@ const StripeCheckoutForm = (props) => {
                 </div>
             </section>
             {/*Banner Ends*/}
-            <Box component='form'   
+            <Box component='form'
                 onSubmit={(e) => submitHandler(e)}
-                sx={{ m: '0 auto', maxWidth: '550px', textAlign: 'center', minWidth: '500px', paddingTop: '10rem',paddingBottom:'10rem' }}>
+                sx={{ m: '0 auto', maxWidth: '550px', textAlign: 'center', minWidth: '500px', paddingTop: '10rem', paddingBottom: '10rem' }}>
                 <Card sx={{ p: 1, pt: 3 }}>
                     <Avatar sx={{ bgcolor: 'white', height: '150px', width: '400px', m: '0 auto' }}>
                         <img src={logo} alt="" style={{ width: '400px' }} />

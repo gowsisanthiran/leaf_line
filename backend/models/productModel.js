@@ -20,7 +20,7 @@ const productSchema=new mongoose.Schema({
     stock:{
         type:Number,
         required:[true, 'Please enter product stock.'],
-        default:1
+        default:10
     },
     images:[
         {

@@ -164,7 +164,7 @@ function ContactPage() {
   return (
     
       
-<div class="formContainer" style={{background: '#DAE2B6',marginTop:'10rem'}}>
+<div class="formContainer" style={{background: 'linear-gradient(90deg, #a6a6a6, #fff)',marginTop:'10rem'}}>
   <div class="formcard">
     <div class="left">
       <img src={contact} style={{width:'400px',height:'500px'}}/>
@@ -186,12 +186,11 @@ function ContactPage() {
             </div>
             <div class="usersubmit">
               <input type="submit" value="Contact Us"
-              
-              
               variant="contained"
               size="large"
               startIcon={<AddIcCallIcon />}
-              sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }} />
+              // sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }} 
+              />
             </div>
           </form>
         </div>

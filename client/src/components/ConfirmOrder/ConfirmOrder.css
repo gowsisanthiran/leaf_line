@@ -1,4 +1,4 @@
-.base-div3 {
+/* .base-div3 {
     margin: 20px 10px;
     display: grid;
     gap: 0px;
@@ -16,14 +16,12 @@
 }
 
 #cardDiv {
-    /* width: 80%; */
 
     background: rgba(255, 255, 255, 0.15);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 16px;
     backdrop-filter: blur(10px);
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
 }
 
 
@@ -37,21 +35,6 @@
 
 }
 
-.btn02 {
-    margin: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .btn02:hover {
-    background: #69B692;
-    border-color: #69B692;
-    cursor: pointer;
-  }
-
 @media only screen and (max-width:950px) {
     .base-div3 {
         grid-template-columns: 1fr 1.2fr;
@@ -62,4 +45,5 @@
     .base-div3 {
         grid-template-columns: 1fr;
     }
-}
+} */
+

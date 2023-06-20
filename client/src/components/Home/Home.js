@@ -31,25 +31,25 @@ const Home = () => {
         <WhyChoosingUs />
       </div>
 
+      <div className='topRated'>
+        <TopRatedProducts />
+      </div>
       
       <div className='WhyWorkWithUs'>
         <WhyWorkWithUs />
       </div>
 
 
-      <div className='topRated'>
-        <TopRatedProducts />
-      </div>
       {/* end div 2 */}
       
+      <VideoPopup/>
       {/* div 3 */}
 <div className='aboutsUs'>
       <AboutUs2/>
       </div>
       {/* <AboutUs /> */}
-      <VideoPopup/>
       <ContactUs />
-      <OurTeam/>
+      {/* <OurTeam/> */}
       
       
     </Box>

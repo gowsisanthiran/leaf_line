@@ -82,7 +82,7 @@ function AboutUs2() {
         <>
             <div style={{ backgroundColor: '#fff' }}>
 
-                <ThemeProvider theme={theme}>
+                {/* <ThemeProvider theme={theme}>
 
                     <section className='bg' style={{ marginTop: '100px', marginBottom: '50px' }}>
                         <Container>
@@ -108,7 +108,7 @@ function AboutUs2() {
                             </Button>
                         </Container>
                     </section>
-                </ThemeProvider>
+                </ThemeProvider> */}
 
                 <div className="container" style={{ paddingBottom: '20px' }} data-aos="fade-up">
                     <div className="row">

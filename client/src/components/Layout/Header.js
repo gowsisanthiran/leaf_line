@@ -48,7 +48,7 @@ const Header = () => {
 
 
     <div className={`container-fluid main ${scrolled ? 'scrolled' : ''}`}>
-      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'rgb(218, 226, 182)' : '' }}>
+      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'white' : '' }}>
         <div className="container" style={{ marginTop: '-40px', marginBottom: '-40px' }}>
           <NavLink to="/" className="navbar-brand">
             <img src={logoo}black alt="Logo" className="logo" style={{ height: 'auto', aspectRatio: '3/2', width: '50%' }} />
@@ -106,10 +106,11 @@ const Header = () => {
   <img src={bg} alt="Image" style={{ textAlign: 'center', paddingRight: '100px', paddingTop:'10px',paddingBottom:'100px' }} />
 </div> */}
 
-      <div class="covertext zoom-effect">
-        <div class="col-lg-10" style={{ float: "none", margin: "0 auto", marginTop: '10rem',fontFamily: 'Bodoni, sans-serif', color: '#fff', border: '2px ' }}>
-          <h1 class="title">BIO-DEGRADABLE PLATES FOR A</h1>
-          <h1 class="title">CLEANER PLANET</h1>
+      <div class="covertext ">
+        {/* <div class="" style={{ float: "none", margin: "0 auto", marginTop: '10rem',fontFamily: 'Bodoni, sans-serif', color: '#fff', border: '2px ' }}> */}
+          <div class="covertext2">
+          <p class="title1" style={{fontFamily:'Poppins,Sans-serif',fontSize:'50px'}}>BIO-DEGRADABLE PLATES FOR </p>
+          <p class="title1" style={{fontFamily:'Poppins,sans-serif',fontSize:'40px'}}>CLEANER PLANET</p>
         </div>
         <div class="col-xs-12 explore">
           <a href="/product"><button type="button" class="btn btn-lg explorebtn" explore={<ExploreIcon/>}>EXPLORE</button></a>

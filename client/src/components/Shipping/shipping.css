@@ -23,12 +23,14 @@
     width: 50%;
     background: #e8edf0;
     background: linear-gradient(to top left, #e8edf0, #ffffff);
-    font-family: 'Open Sans', sans-serif;
+    font-family: Poppins, Opens-serif;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   header {
     text-align: center;
-    color: #69B692;
+    color: #008000;
     font-size: 1.7em;
     padding: 3% 0;
     border-bottom: 2px solid #000;
@@ -138,23 +140,18 @@
   }
 
   .btn01 {
-    /* height: max-content; */
-    cursor: pointer;
-    border: 2px solid #fff;
-    padding: 2px 2px;
-    border-radius: 200px;
-    color: #fff;
-    background: #1b4332;
-    font-family: Poppins,Opens-serif;
-    font-size: 16px;
-    transition: 200ms;
+    width: 150px;
+    padding: 5px;
   }
   
-  .btn01:hover {
-    background: #6f9c05;
-  color: #fff;
+
+  .btn02{
+    margin: auto;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  
+
   @media screen and (max-width: 800px) {
     #myform {
     margin: 50px auto;

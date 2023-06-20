@@ -1,68 +1,7 @@
-.banner {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=');
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-
-.banner.productpage {
-
-  background-position: 100% 100%;
-  padding: 200px 0;
-}
-
-.banner .banner-title {
-  font-size: 60px;
-  font-weight: 700;
-  color: white;
-}
-
-.fast-breadcrumb li {
-  padding-right: 20px;
-}
-
-.fast-breadcrumb li a{
-  text-decoration: none;
-  color: white;
-  font-size: 16;
-}
-
-.fast-breadcrumb li.active {
-  color: green;
-}
-.fast-breadcrumb li:last-child {
-  padding-right: 0;
-}
-
-.fast-breadcrumb li.active::before {
-  content: '/';
-  position: relative;
-  top: 2px;
-  left: -10px;
-  background-size: 13px;
-  width: 12px;
-  height: 17px;
-  color:white
-}
-
-.wrapper {
-  display: flex;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-}
-
-.container2 {
-  max-width: 960px;
-  width: 100%;
-  text-align: center;
-}
 
 .filter-box {
   padding: 0 5px;
   min-width: 310px;
-
-
 }
 
 .card-container {
