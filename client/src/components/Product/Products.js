@@ -407,7 +407,7 @@ const Products = () => {
               <div class="col-lg-12 d-flex justify-content-center">
                   <div class="text-center">
                       <h2 class="banner-title">Our Products</h2>
-                      <h2 class="banner-title">Our Items</h2>
+                     
                       <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                           <ol class="breadcrumb">
                             <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>

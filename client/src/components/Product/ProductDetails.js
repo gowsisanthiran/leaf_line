@@ -210,7 +210,7 @@ const ProductDetails = () => {
                                     :
                                     <Typography variant='button' spacing={10} marginLeft="20px">No reviews yet</Typography>
                                 }
-
+{}
                             </Box>
                         </Box>
                     </main>
