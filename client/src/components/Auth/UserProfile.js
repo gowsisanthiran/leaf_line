@@ -16,22 +16,22 @@ const UserProfile = () => {
     <>{/*Banner starts*/}
     <Header2/>
     <section class="banner productpage">
-                    <div class="container container2">
-                        <div class="row">
-                            <div class="col-lg-12 d-flex justify-content-center">
-                                <div class="text-center">
-                                    <h2 class="banner-title">My Account</h2>
-                                    <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
-                                            <li class="breadcrumb-item active" aria-current="page">My Account</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
+        <div class="container container2">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-start">
+                    <div class="text-center">
+                        <h2 class="banner-title">My Profile</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                            </ol>
+                        </nav>
                     </div>
-                </section>
+                </div>
+            </div>
+        </div>
+    </section>
                 {/*Banner Ends*/}
     <div class="container" style={{paddingTop: '100px', fontFamily: 'Poppins, sans-serif', fontSize:'15px',color: '', width:'auto'}}>
       <div class="">

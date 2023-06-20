@@ -59,22 +59,22 @@ const MyOrders = () => {
     <>
       <Header2 />
       <section class="banner productpage">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <div class="text-center">
-                <h2 class="banner-title">My Orders</h2>
-                <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><Link to='/'><HomeIcon /> Home</Link></li>
-                    <li class="breadcrumb-item active" aria-current="page">My Orders</li>
-                  </ol>
-                </nav>
-              </div>
+        <div class="container container2">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-start">
+                    <div class="text-center">
+                        <h2 class="banner-title">My Orders</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">My Orders</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
       <Box
         sx={{
           marginTop: 8,

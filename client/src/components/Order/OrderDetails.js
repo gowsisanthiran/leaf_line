@@ -35,22 +35,22 @@ const OrderDetails = () => {
             <Header2 />
             {/*Banner starts*/}
             <section class="banner productpage">
-                <div class="container container2">
-                    <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-center">
-                            <div class="text-center">
-                                <h2 class="banner-title">Order Details</h2>
-                                <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><Link to='/'><HomeIcon /> Home</Link></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Order Details</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
+        <div class="container container2">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-start">
+                    <div class="text-center">
+                        <h2 class="banner-title">Order Details</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
             {/*Banner Ends*/}
             <Box
                 sx={{
