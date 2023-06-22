@@ -82,33 +82,7 @@ function AboutUs2() {
         <>
             <div style={{ backgroundColor: '#fff' }}>
 
-                <ThemeProvider theme={theme}>
-
-                    <section className='bg' style={{ marginTop: '100px', marginBottom: '50px' }}>
-                        <Container>
-                            <Typography variant="h3" style={{ fontFamily: 'Poppins, sans-serif', paddingTop: '150px', paddingBottom: '50px', color: "white", fontWeight: 'bold',paddingRight:'20px' }}>
-                                December sale is on! <br />
-                                with big <span className={classes.orangeText} style={{
-                                    fontFamily: 'Poppins, sans-serif', 
-                                   color:' #8FD400'
-                                   
-                                }}> Discount...</span>
-                            </Typography>
-                            <div className={classes.salePercent} style={{ fontFamily: 'Poppins, sans-serif' ,color:'#E6E8E7'}}>
-                                <span>Sale! <br /> Upto</span> 50% <span>off</span>                             </div>
-                            {/* <Button
-                                href="shop.html"
-                                className={classes.cartBtn}
-                                variant="contained"
-                                size="large"
-                                startIcon={<ShoppingCartIcon />}
-                                sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }}
-                            >
-                                Shop Now
-                            </Button> */}
-                        </Container>
-                    </section>
-                </ThemeProvider>
+                
 
                 <div className="container" style={{ paddingBottom: '20px' }} data-aos="fade-up">
                     <div className="row">

@@ -46,7 +46,7 @@ const MyOrders = () => {
 
   const rows = orders?.map((order) => ({
     id: order._id,
-    orderId: order.shortId,
+    // orderId: order.shortId,
     status: order.orderStatus,
     itemsQty: order.orderItems.length,
     amount: 'LKR' + '.' + order.totalPrice,

@@ -221,7 +221,7 @@ const Cart = () => {
     <>
       <Header2 />
       <section class="banner productpage">
-        <div class="container">
+        <div class="container container2">
           <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
               <div class="text-center">
@@ -229,7 +229,7 @@ const Cart = () => {
                 <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><Link to='/'><HomeIcon /> Home</Link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    <li class="breadcrumb-item active" aria-current="page">Cart </li>
                   </ol>
                 </nav>
               </div>
@@ -284,50 +284,18 @@ const Cart = () => {
                   Total: {formatCurrency(products.reduce((acc, item) => acc + item.quantity * item.price, 0))}
                 </Typography>
               </Box>
-            </Box>
 
             <Box sx={{ textAlign: 'center' }}>
               <Button
-                style={{
-                  cursor: 'pointer',
-                  border: '2px solid #fff',
-                  padding: '14px 30px',
-                  borderRadius: '200px',
-                  color: '#fff',
-                  background: '#1b4333',
-                  fontFamily: 'Poppins,Opensserif',
-                  fontSize: '16px',
-                  transition: '200ms',
-                }}
                 variant='contained'
-                // sx={{ backgroundColor: '#617A55 ', '&:hover': { backgroundColor: '#CCD5AE' } }}
+                class='explorebtn'
                 startIcon={<ShoppingCartCheckoutIcon />}
                 onClick={checkOutHandler}
               >
-                Checkout
+              Checkout
               </Button>
-              <Box sx={{ textAlign: 'center' }}>
-                <Button
-                  variant='contained'
-                  sx={{
-                    cursor: 'pointer',
-                    border: '1px solid #203b0b',
-                    padding: '14px 30px',
-                    borderRadius: '200px',
-                    color: ' #fff',
-                    background: '#1b4332',
-                    fontFamily: 'Poppins,Opens-serif',
-                    fontSize: '16px',
-                    transition: '200ms',
-                    '&:hover': { backgroundColor: '#6f9c05' },
-                  }}
-                  startIcon={<ShoppingCartCheckoutIcon />}
-                  onClick={checkOutHandler}
-                >
-                  Checkout
-                </Button>
-              </Box>
             </Box>
+          </Box>
           </>
         ) : (
           <Box sx={{ marginTop: '5rem', padding: '5rem' }}>
@@ -336,7 +304,7 @@ const Cart = () => {
                 Cart is Empty
               </Typography>
               <Typography variant='h4' component='div' gutterBottom>
-                Add something to make me happy :)
+                Add something to make me happy :(
               </Typography>
               <img
                 src="https://st2.depositphotos.com/4060975/9124/v/600/depositphotos_91240944-stock-illustration-remove-cart-colored-vector-illustration.jpg"
@@ -351,6 +319,7 @@ const Cart = () => {
               </Typography>
             </Box>
           </Box>
+          
         )}
       </Box>
     </>

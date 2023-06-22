@@ -85,7 +85,7 @@ const UpdateRole = () => {
             height: "100% !important",
             width: "580px",
             marginLeft: "530px",
-            marginTop: "85px",
+            marginTop: "45px",
             marginBottom: "20px"
 
           }}

@@ -218,7 +218,7 @@ return (
   label={
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <AddCircle sx={{ marginRight: '0.5rem' }} />
-      Add New Product
+      New Product
     </div>
   }
   onClick={() => goto('product')}

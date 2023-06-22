@@ -86,7 +86,7 @@ return (
  <div style={{boxShadow: '2 2 50px rgba(0, 100, 0, 0.5)' }}>
    <section className="eco_services_environment" style={{sectionStyle, }} data-aos="fade-up">
     
-      <div className="eco_services" data-aos="fade-up" data-aos-delay="100"style={{backgroundColor:'#DAE2B6' ,borderRadius:'10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
+      <div className="eco_services" data-aos="fade-up" data-aos-delay="100">
         <Row>
           <Col md={4} sm={6} xs={12} style={{paddingTop:'30px', marginTop:'30px',marginBottom:'25px' }}>
             <div className="eco_items-services">

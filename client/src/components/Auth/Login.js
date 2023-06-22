@@ -64,19 +64,20 @@ const Login = () => {
               
                 <MDBRow>
                     <MDBCol col='10' md='6'>
-                        {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
-                        <img src = {login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'10px'}}/>
+                         <img src="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=" className="img-fluid" alt="Phone image" style={{width:'1000px',height:'500px',display:'flex', opacity: '0.8'}}/>
+                            {/* <img src = {login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'10px'}}/> */}
 
                     </MDBCol>
 
                     <MDBCol col='4' md='6'>
-                        <MDBCol>
+                        {/* <MDBCol>
                             < LockOutlinedIcon />
-                        </MDBCol>
+                        </MDBCol> */}
                         <MDBCol>
                             <h5>Login</h5>
                         </MDBCol>
                         <form onSubmit={handleSubmit}>
+                        <label>Email</label>
                             <MDBInput
                                 wrapperClass='mb-4'
                                 label='Email address'
@@ -89,6 +90,7 @@ const Login = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
+                            <label>Password</label>
                             <MDBInput
                                 wrapperClass='mb-4'
                                 label='Password'
@@ -102,7 +104,7 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
 
-                            <div className="d-flex justify-content-between mx-4 mb-4">
+                            <div className="d-flex justify-content-between mx-4 mb-4"style={{marginLeft:'5rem'}}>
                                 <MDBCheckbox
                                     name='keepLoggedIn'
                                     value=''
@@ -110,6 +112,7 @@ const Login = () => {
                                     label='Keep Me Logged-In'
                                     checked={checked}
                                     onChange={handleKeepMeLoggedIn}
+                                    style={{marginLeft:'-50px'}}
                                 />
                             </div>
 

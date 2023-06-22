@@ -20,7 +20,7 @@ const productSchema=new mongoose.Schema({
     stock:{
         type:Number,
         required:[true, 'Please enter product stock.'],
-        default:1
+        default:10
     },
     images:[
         {
@@ -37,7 +37,7 @@ const productSchema=new mongoose.Schema({
     localShipmentPolicy:{
         type:String,
         // required:[true,'Please select a local shipment policy.'],
-        default:'standard',
+        default:'free',
         enum:['free','standard','custom']
     },
     customLocalShipmentPolicy:{
@@ -46,7 +46,7 @@ const productSchema=new mongoose.Schema({
     internationalShipmentPolicy:{
         type:String,
         required:[true,'Please select a international shipment policy.'],
-        default:'standard',
+        default:'free',
         enum:['free','standard','custom']
     },
     customInternationalShipmentPolicy:{

@@ -34,22 +34,22 @@ const Auth = () => {
     <Header2/>
 {/*Banner starts*/}
 <section class="banner productpage">
-                        <div class="container container2">
-                            <div class="row">
-                                <div class="col-lg-12 d-flex justify-content-center">
-                                    <div class="text-center">
-                                        <h2 class="banner-title">Login | Register</h2>
-                                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><Link to='/'> Home</Link></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Login | Register</li>
-                                            </ol>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+        <div class="container container2">
+            <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="text-center">
+                        <h2 class="banner-title">Login | Register</h2>
+                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
+                              <li class="breadcrumb-item active" aria-current="page">Authentication </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                     {/*Banner Ends*/}
     <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
       <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between' >

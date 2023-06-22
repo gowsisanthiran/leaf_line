@@ -76,14 +76,15 @@ const Registration = () => {
         <MDBRow>
           <MDBCol col='10' md='6'>
             {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
-            <img src={reg} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/>
+            {/* <img src={reg} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/> */}
+            <img src="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=" className="img-fluid" alt="Phone image" style={{width:'1000px',height:'700px',display:'flex', opacity: '0.8' }}/>
 
           </MDBCol>
           <MDBCol col='4' md='6'>
 
-            <MDBCol>
+            {/* <MDBCol>
               <NoAccountsIcon />
-            </MDBCol>
+            </MDBCol> */}
             <MDBCol>
               <h5>Registration</h5>
             </MDBCol>
@@ -176,7 +177,8 @@ const Registration = () => {
     background: "#1b4333",
     fontFamily: "Poppins,Opens-serif",
     fontSize: "16px",
-    transition: "200ms"}}
+    transition: "200ms",
+  marginLeft:'140px'}}
                 >Registration & Login</Button>
                 <MDBRow className="mt-2">
                   <MDBCol>
@@ -187,6 +189,7 @@ const Registration = () => {
                                     label='Keep Me Logged-In'
                                     checked={checked}
                                     onChange={handleKeepMeLoggedIn}
+                                    style={{marginLeft:'100px'}}
                                 />
                   </MDBCol>
                 </MDBRow>
