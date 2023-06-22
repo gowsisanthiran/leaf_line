@@ -113,8 +113,8 @@
 }
 
 .carousel .background.a {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg="); */
-  background-image:   url("../../images/HomeBG.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
+  /* background-image:   url("../../images/HomeBG.png"); */
   /* background-image: url("../../images/Home\ \(1\).png"); */
   /* object-fit: cover; */
 }
@@ -124,24 +124,15 @@
 
 .covertext {
   position: absolute;
-  width: 40%;
-  /* margin-left: 200px; */
-  /* To make the div to be place anywhere. It is out of the document flow */
-  top: 300px;
-  /* The distance between the div with the top of document */
-  left: 250px;
-  /* Make the div full width */
-  right: 0px;
-  /* Make the div full width */
+  top:350px;
+  left:0;
+  right: 0;
   font-family: Poppins,Opens-serif;
-
-}
-.covertext2{
-  left: 280px;
 
 }
 
 .title1 {
+  color:white;
   text-align:   center;
   font-family: Poppins,Opens-serif;
 }

@@ -18,7 +18,7 @@ const UserProfile = () => {
     <section class="banner productpage">
         <div class="container container2">
             <div class="row">
-                <div class="col-lg-12 d-flex justify-content-start">
+                <div class="col-lg-12 d-flex justify-content-center">
                     <div class="text-center">
                         <h2 class="banner-title">My Profile</h2>
                         <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">

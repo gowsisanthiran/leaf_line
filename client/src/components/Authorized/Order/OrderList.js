@@ -57,7 +57,7 @@ const OrderList = () => {
     //     }
     // ]
     const columns = [
-        { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1 },
+        // { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1 },
         { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1 },
         { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1 },
         { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1 },
@@ -95,7 +95,6 @@ const OrderList = () => {
     const rows = [];
     orders && orders.forEach(order => {
         rows.push({
-            orderId:order.shortId,
             id: order._id,
             status: order.orderStatus,
             itemsQty: order.orderItems.length,

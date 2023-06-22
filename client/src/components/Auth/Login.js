@@ -15,7 +15,7 @@ import { login, selectLoggedInUser, persistLogin } from '../../redux/features/au
 
 import { Box, Avatar, Typography, TextField, Button, Grid, FormGroup, FormControlLabel, Checkbox, Link } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import login1 from '../../images/loginn.png';
+// import login1 from '../../images/B';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -61,25 +61,26 @@ const Login = () => {
     return (
         <>
             <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
+                <Box sx={{marginRight:'auto', marginLeft:'45%'}}>
+                        <MDBCol>
+                            <h2 style={{fontFamily:'Poppins,Opens-serif'}}>LOGIN</h2>
+                        </MDBCol>
+                        </Box>
                 <MDBRow>
+                    
                     <MDBCol col='10' md='6'>
                         {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
-                        <img src = {login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'10px'}}/>
+                        <img src = 'https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg='className="img-fluid" alt="Login image" style={{width:'500px',height:'500px',paddingTop:'10px',borderRadius:'40px'}}/>
 
                     </MDBCol>
 
                     <MDBCol col='4' md='6'>
-                        <MDBCol>
-                            < LockOutlinedIcon />
-                        </MDBCol>
-                        <MDBCol>
-                            <h5>Login</h5>
-                        </MDBCol>
+
                         <form onSubmit={handleSubmit}>
+                            <label htmlFor="email">Email Address</label>
                             <MDBInput
-                                wrapperClass='mb-4'
-                                label='Email address'
-                                style={{ color: 'black' }}
+                                wrapperClass='mb-2'
+                                // style={{ color: 'black' }}
                                 id='email'
                                 type='email'
                                 size='lg'
@@ -88,10 +89,10 @@ const Login = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
+                            <label htmlFor="password">Password</label>
                             <MDBInput
-                                wrapperClass='mb-4'
-                                label='Password'
-                                style={{ color: 'black' }}
+                                wrapperClass='mb-3'
+                                // style={{ color: 'black' }}
                                 id='password'
                                 type='password'
                                 size='lg'
@@ -100,18 +101,15 @@ const Login = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-
-                            <div className="d-flex justify-content-between mx-4 mb-4">
-                                <MDBCheckbox
-                                    name='keepLoggedIn'
-                                    value=''
-                                    id='keepLoggedIn'
-                                    label='Keep Me Logged-In'
-                                    checked={checked}
-                                    onChange={handleKeepMeLoggedIn}
-                                />
-                            </div>
-
+                            <MDBCheckbox
+                                wrapperClass='mb-5'
+                                name='keepLoggedIn'
+                                value=''
+                                id='keepLoggedIn'
+                                label='Keep Me Logged-In'
+                                checked={checked}
+                                onChange={handleKeepMeLoggedIn}
+                            />
                             <Button type='submit'
                                 fullWidth
                                 color="success"

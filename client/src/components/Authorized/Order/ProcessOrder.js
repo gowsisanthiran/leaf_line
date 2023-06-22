@@ -87,7 +87,7 @@ const ProcessOrder = () => {
                                                 <FingerprintIcon />
                                             </Avatar>
                                         </ListItemAvatar>
-                                        <ListItemText primary={order && 'Order Id - ' + order.shortId} />
+                                        <ListItemText primary={order && 'Order Id - ' + order.id} />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemAvatar>
@@ -186,7 +186,7 @@ const ProcessOrder = () => {
                                                     <LocationOnIcon />
                                                 </Avatar>
                                             </ListItemAvatar>
-                                            <ListItemText primary={order && `${order?.shippingInfo?.address},${order?.shippingInfo?.city},${order?.shippingInfo?.zipCode},${order?.shippingInfo?.state},${order?.shippingInfo?.country}`} />
+                                            <ListItemText primary={order && `${order?.shippingInfo?.firstname},${order?.shippingInfo?.lastname},${order?.shippingInfo?.address},${order?.shippingInfo?.city},${order?.shippingInfo?.zipCode},${order?.shippingInfo?.country}`} />
                                         </ListItem>
                                     </List>
                                 </Box>

@@ -37,7 +37,7 @@ const OrderDetails = () => {
             <section class="banner productpage">
         <div class="container container2">
             <div class="row">
-                <div class="col-lg-12 d-flex justify-content-start">
+            <div class="col-lg-12 d-flex justify-content-center">
                     <div class="text-center">
                         <h2 class="banner-title">Order Details</h2>
                         <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
@@ -125,7 +125,7 @@ const OrderDetails = () => {
                                                 <span className='rounded-circle' style={{ paddingRight: '20px' }}>
                                                     <LocationOnIcon />
                                                 </span>
-                                                {order && `${order?.shippingInfo?.address}, ${order?.shippingInfo?.city}, ${order?.shippingInfo?.zipCode}, ${order?.shippingInfo?.state}, ${order?.shippingInfo?.country}`}
+                                                {order && `${order?.shippingInfo?.firstname},${order?.shippingInfo?.lastname},${order?.shippingInfo?.address}, ${order?.shippingInfo?.city}, ${order?.shippingInfo?.zipCode},  ${order?.shippingInfo?.country}`}
                                             </ListGroup.Item>
                                         </ListGroup>
                                     </Col>

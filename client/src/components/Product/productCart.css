@@ -30,7 +30,7 @@
 }
 
 .card:hover .content-wrapper{
-  transform: translateY(-180px);
+  transform: translateY(-160px);
 }
 
 .inner-content-wrapper{
@@ -45,17 +45,17 @@
 
 .cardtitle{
   margin: 15px 0 20px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: Poppins,sans-serif;
 }
 
 .card:hover .cardtitle{
-  color: #fe6c2d;
+  color: #008000;
 }
 
 .price{
   margin-bottom: 20px;
-  color: #0f931c;
+  color: #008000;
   letter-spacing: 1px;
 
   transition: all .4s;
@@ -96,12 +96,12 @@
 }
 
 .icon:hover{
-  color: #fe6c2d;
+  color: #008000;
   transform: scale(1.5);
   opacity: 1;
 }
 
-.price-corner::before{
+/* .price-corner::before{
   content: attr(data-content);
   background: rgb(143, 212, 0);
   display: flex;
@@ -109,7 +109,7 @@
   width: 130px;
   align-items: center;
   position: absolute;
-  /* letter-spacing: 1px; */
+  letter-spacing: 1px;
   transform-origin: top;
   padding-top: 30px;
   right: -115px;
@@ -118,7 +118,7 @@
   transform: rotate(45deg);
   z-index: 1;
   transition: all .5s;
-}
+} */
 
 .card:hover .price-corner::before{
   padding-top: 125px;

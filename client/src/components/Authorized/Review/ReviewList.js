@@ -20,15 +20,15 @@ const ReviewList = () => {
     console.log(reviews);
 
     const columns = [
-        {
-            field: 'image', headerName: 'Avatar', headerClassName: 'gridHeader', flex: .4, minWidth: 60,
-            renderCell: (params) => {
-                return (
-                    params.value === '' ? '' :
-                        <img src={params.value} height='100%' />
-                )
-            }
-        },
+        // {
+        //     field: 'image', headerName: 'Avatar', headerClassName: 'gridHeader', flex: .4, minWidth: 60,
+        //     renderCell: (params) => {
+        //         return (
+        //             params.value === '' ? '' :
+        //                 <img src={params.value} height='100%' />
+        //         )
+        //     }
+        // },
         { field: 'name', headerName: 'Name', headerClassName: 'gridHeader', flex: 1, minWidth: 150 },
         {
             field: 'rating',
@@ -74,7 +74,7 @@ const ReviewList = () => {
     reviews && reviews.forEach(rev => {
         rows.push({
             id: rev._id,
-            image: IMAGE_BASEURL + rev.user.avatar.url,
+            image:rev.user.avatar.url,
             name: rev.user.name,
             rating: rev.rating,
             review: rev.comment

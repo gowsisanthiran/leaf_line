@@ -74,26 +74,25 @@ const Registration = () => {
 
       <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
         <MDBRow>
+        <h2 style={{textAlign:'center',fontFamily:'Poppins,Opens-serif'}}>REGISTRATION</h2>
+
           <MDBCol col='10' md='6'>
             {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
-            <img src={reg} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/>
+            <img src = 'https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg='className="img-fluid" alt="Login image" style={{width:'500px',height:'600px',paddingTop:'10px',borderRadius:'40px',objectFit:'cover'}}/>
 
           </MDBCol>
           <MDBCol col='4' md='6'>
 
-            <MDBCol>
-              <NoAccountsIcon />
-            </MDBCol>
-            <MDBCol>
-              <h5>Registration</h5>
-            </MDBCol>
+            
             <MDBCol>
               <form onSubmit={handleSubmit}>
                 <label>Name</label>
                 <MDBInput
+                  wrapperClass='mb-2'
                   type="text"
                   id="name"
-                  label="Name"
+                  style={{color:'black'}}
+                  // label="Name"
                   name="name"
                   required
                   autoFocus
@@ -103,9 +102,11 @@ const Registration = () => {
                 <label>Email</label>
 
                 <MDBInput
+                  wrapperClass='mb-2'
                   type="email"
                   id="email"
-                  label="Email"
+                  style={{color:'black'}}
+                  // label="Email"
                   name="email"
                   required
                   autoComplete="email"
@@ -115,9 +116,11 @@ const Registration = () => {
                 <label>Password</label>
 
                 <MDBInput
+                  wrapperClass='mb-3'
                   type="password"
                   id="password"
-                  label="Password"
+                  style={{color:'black'}}
+                  // label="Password"
                   name="password"
                   required
                   value={password}
@@ -127,7 +130,7 @@ const Registration = () => {
                   <MDBCol>
                     <div
                       className="d-flex align-items-center justify-content-center"
-                      style={{ width: '80px', height: '80px', fontSize: '5.35rem' }}
+                      style={{ width: '80px', height: '80px', fontSize: '3.35rem' }}
                     >
                       {!previewAvatar ? (
                         <AccountCircleIcon fontSize="2.5rem" />
@@ -152,15 +155,10 @@ const Registration = () => {
                     </Button>
                   </MDBCol>
                 </MDBRow>
-                <Button type='submit'
-                  fullWidth
-                  variant='contained'
-                  color="success"
-                  sx={{ mt: 3, mb: 2 }}
-                >Registration & Login</Button>
                 <MDBRow className="mt-2">
-                  <MDBCol>
                   <MDBCheckbox
+                                    style={{color:'black'}}
+
                                     name='keepLoggedIn'
                                     value=''
                                     id='keepLoggedIn'
@@ -168,8 +166,14 @@ const Registration = () => {
                                     checked={checked}
                                     onChange={handleKeepMeLoggedIn}
                                 />
-                  </MDBCol>
                 </MDBRow>
+                <Button type='submit'
+                  fullWidth
+                  variant='contained'
+                  color="success"
+                  sx={{ mt: 3, mb: 2 }}
+                >Registration</Button>
+                
               </form>
             </MDBCol>
           </MDBCol>

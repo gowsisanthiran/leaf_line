@@ -164,7 +164,7 @@ function ContactPage() {
   return (
     
       
-<div class="formContainer" style={{background: 'linear-gradient(90deg, #a6a6a6, #fff)',marginTop:'10rem'}}>
+<div class="formContainer" style={{background: 'rgb(218, 226, 182)',marginTop:'5rem'}}>
   <div class="formcard">
     <div class="left">
       <img src={contact} style={{width:'400px',height:'500px'}}/>

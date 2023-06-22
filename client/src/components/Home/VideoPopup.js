@@ -12,7 +12,7 @@ const VideoPopup = () => {
   return (
     <div>
 
-      <div className="abt-section mb-150" data-aos="fade-up" style={{ background: 'linear-gradient(90deg, #a6a6a6, #fff)'}}>
+      <div className="abt-section mb-150" data-aos="fade-up" style={{ background: 'rgb(218, 226, 182)'}}>
         <Container sx={{ marginTop: '50px', marginBottom: '50px', }}>
           <Grid container spacing={2}>
 

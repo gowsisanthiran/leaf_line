@@ -13,12 +13,10 @@ code {
     monospace;
 }
 .banner {
-  background-image:   url("./images/HomeBG.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 1000px;
 }
 
 .banner.productpage {
@@ -29,7 +27,7 @@ code {
 .banner .banner-title {
   font-size: 60px;
   /* font-weight: 00; */
-  color: #000;
+  color: #fff;
   font-family: Poppins, Opens-serif;
 
 }
@@ -75,3 +73,4 @@ code {
   /* text-align: left; */
   margin-top: 150px;
 }
+

@@ -5,7 +5,7 @@ const shortid = require('shortid');
 const orderSchema=new mongoose.Schema({
     shortId: {
         type: String,
-        default: shortid.generate(),
+        default: shortid.generate,
         unique: true,
       },
     shippingInfo:{

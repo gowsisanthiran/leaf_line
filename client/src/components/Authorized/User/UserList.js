@@ -64,16 +64,16 @@ const UserList = () => {
     //     }
     // ]
     const columns = [
-        {
-          field: 'image',
-          headerName: 'Avatar',
-          headerClassName: 'gridHeader',
-          flex: 1,
-          minWidth: 60,
-          renderCell: (params) => {
-            return params.value === '' ? '' : <img src={params.value} height='100%' />;
-          },
-        },
+        // {
+        //   field: 'image',
+        //   headerName: 'Avatar',
+        //   headerClassName: 'gridHeader',
+        //   flex: 1,
+        //   minWidth: 60,
+        //   renderCell: (params) => {
+        //     return params.value === '' ? '' : <img src={params.value} height='100%' />;
+        //   },
+        // },
         { field: 'name', headerName: 'Name', headerClassName: 'gridHeader', flex: 1 },
         { field: 'email', headerName: 'Email', headerClassName: 'gridHeader', flex: 1 },
         { field: 'role', headerName: 'Role', headerClassName: 'gridHeader', flex: 1 },

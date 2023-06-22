@@ -130,7 +130,7 @@ main {
 .card__body span.stock {
   font-family: Poppins,Opens-serif;
   font-weight: 600;
-  color: #a1cc16;
+  color: #254703;
 }
 
 .card__body .reviews .stars {
@@ -186,7 +186,7 @@ main {
   font-family: Poppins,Opens-serif;
   font-weight: 600;
   text-transform: uppercase;
-  color: #8fba1c;
+  color: #254703;
 }
 
 .card__footer .action button {

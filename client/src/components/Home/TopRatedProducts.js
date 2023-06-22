@@ -34,7 +34,7 @@ const TopRatedProducts=()=> {
   }, []);
 
   return (
-    <div style={{display: 'block',background: 'linear-gradient(90deg, #a6a6a6, #fff)',boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)',paddingBottom:'50px'}} data-aos="fade-up">
+    <div style={{display: 'block',background: 'rgb(218, 226, 182)',boxShadow: '0 0 10px rgba(0, 100, 0, 0.5)',paddingBottom:'50px'}} data-aos="fade-up">
       <div className='col-lg-12 text-center'>
         <Box className="containerx col-lg-8 offset-lg-2 text-center" sx={{ textAlign: 'center'}}>
           <Typography variant="h5" className="m-4 p-1 text-dark text-center" sx={{fontFamily: 'Open Sans , sans-serif',fontWeight: 'bold',fontSize:'40px'}}>

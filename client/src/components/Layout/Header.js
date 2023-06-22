@@ -48,7 +48,7 @@ const Header = () => {
 
 
     <div className={`container-fluid main ${scrolled ? 'scrolled' : ''}`}>
-      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'white' : '' }}>
+      <nav className={`navbar navbar-expand navbar-dark fixed-top ${scrolled ? 'navbar-transparent' : ''}`} style={{ backgroundColor: scrolled ? 'rgb(218, 226, 182)' : '' }}>
         <div className="container" style={{ marginTop: '-40px', marginBottom: '-40px' }}>
           <NavLink to="/" className="navbar-brand">
             <img src={logoo}black alt="Logo" className="logo" style={{ height: 'auto', aspectRatio: '3/2', width: '50%' }} />
