@@ -143,7 +143,7 @@ const UpdateProduct = () => {
         padding: '55px',
         justifyContent: "center",
         marginLeft: "440px",
-        marginTop:"90px",
+        marginTop:"45px",
                 marginBottom:"20px"
       }}
       >

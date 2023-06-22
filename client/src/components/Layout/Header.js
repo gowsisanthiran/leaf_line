@@ -108,10 +108,9 @@ const Header = () => {
 
       <div class="covertext ">
         {/* <div class="" style={{ float: "none", margin: "0 auto", marginTop: '10rem',fontFamily: 'Bodoni, sans-serif', color: '#fff', border: '2px ' }}> */}
-          <div class="covertext2">
+          
           <p class="title1" style={{fontFamily:'Poppins,Sans-serif',fontSize:'50px'}}>BIO-DEGRADABLE PLATES FOR </p>
-          <p class="title1" style={{fontFamily:'Poppins,sans-serif',fontSize:'40px'}}>CLEANER PLANET</p>
-        </div>
+          <p class="title1" style={{fontFamily:'Poppins,sans-serif',fontSize:'50px'}}>CLEANER PLANET</p>
         <div class="col-xs-12 explore">
           <a href="/product"><button type="button" class="btn btn-lg explorebtn" explore={<ExploreIcon/>}>EXPLORE</button></a>
         </div>

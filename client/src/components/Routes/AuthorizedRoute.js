@@ -16,18 +16,19 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import logoo from '../../images/logoo.png';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
-      right: 6,
-      top: 5,
-      border: `2px solid ${theme.palette.background.paper}`,
-      background:'#609a33',
-      padding: '0 4px',
+        right: 6,
+        top: 5,
+        border: `2px solid ${theme.palette.background.paper}`,
+        background: '#609a33',
+        padding: '0 4px',
     },
-  }));
+}));
 
 const AuthorizedRoute = () => {
     const { products } = useSelector(selectCartItems);
@@ -63,25 +64,27 @@ const AuthorizedRoute = () => {
                     <Box className='mTreeMenu' sx={{ minWidth: '225px', mr: 1 }}>
                         <DrawerTreeMenu />
                     </Box>
-                    <Box sx={{ flexGrow: 1}}>
-                        <Link to="dashboard" className="link-no-underline">
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Link to="/" className="link-no-underline">
+
+
+
+
                             <Typography
                                 component='div'
                                 variant='h6'
-                                // marginTop={"50px"}
                                 sx={{
                                     textAlign: 'left',
-                                
                                     color: '#132a13',
                                     textShadow: '1px 1px 1px #555',
-                                    marginLeft: "20px",
-                                   marginTop:"15px"
-
-
+                                    marginLeft: '20px',
+                                    marginTop: '15px'
                                 }}
                             >
-                                Dashboard
+                                <HomeIcon sx={{ marginRight: '10px', fontSize: '1.2rem' }} />
+                                LEAFLINE
                             </Typography>
+
                         </Link>
 
 
@@ -93,18 +96,7 @@ const AuthorizedRoute = () => {
                         {/* <NavLink to="/" className="navbar-brand">
     <img src={logoo} alt="Logo" className="logo" style={{ height: "100px" }} />
   </NavLink> */}
-                        <NavLink
-                            to="/"
-                            className="nav-link custom-nav-link"
-                            activeClassName="active"
-                            style={{
-                                fontWeight: 'bold',
-                                fontFamily: 'Open Sans, sans-serif',
-                                color: '#263A29'
-                            }}
-                        >
-                            <HomeIcon />
-                        </NavLink>
+                       
                         <NavLink
                             to="/product"
                             className="nav-link custom-nav-link"
@@ -148,7 +140,7 @@ const AuthorizedRoute = () => {
                     <Box
                         className='dTreeMenu'
                         sx={{
-                            backgroundColor: '#CDD193',
+                            backgroundColor: '#263A29',
                             // '#E9EDC9',
                             boxShadow: '2px 2px 15px #7b9c56',
                             minWidth: '240px',

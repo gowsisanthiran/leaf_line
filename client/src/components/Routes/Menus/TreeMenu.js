@@ -130,6 +130,8 @@ import { alpha, styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import CategoryIcon from '@mui/icons-material/Category';
 import { AddCircle, Category, ListAlt, Person, RateReview, ShoppingBasket, VerticalSplit } from '@mui/icons-material';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+
   
 
 const StyledTab = styled(Tab)(({ theme }) => ({
@@ -162,6 +164,22 @@ return (
     orientation="vertical"
     sx={{ overflow: 'hidden', color: '#fff' }}
   >
+    <Tab
+  label={
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <DashboardIcon sx={{ marginRight: '0.5rem' }} />
+     Dashboard
+    </div>
+  }
+  onClick={() => goto('Dashboard')}
+  style={{
+    color: 'white',
+    display: 'flex',
+    alignItems: 'flex-start',
+    fontFamily: 'poppins, sans-serif',
+    marginTop: '40px'
+  }}
+/>
    <Tab
   label={
     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -171,11 +189,11 @@ return (
   }
   onClick={() => goto('category')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',
-    marginTop: '60px'
+    marginTop: '40px'
   }}
 />
 
@@ -188,7 +206,7 @@ return (
   }
   onClick={() => goto('categorylist')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',
@@ -205,7 +223,7 @@ return (
   }
   onClick={() => goto('product')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',
@@ -221,7 +239,7 @@ return (
   }
   onClick={() => goto('productlist')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',
@@ -237,7 +255,7 @@ return (
   }
   onClick={() => goto('reviewlist')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',
@@ -254,7 +272,7 @@ return (
   }
   onClick={() => goto('orderlist')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',
@@ -271,7 +289,7 @@ return (
   }
   onClick={() => goto('userlist')}
   style={{
-    color: 'black',
+    color: 'white',
     display: 'flex',
     alignItems: 'flex-start',
     fontFamily: 'poppins, sans-serif',

@@ -152,7 +152,7 @@ const AddNewProduct = () => {
         padding: '55px',
         justifyContent: "center",
         marginLeft: "440px",
-        marginTop: "85px",
+        marginTop: "45px",
         marginBottom: "20px",
         
         cursor: 'pointer', 

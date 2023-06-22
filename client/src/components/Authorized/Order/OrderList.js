@@ -58,6 +58,7 @@ const OrderList = () => {
     // ]
     const columns = [
         // { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1 },
+        // { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1 },
         { field: 'status', headerName: 'Status', headerClassName: 'gridHeader', flex: 1 },
         { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader', flex: 1 },
         { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader', flex: 1 },
@@ -131,7 +132,7 @@ const OrderList = () => {
                 padding: '55px',
                 justifyContent: "center",
                 marginLeft: "124px",
-                marginTop: "95px",
+                marginTop: "45px",
 
             }}
         >
@@ -141,7 +142,7 @@ const OrderList = () => {
                     overflowY: 'scroll',
                 }}
             >
-                <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
+                <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '05px', textAlign: 'center' }}>
                     <Typography component='h1' color="#1b5e20" variant='h5' fontFamily='poppins, sans-serif' sx={{ m: 4 }}>List of Orders</Typography>
                     {loading ? <BoxShadowLoader /> :
                         <DataGrid rows={rows}

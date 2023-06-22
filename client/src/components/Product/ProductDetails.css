@@ -14,14 +14,14 @@ main {
 }
 
 .container3 {
-  background: rgba(255, 255, 255, 0.3);
+  background: #DAE2B6;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   transition: 200ms;
 }
 
 .container3:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: #DAE2B6;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -90,7 +90,7 @@ main {
   font-family: Poppins,Opens-serif;
   font-size: 26px;
   text-transform: uppercase;
-  color: #686e77;
+  color:#DAE2B6;
   font-weight: 300;
   margin-bottom: 5px;
 }
@@ -192,6 +192,7 @@ main {
 .card__footer .action button {
   cursor: pointer;
   border: 1px solid #1b4333;
+  border: 2px solid #fff;
   padding: 14px 30px;
   border-radius: 200px;
   color: #fff;
@@ -203,8 +204,9 @@ main {
 
 .card__footer .action button:hover {
   background: #b6e745;
+  background: #9BBBAF;
   color: #fff;
-}
+} 
 
 /* .ratingsDiv{
     position: relative ;
@@ -212,14 +214,14 @@ main {
 } */
 
 .product-reviews {
-  background: rgba(255, 255, 255, 0.3);
+  background: #DAE2B6;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   transition: 200ms;
 }
 
 .product-reviews:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background:#DAE2B6;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 

@@ -112,7 +112,7 @@ const StripeCheckoutForm = (props) => {
             <section class="banner productpage">
                 <div class="container container2">
                     <div class="row">
-                        <div class="col-lg-12 d-flex justify-content-start">
+                    <div class="col-lg-12 d-flex justify-content-center">
                             <div class="text-center">
                                 <h2 class="banner-title">Payment</h2>
                                 <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
@@ -154,6 +154,18 @@ const StripeCheckoutForm = (props) => {
                     </Box>
 
                     <LoadingButton type='submit'
+                          style={{
+                        cursor: "pointer",
+                        border: "2px solid #fff",
+                        padding: "14px 5px",
+                        width: "250px",
+                        bordeRadius: '200px',
+                        color: " #fff",
+                        background: "#1b4333",
+                        fontFamily: "Poppins,Opens-serif",
+                        fontSize: "16px",
+                        transition: "200ms"
+                    }}
                         loading={proccessing}
                         fullWidth
                         loadingPosition='start'

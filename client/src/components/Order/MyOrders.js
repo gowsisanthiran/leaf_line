@@ -31,6 +31,7 @@ const MyOrders = () => {
       cellClassName: 'gridCell',
       maxWidth: 250,
       type: 'number',
+      flex: 1,
       sortable: false,
       renderCell: (params) => {
         return (
@@ -102,8 +103,7 @@ const MyOrders = () => {
           ) : (
             <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }}  style={{height:'500px', width: '1000px' }}/>
           )}
-        </div>
-
+        </Box>
       </Box>
     </>
   );

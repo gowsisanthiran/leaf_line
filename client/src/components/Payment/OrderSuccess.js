@@ -14,7 +14,9 @@ const OrderSuccess = () => {
       <section class="banner productpage">
         <div class="container container2">
           <div class="row">
-            <div class="col-lg-12 d-flex justify-content-start">
+          <div class="col-lg-12 d-flex justify-content-center">
+
+            
               <div class="text-center">
                 <h2 class="banner-title">Order Success</h2>
                 <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
@@ -29,6 +31,14 @@ const OrderSuccess = () => {
         </div>
       </section>
       {/*Banner Ends*/}
+      <Box sx={{ m: '20px auto', maxWidth: '550px', textAlign: 'center', minWidth: '500px' }}>
+        <Avatar sx={{ bgcolor: '"#0a330d"', height: '80px', width: '80px', m: '0 auto', }} fontSize='4.5rem'style={{backgroundColor:"#0a330d"}}>
+          <DoneAllIcon fontSize='3.5rem' />
+        </Avatar>
+        <Typography variant='h5' component='h1' sx={{ color: 'green', mt: 1, mb: 1 }}>Your order has been placed successfully.</Typography>
+        <Link to='/order' style={{ marginRight: '50px',color:'green' }}>View orders</Link>
+        <Link to='/'style={{ color:'green' }}>Go Home</Link>
+      </Box>
       <Box
         sx={{
           m: '20px auto',

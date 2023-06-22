@@ -9,10 +9,11 @@
   border-radius: 12px;
   border: 1px solid transparent;
   transition: background 0.3s ease;
+  background: #DAE2B6;
 }
 
 .glassmorphism-form:hover {
-  background: rgba(255, 255, 255, 0.25);
+  
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -21,7 +22,7 @@
   #myform {
     margin: 50px auto 0;
     width: 50%;
-    background: #e8edf0;
+    background:  #DAE2B6;
     background: linear-gradient(to top left, #e8edf0, #ffffff);
     font-family: Poppins, Opens-serif;
     padding-left: 10px;
@@ -67,11 +68,11 @@
   
   input:focus {
     outline: none !important;
-    border-color: #69B692;
+    border-color: #024d2c;
   }
   
   input:focus + label {
-    color: #69b692;
+    color: #18593b;
   }
   .row2 {
     padding-left: 5px;
@@ -140,8 +141,16 @@
   }
 
   .btn01 {
-    width: 150px;
-    padding: 5px;
+    /* height: max-content; */
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: 2px 2px;
+    border-radius: 200px;
+    color: #fff;
+    background: #1b4332;
+    font-family: Poppins,Opens-serif;
+    font-size: 16px;
+    transition: 200ms;
   }
   
 
