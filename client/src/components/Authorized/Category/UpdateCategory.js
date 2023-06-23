@@ -151,7 +151,7 @@ const UpdateCategory = () => {
       ) : (
         <Box sx={{ marginTop: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography component='div' color='#1b5e20' variant='h5' fontFamily= 'poppins, sans-serif' marginTop="20px">
-            Update category
+            Update Category
           </Typography>
           <Box component='form' onSubmit={handleSubmit} sx={{ mt: 2 }}>
             <TextField
@@ -189,8 +189,14 @@ const UpdateCategory = () => {
               disabled={isUpdating ? true : false}
               variant='contained'
               startIcon={<UpdateIcon />}
-              sx={{ mt: 3, mb: 2,  fontFamily:'poppins, sans-serif', backgroundColor:"#1b4332",            
-              borderRadius:"10px"}}
+              sx={{ mt: 3, mb: 2,  fontFamily:'poppins, sans-serif',backgroundColor: "rgb(70, 88, 73)",      
+              borderRadius:"10px",
+              '&:hover': {
+                backgroundColor: "#9DC183",
+                color: "#000",
+                border: "black",
+                boxShadow: 'none',
+              },}}
             >
               Update Category
             </Button>

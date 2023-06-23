@@ -81,7 +81,7 @@ const AuthorizedRoute = () => {
                                     marginTop: '15px'
                                 }}
                             >
-                                <HomeIcon sx={{ marginRight: '10px', fontSize: '1.2rem' }} />
+
                                 LEAFLINE
                             </Typography>
 
@@ -96,7 +96,17 @@ const AuthorizedRoute = () => {
                         {/* <NavLink to="/" className="navbar-brand">
     <img src={logoo} alt="Logo" className="logo" style={{ height: "100px" }} />
   </NavLink> */}
-                       
+                        <NavLink
+                            to="/"
+                            className="nav-link custom-nav-link"
+                            activeClassName="active"
+                            style={{
+                                color: '#263A29'
+                            }}
+                        >
+                            <HomeIcon/>
+                        </NavLink>
+
                         <NavLink
                             to="/product"
                             className="nav-link custom-nav-link"

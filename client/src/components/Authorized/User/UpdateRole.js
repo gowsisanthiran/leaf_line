@@ -174,8 +174,13 @@ const UpdateRole = () => {
                 fullWidth
                 startIcon={<UpdateIcon />}
                 sx={{
-                  mt: 3, mb: 2, backgroundColor: "#1b4332",
-                  borderRadius: "10px", fontFamily: 'poppins, sans-serif'
+                  mt: 3, mb: 2, backgroundColor: "rgb(70, 88, 73)",
+                  borderRadius: "10px", fontFamily: 'poppins, sans-serif', '&:hover': {
+                    backgroundColor: "#9DC183",
+                    color: "#000",
+                    border: "black",
+                    boxShadow: 'none',
+                  },
                 }}
                 onClick={submitHandler}>Change
               </Button>

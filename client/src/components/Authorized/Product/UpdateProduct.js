@@ -157,7 +157,7 @@ const UpdateProduct = () => {
 
         {loading ? <BoxShadowLoader /> :
           <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>
-            <Typography component='div' variant='h5' color="green" fontFamily= 'poppins, sans-serif'>Update product</Typography>
+            <Typography component='div' variant='h5' color="green" fontFamily= 'poppins, sans-serif'>Update Product</Typography>
             <Box component='form' onSubmit={handleSubmit} >
               <TextField type='text'
                 id='title'
@@ -385,7 +385,12 @@ const UpdateProduct = () => {
                 variant='contained'
                 startIcon={<UpdateIcon />}
                 sx={{
-                  mt: 3, mb: 2, backgroundColor:"#1b4332",borderRadius:"10px", fontFamily: 'poppins, sans-serif'
+                  mt: 3, mb: 2, backgroundColor:"rgb(70, 88, 73)",borderRadius:"10px", fontFamily: 'poppins, sans-serif','&:hover': {
+                    backgroundColor: "#9DC183",
+                    color: "#000",
+                    border: "black",
+                    boxShadow: 'none',
+                  },
                 }}
 
               >Update Product</Button>
