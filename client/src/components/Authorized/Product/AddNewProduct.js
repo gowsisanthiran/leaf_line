@@ -167,7 +167,7 @@ const AddNewProduct = () => {
         }}
       >
         <Box sx={{ m: '0 auto', marginTop: 2, maxWidth: '550px' }}>
-          <Typography component='div' color="#1b5e20" variant='h5' sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Add new product</Typography>
+          <Typography component='div' color="#1b5e20" variant='h5' sx={{ textAlign: 'center', fontFamily: 'poppins, sans-serif' }}>Add New Product</Typography>
           <Box component='form' onSubmit={handleSubmit}>
             <TextField type='text'
               id='title'
@@ -397,7 +397,12 @@ const AddNewProduct = () => {
               variant='contained'
 
               startIcon={<AddBoxOutlinedIcon />}
-              sx={{ mt: 3, mb: 2,backgroundColor:"#1b4332",borderRadius:"10px", fontFamily: 'poppins, sans-serif' }}
+              sx={{ mt: 3, mb: 2,    backgroundColor: "rgb(70, 88, 73)" ,borderRadius:"10px", fontFamily: 'poppins, sans-serif','&:hover': {
+                backgroundColor: "#9DC183",
+                color: "#000",
+                border: "black",
+                boxShadow: 'none',
+              }, }}
 
             >Add Product</Button>
           </Box>

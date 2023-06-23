@@ -170,7 +170,7 @@ const AddNewCategory = () => {
         }}
       >
         <Typography component="div" variant="h5" color="#1b5e20" fontFamily='poppins, sans-serif'>
-          Add new category
+          Add New Category
         </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
@@ -202,7 +202,9 @@ const AddNewCategory = () => {
             onChange={(e) => setDescription(e.target.value)}
             color="success"
           />
-          <Button
+          {/* <Button
+        
+
             type="submit"
             fullWidth
             disabled={loading ? true : false}
@@ -212,13 +214,40 @@ const AddNewCategory = () => {
               mt: 4,
               mb: 2,
               fontFamily: 'poppins, sans-serif',
-              backgroundColor:"#1b4332",  
-             
+              backgroundColor:" rgb(70, 88, 73)",
               borderRadius:"10px"
+             
+
             }}
           >
+        
             Add Category
-          </Button>
+          </Button> */}
+         <Button
+  type="submit"
+  fullWidth
+  disabled={loading ? true : false}
+  variant="contained"
+  startIcon={<AddBoxOutlinedIcon />}
+  sx={{
+    mt: 4,
+    mb: 2,
+    fontFamily: 'poppins, sans-serif',
+    backgroundColor: "rgb(70, 88, 73)",
+    borderRadius: "10px",
+    '&:hover': {
+      backgroundColor: "#9DC183",
+      color: "#000",
+      border: "black",
+      boxShadow: 'none',
+    },
+  }}
+>
+  Add Category
+</Button>
+
+
+
         </Box>
       </Box>
     </div>

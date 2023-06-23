@@ -45,8 +45,8 @@ const AdminDashboard = () => {
       {
         label: 'Total Amount',
         fill: true,
-        backgroundColor: [ '#E86A33'],
-        hoverBackgroundColor: ['orange'],
+        backgroundColor: [ '#C38154'],
+        hoverBackgroundColor: ['#F1C27B'],
         data: [0, totalAmount]
       }
     ]
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
     datasets: [
       {
         backgroundColor: ['#884A39', '#285430'],
-        hoverBackgroundColor: ['black', '#9CA777'],
+        hoverBackgroundColor: ['#C38154', '#8EAC50'],
         data: [outOfStock, products.length - outOfStock]
       }
     ]
@@ -208,7 +208,7 @@ const AdminDashboard = () => {
           <Typography component="div" variant="h4"  fontWeight='bold' color="#1b5e20" fontFamily='poppins, sans-serif' textAlign="center" marginTop="20px">
           Stock Of Products
         </Typography>
-            <Grid item xs={12} md={10} lg={10} style={{width:'550px',paddingLeft:'14rem',marginTop:'2rem',marginBottom:'2rem', alignItems:"center" }} >
+            <Grid item xs={18} md={10} lg={10} style={{width:'570px',paddingLeft:'14rem',marginTop:'1rem',marginBottom:'1rem', alignItems:"center" }} >
               <Doughnut data={doughnutData} />
             </Grid>
           </div>

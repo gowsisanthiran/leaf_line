@@ -164,7 +164,7 @@ const UserList = () => {
                 }}
             >
             <Box style={{ displya: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px', textAlign: 'center' }}>
-                <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20' fontFamily= 'poppins, sans-serif' >Full list of users</Typography>
+                <Typography component='h1' variant='h5' sx={{ m: 4 }} color='#1b5e20' fontFamily= 'poppins, sans-serif' >list of Users</Typography>
                 {loading ? <BoxShadowLoader /> :
                     <DataGrid rows={rows}
                         columns={columns}
