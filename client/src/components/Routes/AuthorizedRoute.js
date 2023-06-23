@@ -65,7 +65,7 @@ const AuthorizedRoute = () => {
                         <DrawerTreeMenu />
                     </Box>
                     <Box sx={{ flexGrow: 1 }}>
-                        <Link to="/" className="link-no-underline">
+                        <Link to="dashboard" className="link-no-underline">
 
 
 

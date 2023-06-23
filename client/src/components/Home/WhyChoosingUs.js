@@ -263,140 +263,28 @@ const WhyChoosingUs = () => {
           <div class="row">
             <div class="col-12">
               <div class="section-title text-center mb-35">
-
-
-
-                <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Who </span>We Are</h2>
-
-
-
-
-
-                <span style={{fontFamily: 'Poppins', fontSize: '20px', display: 'block',color:'green'}}>A little story about us</span>
-
-
-
+                <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight: 'bold' }}><span style={{ color: '#008000' }}>Who </span>We Are</h2>
+                <span style={{ fontFamily: 'Poppins', fontSize: '20px', display: 'block', color: 'green' }}>A little story about us</span>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-8 ml-auto mr-auto">
               <div class="history-area-content text-center">
-              <img src="https://linguini.akamaized.net/starchef2_website/idli_sambar.png" alt="Image 1" style={{ width: '200px', height: '200px' }} />
-          <img src="https://cdn.shopify.com/s/files/1/0518/1980/6879/articles/IMG_1_2_a5e73e89-8457-4b59-b9b8-d2d82a78b5f3_1200x1200.jpg?v=1649835611" alt="Image 2" style={{ width: '200px', height: '200px' }} />
-          <img src="https://i.pinimg.com/736x/df/13/0a/df130a5def95229783839705e55dcd94.jpg" alt="Image 3" style={{ width: '200px', height: '200px' }} />
-
-                <p style={{fontFamily:'Poppins, sans-serif',textAlign:'justify',fontSize:'20px'}}>Located in the heart of the city, our banana leaf plates shop is a haven for eco-conscious individuals seeking sustainable alternatives to disposable dinnerware. We offer a wide selection of beautifully crafted plates made from naturally fallen banana leaves. Each plate is meticulously cleaned and shaped, showcasing the intricate veins and vibrant hues of the leaves. Our shop is committed to promoting environmentally friendly practices, providing customers with a guilt-free dining experience that combines elegance and sustainability.
+                <img src="https://linguini.akamaized.net/starchef2_website/idli_sambar.png" alt="Image 1" style={{ width: '200px', height: '200px' }} />
+                <img src="https://cdn.shopify.com/s/files/1/0518/1980/6879/articles/IMG_1_2_a5e73e89-8457-4b59-b9b8-d2d82a78b5f3_1200x1200.jpg?v=1649835611" alt="Image 2" style={{ width: '200px', height: '200px' }} />
+                <img src="https://i.pinimg.com/736x/df/13/0a/df130a5def95229783839705e55dcd94.jpg" alt="Image 3" style={{ width: '200px', height: '200px' }} />
+                <p style={{ fontFamily: 'Poppins, sans-serif', textAlign: 'justify', fontSize: '20px' }}>Located in the heart of the city, our banana leaf plates shop is a haven for eco-conscious individuals seeking sustainable alternatives to disposable dinnerware. We offer a wide selection of beautifully crafted plates made from naturally fallen banana leaves. Each plate is meticulously cleaned and shaped, showcasing the intricate veins and vibrant hues of the leaves. Our shop is committed to promoting environmentally friendly practices, providing customers with a guilt-free dining experience that combines elegance and sustainability.
                 </p>
-
-
-
-
-
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 
 
-    // <Box className={classes.background}>
-    //   <Box className={classes.container} textAlign="left" style={{ margin: '10 auto', marginTop: '10px' }} data-aos="fade-up">
-    //     <Typography variant="h6" className={classes.title} sx={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', paddingTop: '30px' ,fontWeight: 'bold'}}>
-    //       <span style={{ color: 'green' }}>Why Choosing </span> Us!
-    //     </Typography>
-    //     <Box mt={4} data-aos="fade-up" data-aos-delay="100">
-    //       <Typography style={{ textAlign: 'center', fontFamily: 'Poppins, sans-serif', fontSize: '20px', color: 'green', marginTop: '5px'  }}>
-    //         Few Reasons Why People Choose Us!
-    //       </Typography>
-
-    //       <Slider {...carouselSettings}style={{paddingLeft:'0px',paddingRight:'0px' ,paddingTop:'10px',alignItems:'center',padding:'10px'}}>
-
-    //         {/* <div className={classes.imageCard} >
-    //           <img src={sl9} style={{  width: '500px', margin: '0px'}} alt="Image" />
-
-    //         </div> */}
-    //    <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-    //     <img src={sl9} style={{ width: '500px', margin: '0px' }} alt="Image" />
-    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-    //           <h5 className="header">Packaging</h5>
-    //           <p>Leafline banana leaf packages are sturdy and can hold a variety of hot and cold dishes.
-    //           </p>
-    //         </div>
-    //       </article>
-    //     </div>
-    //   </a>
-    // </div>
-
-
-
-    // <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-    //     <img src={sl12} style={{ width: '500px', margin: '0px' }} alt="Image" />
-    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-    //           <h5 className="header">Plates</h5>
-    //           <p>Leafline banana leaf plates are eco-friendly alternatives to traditional disposable plates.
-    //           </p>
-    //         </div>
-    //       </article>
-    //     </div>
-    //   </a>
-    // </div>
-
-    // <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-    //     <img src={sl13} style={{ width: '500px', margin: '0px' }} alt="Image" />
-    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-    //           <h5 className="header">packages</h5>
-    //           <p>Using Leafline banana leaf plates helps reduce plastic waste and promotes a greener lifestyle
-    //           </p>
-    //         </div>
-    //       </article>
-    //     </div>
-    //   </a>
-    // </div>
-    // <div className="swiper-slide item col-lg-4 col-sm-4 swiper-slide-active" style={{ width: '400px' }}>
-    //   <a href="/shop/" className="photo" style={{ position: 'relative' }}>
-    //     <img src={sl14} style={{ width: '500px', margin: '0px' }} alt="Image" />
-    //     <div style={{ position: 'absolute', top: '200px', left: '45%', transform: 'translate(-50%, 50%)', width: '400px', backgroundColor: 'rgba(255, 255, 255, 0.5)' ,alignItems:'center'}}>
-    //       <article id="post-5091" className="post-5091 services type-services status-publish has-post-thumbnail hentry services-category-assortment" data-mh="ltx-services-1359732677">
-    //         <div className="descr" style={{color:'#232423',fontWeight: 'bold',fontFamily: 'Poppins, sans-serif' }}>
-    //           <h5 className="header">Packs</h5>
-    //           <p>Leafline banana leaf packs are lightweight and easy to handle, making them convenient for both hosts and guests.
-    //           </p>
-    //         </div>
-    //       </article>
-    //     </div>
-    //   </a>
-    // </div>
-    //       </Slider>
-
-
-
-    //     </Box>
-    //   </Box>
-    // </Box>
   );
 };
 

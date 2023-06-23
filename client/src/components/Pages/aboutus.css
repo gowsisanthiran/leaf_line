@@ -2,17 +2,18 @@
  
  .formContainer {
    width: 100vw;
-   height: 100vh;
-   display: flex;
+   /* height: 100vh; */
+   display: grid;
    align-items: center;
    justify-content: center;
-   font-family: sans-serif;
+   font-family: Popping;
    background-color: #ddd;
 
  }
  
  .formcard {
-   padding: 1rem;
+   /* padding: 3rem; */
+   padding-bottom:3rem;
    display: flex;
    align-items: center;
    justify-content: center;

@@ -31,14 +31,7 @@ const OrderSuccess = () => {
         </div>
       </section>
       {/*Banner Ends*/}
-      <Box sx={{ m: '20px auto', maxWidth: '550px', textAlign: 'center', minWidth: '500px' }}>
-        <Avatar sx={{ bgcolor: '"#0a330d"', height: '80px', width: '80px', m: '0 auto', }} fontSize='4.5rem'style={{backgroundColor:"#0a330d"}}>
-          <DoneAllIcon fontSize='3.5rem' />
-        </Avatar>
-        <Typography variant='h5' component='h1' sx={{ color: 'green', mt: 1, mb: 1 }}>Your order has been placed successfully.</Typography>
-        <Link to='/order' style={{ marginRight: '50px',color:'green' }}>View orders</Link>
-        <Link to='/'style={{ color:'green' }}>Go Home</Link>
-      </Box>
+      
       <Box
         sx={{
           m: '20px auto',
@@ -62,7 +55,7 @@ const OrderSuccess = () => {
       >
         <Avatar
           sx={{
-            bgcolor: 'primary.main',
+            bgcolor: '#9ABC66',
             height: '80px',
             width: '80px',
             m: '0 auto',
@@ -71,15 +64,17 @@ const OrderSuccess = () => {
         >
           <DoneAllIcon fontSize="3.5rem" />
         </Avatar>
-        <Typography variant="h5" component="h1" sx={{ color: 'green', mt: 1, mb: 1 }}>
+        <Typography variant="h5" component="h1" sx={{  mt: 1, mb: 1 ,fontFamily:'Poppins, opens-serif' }}>
           Your order has been placed successfully.
         </Typography>
-        <button className='btn01'>
+        <div style={{display:'flex',justifyContent:'space-evenly'}}>
+        <button className='btn02 explorebtn'>
           <Link to="/order" style={{ color: 'black' }} >
             View orders
           </Link></button>
-        <button className='btn01'>
+        <button className='btn02 explorebtn'>
           <Link to="/" style={{ color: 'black' }}>Go Home</Link></button>
+        </div>
       </Box>
 
     </>

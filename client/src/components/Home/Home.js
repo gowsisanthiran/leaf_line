@@ -12,7 +12,7 @@ import ContactUs from '../Pages/Contactus';
 import WhyWorkWithUs from './WhyWorkWithUs'
 import WhyChoosingUs from './WhyChoosingUs';
 import TopRatedProducts from './TopRatedProducts';
-import '../Home/home.css';
+import './home.css';
 
 
 import { alignPropType } from 'react-bootstrap/esm/types';
@@ -34,24 +34,24 @@ const Home = () => {
       <div className='topRated'>
         <TopRatedProducts />
       </div>
-      
+
       <div className='WhyWorkWithUs'>
         <WhyWorkWithUs />
       </div>
 
 
       {/* end div 2 */}
-      
-      <VideoPopup/>
+
+      <VideoPopup />
       {/* div 3 */}
-<div className='aboutsUs'>
-      <AboutUs2/>
+      <div className='aboutUs'>
+        <AboutUs2 />
       </div>
       {/* <AboutUs /> */}
       <ContactUs />
       {/* <OurTeam/> */}
-      
-      
+
+
     </Box>
   );
 };

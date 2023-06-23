@@ -17,8 +17,8 @@ const VideoPopup = () => {
           <Grid container spacing={2}>
 
             <Grid>
-              <Typography variant="h3" component="h3" style={{ fontFamily: 'Open Sans', fontSize: '46px', paddingLeft: '300px', margin: '0 ', paddingTop: '20px',textAlign:'center' }}>
-              <span style={{ color: 'green' }} data-aos="fade-up" data-aos-delay="500">Experiment </span> with different style
+              <Typography variant="h3" component="h3" data-aos="fade-up" data-aos-delay="500" style={{ fontFamily: 'Open Sans , sans-serif',fontWeight: 'bold',fontSize:'40px', paddingLeft: '300px', margin: '0 ', paddingTop: '20px',textAlign:'center' }}>
+              <span style={{ color: 'green' }} >Experiment </span> with different style
               </Typography>
             </Grid>
             <Grid>

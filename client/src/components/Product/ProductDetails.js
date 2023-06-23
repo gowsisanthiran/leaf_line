@@ -81,7 +81,7 @@ const ProductDetails = () => {
                     <section class="banner productpage">
                         <div class="container container2">
                             <div class="row">
-                            <div class="col-lg-12 d-flex justify-content-center">
+                                <div class="col-lg-12 d-flex justify-content-center">
                                     <div class="text-center">
                                         <h2 class="banner-title">Product Details</h2>
                                         <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
@@ -127,7 +127,7 @@ const ProductDetails = () => {
                                         } alt="" />
                                     </div>
                                 </div>
-                                <div class="half">
+                                <div class="half"style={{paddingTop:'60px'}}>
                                     <div className='ratingsDiv'>
                                         <div class="reviews">
                                             <ul class="stars">
@@ -144,10 +144,10 @@ const ProductDetails = () => {
                                     <div class="description">
                                         <p>{product && product.description}</p>
                                     </div>
-                                    <div id="quantity">
+                                    {/* <div id="quantity">
                                         <label for="quantity-input">Quantity</label>
                                         <p></p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div class="card__footer">
@@ -156,7 +156,7 @@ const ProductDetails = () => {
                                     <h3>Leaf Line</h3>
                                 </div>
                                 <div class="action">
-                                    <button type="button" class='explorebtn' onClick={addToCartHandler}>Add to cart</button>
+                                    <button type="button" class='btn01 explorebtn' onClick={addToCartHandler}>Add to cart</button>
                                 </div>
                             </div>
                         </div>
@@ -167,15 +167,7 @@ const ProductDetails = () => {
                                 <h4>Clients Says</h4>
                             </div>
                             <Box className='reviews' spacing={10} style={{ textAlign: 'center', marginRight: "0px" }} >
-                                <Button variant="outlined" onClick={handleClickOpen} color="success" style={{cursor: 'pointer',
-  border: '2px solid #fff',
-  padding: '14px 30px',
-  borderRadius: '200px',
-  color: '#fff',
-  background: '#1b4333',
-  fontFamily: 'Poppins,Opensserif',
-  fontSize: '16px',
-  transition: '200ms',}}>Submit Review</Button>
+                                <button onClick={handleClickOpen} className='btn02 explorebtn'>Submit Review</button>
                                 <Dialog open={open} onClose={handleClose}>
                                     <DialogTitle sx={{ backgroundImage: 'linear-gradient(to right, #143a0d, #c0dca5)', color: '#fff', mb: 2 }}>Review &#38; Rating</DialogTitle>
                                     <DialogContent sx={{ minWidth: '350px' }} fullWidth>
@@ -196,8 +188,8 @@ const ProductDetails = () => {
                                         />
                                     </DialogContent>
                                     <DialogActions>
-                                        <Button onClick={handleClose}>Cancel</Button>
-                                        <Button onClick={handleSubmitReviewRating} color="success" >Submit</Button>
+                                        <button onClick={handleClose} class='explorebtn'>Cancel</button>
+                                        <button onClick={handleSubmitReviewRating} class='explorebtn' >Submit</button>
                                     </DialogActions>
                                 </Dialog>
 
@@ -208,9 +200,9 @@ const ProductDetails = () => {
                                         )}
                                     </Box>
                                     :
-                                    <Typography variant='button' spacing={10} marginLeft="20px" style={{color:'#AA8B56'}}>No reviews yet</Typography>
+                                    <Typography variant='button' spacing={10} marginLeft="20px" style={{ color: '#AA8B56' }}>No reviews yet</Typography>
                                 }
-{}
+                                { }
                             </Box>
                         </Box>
                     </main>

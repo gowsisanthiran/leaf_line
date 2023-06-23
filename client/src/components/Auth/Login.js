@@ -71,7 +71,7 @@ const Login = () => {
                     <MDBCol col='10' md='6'>
                         {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
                         <img src = 'https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg='className="img-fluid" alt="Login image" style={{width:'500px',height:'500px',paddingTop:'10px',borderRadius:'40px'}}/>
-                         <img src="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=" className="img-fluid" alt="Phone image" style={{width:'1000px',height:'500px',display:'flex', opacity: '0.8'}}/>
+                         {/* <img src="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=" className="img-fluid" alt="Phone image" style={{width:'1000px',height:'500px',display:'flex', opacity: '0.8'}}/> */}
                             {/* <img src = {login1} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'10px'}}/> */}
 
                     </MDBCol>
@@ -121,22 +121,7 @@ const Login = () => {
                                 />
                             </div>
 
-                            <Button type='submit'
-                                
-                                variant='contained'
-                                color="success"
-                                sx={{ mt: 3, mb: 2  }}
-                                style={{cursor: "pointer",
-    border: "2px solid #fff",
-    padding: "14px 5px",
-    width:"300px",
-    bordeRadius: '200px',
-    color:" #fff",
-    background: "#1b4333",
-    fontFamily: "Poppins,Opens-serif",
-    fontSize: "16px",
-    transition: "200ms"}}
-                            >Login</Button>
+                            <Button type='submit' class='explorebtn' style={{display:'flex',justifyContent:'center'}}>Login</Button>
 
                         </form>
                     </MDBCol>

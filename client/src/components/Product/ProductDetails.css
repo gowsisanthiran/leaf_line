@@ -189,7 +189,7 @@ main {
   color: #254703;
 }
 
-.card__footer .action button {
+/* .card__footer .action button {
   cursor: pointer;
   border: 1px solid #1b4333;
   border: 2px solid #fff;
@@ -200,13 +200,13 @@ main {
   font-family: Poppins,Opens-serif;
   font-size: 16px;
   transition: 200ms;
-}
+} */
 
-.card__footer .action button:hover {
+/* .card__footer .action button:hover {
   background: #b6e745;
   background: #9BBBAF;
   color: #fff;
-} 
+}  */
 
 /* .ratingsDiv{
     position: relative ;

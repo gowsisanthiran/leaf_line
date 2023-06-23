@@ -67,24 +67,24 @@ const Registration = () => {
     border: '1px solid rgba(255, 255, 255, 0.18)', // Adjust the border color and opacity as desired
     padding: '10px',
     margin: '0 auto',
-    
-};
+
+  };
   return (
     <>
 
       <MDBContainer fluid className="p-3 my-5" style={glassmorphismStyles}>
         <MDBRow>
-        <h2 style={{textAlign:'center',fontFamily:'Poppins,Opens-serif'}}>REGISTRATION</h2>
+          <h2 style={{ textAlign: 'center', fontFamily: 'Poppins,Opens-serif' }}>REGISTRATION</h2>
 
           <MDBCol col='10' md='6'>
             {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" /> */}
             {/* <img src={reg} className="img-fluid" alt="Login image" style={{width:'500px',paddingTop:'60px'}}/> */}
-            <img src="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=" className="img-fluid" alt="Phone image" style={{width:'1000px',height:'700px',display:'flex', opacity: '0.8' }}/>
+            <img src="https://media.istockphoto.com/id/1146491866/photo/green-banana-leaf.jpg?s=612x612&w=0&k=20&c=Qjlha-KIeVxMRkixFRUqXx0EfUWVf-YMyn1Vca5D4Yg=" className="img-fluid" alt="Phone image" style={{ width: '500px', height: '600px', paddingTop: '10px', borderRadius: '40px', objectFit: 'cover' }} />
 
           </MDBCol>
           <MDBCol col='4' md='6'>
 
-            
+
             <MDBCol>
               <form onSubmit={handleSubmit}>
                 <label>Name</label>
@@ -92,7 +92,7 @@ const Registration = () => {
                   wrapperClass='mb-2'
                   type="text"
                   id="name"
-                  style={{color:'black'}}
+                  style={{ color: 'black' }}
                   // label="Name"
                   name="name"
                   required
@@ -106,7 +106,7 @@ const Registration = () => {
                   wrapperClass='mb-2'
                   type="email"
                   id="email"
-                  style={{color:'black'}}
+                  style={{ color: 'black' }}
                   // label="Email"
                   name="email"
                   required
@@ -120,7 +120,7 @@ const Registration = () => {
                   wrapperClass='mb-3'
                   type="password"
                   id="password"
-                  style={{color:'black'}}
+                  style={{ color: 'black' }}
                   // label="Password"
                   name="password"
                   required
@@ -146,16 +146,18 @@ const Registration = () => {
                       component='label'
                       color="success"
                       startIcon={<PhotoIcon />}
-                      style={{cursor: "pointer",
-    border: "2px solid #fff",
-    padding: "14px 5px",
-    width:"250px",
-    bordeRadius: '200px',
-    color:" #fff",
-    background: "#1b4333",
-    fontFamily: "Poppins,Opens-serif",
-    fontSize: "16px",
-    transition: "200ms"}}
+                      style={{
+                        cursor: "pointer",
+                        border: "2px solid #fff",
+                        padding: "14px 5px",
+                        width: "250px",
+                        bordeRadius: '200px',
+                        color: " #fff",
+                        background: "#1b4333",
+                        fontFamily: "Poppins,Opens-serif",
+                        fontSize: "16px",
+                        transition: "200ms"
+                      }}
                     >
                       <input type='file'
                         hidden
@@ -166,43 +168,24 @@ const Registration = () => {
                     </Button>
                   </MDBCol>
                 </MDBRow>
-                <Button type='submit'
-                  fullWidth
-                  variant='contained'
-                  color="success"
-                  sx={{ mt: 3, mb: 2 }}
-                  style={{cursor: "pointer",
-    border: "2px solid #fff",
-    padding: "14px 5px",
-    width:"250px",
-    bordeRadius: '200px',
-    color:" #fff",
-    background: "#1b4333",
-    fontFamily: "Poppins,Opens-serif",
-    fontSize: "16px",
-    transition: "200ms",
-  marginLeft:'140px'}}
-                >Registration & Login</Button>
+
                 <MDBRow className="mt-2">
                   <MDBCheckbox
-                                    style={{color:'black'}}
+                    style={{ color: 'black' }}
 
-                                    name='keepLoggedIn'
-                                    value=''
-                                    id='keepLoggedIn'
-                                    label='Keep Me Logged-In'
-                                    checked={checked}
-                                    onChange={handleKeepMeLoggedIn}
-                                    style={{marginLeft:'100px'}}
-                                />
+                    name='keepLoggedIn'
+                    value=''
+                    id='keepLoggedIn'
+                    label='Keep Me Logged-In'
+                    checked={checked}
+                    onChange={handleKeepMeLoggedIn}
+                  // style={{marginLeft:'100px'}}
+                  />
                 </MDBRow>
                 <Button type='submit'
-                  fullWidth
-                  variant='contained'
-                  color="success"
-                  sx={{ mt: 3, mb: 2 }}
+                  class='explorebtn'
                 >Registration</Button>
-                
+
               </form>
             </MDBCol>
           </MDBCol>

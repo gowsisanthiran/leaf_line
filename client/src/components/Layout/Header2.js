@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import { selectCartItems } from '../../redux/features/cartSlice';
 import logoo from '../../images/logoo.png'
 import React, { useState, useEffect } from 'react';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
+import StoreIcon from '@mui/icons-material/Store';
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -59,7 +59,7 @@ const Header2 = () => {
               </li>
               <li className="nav-item mr-sm-2">
                 <NavLink to="/product" className="" activeClassName="active" style={{ color: '#9DC183',marginRight: '15px' }}>
-                  <Inventory2Icon />
+                  <StoreIcon />
                 </NavLink>
               </li>
               <li className="nav-item mr-sm-2">

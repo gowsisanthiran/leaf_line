@@ -103,8 +103,9 @@ const MyOrders = () => {
           ) : (
             <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }}  style={{height:'500px', width: '1000px' }}/>
           )}
-        </Box>
+      </div>
       </Box>
+
     </>
   );
 };

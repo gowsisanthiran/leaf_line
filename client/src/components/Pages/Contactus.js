@@ -105,7 +105,7 @@
 
 //       </form>
 
-      
+
 //     </div>
 //   );
 // }
@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
     backdropFilter: 'blur(100px)', // Apply the glass-like effect
     backgroundColor: '#DAE2B6',
-        padding: theme.spacing(5),
+    padding: theme.spacing(5),
     borderRadius: theme.spacing(2),
   },
   field: {
@@ -149,9 +149,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#3f51b5',
     color: '#fff',
     '&:hover': {
-      backgroundColor:'#5f8273',
-      borderColor:'#5f8273' ,
-      color:'#ffffff' ,
+      backgroundColor: '#5f8273',
+      borderColor: '#5f8273',
+      color: '#ffffff',
     },
   },
 
@@ -162,57 +162,50 @@ function ContactPage() {
 
 
   return (
-    
-      
-<div class="formContainer" style={{background: 'rgb(218, 226, 182)',marginTop:'5rem'}}>
-  <div class="formcard">
-    <div class="left">
-      <img src={contact} style={{width:'400px',height:'500px'}}/>
-    </div>
-    <div class="right">
-    <h2 style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight:'bold' }}><span style={{color:'#008000'}}>Contact</span>Us</h2>
 
-      <div class="contact">
-        <div class="form-container">
-          <form class="form">
-            <div class="username">
-              <input type="text" placeholder="Enter your Name"/>
-            </div>
-            <div class="useremail">
-              <input type="email" placeholder="Enter your email" required/>
-            </div>
-            <div class="usermessage">
-              <textarea placeholder="Enter your message" required></textarea>
-            </div>
-            <div class="usersubmit">
-              <input type="submit" value="Contact Us"
-              variant="contained"
-              size="large"
-              startIcon={<AddIcCallIcon />}
-              // sx={{ marginBottom: '10px', color: "#fffff", backgroundColor: 'rgb(70, 88, 73)', borderRadius: '10px' }} 
-              />
-            </div>
-          </form>
+    <>
+      <div class="formContainer" style={{ background: 'rgb(218, 226, 182)', marginTop: '5rem' }}>
+        <div className='title'>
+          <h2 className='m-4 p-1 text-dark text-center' style={{ fontFamily: 'Open Sans , sans-serif', fontSize: '40px', fontWeight: 'bold' }}><span style={{ color: '#008000' }}>Contact</span>Us</h2>
         </div>
-        <div class="address">
-          <div class="email">
-            <h4>Contact</h4>
-            <p>leafline@gmail.com</p>
+        <div class="formcard">
+          <div class="left">
+            <img src={contact} style={{ width: '400px', height: '500px' }} />
           </div>
-          <div class="location">
-            <h4>Based in</h4>
-            <p>Kopay,Jaffna<br/>Srilanka</p>
-          </div>
-          <div class="social">
-            <span><a href="#"><i class="fab fa-facebook"></i></a></span>
-            <span><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
-            <span><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+          <div class="right">
+            <div class="contact">
+              <div class="form-container">
+                <form class="form">
+                  <div class="username">
+                    <input type="text" placeholder="Enter your Name" />
+                  </div>
+                  <div class="useremail">
+                    <input type="email" placeholder="Enter your email" required />
+                  </div>
+                  <div class="usermessage">
+                    <textarea placeholder="Enter your message" required></textarea>
+                  </div>
+                  <div class="usersubmit">
+                    <button className='btn02 explorebtn'>Contact Us</button>
+                  </div>
+                </form>
+              </div>
+              <div class="address">
+                <div class="email">
+                  <h4>Contact</h4>
+                  <p>leafline@gmail.com</p>
+                </div>
+                <div class="location">
+                  <h4>Based in</h4>
+                  <p>Kopay,Jaffna<br />Srilanka</p>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    </>
   );
 }
 

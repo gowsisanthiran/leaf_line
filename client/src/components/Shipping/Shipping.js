@@ -7,13 +7,14 @@ import { selectShippingInfo, saveShippingInfo } from '../../redux/features/shipp
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import './shipping.css'
-import { Box, Typography, TextField, Button, TextareaAutosize, Grid, Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
+import { Box,  TextField, Button, TextareaAutosize, Grid, Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 // import './ConfirmOrder.css';
 import { formatCurrency } from '../../utility/formatCurrency';
 
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PaidIcon from '@mui/icons-material/Paid';
@@ -128,10 +129,10 @@ const Shipping = () => {
         shippingCharge = shippingCharge + (products[i].customInternationalShipmentCost);
         unitShippingCharge[i] = products[i].customInternationalShipmentCost;
       }
-      
+
     }
   }
-  const totalPrice = subTotal + shippingCharge ;
+  const totalPrice = subTotal + shippingCharge;
 
 
   const handleSubmit = (e) => {
@@ -143,256 +144,281 @@ const Shipping = () => {
   }
   const proccedToPayment = () => {
     const data = {
-      subTotal, shippingCharge,  totalPrice
+      subTotal, shippingCharge, totalPrice
     }
     sessionStorage.setItem('orderInfo', JSON.stringify(data));
     navigate('/payment');
   }
   return (
     <>
-    <Header2/>
+      <Header2 />
       {/*Banner starts*/}
       <section class="banner productpage">
         <div class="container container2">
-            <div class="row">
+          <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
-                    <div class="text-center">
-                        <h2 class="banner-title">Checkout</h2>
-                        <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
-                            <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><Link to='/'><HomeIcon/> Home</Link></li>
-                              <li class="breadcrumb-item active" aria-current="page">Checkout </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
+              <div class="text-center">
+                <h2 class="banner-title">Checkout</h2>
+                <nav aria-label="breadcrumb" class="d-flex justify-content-center fast-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><Link to='/'><HomeIcon /> Home</Link></li>
+                    <li class="breadcrumb-item active" aria-current="page">Checkout </li>
+                  </ol>
+                </nav>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
       {/*Banner Ends*/}
 
-      <form id="myform" className='glassmorphism-form'style={{backgroundColor:'#DAE2B6'}} onSubmit={handleSubmit} >
-        <header style={{backgroundColor:'#DAE2B6'}}>CheckOut Page
-        </header>
-        <div class="grid-container" style={{backgroundColor:'#DAE2B6'}}>
-          <div className="area">
-            <div class="grid-child purple">
-              <div className="row2">
-                <div className="col2">
-                  <input
-                    type="text"
-                    name="firstname"
-                    value={firstname}
-                    onChange={(e => setFirstname(e.target.value))}
-                  />
-                  <label htmlFor="firstname">First Name</label>
-                  {errors.firstname && <p className='validationError' color="red">{errors.firstname}</p>}
+
+
+
+
+
+
+      <main className='productDetailsContainer container'>
+        <div class="container3">
+          <div class="card__body">
+            <form id="" className='glassmorphism-form' style={{ backgroundColor: '#DAE2B6' }} onSubmit={handleSubmit} >
+              <header style={{ }}>
+                Shipping Details
+              </header>
+              <div class="grid-container" style={{ backgroundColor: '#DAE2B6' }}>
+                <div className="area">
+                  <div class="grid-child purple">
+                    <div className="row2">
+                      <div className="col2">
+                        <input
+                          type="text"
+                          name="firstname"
+                          value={firstname}
+                          onChange={(e => setFirstname(e.target.value))}
+                        />
+                        <label htmlFor="firstname">First Name</label>
+                        {errors.firstname && <p className='validationError' color="red">{errors.firstname}</p>}
+
+                      </div>
+                      <div className="col2">
+                        <input
+                          type="text"
+                          name="lastname"
+                          value={lastname}
+                          onChange={(e => setLastname(e.target.value))}
+                        />
+                        <label htmlFor="lastname">Last Name</label>
+                        {errors.lastname && <p className='validationError' color="red">{errors.lastname}</p>}
+
+                      </div>
+                    </div>
+                    <div className="row">
+                      <label htmlFor="phone">Phone</label>
+                      <input
+                        type="text"
+                        name="phone"
+                        value={phone}
+                        onChange={(e => setPhone(e.target.value))}
+                      />
+                      {errors.phone && <p className='validationError'>{errors.phone}</p>}
+                    </div>
+                    <div className="row">
+                      <label htmlFor="address">Address</label>
+                      <input
+                        type="text"
+                        name="address"
+                        value={address}
+                        onChange={(e => setAddress(e.target.value))}
+                      />
+                      {errors.address && <p className='validationError'>{errors.address}</p>}
+
+                    </div>
+                  </div>
+                  <div className="area">
+                    <div className="ckeckarea">
+
+                    </div>
+                    <div className="row2">
+                      <div className="col2">
+                        <input
+                          type="text"
+                          name="newfirstname"
+                          value={city}
+                          onChange={(e => setCity(e.target.value))}
+                        />
+                        {errors.city && <p className='validationError'>{errors.city}</p>}
+
+                        <label htmlFor="newfirstname">City</label>
+                      </div>
+                      <div className="col2">
+                        <input
+                          type="text"
+                          name="newlastname"
+                          value={zipCode}
+                          onChange={(e => setZipCode(e.target.value))}
+                        />
+                        <label htmlFor="newlastname">Zip Code</label>
+                        {errors.zipCode && <p className='validationError'>{errors.zipCode}</p>}
+                      </div>
+                    </div>
+                    <div className="row">
+                      <label htmlFor="selectTheCountry">Select The Country</label>
+                      <CountryDropdown classes='ship-drop-down'
+                        defaultOptionLabel=''
+                        id='selectTheCountry'
+                        style={{ width: '100%', backgroundColor: '#ffffff', color: '#000', border: '2px solid #000' }}
+                        value={country}
+                        valueType='short'
+                        priorityOptions={['CA', 'US', 'IN', 'GB']}
+                        onChange={(e => setCountry(e))}
+                      />
+                      {errors.country && <p className='validationError'>{errors.country}</p>}
+
+                    </div>
+                  </div>
 
                 </div>
-                <div className="col2">
-                  <input
-                    type="text"
-                    name="lastname"
-                    value={lastname}
-                    onChange={(e => setLastname(e.target.value))}
-                  />
-                  <label htmlFor="lastname">Last Name</label>
-                  {errors.lastname && <p className='validationError' color="red">{errors.lastname}</p>}
 
-                </div>
-              </div>
-              <div className="row">
-                <label htmlFor="phone">Phone</label>
-                <input
-                  type="text"
-                  name="phone"
-                  value={phone}
-                  onChange={(e => setPhone(e.target.value))}
-                />
-                {errors.phone && <p className='validationError'>{errors.phone}</p>}
-              </div>
-              <div className="row">
-                <label htmlFor="address">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  value={address}
-                  onChange={(e => setAddress(e.target.value))}
-                />
-                {errors.address && <p className='validationError'>{errors.address}</p>}
 
               </div>
-            </div>
-            <div className="area">
-              <div className="ckeckarea">
-
+              <div class="action">
+                <button type="submit" value="Submit" className="btn02 explorebtn"><LocalShippingIcon />Checkout</button>
               </div>
-              <div className="row2">
-                <div className="col2">
-                  <input
-                    type="text"
-                    name="newfirstname"
-                    value={city}
-                    onChange={(e => setCity(e.target.value))}
-                  />
-                  {errors.city && <p className='validationError'>{errors.city}</p>}
-
-                  <label htmlFor="newfirstname">City</label>
-                </div>
-                <div className="col2">
-                  <input
-                    type="text"
-                    name="newlastname"
-                    value={zipCode}
-                    onChange={(e => setZipCode(e.target.value))}
-                  />
-                  <label htmlFor="newlastname">Zip Code</label>
-                  {errors.zipCode && <p className='validationError'>{errors.zipCode}</p>}
-                </div>
-              </div>
-              <div className="row">
-                <label htmlFor="selectTheCountry">Select The Country</label>
-                <CountryDropdown classes='ship-drop-down'
-                  defaultOptionLabel=''
-                  id='selectTheCountry'
-                  style={{ width: '100%', backgroundColor: '#ffffff', color: '#000', border: '2px solid #000' }}
-                  value={country}
-                  valueType='short'
-                  priorityOptions={['CA', 'US', 'IN', 'GB' ]}
-                  onChange={(e => setCountry(e))}
-                />
-                {errors.country && <p className='validationError'>{errors.country}</p>}
-
-              </div>
-            </div>
-            <div className="row" style={{padding:'10px',display:'inline',marginLeft:'47px'}}>
-            <Link to='/cart' style={{ textDecoration: 'none', color: '#fff'}}><button type="submit" value="Cancel" className="btn01 explorebtn"> <ArrowCircleLeftIcon />Back</button></Link>
-              <button type="submit" value="Submit" className="btn01 explorebtn"><LocalShippingIcon />Checkout</button>
-            </div>
+            </form>
           </div>
+        </div>
 
-          <div class="grid-child green">
-            {/* <header>Cart & Shipping Information</header> */}
-            <Divider />
-            <Box className='base-div3'>
-              <div id='cardDiv'>
-                <Box className='div1'>
-                  <Box className='confirmOrderTitle '>
-                    <p component='div' variant='button' sx={{ textAlign: 'center',    color: "#17432f"}}>
-                      Shipping Address
-                    </p>
-                  </Box>
-                  <Box>
-                    <List>
-                      <ListItem>
-                        <ListItemAvatar>
-                          <Avatar>
-                            <PhoneIcon />
-                          </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText>{shipInfo && shipInfo.phone}</ListItemText>
-                      </ListItem>
-                      <ListItem>
-                        <ListItemAvatar>
-                          <Avatar>
-                            <LocationOnIcon />
-                          </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText>{shipInfo && shipInfo.address},</ListItemText>
-                        <ListItemText>{shipInfo && shipInfo.city},</ListItemText>
-                        <ListItemText>{shipInfo && shipInfo.country},</ListItemText>
-                        <ListItemText>{shipInfo && shipInfo.zipCode}</ListItemText>
-                      </ListItem>
-                    </List>
-                  </Box>
-                </Box>
+        <div className='container3'>
+          {/* <!--heading---> */}
+          <div class='card__body1'>
+            <header style={{ backgroundColor: '#DAE2B6' }}>
+              Order Details
+            </header>
+            <Box>
+              <div class="grid-child green area">
+                <div className='base-div3'>
+                  <div id='cardDiv'>
+                    <Box className='div1'>
+                      <Box className='confirmOrderTitle '>
+                        <p component='div' style={{fontWeight:'bold', textAlign: 'left', color: "#17432f" }}>
+                          Shipping Address
+                        </p>
+                      </Box>
+                      <Box>
+                        <List>
+                          <ListItem>
+                            <ListItemAvatar>
+                              <Avatar>
+                                <PhoneIcon />
+                              </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText>{shipInfo && shipInfo.phone}</ListItemText>
+                          </ListItem>
+                          <ListItem>
+                            <ListItemAvatar>
+                              <Avatar>
+                                <LocationOnIcon />
+                              </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText>{shipInfo && shipInfo.address},</ListItemText>
+                            <ListItemText>{shipInfo && shipInfo.city},</ListItemText>
+                            <ListItemText>{shipInfo && shipInfo.country},</ListItemText>
+                            <ListItemText>{shipInfo && shipInfo.zipCode}</ListItemText>
+                          </ListItem>
+                        </List>
+                      </Box>
+                    </Box>
 
-                <Box className='div2'>
-                  <Box className='confirmOrderTitle'>
-                    <p component='div' variant='button' sx={{ textAlign: 'center', color: "#17432f" }}>
-                      Cart Items Info
-                    </p>
-                  </Box>
-                  <Box>
-                    {products &&
-                      products.map((item, i) => (
-                        <Box key={item._id} sx={{ display: 'flex', width: '100%', mb: 2 }}>
-                          <Box>
-                            <img src={item.image} alt={item.title} style={{ maxWidth: 100, marginRight: '5px' }} />
-                          </Box>
-                          <Box>
-                            <Typography component='div' variant='button'>
-                              <Link to={`/product/${item._id}`}>{item.title}</Link>
-                            </Typography>
-                            <Typography component='div' variant='button'>
-                              Price : {formatCurrency(item.price)} x {item.quantity}={formatCurrency(item.price * item.quantity)}
-                            </Typography>
-                          </Box>
-                        </Box>
-                      ))}
-                  </Box>
-                </Box>
+                    <Box className='div2'>
+                      <Box className='confirmOrderTitle'>
+                        <p component='div'  style={{fontWeight:'bold', textAlign: 'left', color: "#17432f" }}>
+                          Cart Items Info
+                        </p>
+                      </Box>
+                      <Box>
+                        {products &&
+                          products.map((item, i) => (
+                            <Box key={item._id} sx={{ display: 'flex', width: '100%', mb: 2 }}>
+                              <Box>
+                                <img src={item.image} alt={item.title} style={{ maxWidth: 100, marginRight: '5px' }} />
+                              </Box>
+                              <Box style={{paddingLeft:'40px'}}>
+                                <p component='div' variant='button'>
+                                  <Link to={`/product/${item._id}`} style={{color:'#008000'}}>{item.title}</Link>
+                                </p>
+                                <p component='div' variant='button' style={{fontSize:'15px'}}>
+                                  Price : {formatCurrency(item.price)} x {item.quantity}={formatCurrency(item.price * item.quantity)}
+                                </p>
+                              </Box>
+                            </Box>
+                          ))}
+                      </Box>
+                    </Box>
 
-                <Box className='div3'>
-                  <Box className='confirmOrderTitle'>
-                    <p component='div' variant='button' sx={{ textAlign: 'center' }}>
-                      Orders Info
-                    </p>
-                  </Box>
-                  <Box>
-                    <Grid container>
-                      <Grid item xs>
-                        <Typography component='div' variant='button'>
-                          Subtotal :
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography component='div' variant='button'>
-                          {formatCurrency(subTotal)}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                    <Grid container>
-                      <Grid item xs>
-                        <Typography component='div' variant='button'>
-                          Shipping charges :
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography component='div' variant='button'>
-                          {formatCurrency(shippingCharge)}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                    <Grid container sx={{ paddingTop: '100px' }}>
-                      <Grid item xs>
-                        <Typography component='div' variant='button'>
-                          Total :
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography component='div' variant='button'>
-                          {formatCurrency(totalPrice)}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                  </Box>
+                    <Box className='div3'>
+                      <Box className='confirmOrderTitle'>
+                      <p style={{fontWeight:'bold', textAlign: 'left', color: "#17432f" }}>
+                          Orders Info
+                        </p>
+                      </Box>
+                      <Box>
+                        <Grid container>
+                          <Grid item >
+                          <p style={{textAlign: 'left', color: "" }}>
+                              Subtotal :
+                            </p>
+                          </Grid>
+                          <Grid item>
+                          <p style={{textAlign: 'left', color: "" }}>
+                              {formatCurrency(subTotal)}
+                            </p>
+                          </Grid>
+                        </Grid>
+                        <Grid container>
+                          <Grid item >
+                          <p style={{textAlign: 'left', color: "" }}>
+                              Shipping charges :
+                            </p>
+                          </Grid>
+                          <Grid item>
+                            <p style={{textAlign: 'left', color: "" }}>
+                              {formatCurrency(shippingCharge)}
+                            </p>
+                          </Grid>
+                        </Grid>
+                        <Grid container sx={{ paddingTop: '100px' }}>
+                          <Grid item >
+                            <p style={{ textAlign: 'left', color: "" }}>
+                              Total :
+                            </p>
+                          </Grid>
+                          <Grid item >
+                            <p style={{ textAlign: 'left', color: "" }}>
+                              {formatCurrency(totalPrice)}
+                            </p>
+                          </Grid>
+                        </Grid>
+                      </Box>
+                    </Box>
+                  </div>
+                </div>
+                <Box>
                 </Box>
               </div>
-            </Box>
-            <Box>
             </Box>
           </div>
         </div>
-      </form>
-      <button
-        className='btn02 explorebtn'
-        onClick={proccedToPayment}
-      >
-        <PaidIcon/>
-        Proceed to payment
-      </button>
 
+      </main >
+      <div class='action'>
+        <button
+          className='btn02 explorebtn'
+          onClick={proccedToPayment}
+        >
+          <PaidIcon />
+          Proceed to payment
+        </button>
+      </div>
 
     </>
   )

@@ -59,7 +59,7 @@ const Auth = () => {
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={justifyActive === 'tab2'}style={{background:"#1b4333",marginLeft:'30rem',width:"450px",height:'50px',marginTop:"-50px",alignItems:"center"}}>
+          <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={justifyActive === 'tab2'}style={{background:"#1b4333",marginLeft:'23rem',width:"450px",height:'50px',marginTop:"-50px",alignItems:"center"}}>
             <p style={{marginLeft:'120px',color:'white',paddingTop:'10px',paddingBottom:'10px'}}>Register</p>
           </MDBTabsLink>
         </MDBTabsItem>

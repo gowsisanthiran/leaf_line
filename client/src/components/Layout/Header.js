@@ -4,7 +4,7 @@ import DrawerMenu from './DrawerMenu';
 import AuthMenu from './AuthMenu';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
+import StoreIcon from '@mui/icons-material/Store';
 import { Tooltip } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
@@ -15,7 +15,8 @@ import { selectCartItems } from '../../redux/features/cartSlice';
 import '../Layout/Header.css';
 import logoo from '../../images/logoo.png';
 import bg from '../../images/png1.png';
-import ExploreIcon from '@mui/icons-material/Explore';
+import ShopTwoIcon from '@mui/icons-material/ShopTwo';
+
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     right: 6,
@@ -65,7 +66,7 @@ const Header = () => {
               </li>
               <li className="nav-item mr-sm-2">
                 <NavLink to="/product" className="" activeClassName="active" style={{ color: '#9DC183',marginRight: '15px' }}>
-                  <Inventory2Icon />
+                  <StoreIcon />
                 </NavLink>
               </li>
               <li className="nav-item mr-sm-2">
@@ -112,7 +113,7 @@ const Header = () => {
           <p class="title1" style={{fontFamily:'Poppins,Sans-serif',fontSize:'50px'}}>BIO-DEGRADABLE PLATES FOR </p>
           <p class="title1" style={{fontFamily:'Poppins,sans-serif',fontSize:'50px'}}>CLEANER PLANET</p>
         <div class="col-xs-12 explore">
-          <a href="/product"><button type="button" class="btn btn-lg explorebtn" explore={<ExploreIcon/>}>EXPLORE</button></a>
+          <a href="/product"><button type="button" class="btn02 explorebtn"><ShopTwoIcon style={{paddingRight:'5px'}}/>SHOP</button></a>
         </div>
       </div>
 
