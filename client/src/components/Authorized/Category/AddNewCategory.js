@@ -145,13 +145,14 @@ const AddNewCategory = () => {
       <Box
         className='dash-box'
         sx={{
-          backgroundColor:"#F6F7C1",
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
           padding: '40px',
           minHeight: '100vh',
+          marginTop:'30px'
         }}
       >
+        <Typography component="div" variant="h5" color='#1b5e20' style={{fontFamily: 'poppins, sans-serif' ,textAlign:'center'}}>
+          Add New Category
+        </Typography>
     <div className="bigbox" >
       <Box
         sx={{
@@ -169,9 +170,7 @@ const AddNewCategory = () => {
                     fontFamily: 'poppins, sans-serif',
         }}
       >
-        <Typography component="div" variant="h5" color="#1b5e20" fontFamily='poppins, sans-serif'>
-          Add New Category
-        </Typography>
+       
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
             fontFamily='poppins, sans-serif'
@@ -223,28 +222,16 @@ const AddNewCategory = () => {
         
             Add Category
           </Button> */}
-         <Button
+         <button
   type="submit"
   fullWidth
   disabled={loading ? true : false}
-  variant="contained"
   startIcon={<AddBoxOutlinedIcon />}
-  sx={{
-    mt: 4,
-    mb: 2,
-    fontFamily: 'poppins, sans-serif',
-    backgroundColor: "rgb(70, 88, 73)",
-    borderRadius: "10px",
-    '&:hover': {
-      backgroundColor: "#9DC183",
-      color: "#000",
-      border: "black",
-      boxShadow: 'none',
-    },
-  }}
+  className='btn02 explorebtn'
+  style={{marginLeft:'30%'}}
 >
   Add Category
-</Button>
+</button>
 
 
 

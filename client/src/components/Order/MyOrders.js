@@ -18,9 +18,9 @@ const MyOrders = () => {
   const { loading, orders } = useSelector(selectAllOrders);
   // const { shipInfo } = useSelector(selectShippingInfo);
   const columns = [
-    // { field: 'id', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
+    { field: 'orderId', headerName: 'Order ID', headerClassName: 'gridHeader', flex: 1, maxWidth: 200 },
       // { field: 'Name', headerName: 'Name', headerClassName: 'gridHeader', flex: 1, maxWidth: 90 },
-    { field: 'status', headerName: 'Status', headerClassName: 'gridHeader',cellClassName: 'gridCell gridCellStatus', flex: 1, maxWidth: 250 },
+    { field: 'status', headerName: 'Status', headerClassName: 'gridHeader',cellClassName: 'gridCell gridCellStatus', flex: 1, maxWidth: 250,minWidth:100 },
     { field: 'itemsQty', headerName: 'Quantity', headerClassName: 'gridHeader',cellClassName: 'gridCell', flex: 1, maxWidth: 250, type: 'number',},
     { field: 'amount', headerName: 'Amount', headerClassName: 'gridHeader',cellClassName: 'gridCell', flex: 1, maxWidth: 250, type: 'number' },
     {
@@ -48,6 +48,7 @@ const MyOrders = () => {
   ];
 
   const rows = orders?.map((order) => ({
+    orderId: order.shortId,
     id: order._id,
     status: order.orderStatus,
     itemsQty: order.orderItems.length,

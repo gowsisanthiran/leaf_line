@@ -112,7 +112,7 @@ const UpdateProfile = () => {
                         </Avatar>
                       </div>
                       <div style={{ paddingTop: '5px' }}>
-                        <label className="btn btn-primary" style={{ backgroundColor: 'rgb(51, 104, 47)', backdropFilter: 'blur(10px)', borderColor: 'transparent', borderRadius: '5px', color: 'white' }}>
+                        <label className="btn" style={{ backgroundColor: 'rgb(70, 88, 73)', backdropFilter: 'blur(10px)', borderColor: 'transparent', borderRadius: '20px', color: 'white' }}>
                           <Photo className="me-2" />
                           Change Profile Picture
                           <input type="file" hidden name="avatar" onChange={imageHandler} />
@@ -125,7 +125,7 @@ const UpdateProfile = () => {
                       disabled={loading ? true : false}
                       variant="contained"
                       className="mb-3"
-                      sx={{ backgroundColor: 'rgb(51, 104, 47)', color: 'white', borderRadius: '5px' }}
+                      sx={{ backgroundColor: 'rgb(70, 88, 73)', color: 'white', borderRadius: '20px' }}
                     >
                       Update Profile
                     </Button>

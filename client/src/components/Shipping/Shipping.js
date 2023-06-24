@@ -410,7 +410,7 @@ const Shipping = () => {
         </div>
 
       </main >
-      <div class='action'>
+      <div class='action' style={{paddingBottom:'30px'}}>
         <button
           className='btn02 explorebtn'
           onClick={proccedToPayment}

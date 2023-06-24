@@ -158,6 +158,7 @@ const StripeCheckoutForm = (props) => {
                         loadingPosition='start'
                         startIcon={<PaymentIcon />}
                         className='btn02 explorebtn'
+                        style={{backgroundColor:'rgb(70, 88, 73)',color:'#ffffff',borderRadius:'20px'}}
                         >
                         Pay - {orderInfo && formatCurrency(orderInfo.totalPrice)}
 

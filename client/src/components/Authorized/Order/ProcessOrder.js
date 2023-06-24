@@ -68,7 +68,7 @@ const ProcessOrder = () => {
                             }}>
                                 Order Details
                             </Typography>
-                            <Box sx={{ paddingTop: '50px', boxShadow: '2px 2px 2px 2px #588157', padding: "15px", width: "1270px", marginRight: "300px", marginTop: "20px" }}>
+                            <Box sx={{ paddingTop: '50px', boxShadow: '2px 2px 2px 2px #588157', padding: "15px", width: "1312px", marginTop: "20px" , marginLeft:"-22px"}}>
                                 <Box className='title' sx={{ display: 'flex', alignItems: 'center' }}>
                                     <Avatar sx={{ background: '#fff', color: '#285430', minWidth: '30px', height: '30px' }}>
                                         <MonitorHeartIcon />

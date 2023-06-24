@@ -14,7 +14,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { selectCartItems } from '../../redux/features/cartSlice';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
-import Inventory2Icon from '@mui/icons-material/Inventory2';
+import StoreIcon from '@mui/icons-material/Store';
 import logoo from '../../images/logoo.png';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
@@ -115,7 +115,7 @@ const AuthorizedRoute = () => {
                                 color: '#263A29'
                             }}
                         >
-                            <Inventory2Icon />
+                            <StoreIcon />
                         </NavLink>
                         <NavLink
                             to="/cart"

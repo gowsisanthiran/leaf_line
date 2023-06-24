@@ -163,14 +163,15 @@ const CategoryList = () => {
   };
 
   const columns = [
-    { field: 'title', headerName: 'Categories', headerClassName: 'gridHeader', flex: 1, minWidth: 170 },
-    { field: 'description', headerName: 'Description', headerClassName: 'gridHeader', flex: 1, minWidth: 170 },
+    { field: 'title', headerName: 'Categories', headerClassName: 'gridHeader', flex: 1, maxWidth: 200 },
+    { field: 'description', headerName: 'Description', headerClassName: 'gridHeader', flex: 1, minWidth: 250 },
     {
       field: 'actions',
       headerName: 'Actions',
       headerClassName: 'gridHeader',
+      align: 'right', // Aligns the header text to the right
       flex: 1,
-      minWidth: 170,
+      maxWidth: 180,
       type: 'number',
       sortable: false,
       renderCell: (params) => {
@@ -217,37 +218,33 @@ const CategoryList = () => {
       <Box
         className='dash-box'
         sx={{
-          backgroundColor: "#F6F7C1",
           padding: '40px',
           minHeight: '100vh',
+          marginTop:'30px'
+
         }}
       >
+        <Typography component="div" variant="h5" color='#1b5e20' style={{fontFamily: 'poppins, sans-serif' ,textAlign:'center'}}>
+          List of Categories
+        </Typography>
         <Container maxWidth="lg">
           <Box
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              width: '1410px',
+              width: '117%',
               textAlign: 'center',
               boxShadow: '2px 2px 2px 2px #588157',
               borderRadius: '4px',
               backgroundColor: '#fff',
               padding: '55px',
               marginTop: "45px",
-              marginLeft: "-130px"
+              marginLeft: "-106px"
             }}
           >
-            <div
-              style={{
-                maxHeight: '560px',
-                overflowY: 'scroll',
-              }}
-            >
+            <div>
               <Box style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '15px' }}>
 
-                <Typography component='h1' color='#1b5e20' variant='h5' sx={{ m: 4, fontFamily: 'poppins, sans-serif' }}>
-                  List of Categories
-                </Typography>
                 {loading ? (
                   <BoxShadowLoader />
                 ) : (
